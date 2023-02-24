@@ -6,9 +6,6 @@ require('dotenv').config()
 
 app.use(express.static(__dirname))
 app.use(express.static(__dirname + '/public'))
-app.use(express.static(__dirname + '/data'))
-app.use(express.static(__dirname + '/data/conversation'))
-app.use(express.static(__dirname + '/data/conversation/enquirer'))
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html')

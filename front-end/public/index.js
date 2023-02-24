@@ -6,7 +6,7 @@ $(document).ready(()=>{
     })
 
     // *** Left-bar ***
-    let who = 'user'    // 'user' or 'sapper'
+    let who = 'User'    // 'User' or 'Sapper'
 
     // *** conversation transmission ***
     // input message
@@ -45,7 +45,7 @@ $(document).ready(()=>{
                     alert("Connection to Server Error")
                 }
                 else {
-                    $('.conversation-wrapper').append(generateDialog('Expertise', res.answer))
+                    $('.conversation-wrapper').append(generateDialog('Sapper', res.answer))
                     convWrapper.animate({
                         scrollTop: convWrapper.prop('scrollHeight')
                     }, 500)
