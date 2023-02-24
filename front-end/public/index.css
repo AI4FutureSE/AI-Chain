@@ -3,7 +3,6 @@
     --secondary: #edc7b7;
     --third: #00838d;
     --gray: #f2f8f9;
-    --red: lightcoral
 }
 
 body{
@@ -83,7 +82,6 @@ Font
 }
 
 .user{
-    margin-top: 100px;
     padding-top: 100px;
     position: relative;
     z-index: 1;
@@ -150,9 +148,6 @@ Font
     color: var(--primary);
 }
 
-.opts-expertise{
-    display: none;
-}
 
 /*.lef-navbar{*/
 /*    position: absolute;*/
@@ -192,21 +187,6 @@ Font
     width: 100%;
     /*background: greenyellow;*/
     position: relative;
-}
-
-.enquires-page-expertise{
-    display: none;
-}
-
-.enquire-wrapper > .conversation-card{
-    display: inline-table !important;
-    width: 200px !important;
-}
-
-.enquire-wrapper{
-    padding: 20px;
-    transition: 0.5s;
-    text-align: center;
 }
 
 /* Conversation dialog */
@@ -249,14 +229,6 @@ Font
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-/*.dialog-expertise>.dialog-portrait>.dialog-portrait-img{*/
-/*    border: 4px solid var(--red);*/
-/*}*/
-
-/*.dialog-expertise>.dialog-portrait>.dialog-portrait-name{*/
-/*    color: var(--red);*/
-/*}*/
-
 .dialog-msg-wrapper{
     /*background-color: lawngreen;*/
     padding: 10px;
@@ -270,12 +242,6 @@ Font
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 6px;
     display: table;
-    transition: 0.5s;
-}
-
-.dialog-msg-editing{
-    background-color: lightcoral;
-    transition: 0.5s;
 }
 
 .dialog-option{
@@ -315,7 +281,6 @@ Font
     padding-top: 20px;
     position: absolute;
     bottom: 0;
-    display: none;
 }
 
 .input-msg{
@@ -329,7 +294,6 @@ Font
     background: var(--third);
     transition: 0.5s;
     color: white;
-    padding-top: 14px;
 }
 
 .btn-msg:hover{
@@ -337,50 +301,6 @@ Font
     color: white;
 }
 
-#msgInput{
-    height: 50px;
-}
-
-/* addons */
-.addon{
-    font-weight: bold;
-    color: var(--secondary);
-    text-decoration: none;
-}
-
-.addon-principle{
-    color: white;
-}
-
-.addon-link{
-    color: lightcoral;
-}
-
-.addon-link:hover{
-    color: var(--secondary);
-}
-
-/* bottom bar */
-.reminder-wrapper{
-    width: 100%;
-    height: 100px;
-    padding-top: 20px;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    display: none;
-}
-
-.bottom-reminder{
-    width: 80%;
-    height: 40px;
-    margin: auto;
-    background-color: lightblue;
-    padding: 9px 30px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    opacity: 0.8;
-}
 
 /*** Right sidebar ***/
 #right-sidebar{

@@ -7,6 +7,8 @@ require('dotenv').config()
 app.use(express.static(__dirname))
 app.use(express.static(__dirname + '/public'))
 app.use(express.static(__dirname + '/data'))
+app.use(express.static(__dirname + '/data/conversation'))
+app.use(express.static(__dirname + '/data/conversation/enquirer'))
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html')
@@ -15,11 +17,13 @@ app.get('/', (req, res) => {
 app.post('/sendMsg', urlencodedParser, (req, res) => {
     console.log('Message sending:', req.body);
     openaiConnection(req.body.message).then((openaiRes) => {
-        // console.log(openaiRes.data)
+        console.log(openaiRes.data)
         res.json({code:1, answer: openaiRes.data.choices[0].text});
+
     }).catch((err) =>{
         console.error(err)
         res.json({code: -1});
+
     })
 });
 
