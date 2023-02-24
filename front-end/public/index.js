@@ -17,24 +17,6 @@ $(document).ready(()=>{
         'prevent the absence of a cost effective/easy method to appeal a decision made by your system',
         'Who is accountable for the accuracy of the answers']
     const raiKeywords = principles.concat(['Vulnerability', 'Privacy', 'Regulatory', 'Safety', 'bias', 'accountability', 'privacy', 'security'])
-    const principleIds = ['w2', 'v3', 'f4', 'p1', 'r6', 't8', 'c3', 'a7']
-    const raiLinks = ['https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/continuous-rai-validator/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/rai-risk-assessment/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/fairness-measurement/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/random-noise-data-generator/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/multi-model-decision-maker/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/standardized-reporting/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/ai-mode-switcher/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/role-level-accountability/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/role-level-accountability/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/random-noise-data-generator/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/xai-interface/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/rai-black-box/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/standardized-reporting/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/role-level-accountability/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/random-noise-data-generator/',
-        'https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/random-noise-data-generator/'
-        ]
 
     // ***********
     // Initial loading
