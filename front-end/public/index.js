@@ -5,11 +5,9 @@ $(document).ready(()=>{
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 
-    // *** Left-bar ***
-    let who = 'User'    // 'User' or 'Sapper'
-
     // *** conversation transmission ***
     // input message
+    let who = 'User'    // 'User' or 'Sapper'
     $('#msgForm').submit(function (e){
         // * display the input message in the conversation wrapper
         let currentDialog = $('.conversation-dialog').last()
@@ -60,6 +58,26 @@ $(document).ready(()=>{
             }
         })
     })
+
+    // *** Result ***
+    $('#result_display').click(function (){
+        $.ajax({
+            url: '/codeResult',
+            type: 'post',
+            data:{
+            },
+            success: function (res){
+                console.log(res.code)
+                $('#result_display').html('<pre><code contenteditable="true">' + res.code + '</code></pre>')
+                hljs.highlightAll()
+            },
+            error: function (res){
+                alert('Result error')
+                console.log(res)
+            }
+        })
+    })
+
 
     // *** Dialog rendering ***
     // middle page

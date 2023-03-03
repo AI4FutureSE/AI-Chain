@@ -1,0 +1,45 @@
+function：代码解析
+
+user input：
+def fun(n):
+    def fun1(p):
+        if p == 2:
+            return True
+        if p % 2 == 0:
+            return False
+        for i in range(3, int(p ** 0.5) + 1, 2):
+            if p % i == 0:
+                return False
+        return True
+    if isinstance(n, int) and n > 0 and n % 2 == 0:
+        for i in range(2, n // 2 + 1):
+            if fun1(i) and fun1(n - i):
+                print(i, '+', n - i, '=', n)
+
+bot：
+我可以完成以下5个任务:
+1. 为代码添加注释
+2. 分析代码功能
+3. 讲解代码思路
+4. 提取代码知识
+5. 用其它方法改写代码
+请问你需要我完成哪个任务?
+(输入数字进行查询,0表示退出)
+
+user input：1
+
+bot result：
+def fun(n): #定义函数fun，用于判断一个数是否是素数
+    def fun1(p): #定义函数fun1，用于判断一个数是否是素数
+        if p == 2: #若p为2，即为素数，返回True
+            return True
+        if p % 2 == 0: #若p为偶数，不为素数，返回False
+            return False
+        for i in range(3, int(p ** 0.5) + 1, 2): #从3到p的平方根+1，以2为步长遍历，即3,5,7...
+            if p % i == 0: #若p可以整除上面遍历的数，则不为素数，返回False
+                return False
+        return True #若上面的条件都不满足，则为素数，返回True
+    if isinstance(n, int) and n > 0 and n % 2 == 0: #若n为正偶数
+        for i in range(2, n // 2 + 1): #从2到n的一半加1，遍历
+            if fun1(i) and fun1(n - i): #若i和n-i均为素数
+                print(i, '+', n - i, '=', n) #输出i和n-i的和为n

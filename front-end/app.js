@@ -3,6 +3,8 @@ const app = express()
 var bodyParser = require('body-parser')
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 require('dotenv').config()
+var fs = require('fs')
+var path = require('path')
 
 app.use(express.static(__dirname))
 app.use(express.static(__dirname + '/public'))
@@ -16,13 +18,23 @@ app.post('/sendMsg', urlencodedParser, (req, res) => {
     openaiConnection(req.body.message).then((openaiRes) => {
         console.log(openaiRes.data)
         res.json({code:1, answer: openaiRes.data.choices[0].text});
-
     }).catch((err) =>{
         console.error(err)
         res.json({code: -1});
-
     })
 });
+
+app.post('/codeResult', urlencodedParser, (req, res)=>{
+    let resultCodePath = path.join(__dirname, '/public/doc', 'result.txt')
+    fs.readFile(resultCodePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        console.log('Load result from', resultCodePath);
+        res.json({code: data})
+    });
+})
 
 app.listen(3333, function (){
     console.log('visit http://localhost:3333/')
