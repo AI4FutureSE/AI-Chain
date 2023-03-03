@@ -57,7 +57,7 @@ $(document).ready(()=>{
                         },
                         success: function (res){
                             console.log(res.code)
-                            $('#result_display').html('<pre><code contenteditable="true">' + res.code + '</code></pre>')
+                            $('#result_display').html('<pre class="res-code"><code contenteditable="true">' + res.code + '</code></pre>')
                             hljs.highlightAll()
                         },
                         error: function (res){
