@@ -198,3 +198,17 @@ Font
     background: #00838d80;
     color: white;
 }
+
+
+/* result page */
+#result_container{
+    padding: 30px;
+}
+
+#result_display{
+    background: whitesmoke;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+}
