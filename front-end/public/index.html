@@ -17,50 +17,46 @@
 <body>
 
 <main id="main" class="container-fluid">
-    <div class="row one-page">
-        <!-- *** Left sidebar *** -->
-        <div id="left-sidebar" class="col-2">
-            <!-- Brand -->
-            <div class="text-center brand">
-                <img src="images/sapperlogo.jpg" class="brand-logo">
-            </div>
-
-            <!-- Conversation options -->
-            <div class="conversation-opts container">
-                <div class="row">
-                    <div class="col-4 text-center">
-                        <a id="conversation-history" class="conversation-opts-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Conversation history"><i class="bi bi-book-fill"></i></a>
-                    </div>
-                    <div class="col-4 text-center">
-                        <a id="conversation-new" class="conversation-opts-link" data-bs-toggle="tooltip" data-bs-placement="top" title="New Conversation"><i class="bi bi-cloud-plus-fill"></i></a>
-                    </div>
-                    <div class="col-4 text-center">
-                        <a id="conversation-archive" class="conversation-opts-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Archive Conversation"><i class="bi bi-archive-fill"></i></a>
-                    </div>
-                </div>
-            </div>
+    <!-- *** Left sidebar *** -->
+    <div id="left-sidebar">
+        <!-- Brand -->
+        <div class="text-center brand">
+            <img src="images/sapperlogo.jpg" class="brand-logo">
         </div>
 
-        <!-- *** Chat page *** -->
-        <div id="chat_container" class="col-10">
-            <!-- *** Middle page *** -->
-            <div id="middle-page">
-                <!-- conversation -->
-                <div id="conv-0" class="conversation-wrapper">
-                </div>
-                <!-- Input bar -->
-                <div class="input-wrapper">
-                    <form id="msgForm" method="post" action="">
-                        <div class="input-group input-msg">
-                            <input required id="msgInput" name="message" type="text" class="form-control" placeholder="Enquiry">
-                            <a class="btn btn-msg" type="submit"><i class="bi bi-send-fill"></i></a>
-                        </div>
-                    </form>
-                </div>
+        <!-- Conversation options -->
+        <div class="conversation-opts container">
+            <div class="text-center">
+                <a id="conversation-history" class="conversation-opts-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Conversation history"><i class="bi bi-book-fill"></i></a>
+            </div>
+            <div class="text-center">
+                <a id="conversation-new" class="conversation-opts-link" data-bs-toggle="tooltip" data-bs-placement="top" title="New Conversation"><i class="bi bi-cloud-plus-fill"></i></a>
+            </div>
+            <div class="text-center">
+                <a id="conversation-archive" class="conversation-opts-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Archive Conversation"><i class="bi bi-archive-fill"></i></a>
             </div>
         </div>
-
     </div>
+
+    <!-- *** Chat page *** -->
+    <div id="chat_container">
+        <!-- *** Middle page *** -->
+        <div id="middle-page">
+            <!-- conversation -->
+            <div id="conv-0" class="conversation-wrapper">
+            </div>
+            <!-- Input bar -->
+            <div class="input-wrapper">
+                <form id="msgForm" method="post" action="">
+                    <div class="input-group input-msg">
+                        <input required id="msgInput" name="message" type="text" class="form-control" placeholder="Enquiry">
+                        <a class="btn btn-msg" type="submit"><i class="bi bi-send-fill"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </main>
 
 </body>
