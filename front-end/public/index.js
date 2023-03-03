@@ -45,7 +45,8 @@ $(document).ready(()=>{
                     alert("Connection to Server Error")
                 }
                 else {
-                    $('.conversation-wrapper').append(generateDialog('Sapper', res.answer))
+                    let answer = res.answer.slice(2).replaceAll('\n', '<br><br>')
+                    $('.conversation-wrapper').append(generateDialog('Sapper', answer))
                     convWrapper.animate({
                         scrollTop: convWrapper.prop('scrollHeight')
                     }, 500)
