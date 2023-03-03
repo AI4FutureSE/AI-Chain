@@ -104,7 +104,8 @@ Font
     color: var(--primary);
 }
 
-#chat_container{
+/*** Content ***/
+#content{
     padding: 0;
     transition: 0.5s;
     overflow: hidden;
@@ -113,11 +114,7 @@ Font
     flex: 1;
 }
 
-/*** Middle page ***/
-#middle-page{
-    height: 100%;
-    width: 100%;
-    /*background: greenyellow;*/
+#chat_container{
     position: relative;
 }
 

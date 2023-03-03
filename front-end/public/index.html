@@ -39,20 +39,26 @@
     </div>
 
     <!-- *** Chat page *** -->
-    <div id="chat_container">
-        <!-- *** Middle page *** -->
-        <div id="middle-page">
-            <!-- conversation -->
-            <div id="conv-0" class="conversation-wrapper">
+    <div id="content" class="container-fluid">
+        <div class="row">
+            <!-- *** Chat page *** -->
+            <div id="chat_container" class="col-6">
+                <!-- conversation -->
+                <div id="conv-0" class="conversation-wrapper">
+                </div>
+                <!-- Input bar -->
+                <div class="input-wrapper">
+                    <form id="msgForm" method="post" action="">
+                        <div class="input-group input-msg">
+                            <input required id="msgInput" name="message" type="text" class="form-control" placeholder="Enquiry">
+                            <a class="btn btn-msg" type="submit"><i class="bi bi-send-fill"></i></a>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <!-- Input bar -->
-            <div class="input-wrapper">
-                <form id="msgForm" method="post" action="">
-                    <div class="input-group input-msg">
-                        <input required id="msgInput" name="message" type="text" class="form-control" placeholder="Enquiry">
-                        <a class="btn btn-msg" type="submit"><i class="bi bi-send-fill"></i></a>
-                    </div>
-                </form>
+
+            <!-- *** Result Page *** -->
+            <div id="result_container" class="col-6">
             </div>
         </div>
     </div>
