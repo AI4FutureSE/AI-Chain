@@ -49,6 +49,22 @@ $(document).ready(()=>{
                         scrollTop: convWrapper.prop('scrollHeight')
                     }, 500)
                     msgInput.removeAttr('disabled')
+
+                    $.ajax({
+                        url: '/codeResult',
+                        type: 'post',
+                        data:{
+                        },
+                        success: function (res){
+                            console.log(res.code)
+                            $('#result_display').html('<pre><code contenteditable="true">' + res.code + '</code></pre>')
+                            hljs.highlightAll()
+                        },
+                        error: function (res){
+                            alert('Result error')
+                            console.log(res)
+                        }
+                    })
                 }
             },
             error: function (res){
@@ -60,23 +76,23 @@ $(document).ready(()=>{
     })
 
     // *** Result ***
-    $('#result_display').click(function (){
-        $.ajax({
-            url: '/codeResult',
-            type: 'post',
-            data:{
-            },
-            success: function (res){
-                console.log(res.code)
-                $('#result_display').html('<pre><code contenteditable="true">' + res.code + '</code></pre>')
-                hljs.highlightAll()
-            },
-            error: function (res){
-                alert('Result error')
-                console.log(res)
-            }
-        })
-    })
+    // $('#result_display').click(function (){
+    //     $.ajax({
+    //         url: '/codeResult',
+    //         type: 'post',
+    //         data:{
+    //         },
+    //         success: function (res){
+    //             console.log(res.code)
+    //             $('#result_display').html('<pre><code contenteditable="true">' + res.code + '</code></pre>')
+    //             hljs.highlightAll()
+    //         },
+    //         error: function (res){
+    //             alert('Result error')
+    //             console.log(res)
+    //         }
+    //     })
+    // })
 
 
     // *** Dialog rendering ***

@@ -1,4 +1,3 @@
-bot result：
 def fun(n): #定义函数fun，用于判断一个数是否是素数
     def fun1(p): #定义函数fun1，用于判断一个数是否是素数
         if p == 2: #若p为2，即为素数，返回True
