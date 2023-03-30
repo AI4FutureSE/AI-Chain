@@ -55,6 +55,10 @@ html body{
     height: 100vh;
 }
 
+.font-emp{
+    color: gold;
+    font-weight: bolder;
+}
 
 /**** Specific ***/
 /* nav */
@@ -209,6 +213,51 @@ html body{
 
 .module-content{
     height: 100%;
+    padding-top: 30px;
+}
+
+.figure-aichain{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+/* module card */
+.module-card{
+    background: #ffffff40;
+    padding: 40px;
+    transition: 0.8s;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.module-card:hover{
+    background: #ffffff70;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.module-card-caption{
+    padding: 40px;
+}
+
+.module-card-title{
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.module-subtitle{
+    font-size: 25px;
+}
+
+.module-card-link{
+    font-size: 25px;
+    color: white;
+
+}
+
+.module-card-link:hover{
+    color: white;
 }
 
 #promptmanship{
