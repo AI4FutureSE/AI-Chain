@@ -1,0 +1,104 @@
+/*** Font ***/
+@font-face {
+    font-family: Roboto;
+    src: url("plugin/font/Roboto-Regular.ttf");
+}
+
+:root{
+    --first: #23a6d5;
+    --second: #e73c7e;
+
+    --yellow: #FEE622;
+    --orange: #F49237;
+    --grey: #DBDBDB;
+    --red: #F6522C;
+    --blue: #8FC1E3;
+    --purple: #760fcb;
+    --black: #262626;
+    --pink: #b369b8;
+}
+
+html body{
+    font-family: Roboto, serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*** General ***/
+.animate-color{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.half-size-page{
+    width: 100%;
+    height: 50vh;
+}
+
+.one-size-page{
+    width: 100%;
+    height: 100vh;
+}
+
+
+/**** Specific ***/
+/* cover */
+#cover{
+    width: 100%;
+    height: 100vh;
+}
+
+/* content */
+#content{
+    width: 100%;
+}
+
+/* intro */
+#intro{
+    width: 100%;
+    height: 60vh;
+    padding: 150px;
+    border-bottom: var(--first) 2px solid;
+}
+
+.card-intro{
+    /*text-align: center;*/
+    color: var(--first);
+    padding: 10px;
+    border-left: var(--first) 2px solid
+}
+
+.card-title{
+    font-weight: 900;
+}
+
+.card-lead{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.card-link{
+    color: #23a6d5;
+    font-weight: bold;
+    transition: 0.8s;
+}
+
+.card-link:hover{
+    cursor: pointer;
+    color: var(--second);
+}
