@@ -5,14 +5,14 @@
 }
 
 :root{
-    --first: #23a6d5;
+    --first: #1d50c3;
     --second: #e73c7e;
 
     --yellow: #FEE622;
     --orange: #F49237;
     --grey: #DBDBDB;
     --red: #F6522C;
-    --blue: #8FC1E3;
+    --blue: #23a6d5;
     --purple: #760fcb;
     --black: #262626;
     --pink: #b369b8;
@@ -88,7 +88,7 @@ html body{
 
 .btn-title:hover{
     background: white;
-    color: var(--first);
+    color: var(--blue);
 }
 
 /* content */
@@ -106,9 +106,9 @@ html body{
 
 .card-intro{
     /*text-align: center;*/
-    color: var(--first);
+    color: var(--blue);
     padding: 10px;
-    border-left: var(--first) 2px solid
+    border-left: var(--blue) 2px solid
 }
 
 .card-title{
@@ -121,7 +121,7 @@ html body{
 }
 
 .card-link{
-    color: #23a6d5;
+    color: var(--blue);
     font-weight: bold;
     transition: 0.8s;
 }
@@ -166,4 +166,15 @@ html body{
 #sapper{
     background: var(--second);
     color: white;
+}
+
+/* footer */
+#about{
+    height: 60vh;
+    background: #ecf5ff;
+}
+
+#contact{
+    height: 40vh;
+    background: #004a99;
 }
