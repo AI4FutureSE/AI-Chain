@@ -63,6 +63,33 @@ html body{
     height: 100vh;
 }
 
+.title-wrap{
+    color: white;
+    padding: 200px;
+    text-align: center;
+    height: 100%;
+}
+
+.title{
+    font-size: 60px;
+}
+
+.subtitle{
+    margin: 40px 0 150px;
+}
+
+.btn-title{
+    border: white 1px solid;
+    color: white;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.btn-title:hover{
+    background: white;
+    color: var(--first);
+}
+
 /* content */
 #content{
     width: 100%;
