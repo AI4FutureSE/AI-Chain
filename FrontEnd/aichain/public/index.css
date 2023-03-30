@@ -58,24 +58,25 @@ html body{
 
 /**** Specific ***/
 .my-navbar{
+    font-size: 20px;
     position: fixed;
     z-index: 100;
     top: 100px;
-    background-color: var(--blue);
+    /*background-color: var(--blue);*/
     padding: 0;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .navbar-brand{
     width: 150px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bolder;
     text-align: center;
     background-color: white;
     color: var(--first);
-    font-family: Arial, serif;
-    height: 60px;
-    padding-top: 17px;
+    font-family: "Agency FB", serif;
+    height: 65px;
+    padding-top: 10px;
     transition: 0.5s;
     margin: 0;
 }
