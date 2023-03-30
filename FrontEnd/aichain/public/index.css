@@ -195,7 +195,7 @@ html body{
 
 /* module */
 .module-container{
-    height: 110vh;
+    min-height: 110vh;
     padding: 100px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
@@ -208,6 +208,7 @@ html body{
 .module-title{
     font-family: Arial, serif;
     font-size: 4em;
+    font-weight: bolder;
     border-bottom: 2px solid white;
 }
 
@@ -229,6 +230,7 @@ html body{
     transition: 0.8s;
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-bottom: 40px;
 }
 
 .module-card:hover{
@@ -247,7 +249,7 @@ html body{
 }
 
 .module-subtitle{
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .module-card-link{
