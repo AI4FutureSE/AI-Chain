@@ -229,7 +229,7 @@ html body{
     padding: 40px;
     transition: 0.8s;
     border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;*/
     margin-bottom: 40px;
 }
 
@@ -263,7 +263,7 @@ html body{
 }
 
 #promptmanship{
-    background: ghostwhite;
+    background: #e73c7e70;
     color: var(--second);
 }
 
@@ -271,6 +271,17 @@ html body{
     font-size: 3.5em;
     float: right;
     border-bottom: 2px solid var(--second);
+}
+
+#promptmanship .module-card{
+    color: white;
+    background: #e73c7e00;
+}
+
+#promptmanship .module-card:hover{
+    color: white;
+    background: #e73c7e70;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 #sapper{

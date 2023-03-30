@@ -3,10 +3,9 @@ $(document).ready(()=>{
         let nav = $('.my-navbar')
         let cover = $('#cover')
         let navLink = $('.nav-link')
-        let navItem = $('.nav-item')
         // start scroll
         if (cover.offset().top - $(document).scrollTop() <= -100){
-            nav.css({'width': '100%', 'height':'90px', 'position':'fixed', 'background':'white'})
+            nav.css({'width': '100%', 'height':'80px', 'position':'fixed', 'background':'white'})
             navLink.css({'color':'var(--first)', 'font-weight':'bold'})
             navLink.mouseover(function() {
                 $(this).css({'color':'whitesmoke'})
