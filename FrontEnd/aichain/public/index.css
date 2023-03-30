@@ -71,11 +71,12 @@ html body{
 }
 
 .title{
-    font-size: 60px;
+    font-size: 8em;
+    font-family: "Agency FB", serif;
 }
 
 .subtitle{
-    margin: 40px 0 150px;
+    margin: 90px 0 150px;
 }
 
 .btn-title{
