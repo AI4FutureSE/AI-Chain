@@ -113,6 +113,7 @@ html body{
     height: 100vh;
     position: relative;
     padding-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .title-wrap{
@@ -153,7 +154,7 @@ html body{
     width: 100%;
     height: 60vh;
     padding: 150px;
-    border-bottom: var(--first) 2px solid;
+    /*border-bottom: var(--first) 2px solid;*/
 }
 
 .card-intro{
@@ -183,10 +184,16 @@ html body{
     color: var(--second);
 }
 
+.graphic-divider{
+    width: 100%;
+    margin-top: -295px;
+}
+
 /* module */
 .module-container{
     height: 110vh;
     padding: 100px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 #aichain{
