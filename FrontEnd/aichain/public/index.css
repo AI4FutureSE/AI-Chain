@@ -130,3 +130,40 @@ html body{
     cursor: pointer;
     color: var(--second);
 }
+
+/* module */
+.module-container{
+    height: 110vh;
+    padding: 100px;
+}
+
+#aichain{
+    background: var(--first);
+    color: white;
+}
+
+.module-title{
+    font-family: Arial, serif;
+    font-size: 4em;
+    border-bottom: 2px solid white;
+}
+
+.module-content{
+    height: 100%;
+}
+
+#promptmanship{
+    background: ghostwhite;
+    color: var(--second);
+}
+
+#promptmanship .module-title{
+    font-size: 3.5em;
+    float: right;
+    border-bottom: 2px solid var(--second);
+}
+
+#sapper{
+    background: var(--second);
+    color: white;
+}
