@@ -57,14 +57,16 @@ html body{
 
 
 /**** Specific ***/
+/* nav */
 .my-navbar{
-    font-size: 20px;
-    position: fixed;
+    font-size: 22px;
     z-index: 100;
-    top: 100px;
     /*background-color: var(--blue);*/
-    padding: 0;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transition: 0.8s !important;
+    width: 700px;
+    height: 65px;
+    top: 0;
 }
 
 .navbar-brand{
@@ -82,12 +84,13 @@ html body{
 }
 
 .navbar-brand:hover{
-    color: var(--purple);
+    color: var(--second);
 }
 
 .nav-link{
     color: whitesmoke;
     padding: 18px !important;
+    height: 100%;
 }
 
 .nav-link:hover{
@@ -108,6 +111,8 @@ html body{
 #cover{
     width: 100%;
     height: 100vh;
+    position: relative;
+    padding-top: 100px;
 }
 
 .title-wrap{
