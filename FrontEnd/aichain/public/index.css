@@ -214,7 +214,7 @@ html body{
 
 .module-content{
     height: 100%;
-    padding: 60px;
+    padding: 30px;
 }
 
 .figure-aichain{
@@ -226,7 +226,7 @@ html body{
 /* module card */
 .module-card{
     background: #ffffff40;
-    padding: 55px;
+    padding: 40px;
     transition: 0.8s;
     border-radius: 10px;
     /*box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;*/
