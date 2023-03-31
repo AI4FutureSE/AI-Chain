@@ -1,0 +1,19 @@
+Extract the Non-FQNs of java API in natural language text.
+
+Natural language text: In practice, the java.util.Random class is often preferable to java.lang.Math.random().
+API Non-FQNs: None. java.util.Random and java.lang.Math.random() are both Non-fully qualified names.
+
+Natural language text: String.contentEquals() compares the content of the String with the content of any CharSequence (available since Java 1.5).
+API Non-FQNs: String.contentEquals(); String; CharSequence
+
+Natural language text: The compare() method must return an int, so you couldn't directly return a boolean like you were planning to anyway.
+API Non-FQNs: compare()
+
+Natural language text: See also: JavaDoc System.nanoTime() and JavaDoc System.currentTimeMillis() for more info.
+API Non-FQNs: System.nanoTime(); System.currentTimeMillis()
+
+Natural language text: Note there isn't paintComponent(). It's wrong, just use the paint() method.
+API Non-FQNs: paintComponent(); paint()
+
+Natural language text: {{sentence}}
+API Non-FQNs:

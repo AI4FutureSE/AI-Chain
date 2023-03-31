@@ -1,0 +1,57 @@
+A user is interacting with a large language model. They are crafting prompts and giving them to the LLM in order to get the model to complete a task or generate output.
+
+In order for a large language model to better complete tasks or generate outputs, task requirements need to be decomposed.
+
+The decomposed subtasks can interact with a large language model like a human thought chain, reflecting data flow and control flow.
+
+
+<Task Description>
+I want to build a chatbot that will stop the conversation until someone says GoodBye.
+</Task Description>
+
+<Decomposed Subtasks>
+
+<Control While User_Input not equal to GoodBye>
+
+(Subtask1 Input:  Chat_History User_Input Bot_Response Output: Bot_Response Model LLM)
+Combine chat history, user input, and bot response to get a new chat history.
+
+(Subtask2 Input: Chat_History User_Input Output: Bot_Response Model LLM)
+Keep the conversation going and prompt the user for more input
+
+</Control>
+</Decomposed Subtasks>
+
+
+<Task Description>
+I need to develop a function to obtain the weather conditions of the day according to the weather API and automatically draw 500x500 pixel RGB color paintings that meet the weather conditions, draw abstract paintings when the weather is rainy, and draw natural landscape paintings when the weather is sunny, so as to improve the user experience and entertainment.
+</Task Description>
+
+<Decomposed Subtasks >
+
+(Subtask1 Input: None Output: Weather_Data Model OpenWeatherMap)
+obtain weather conditions for the day
+
+<Control If Weather equal to rainy>
+
+(Subtask2 Input: Weather_Data Output: Painting_Description Model LLM)
+generate descriptions of abstract paintings through weather information.
+
+</Control>
+
+<Control If Weather equal to sunny>
+
+(Subtask3 Input: Weather_Data Output: Painting_Description Model LLM)
+generate natural landscape descriptions of abstract paintings through weather information.
+
+</Control>
+
+(Subtask4 Input: Painting_Description Output: Painting; Model Image-generation-model)
+Generate 500x500 pixel paintings according to Painting_Description.
+
+</Decomposed Subtasks>
+
+
+<Task Description>
+{{Description}}
+</Task Description>

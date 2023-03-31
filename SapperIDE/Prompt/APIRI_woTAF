@@ -1,0 +1,42 @@
+Infer the relation between apis in the text based on your own knowledge.
+The relations are described as follows:
+- function similarity: two API entities have similar usage.
+- behavior difference: two API entities have similar usage and different behaviors.
+- function replace: one API entity can be replaced by another API entity in some specific condition.
+- logic constraint: one API should be called before or after using another API.
+- efficiency comparison: two API entity have efficiency comparison in some specific conditions.
+- unknow: two apis do not contain the above relations.
+
+sentence:
+Summary arraylist with arraydeque are preferable in many more use-cases than linkedlist.
+If you're not sure — just start with arrayList.
+relation:
+(java.util.arraylist, java.util.arraydeque) : function similarity, behavior difference, efficiency comparison
+(java.util.arraydeque, java.util.linkedlist): function similarity, behavior difference, efficiency comparison
+(java.util.arraylist, java.util.linkedlist): function similarity, behavior difference, efficiency comparison
+
+sentence:
+One of HashMap's subclasses is linkedhashmap, so in the event that you'd want predictable iteration order (which is insertion order by default), you could easily wsap out the hashmap for a linkedhashmap. This wouldn't be as easy if you were using hashtable.
+relation:
+(java.util.hashmap, java.util.linkedhashmap): function similarity, behavior difference, function replace, efficiency comparison
+(java.util.hashmap, java.util.hashtable): function similarity, behavior difference, function replace, efficiency comparison
+(java.util.linkedhashmap, java.util.hashtable): function similarity, behavior difference, function replace, efficiency comparison
+
+sentence:
+The higherEntry(K key) does the opposite of the lowerEntry(K key), meaning higherEntry(K key) returns a key-value mapping associated with the least key strictly greater than the given key, or null if there is no such key.
+relation:
+(java.treemap.higherentry, java.treemap.lowerentry): unknow
+
+sentence:
+matches returns true if the whole string matches the given pattern. find tries to find a substring that matches the pattern.
+relation:
+(java.util.regex.matches,  java.util.regex.find): function similarity, behavior difference, function  replace
+
+sentence:
+StringBuilder was added in Java 5. For versions prior to Java 5, the StringBuffer class can be used instead — it has the same API.
+relation:
+(java.lang.stringbuilder, java.lang.stringbuffer): function similarity, behavior difference, function  replace, efficiency comparison
+
+sentence:
+{{sentence}}
+relation:

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI4Mission</title>
+    <!-- bootstrap -->
+    <link href="plugin/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="plugin/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- jquery -->
+    <script src="plugin/jquery.min.js"></script>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- Code rendering -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <!-- self -->
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body>
+
+<main id="main" class="container-fluid">
+    <!-- *** Left sidebar *** -->
+    <div id="left-sidebar">
+        <!-- Brand -->
+        <div class="text-center brand">
+            <img src="images/sapperlogo.jpg" class="brand-logo">
+        </div>
+
+        <!-- Conversation options -->
+        <div class="conversation-opts container">
+            <div class="text-center">
+                <a id="conversation-user" class="conversation-opts-link" data-bs-toggle="tooltip" data-bs-placement="top" title="UESR"><i class="bi bi-person-fill"></i></a>
+            </div>
+            <div class="text-center">
+                <a id="conversation-key" class="conversation-opts-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Openai Key"><i class="bi bi-key-fill"></i></a>
+            </div>
+            <div class="text-center">
+                <a id="conversation-history" class="conversation-opts-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Conversation history"><i class="bi bi-book-fill"></i></a>
+            </div>
+            <div class="text-center">
+                <a id="conversation-new" class="conversation-opts-link" data-bs-toggle="tooltip" data-bs-placement="top" title="New Conversation"><i class="bi bi-cloud-plus-fill"></i></a>
+            </div>
+            <div class="text-center">
+                <a id="conversation-archive" class="conversation-opts-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Archive Conversation"><i class="bi bi-archive-fill"></i></a>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+        <script>
+            // $(document).ready(function() {
+            //     $("#conversation-key").click(function() {
+            //         var key = prompt("请输入Openai Key：", "");
+            //         if (key != null && key != "") {
+            //             // 在这里可以将输入的Key提交到服务器进行处理
+            //             console.log(key);
+            //         }
+            //     });
+            // });
+        </script>
+    </div>
+
+    <!-- *** Chat page *** -->
+    <div id="content" class="container-fluid">
+        <div class="row">
+            <!-- *** Chat page *** -->
+            <div id="chat_container" class="col-6">
+                <!-- conversation -->
+                <div id="conv-0" class="conversation-wrapper">
+                </div>
+                <!-- Input bar -->
+                <div class="input-wrapper">
+                    <form id="msgForm" method="post" action="https://chatbottest.mynatapp.cc">
+                        <div class="input-group input-msg">
+                            <input required id="msgInput" name="message" type="text" class="form-control" placeholder="Enquiry">
+                            <a class="btn btn-msg" type="submit"><i class="bi bi-send-fill"></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- *** Result Page *** -->
+            <div id="result_container" class="col-6">
+                <div id="result_display" class="container">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>

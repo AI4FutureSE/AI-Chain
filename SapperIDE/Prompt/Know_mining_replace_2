@@ -1,0 +1,19 @@
+Answer the question about API knowledge.
+
+Q: When should i not use java.util.concurrent.BlockingQueue.poll()?
+A: The unavailable scenarios of java.util.concurrent.BlockingQueue.poll(): need to wait for an element to be available in the queue before retrieving it.
+
+Q: When should i not use java.lang.String.substring()?
+A: The unavailable scenarios of java.lang.String.substring(): want to extract a substring from a specific character or pattern rather than a fixed index.
+
+Q: When should i not use java.sql.statement.executeQuery()?
+A: The unavailable scenarios of java.sql.statement.executeQuery: want to modify the database, such as with insert, update, or delete statements.
+
+Q: When should i not use java.util.Arrays.toString()?
+A: The unavailable scenarios of java.util.Arrays.toString(): need to print out the elements of an array that is very large; print the elements of a multidimensional array.
+
+Q: When should i not use java.time.LocalDate.isEqual()?
+A: The unavailable scenarios of java.time.LocalDate.isEqual(): want to compare two LocalDate objects and take into account their time components.
+
+Q: When should i not use {{api}}?
+A:

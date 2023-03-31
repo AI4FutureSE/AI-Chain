@@ -1,0 +1,19 @@
+Answer the question about API knowledge.
+
+Q: What is the primary usage of java.util.Scanner.nextInt()?
+A: java.util.Scanner.nextInt() is used to read a int value from the input.
+
+Q: What is the primary usage of java.util.Treemap?
+A: java.util.Treemap is used to store key-value pairs.
+
+Q: What is the primary usage of java.util.Collection.retainAll()?
+A: java.util.Collection.retainAll() is used to retain only the elements in the collection.
+
+Q: What is the primary usage of java.net.URL.getPath?
+A: java.net.URL.getPath is used to get the path of the URL.
+
+Q: What is the primary usage of java.io.File.exists()?
+A: java.io.File.exists() is used to check if a file or directory exists at the specified path.
+
+Q: What is the primary usage of {{api}} ?
+A:

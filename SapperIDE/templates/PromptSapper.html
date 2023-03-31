@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8">
+<!--    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />-->
+    <title>Promptsapper</title>
+<!--    <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">-->
+<!--  <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>-->
+    <link href="../static/js/plugin/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="../static/js/plugin/bootstrap/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Code rendering -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<!--    <script src="../static/js/lib/highlight.min.js"></script>-->
+    <script src="../static/js/lib/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../static/js/lib/md5.js"></script>
+    <script src="../static/js/lib/download.min.js"></script>
+
+    <script src="../static/js/lib/blockly_compressed.js"></script>
+    <script src="../static/js/lib/blocks_compressed.js"></script>
+    <script src="../static/js/lib/javascript_compressed.js"></script>
+    <script src="../static/js/lib/python_compressed.js"></script>
+    <script src="../static/js/lib/en.js"></script>
+    <script src="../static/js/Sapper_Blocks.js"></script>
+    <script src="../static/js/Sapper_javascript.js"></script>
+    <script src="../static/js/Sapper_deploy.js"></script>
+    <script src="../static/js/background.js"></script>
+    <link href="../static/css/index.css" rel="stylesheet" type="text/css"/>
+<!--            <script src="../static/js/newlist.js"></script>-->
+    <link href="../static/index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body style="background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)">
+<div class="container-fluid" style="width: 100%;height: 100%;padding: 0">
+  <div class="container-fluid" style="padding-left: 5px">
+      <div id="sapper_func" class="row" style="padding-bottom: 3px;padding-top: 3px">
+          <div id="sapper_func_left" class="col-8">
+            <div class="btn-group">
+              <button type="button" id="Show_Project_List" onclick="show_project()" class="btn content_button">Project</button>
+              <div class="btn-group">
+                <button type="button" class="btn content_button dropdown-toggle" data-bs-toggle="dropdown">File</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" onclick="new_project()">New</a></li>
+                    <li><a class="dropdown-item" onclick="save_project()">Save</a></li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item">Download</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" onclick="download_project()">Download Block</a></li>
+                        <li><a class="dropdown-item" onclick="download_code()">Download Code</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" onclick="upload_project()">Upload</a></li>
+                    <li><a class="dropdown-item" onclick="deploymentCloud()">Deploy</a></li>
+                    <li><a class="dropdown-item" onclick="share_project()">Share</a></li>
+                </ul>
+              </div>
+              <button type="button" id="Save_Project_Name" class="btn content_button" style="background-color: #acbfdc">Undefined Name</button>
+              <button type="button" id="ShowExplorationViewButton" onclick="shift_view('ShowExplorationViewButton')" class="btn content_button">Exploration View</button>
+              <button type="button" id="ShowDesignViewButton" onclick="shift_view('ShowDesignViewButton')" class="btn content_button">Design View</button>
+              <button type="button" id="ShowBlockViewButton" onclick="shift_view('ShowBlockViewButton')" class="btn content_button" style="background-color: #7c7676">Block View</button>
+              <div class="btn-group">
+                  <button type="button" class="btn content_button dropdown-toggle" data-bs-toggle="dropdown">Run</button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" onclick="run_block()">Run</a></li>
+                    <li><a class="dropdown-item" onclick="debug_block()">Debug</a></li>
+                    <li><a class="dropdown-item" onclick="stop_block()">Stop</a></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div id="sapper_func_right" class="col-4">
+              <div class="container btn-group">
+                  <button type="button" id="show_modelpanel_button" onclick="show_model()" class="btn content_button col-6" style="float: right; width: 160px">Engine Management</button>
+                  <button type="button" id="show_promptpanel_button" onclick="show_prompt()" class="btn content_button col-6" style="float: right;width: 160px">Prompt Hub</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container-fluid" style="padding-left: 0">
+      <div id="sapper_body" class="row">
+          <div id="ProjectDiv" class="col-12" style="padding-left: 5px;padding-right: 0">
+              <div id="ShowProjectDiv" class="btn-group-vertical" style="padding-left: 5px;width: 80px;display: none;">
+              </div>
+              <div id="ProjectMainDiv" class="container-fluid" style="padding-bottom: 2px">
+                  <div id="WorkDiv" class="row">
+                      <div id="explorationDiv" class="col-12" style="display: none">
+                          <div class="container-fluid" style="height: 100%;">
+                              <div class="row" style="height: 100%">
+                                  <div id="ChatExplore" class="col-12" style="height: 100%; padding-right: 5px;padding-left: 5px;position: relative;display: block">
+                                      <div class="conversation-wrapper" id="Explore_conversation">
+                                      </div>
+                                      <div class="input-wrapper" style="height: 10%; width: 100%;bottom: 8%">
+                                            <div class="input-group input-msg">
+                                                <input required id="ExploreInput" name="message" type="text" class="form-control" placeholder="Enquiry">
+                                                <a class="btn btn-msg" type="submit" onclick="SendExplore()"><i class="bi bi-send-fill"></i></a>
+                                            </div>
+                                            <div class="input-group input-msg" style="padding-top: 5px">
+                                                <a class="btn btn-msg" style="width: 100%" onclick="ClearExplore()"></a>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div id="blocklyDiv" class="col-12"></div>
+                      <div id="draftBlocklyDiv" class="col-12" style="display: none;padding: 0">
+                          <div class="container-fluid" style="height: 100%;">
+                              <div class="row" style="height: 100%">
+                                  <div class="container-fluid" style="height: 50px; width: 50px;bottom: 5%;position: absolute;padding-left: 0">
+                                    <div class="input-group" style="margin: auto;border-radius: 20px;">
+                                        <button class="btn btn-msg" style="height: 30px; width: 40px;padding: 0" onclick="DisplayChat()">Bot</button>
+                                    </div>
+                                  </div>
+                                  <div id="ChatClarify" class="col-4" style="height: 100%; padding-right: 5px;padding-left: 5px;position: relative;display: none">
+                                      <div class="conversation-wrapper" id="Clarify_conversation">
+                                      </div>
+                                      <div class="input-wrapper" style="height: 10%; width: 100%;bottom: 8%">
+                                            <div class="input-group input-msg">
+                                                <input required id="msgInput" name="message" type="text" class="form-control" placeholder="Enquiry">
+                                                <a class="btn btn-msg" type="submit" onclick="SendClarify()"><i class="bi bi-send-fill"></i></a>
+                                            </div>
+                                            <div class="input-group input-msg" style="padding-top: 5px">
+                                                <a class="btn btn-msg" style="width: 100%" onclick="ClearClarify()"></a>
+                                            </div>
+                                      </div>
+                                  </div>
+                                  <div id="RequireDecompose" class="col-12" style="height: 100%; float: right;padding-right: 10px;padding-left: 10px; position: relative;margin: auto;">
+                                      <div id="result_display"  style="padding-left: 10px;padding-right: 5px;width:100%;height: 100%">
+                                          <div id="stepsContainer" class="card-columns" style=" width: 100%;float: left;display: block;position: relative;padding-top: 20px">
+                                              <div style="width:100%;height: 100px" id="Require_display_container">
+                                                  <textarea  id ="Require_display" class="ProjectPromptTemplate" style="width:100%;height:100%;display: block;float: left"></textarea>
+                                              </div>
+                                              <div style="width: 100%; height: 30px" class="btn-group">
+                                                  <button id="DecomposeButton" type="button" class="btn btn-msg" style="width: calc(100% - 50px); float: left" onclick="splitSteps()">Generate AI chain Skeleton</button>
+                                                  <button type="button" id="arrow-button" class="btn btn-msg" style="width: 50px; float: left" onclick="toggleArrowIcon()">
+                                                        <i class="fa fa-chevron-up"></i>
+                                                  </button>
+                                              </div>
+
+    <!--                                          正在加载效果-->
+                                              <div id="DraftSteps" style="width: 100%; float: left;padding: 0;position: relative">
+                                                  <div class="container" style="padding: 5px">
+                                                        <div class="d-flex justify-content-center">
+                                                            <div class="btn-group w-100">
+                                                                <button type="button" onclick="renderData(inittaskcard, workerindex)" class="btn btn-secondary col-md-4">
+                                                                    Create Step
+                                                                </button>
+                                                                <button type="button" onclick="createlogiccard('If', workerindex)" class="btn btn-secondary col-md-4">
+                                                                    Create Conditional Control
+                                                                </button>
+                                                                <button type="button" onclick="createlogiccard('While', workerindex)" class="btn btn-secondary col-md-4">
+                                                                    Create Loop Control
+                                                                </button>
+                                                                <button type="button" onclick="parseCards()" class="btn btn-secondary col-md-4">
+                                                                    Generate AI Chain
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                  </div>
+                                                  <div id="ReadySplit" class="container mt-3" style="display: none;">
+                                                      <div class="spinner-border spinner-border-sm"></div>
+                                                      <div class="spinner-grow spinner-grow-sm"></div>
+                                                      <div class="spinner-border spinner-border-sm"></div>
+                                                      <div class="spinner-grow spinner-grow-sm"></div>
+                                                      <div class="spinner-border spinner-border-sm"></div>
+                                                      <div class="spinner-grow spinner-grow-sm"></div>
+                                                      </div>
+                                                  <div id="data-container" class="row" style="overflow-y: auto;height: 45vh;padding: 5px">
+                                                  </div>
+                                              </div>
+<!--                                              <div style="height: 25px; width: 50%;padding-top: 20px;left: 50%;transform: translateX(-50%);">-->
+<!--                                                    <button class="btn btn-msg" style="width: 100%" onclick="parseCards()">Generate AI Chain</button>-->
+<!--                                              </div>-->
+                                          </div>
+                                          <div id="cardsContainer" style="padding: 0;width: 30%;height: 80vh;position: absolute; float: left;margin-top: 20px;margin-bottom: 5%;padding-left: 5px;margin-left: 65%;overflow-y: auto;display: none">
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div id="CodeDiv" class="container-fluid code_model_content" style="height: 100px;padding-bottom: 2px">
+                  <div id="ProjectConsole" class="container-fluid" style="height: 100%;padding: 0;border-top: #8c8686 solid 5px;">
+                      <div id="BlockConsole" class="container-fluid" style="height: 100%;display: block">
+                          <div class="row" style="height: 100%">
+                              <div id="BlockConsoleDebug" class="col-6" style="height: 100%;float: left;padding: 0;display: none">
+                                  <div id="BlockDebugValue" style="height: 100%;width: 100%;padding: 0;display: block">
+                                      <textarea id = "input_value" class="ProjectPromptTemplate" style="width: 100%; height: 100%;display: none"></textarea>
+                                  </div>
+                                  <div style="width: 100%;height: 22px;">
+                                      <button id = "submit_value" class="content_button" style="width: 100%;height: 22px;display: none;float: left">Proceed</button>
+                                      <button id = "rerun_value" class="content_button" style="width: 48%;height: 22px;display: none;float: left">Rerun</button>
+                                  </div>
+                              </div>
+                              <div id="BlockConsoleOutput" class="col-12" style="height: 100%;float: left;padding: 0;display: block">
+                                  <textarea id = "output_value" class="ProjectPromptTemplate" style="display: block;width: 100%" readonly="readonly"></textarea>
+                              </div>
+                          </div>
+                      </div>
+                      <div id="PromptConsole" class="container-fluid" style="height: 100%;display: none">
+                          <div class="row"  id="PromptConsoleValue" style="height: 100%;">
+                              <textarea id="init_prompt_value" class="ProjectPromptTemplate" style="display: block" readonly="readonly"></textarea>
+                          </div>
+                      </div>
+                      <div id="EngineConsole" class="container-fluid" style="height: 100%;display: none">
+                          <div class="row"  id="EngineConsoleValue" style="height: 100%;overflow-y: auto">
+                              <textarea id="init_engine_value" class="ProjectPromptTemplate" style="display: block" readonly="readonly"></textarea>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div id="container-fluid ProjectConsoleButton" style="padding-left: 5px">
+                  <div class="btn-group" style="padding-bottom: 3px;padding-left: 5px">
+                      <button id="show_blockconsole_button" onclick="show_block_console()" class="btn content_button">Block Console</button>
+                      <button id="show_engineconsole_button" onclick="show_engine_console()" class="btn content_button">Engine Console</button>
+                      <button id="show_promptconsole_button" onclick="show_prompt_console()" class="btn content_button">Prompt Console</button>
+                  </div>
+                  <input required id="OpenAIKey" type="password" style="width: 150px" placeholder="OpenAI API key" oninput="OpenAIKey = this.value">
+              </div>
+          </div>
+          <div id="ModelDiv" class="col-5" style="padding: 0">
+            <div class="container btn-group" style="padding-bottom: 2px">
+                <button type="button" onclick="import_model()" class="btn content_button">Import Model</button>
+                <button type="button" onclick="save_model()" class="btn content_button">Save Model</button>
+                <button type="button" onclick="download_model()" class="btn content_button">Download Model</button>
+                <button type="button" onclick="upload_model()" class="btn content_button">Upload Model</button>
+            </div>
+            <div id="CreateModelDiv" class="container" style="height: 85vh;"></div>
+            <div id="ModelContentDiv" class="container" style="height: 35vh;float: left;overflow-y: scroll;padding-left: 12px !important;padding-right: 5px !important;display: none">
+            </div>
+          </div>
+          <div id="PromptDiv" class="col-5" style="padding: 0">
+              <div class="container btn-group" style="padding-bottom: 2px">
+                <button type="button" onclick="import_prompt()" class="btn content_button">Import Prompt</button>
+                <button type="button" onclick="save_prompt()" class="btn content_button">Save Prompt</button>
+                <button type="button" onclick="download_prompt()" class="btn content_button">Download Prompt</button>
+                <button type="button" onclick="upload_prompt()" class="btn content_button">Upload Prompt</button>
+              </div>
+              <div id="CreatePromptDiv" class="container" style="height: 50vh;"></div>
+              <div id="PromptContentDiv" class="container" style="height: 35vh;float: left">
+                  <textarea id="init_prompt_template" class="prompttemplate" style="display: block" readonly="readonly"></textarea>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <xml id="toolbox" style="display: none">
+      <category name="Units" id="Units" colour="210">
+<!--          <block type="Set_Text"></block>-->
+        <block type="Module"></block>
+
+        <block type="AI_Unit"></block>
+<!--        <block type="good"></block>-->
+<!--        <block type="Tool_Unit"></block>-->
+
+    </category>
+      <category name="Code" id="Logic" colour="210">
+          <block type="Input"></block>
+          <block type="Output"></block>
+          <block type="text"></block>
+          <block type="prompt_controls_whileUntil"></block>
+          <block type="prompt_control"></block>
+          <block type="Parallel_Work"></block>
+          <block type="prompt_compare">
+            <value name="A">
+                <block type="unit_var_value">
+                    <field name="unit_value">Unit</field>
+                </block>
+            </value>
+            <value name="B">
+                <shadow type="text">
+<!--                    <field name="TEXT"></field>-->
+                </shadow>
+            </value>
+        </block>
+          <block type="Set_value">
+              <value name="variable">
+                <block type="unit_var_value">
+                    <field name="unit_value">Unit</field>
+                </block>
+            </value>
+              <value name="value">
+                <shadow type="text">
+<!--                    <field name="TEXT"></field>-->
+                </shadow>
+            </value>
+          </block>
+          <block type="Append_text">
+              <value name="variable">
+                <block type="unit_var_value">
+                    <field name="unit_value">Unit</field>
+                </block>
+            </value>
+              <value name="value">
+                <shadow type="text">
+<!--                    <field name="TEXT"></field>-->
+                </shadow>
+            </value>
+          </block>
+<!--          <block type="Set_value2_list"></block>-->
+          <block type="For_each">
+            <value name="Var">
+                <block type="unit_var_value">
+                    <field name="unit_value">Item</field>
+                </block>
+            </value>
+              <value name="List">
+                <block type="unit_var_value">
+                    <field name="unit_value">Unit</field>
+                </block>
+            </value>
+          </block>
+      </category>
+      <category name="Prompts" custom="DIYPrompt" colour="210"></category>
+      <category name="Variables" custom="Myvariables" colour="210"></category>
+      <category name="Models" custom="Mymodels" colour="210"></category>
+  </xml>
+  <xml id="modeltoolbox" style="display: none">
+<!--      <category name="Engines" colour="210" custom="DIYModel"></category>-->
+<!--      <category name="Models" custom="ready_models" colour="210">-->
+<!--      </category>-->
+      <category name="Foundation Model" colour="210">
+          <block type="Model">
+              <field name="modelName">gpt-3.5-turbo</field>
+          </block>
+          <block type="Model">
+              <field name="modelName">text-davinci-003</field>
+          </block>
+
+      </category>
+      <category name="Foundation Engine" custom="DIYModel" colour="210">
+      </category>
+      <category name="Tradition Engine" colour="210">
+      </category>
+      <category name="API Engine" colour="210">
+      </category>
+  </xml>
+  <xml id="prompttoolbox" style="display: none">
+      <category name="Prompt Builder" colour="210">
+          <block type="Prompt_template">
+          </block>
+<!--          <block type="lists_create_with">-->
+<!--              <mutation items="1"></mutation>-->
+<!--          </block>-->
+          <block type="Example"></block>
+      </category>
+      <category name="Prompt Base" custom="DIYPrompttemplate" colour="210"></category>
+  </xml>
+  <script src="../static/js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+Choose the relation between the two APIs based on the knowledge of APIs.
+Relations:
+- function similarity: two API entities have similar usage.
+- behavior difference: two API entities have similar usage and different behaves.
+- function replace: one API entity can be replaced by another API entity in some specific condition.
+- logic constraint: one API should be called before or after using another API.
+- efficiency comparison: two API entity have efficiency comparison in some specific conditions.
+- unknow: Not the above relation.
+
+API Knowledge:
+java.util.Scanner.nextInt() is used to read a int value from the input.
+java.util.Scanner.nextLine() is used to read a line of text from the input.
+Relation between java.util.Scanner.nextInt() and java.util.Scanner.nextLine(): Both APIs are used to read information from input text. So the relation is function similarity.
+
+API Knowledge:
+java.net.URL.getFile is used to get the file name of the URL.
+java.net.URL.getPath is  used to get the path of the URL.
+Relation between java.net.URL.getFile and java.net.URL.getPath: Both APIs are used to get the information of URL. So the relation is function similarity.
+
+API Knowledge:
+java.lang.Thread.join() allows one thread to wait for the completion of another thread.
+java.lang.Thread.isAlive() determines whether a thread is still running or not.
+Relation between java.lang.Thread.join() and java.lang.Thread.isAlive(): The relation is unknow.
+
+API Knowledge:
+java.io.File.exists() is used to check if a file or directory exists at the specified path.
+java.nio.file.Files.notExists() is used to check if a file or directory does not exist at the specified path.
+Relation between java.io.File.exists() and java.nio.file.Files.notExists(): They have opposite usage. So the relation is unknow.
+
+API Knowledge:
+java.util.Collections.sort is a method used to sort the elements of a list, using a specified comparator.
+java.util.List.sort is a method used to sort the elements of a List in-place, using a specified Comparator.
+Relation between java.util.Collections.sort and java.util.List.sort: Both APIs are used to sort the element in the list. So the relation is function similarity.
+
+API Knowledge:
+{{content}}
+Relation between {{api_1}} and {{api_2}}:

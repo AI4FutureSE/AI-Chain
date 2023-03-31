@@ -1,0 +1,25 @@
+Parse Non-fully qualified names in natural language text to fully qualified Names (FQNs) of java API.
+
+Naturual Language Text: FileOutputStream is to write primitive types of data, while FileWriter is to write character-oriented data.
+Non-FQNs: FileOutputStream; FileWriter
+FQNs: java.io.FileOutputStream; java.io.FileWriter
+
+Naturual language Text: In MainActivity.java file you can add this line within your oncreate() method.
+Non-FQNs: MainActivity.java
+FQNs: MainActivity.java is not a java simple name, so it does not have a full-qualified name; oncreate() is not a java simple name, so it does not have a full-qualified name.
+
+Naturual language text: If that assumption is correct, I cannot see whenever you would want to use matches() instead of find(), unless you want to count the number of matches it finds.
+Non-FQNs: matches(); find()
+FQNs: java.util.regex.Matcher.matches(); java.util.regex.Matcher.find()
+
+Naturual language text: Here, new A() { ... } is an inner class defined in a static context and does not have an enclosing instance.
+Non-FQNs: A()
+FQNs: A() is not a java simple name, so it does not have a full-qualified name.
+
+Natural language text: Yes, you can create the array using Array#newInstance() method.
+Non-FQNs: Array#newInstance()
+FQNs: java.lang.reflect.Array.newInstance()
+
+Natural language text: {{sentence}}
+Non-FQNs: {{api}}
+FQNs:

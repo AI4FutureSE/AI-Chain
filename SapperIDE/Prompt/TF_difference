@@ -1,0 +1,46 @@
+Determine whether the claim is correct based on the knowledge of APIs.
+
+API Knowledge:
+java.util.Scanner.nextInt() is a method used to read a int value from the input.
+java.util.Scanner.nextLine() is a method used to read a line of text from the input.
+The java.util.Scanner.nextInt() method scans the next token of the input as an int. It will return the int value scanned from the input.
+The java.util.Scanner.nextLine() method scans the next line of the input. It will return the line that was scanned from the input.
+claim: Based on the domain knowledge above, nextInt() and nextLine() have similar usage and different behavior.
+answer: The two APIs are used to read the information of input. However, java.util.Scanner.nextInt() scans a single integer value from the input, and java.util.Scanner.nextLine() scans an entire line of text from the input. The claim is correct.
+
+API Knowledge:
+java.util.HashMap is used to store and manage key-value pairs.
+java.util.Hashtable is used to store and retrieve data in a key-value pair format.
+The java.util.HashMap provides constant time performance for the basic operations such as get and put. It allows null values and the null key. It is not thread-safe and must be synchronized externally if used in a multi-threaded environment.
+The java.util.Hashtable class provides constant time performance for the basic operations such as get and put. It does not allow null values and the null key. It is thread-safe and can be used in a multi-threaded environment without external synchronization.
+claim: Based on the domain knowledge above, HashMap and Hashtable have similar usage and different behavior.
+answer: The two APIs are used to store key-value pairs in a hash table. However, HashMap allows null values and the null key, Hashtable does not allow null values and the null key; HashMap is not thread-safe, Hashtable is thread-safe. The claim is correct.
+
+API Knowledge:
+java.util.Map is used to store key-value pairs.
+java.io.FileReader is used to read characters from a file in a Java program.
+The java.util.Map interface is a collection that maps keys to values. It does not allow duplicate keys, but may contain duplicate values. It provides methods for adding, removing, and searching for key-value mappings. It also provides methods for bulk operations such as putAll and clear.
+The FileReader class provides methods for reading character data from a file and also allows the user to specify the file to be read.
+claim: Based on the domain knowledge above, java.util.Map and java.io.FileReader have similar usage and different behavior.
+answer: They have unrelated usage. The claim is incorrect.
+
+API Knowledge:
+java.util.Deque.removeLast() is used to remove and return the last element from the Deque.
+java.util.Deque.pollLast() method is used to retrieve and remove the last element from the Deque.
+The java.util.Deque.removeLast() method is used to remove and return the last element of the Deque container. It throws an exception if the Deque is empty.
+The java.util.Deque.pollLast() method is used to retrieve and remove the last element of the Deque container. It returns null if the Deque is empty.
+claim: Based on the domain knowledge above, removeLast() and pollLast() have similar usage and different behavior.
+answer: The two APIs are used to remove the last element from the Deque. However, removeLast() will throw an exception if the deque is empty, and pollLast() will return null in this case. The claim is correct.
+
+API Knowledge:
+java.io.DataOutputStream is used for writing primitive data types to an output stream in a binary format.
+java.io.DataInputStream class is used to read primitive data types in binary format from an input stream.
+The java.io.DataOutputStream class provides methods for writing primitive Java data types to an output stream in a portable way.
+The java.io.DataInputStream class allows an application to read primitive data types from an underlying input stream in a machine-independent way.
+claim: Based on the domain knowledge above, DataOutputStream and DataInputStream have similar usage and different behavior.
+answer: They have opposite usage. The claim is incorrect.
+
+API Knowledge:
+{{content}}
+claim: Based on the domain knowledge above, {{api_1}} and {{api_2}} have similar usage and different behavior.
+answer:

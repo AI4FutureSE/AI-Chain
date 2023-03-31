@@ -1,0 +1,19 @@
+Answer the question about API knowledge.
+
+Q: What are the characteristics of java.util.Map?
+A: java.util.Map is a collection that maps keys to values. It does not allow duplicate keys, but may contain duplicate values. It provides methods for adding, removing, and searching for key-value mappings. It also provides methods for bulk operations such as putAll and clear.
+
+Q: What are the characteristics of java.util.Deque.removeLast()?
+A: java.util.Deque.removeLast() is used to remove and return the last element of the Deque container. It throws an exception if the Deque is empty.
+
+Q: What are the characteristics of java.util.TreeMap.ceilingEntry()?
+A: java.util.TreeMap.ceilingEntry() returns a key-value mapping associated with the least key greater than or equal to the given key, or null if there is no such key. This method returns null if the TreeMap is empty.
+
+Q: What are the characteristics of java.lang.StringBuffer?
+A: java.lang.StringBuffer is a mutable sequence of characters. It is similar to String, but it can be modified. It is thread-safe, meaning multiple threads can access the same StringBuffer object without causing any conflicts.
+
+Q: What are the characteristics of java.util.TreeMap.ceilingKey()?
+A: The java.util.TreeMap.ceilingKey() returns the least key greater than or equal to the given key, or null if there is no such key. It throws a NullPointerException if the specified key is null and the map is non-empty.
+
+Q: What are the characteristics of {{api}}?
+A:

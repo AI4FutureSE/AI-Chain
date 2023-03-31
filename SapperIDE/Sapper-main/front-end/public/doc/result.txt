@@ -1,0 +1,14 @@
+def fun(n): #定义函数fun，用于判断一个数是否是素数
+    def fun1(p): #定义函数fun1，用于判断一个数是否是素数
+        if p == 2: #若p为2，即为素数，返回True
+            return True
+        if p % 2 == 0: #若p为偶数，不为素数，返回False
+            return False
+        for i in range(3, int(p ** 0.5) + 1, 2): #从3到p的平方根+1，以2为步长遍历，即3,5,7...
+            if p % i == 0: #若p可以整除上面遍历的数，则不为素数，返回False
+                return False
+        return True #若上面的条件都不满足，则为素数，返回True
+    if isinstance(n, int) and n > 0 and n % 2 == 0: #若n为正偶数
+        for i in range(2, n // 2 + 1): #从2到n的一半加1，遍历
+            if fun1(i) and fun1(n - i): #若i和n-i均为素数
+                print(i, '+', n - i, '=', n) #输出i和n-i的和为n
