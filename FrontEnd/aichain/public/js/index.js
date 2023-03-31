@@ -1,4 +1,6 @@
 $(document).ready(()=>{
+
+    // change the navbar on scroll
     $(window).scroll(function (){
         let nav = $('.my-navbar')
         let cover = $('#cover')
@@ -23,5 +25,10 @@ $(document).ready(()=>{
                 $(this).css({'color':'whitesmoke'})
             });
         }
+    })
+
+    // click card to redirect
+    $('.module-card').click(function (){
+        window.location.href = 'content.html'
     })
 })
