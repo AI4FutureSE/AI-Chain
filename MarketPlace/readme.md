@@ -18,4 +18,4 @@ Check `marketplace.py` for a simple example.
 4. Call `marketplace.similar_search('query')` to search similar prompts from database.
 
 ### Note:
-The model support both English and Chinese.
+The model supports both English and Chinese.
