@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contents</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- self-defined -->
+    <link href="css/content.css" rel="stylesheet">
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light my-navbar">
+  <a class="navbar-brand" href="#cover">AI Chain</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#aichain">Chain</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#promptmanship">Promptmanship</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sapper">Sapper</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+    <div id="main-content" class="container">
+        <h1 class="main-title">AI Chain Concepts</h1>
+        <h2 class="main-subtitle"></h2>
+        
+        <img class="main-figure" src="image/figures/Magic.jpg">
+        <p class="figure-caption">Promptmanship: concepts, process, activities, and patterns</p>
+
+        <P>We not only inherit and adapt traditional software concepts such as software requirements, object composition and collaboration, and object roles to the AI chain context, but also developers unique concepts specific to AI chains such as Software 1.0/2.0/3.0 workers, worker-AI interaction modes, and prompt designs and patterns.
+        </P>
+
+        <h2 class="main-subtitle">Requirements</h2>
+        <p>
+            Building AI chains is a <a href="urlofrapidprototypinghtml">rapid prototyping process</a> that creates custom AI services on top of foundation models. 
+            Foundation models make rapid prototyping of AI services feasible, as we no longer need to spend time and effort on data engineering and model training, but focus on the act of solving problems using AI. 
+            Furthermore, rapid prototyping allows for the quick delivery of working software and obtaining feedback to iteratively improve AI services.
+            See how we build <a href="">showcase1-name</a> and <a href="">showcase2-name</a> through rapid prototyping in <a href="">Sapper IDE</a>. 
+            As AI chain engineering frees us from low-level coding, we will see a revival of important but undervalued software engineering activities, such as requirement analysis, specification and verification throughout AI chain engineering.
+            The key is to align problem understanding with model capability through iterative design, evaluation and improvement of AI chains and prompts. 
+            This process can be enhanced by the interaction with large language models, which we call <a href="">magic enhancing magic</a>.
+        </p>
+        
+        <h2 class="main-subtitle">Worker composition and cooperation</h2>
+        <p>
+            An AI chain consist of a set of cooperating function units, which we call workers, analogous to objects. 
+            AI chain is a recursive concept.
+            Depending on the task complexity and model capability, an AI chain may organize cooperating workers into a hierarchy of workers. 
+            The worker hierarchy can be represented in <a href="https://en.wikipedia.org/wiki/Composite_pattern">composite pattern</a>, in which the leaf worker has no children and implements the functionality directly, and the composite worker (analogous to module) maintains a container of child workers (leaf or composite) and forwards requests to these children. An AI chain also needs to specify the workflow, control structure, and cooperation of its workers. 
+            Workers need to define a "function signature" for communicating with human and other workers. 
+            We can use <a href="http://www.workflowpatterns.com/">workflow patterns</a> to define and implement the cooperation between workers, data management, and exception handling. 
+            These worker design aspects are analogous to system design and should follow computational thinking principles, such as problem decomposition, pattern  recognition, and algorithmic thinking, as well as well-recognized software engineering practices, such as separation of concerns and modularity.
+        </p>
+
+        <h2 class="main-subtitle">Worker types</h2>
+        <p>
+            An AI chain may consist of three types of workers. 
+            First, Software 3.0 workers use foundation models to accomplish the tasks specified in natural language prompts. 
+            Second, Software 2.0 workers use some AI functionality by programming language, for example, the rewrite classifier in <a href="https://arxiv.org/abs/2210.06774">Re3</a>, the answer consistency checker in <a href="https://arxiv.org/abs/2210.02441">Ask My Anything</a>. or web browser. 
+            Third, Software 1.0 workers invoke non-AI tools or APIs by programming language, for example, calculator, Python interpreter. 
+            There are two types of hybrid workers which blend the input of worker 3.0 and the processing of worker 1.0/2.0. 
+            That is, the hybrid workers accept natural language prompts as worker 3.0, but they do not directly use foundation models to acomplish the tasks.
+            Instead, they use large language models to generate code or invoke other models to acomplish the tasks as worker 1.0/2.0.
+            We refer to such hybrid workers as worker 1.5/2.5.
+            Software 3.0 workers will play the main role in an AI chain, but they will not cover 100% the problem space where Software 2.0 and Software 1.0 workers can perform more effectively and economically. 
+            When designing AI chains, it is important to separate AI and non-AI concerns in the task and determine the most effective worker type for different concerns.
+        </p>
+
+        <h2 class="main-subtitle">Worker-AI interaction modes</h2>
+        <p>
+            Large language models have been shown to solve various tasks given only prompts, but many real-world applications involve multi-step tasks that are nontrivial for a single run of the model. 
+            It is thus important to determine the proper interaction mode that a Software 3.0 worker uses to interact with the model to accomplish the task or a step of the task. 
+            We define four interaction modes, with the increasing reasoning capability: 
+            
+        </p>
+        <ul>
+            <li>L1 - a leaf worker that keeps all reasoning implicit</li>
+            <li>L2 - a leaf worker with Chain-of-Thoughts (CoT) instruction and/or examples</li>
+            <li>L3 - a leaf worker with explicit meta-level problem-solving workflow</li>
+            <li>L4 - a composite worker (i.e., AI chain) consists of multiple cooperating workers</li>
+        </ul>
+        <p>
+            L1 keeps all reasoning implicit and produces the final answer directly. 
+            L2 encourages reasoning before answering by the CoT instruction like "let’s think step by step", "we need to first solve", "are there missing information", and/or few-shot CoT examples that demonstrate instance-level reasoning steps.
+            L3 breaks down a complex problem into smaller steps and explicitly expresses the meta-level problem solving workflow as part of the prompt. 
+            Although L2 and L3 incorporate reasoning steps, they perform all reasoning steps in a single generative pass, which may not give the model enough "thinking time" to solve complex, multi-step problems, even if the model can successfully solve each intermediate sub-problem within a step. Furthermore, L2 and L3 offer no control over the black-box language model reasoning process, which may generate unrelated or incorrect steps while still resulting in the correct answers. 
+            L4 (i.e., AI chain) addresses these limitations by representing task sub-steps as explicit cooperating workers. 
+            Each worker is responsible for a sub-step, and they cooperate to accomplish the overall task.
+        </p>
+        
+        <h2 class="main-subtitle">Worker roles and prompt design</h2>
+        <p>
+            A prompt defines the function of a worker and “program” the foundation model to complete the corresponding task. The workers should follow single responsibility principle and play distinct roles instructed by their prompts.
+            We can define <a href="promptdesingpatternhtml#workerstereotype">common stereotypes for worker roles</a>, such as input rewriter, splitter, reverse questioner, planner information inquirer, commander, composer, state monitor, verifier. 
+            We document a set of <a href="promptdesingpatternhtml">prompting caveats and patterns</a> to improve prompt performance or accomplish more difficult tasks.
+        </p>
+        <p>
+            
+            While prompt programming lowers the barrier for non-technical individuals to develop AI prototypes, the difficulty of designing effective prompts increases with increasing reasoning ability of the worker. 
+            For L2, challenges arise in finding or generating representative few-shot examples (so called <a href="https://dl.acm.org/doi/abs/10.1145/3491101.3503564">example sourcing</a>), requiring AI chain engineers to be creative and maintain example datasets (although would be smaller than those typically used to train neural networks). 
+            For L3, the challenge is to accurately describe task workflows, which can be achieved using <a href="promptdesingpatternhtml">semi-structured or code-like prompts</a>. 
+        </p>
+        <p>
+            Adopting L4, decomposing complex workflows into cooperating workers, significantly reduces prompt design difficulty as each worker only needs to execute a simple sub-step of the complex workflow. 
+            Furthermore, we can provide each sub-task worker with sufficient specific examples, test and debug individual workers (akin to unit testing) to optimize its performance, and seamlessly plug the improved worker into the AI chain, as a systematic way to improve performance on the complex task. 
+            A well-design worker can be reused across multiple tasks. 
+            Last but not least, L4 offers more transparent and controllable <a href="https://arxiv.org/abs/2203.08383">process supervision</a>. 
+            This is crucial for responsible AI, especially for important applications in which the process used to generate the output matters as much as the output itself.
+        </p>
+    </div>
+</main>
+
+<!--<footer id="footer">-->
+<!--</footer>-->
+
+</body>
+</html>
