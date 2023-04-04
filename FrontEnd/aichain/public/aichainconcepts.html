@@ -39,12 +39,14 @@
         <h2 class="main-subtitle"></h2>
         
         <img class="main-figure" src="image/figures/Magic.jpg">
-        <p class="figure-caption">Promptmanship: concepts, process, activities, and patterns</p>
+        <p class="figure-caption">Promptmanship: process, concepts, activities, and patterns</p>
 
-        <P>We not only inherit and adapt traditional software concepts such as software requirements, object composition and collaboration, and object roles to the AI chain context, but also developers unique concepts specific to AI chains such as Software 1.0/2.0/3.0 workers, worker-AI interaction modes, and prompt designs and patterns.
+        <P>
+            We not only inherit and adapt traditional software concepts such as software requirements, object composition and collaboration, and object roles to the AI chain context, but also developes unique concepts specific to AI chains such as Software 1.0/2.0/3.0 workers, worker-AI interaction modes, and prompt designs and patterns.
+            These concepts have different level of relevance to different AI chain engineeering activities, and they will be identified, analyzed and refined in various AI chain engineering activities throughout the rapid prototyping process of AI services.
         </P>
 
-        <h2 class="main-subtitle">Requirements</h2>
+        <h2 class="main-subtitle">AI chain requirements</h2>
         <p>
             Building AI chains is a <a href="urlofrapidprototypinghtml">rapid prototyping process</a> that creates custom AI services on top of foundation models. 
             Foundation models make rapid prototyping of AI services feasible, as we no longer need to spend time and effort on data engineering and model training, but focus on the act of solving problems using AI. 
@@ -68,14 +70,26 @@
 
         <h2 class="main-subtitle">Worker types</h2>
         <p>
-            An AI chain may consist of three types of workers. 
-            First, Software 3.0 workers use foundation models to accomplish the tasks specified in natural language prompts. 
-            Second, Software 2.0 workers use some AI functionality by programming language, for example, the rewrite classifier in <a href="https://arxiv.org/abs/2210.06774">Re3</a>, the answer consistency checker in <a href="https://arxiv.org/abs/2210.02441">Ask My Anything</a>. or web browser. 
-            Third, Software 1.0 workers invoke non-AI tools or APIs by programming language, for example, calculator, Python interpreter. 
+            An AI chain may consist of three main types of workers and two variant types.
+        </p>
+        <ul>
+            <li>
+                Software 3.0 workers use foundation models to accomplish the tasks specified in natural language prompts. 
+            </li>
+            <li>
+                Software 2.0 workers use some AI functionality by programming language, for example, the rewrite classifier in <a href="https://arxiv.org/abs/2210.06774">Re3</a>, the answer consistency checker in <a href="https://arxiv.org/abs/2210.02441">Ask My Anything</a>. or web browser. 
+            </li>
+            <li>
+                Software 1.0 workers invoke non-AI tools or APIs by programming language, for example, calculator, Python interpreter. 
+            </li>
+        </ul>
+        <p>
             There are two types of hybrid workers which blend the input of worker 3.0 and the processing of worker 1.0/2.0. 
             That is, the hybrid workers accept natural language prompts as worker 3.0, but they do not directly use foundation models to acomplish the tasks.
             Instead, they use large language models to generate code or invoke other models to acomplish the tasks as worker 1.0/2.0.
             We refer to such hybrid workers as worker 1.5/2.5.
+        </p>
+        <p>
             Software 3.0 workers will play the main role in an AI chain, but they will not cover 100% the problem space where Software 2.0 and Software 1.0 workers can perform more effectively and economically. 
             When designing AI chains, it is important to separate AI and non-AI concerns in the task and determine the most effective worker type for different concerns.
         </p>
@@ -88,18 +102,27 @@
             
         </p>
         <ul>
-            <li>L1 - a leaf worker that keeps all reasoning implicit</li>
-            <li>L2 - a leaf worker with Chain-of-Thoughts (CoT) instruction and/or examples</li>
-            <li>L3 - a leaf worker with explicit meta-level problem-solving workflow</li>
-            <li>L4 - a composite worker (i.e., AI chain) consists of multiple cooperating workers</li>
+            <li>
+                L1 - a leaf worker that keeps all reasoning implicit. 
+                L1 keeps all reasoning implicit and produces the final answer directly. 
+            </li>
+            <li>
+                L2 - a leaf worker with Chain-of-Thoughts (CoT) instruction and/or examples. 
+                L2 encourages reasoning before answering by the CoT instruction like "let’s think step by step" (<a href="https://arxiv.org/abs/2205.11916">Kojima et al. 2022</a>), "we need to first solve" (<a href="https://arxiv.org/abs/2205.10625">Zhou et al. 2022</a>), "are there missing information", and/or few-shot CoT examples that demonstrate instance-level reasoning steps ((<a href="https://arxiv.org/abs/2201.11903">Wei et al. 2022</a>)).
+            </li>
+            <li>
+                L3 - a leaf worker with explicit meta-level problem-solving workflow. L3 breaks down a complex problem into smaller steps and explicitly expresses the meta-level problem solving workflow as part of the prompt (see the Table 1 in the <a href="https://arxiv.org/pdf/2301.01751">Iterated Decomposition</a> paper). 
+            </li>
+            <li>
+                L4 - a composite worker (i.e., AI chain) consists of multiple cooperating workers.
+                Each worker is responsible for a sub-step, and they cooperate to accomplish the overall task (see <a href="">AI chain examples</a> from the literature and explore our <a href="aichain.store">AI chain showcases</a>).
+            </li>
         </ul>
         <p>
-            L1 keeps all reasoning implicit and produces the final answer directly. 
-            L2 encourages reasoning before answering by the CoT instruction like "let’s think step by step", "we need to first solve", "are there missing information", and/or few-shot CoT examples that demonstrate instance-level reasoning steps.
-            L3 breaks down a complex problem into smaller steps and explicitly expresses the meta-level problem solving workflow as part of the prompt. 
-            Although L2 and L3 incorporate reasoning steps, they perform all reasoning steps in a single generative pass, which may not give the model enough "thinking time" to solve complex, multi-step problems, even if the model can successfully solve each intermediate sub-problem within a step. Furthermore, L2 and L3 offer no control over the black-box language model reasoning process, which may generate unrelated or incorrect steps while still resulting in the correct answers. 
+            Although L2 and L3 incorporate reasoning steps, they perform all reasoning steps in a single generative pass, which may not give the model enough "thinking time" to solve complex, multi-step problems, even if the model can successfully solve each intermediate sub-problem within a step (). 
+            Furthermore, L2 and L3 offer no control over the black-box language model reasoning process, which may generate unrelated or incorrect steps while still resulting in the correct answers. 
             L4 (i.e., AI chain) addresses these limitations by representing task sub-steps as explicit cooperating workers. 
-            Each worker is responsible for a sub-step, and they cooperate to accomplish the overall task.
+            
         </p>
         
         <h2 class="main-subtitle">Worker roles and prompt design</h2>

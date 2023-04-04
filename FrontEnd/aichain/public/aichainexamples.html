@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contents</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- self-defined -->
+    <link href="css/content.css" rel="stylesheet">
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light my-navbar">
+  <a class="navbar-brand" href="#cover">AI Chain</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#aichain">Chain</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#promptmanship">Promptmanship</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sapper">Sapper</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+    <div id="main-content" class="container">
+        <h1 class="main-title">AI Chain Examples</h1>
+        <h2 class="main-subtitle"></h2>
+
+        <img class="main-figure" src="image/figures/previous%20work.jpg">
+        <p class="figure-caption">Caption of the figure</p>
+
+        <p>
+            @Dehai, make each example a side by side figure and text (including paper title, hyperlink the title to the paper source, and a short explanation).
+        </p>
+        
+        <p>
+            @Dehai, add hugginggpt figure and text
+        </p>
+        
+        <p>
+             Figure~\ref{fig:examples} present examples of AI chains for diverse tasks, such as question answering~\cite{arora2022ask}, content creation~\cite{schick2022peer, yang2022re3, wu2022ai}, logical reasoning~\cite{creswell2022selection, kazemi2022lambada}, robotics~\cite{singh2022progprompt}, and code analysis~\cite{pcrchain}.
+            \begin{itemize}[leftmargin=*]
+                \item Arora et al.~\cite{arora2022ask} (Figure~\ref{fig:examples}(a)) present a strategy for improving question answering by chaining question rewriting, parallel answering, and self-consistency checking units.
+
+                \item PEER~\cite{schick2022peer} (Figure~\ref{fig:examples}(b)) and Re3~\cite{yang2022re3} (Figure~\ref{fig:examples}(c) decompose content creation as recursive plan, write, revision steps.
+
+                \item LAMBADA (Figure~\ref{fig:examples}(d)) supports a backward reasoning AI chain algorithm, consisting of four sub-modules - fact check, rule selection, goal decomposition, and sign agreement.
+
+                \item Wu et al.~\cite{wu2022ai} (Figure~\ref{fig:examples}(e)) design an AI chain for rewriting peer reviews by chaining split-points, ideation, and compose-points steps.
+                They also demonstrate an AI chain for travel flashcard creation through brainstorming, ideation, and translation.
+
+                \item Selection-Inference~\cite{creswell2022selection} (Figure~\ref{fig:examples}(f)) performs repeated fact selection and inference for interpretable logical reasoning.
+
+                \item Singh et el.~\cite{singh2022progprompt} ((Figure~\ref{fig:examples}(g)) perform robotics operation by an AI chain of robot task planning, execution and feedback.
+                Similar LLM-based robotics can be found in~\cite{DescribeExplainPlanSelect-https://arxiv.org/pdf/2302.01560.pdf, chatgptforrobotics-https://www.microsoft.com/en-us/research/uploads/prod/2023/02/ChatGPT___Robotics.pdf}
+
+                \item Huang et al.~\cite{pcrchain} (Figure~\ref{fig:examples}(h)) fix unresolved fully-qualified names and last-mile code errors step by step in partial code.
+            \end{itemize}
+        </p>
+        
+        <p>
+            In addition to specific tasks, AI chain is a powerful tool for multi-model, tool, or API collaboration to solve complex tasks involving multi-modal subtasks.
+            HuggingGTP~\cite{https://arxiv.org/abs/2303.17580} creates a model collaborative system, in which the LLM coordinates external specialized models to deal with complex AI tasks.
+            In the backend, the LLM runs an AI chain to understand user input, plan task sub-steps, select appropriate external models to execute, and aggregate the results from various models.
+            Similar ideas have been proposed in ChatGPT plugin~\cite{https://openai.com/blog/chatgpt-plugins} and TaskMatrix.AI~\cite{https://arxiv.org/abs/2303.16434}
+        </p>
+    </div>
+</main>
+
+<!--<footer id="footer">-->
+<!--</footer>-->
+
+</body>
+</html>
