@@ -42,13 +42,15 @@
         <p class="figure-caption">Promptmanship: process, concepts, activities, and patterns</p>
 
         <p>
-            This co-pilot activity leverages the capabilities of large language models to enhance AI chain engineering in multiple ways: <b>acquiring task knowledge</b>, <b>requirement elicitation</b>, and <b>mechanical sympathy</b>.
+            This co-pilot activity leverages the capabilities of large language models to enhance AI chain engineering from three aspects: <b>acquiring task knowledge</b>, <b>requirement elicitation</b>, and <b>mechanical sympathy</b>.
+            Our Sapper IDE is equipped with specialized LLM-based co-pilots (Software 3.0 workers) to support the magic-enhancing-magic activity.             
         </p>
         
         <h2 class="main-subtitle">Acquiring task knowledge</h2>
         <p>
             The pre-training of LLMs uses Internet-scale data, which makes the resulting models neural knowledge bases (<a href="https://arxiv.org/abs/2301.12810">Cohen et al. 2023</a>). 
-            People can chat with the LLM to obtain task-related knowledge, for example, how people generally solve the task step by step, what are key challenges in problem solving, what kind of information is required or produced, are there any special conditions/cases, what are common errors and how to recover from the errors, what tool supports are available and what are their limitations.
+            People can chat with the LLM to obtain task-related knowledge, such as how people generally solve the task step by step, what are key challenges in solving a particular problem, what kind of information is required or produced, are there any special conditions/cases, what are common errors and how to recover from them, what tool supports are available and what are their limitations.
+            Such task-related knowledge serve as the foundation for AI chain analysis and design.
         </p>
         
         <p>
@@ -58,7 +60,7 @@
         </p>
         
         <p>
-            Such task-related knowledge serve as the foundation for AI chain analysis and design.
+            Our IDE's <a href="explorationviewpage">Exploration view</a> supports the chatting with ChatGPT, and is equipped with a note-taking co-pilot that summarizes key notes from the chats in real time, such as task context, user preference, things to avoid.
             Although chatting with the LLM is more convenient and efficient than obtaining relevant knowledge through Internet searches, it is important to be aware of the correctness of the knowledge recommended by the LLM.
             People can verify the model's output by asking it to explain its thought process (<a href="promptdecoratorspage">Reflection</a>), list the relevant facts it knows (<a href="workerstereotypepage">Verifier</a>), and then combine it with their own knowledge to assess the validity of the model's response.
         </p>
@@ -77,7 +79,7 @@
         <p>
             Mechanical Sympathy means that a racing driver does not need to be a mechanical engineer, but understanding how the car works can make one a better racing driver. 
             The same applies to developing AI chains and writing prompts, especially as large language models are transforming AI from traditional design and engineering to something more akin to natural science. 
-            Therefore, we need to explore and understand emergent AI behaviors and capabilities.
+            Therefore, we need to empirically explore and understand emergent AI behaviors and capabilities.
         </p>
         <p>
             Gwern Branwen's <a href="https://gwern.net/gpt-3#prompts-as-programming">blog</a> proposes that we need to <b>anthropomorphize prompts</b>.
@@ -87,9 +89,14 @@
             Understanding these discrepancies can guide us in decomposing tasks and writing prompts to fit with the model capability. 
         </p>
         <p>
-            Research has shown that large language models can create human-level prompts (<a href="https://arxiv.org/abs/2211.01910">Zhou et al. 2023</a>),            we can also rely on large language models to create or revise prompts.
-            In fact, the <a href="designviewmanualpage">Design view</a> of our <a href="https://promptsapper.tech">Sapper IDE</a> uses the LLM to create candidate prompts when generating AI chain skeleton.
-            During prompt debugging in the <a href="blockviewmanualpage">Block view</a>, the engineer can also request the LLM to revise an existing prompt.
+            Foundation models provide playgrounds for experimenting prompts.
+            Our IDE's <a href="explorationviewpage">Exploration view</a> can be regarded as a playground for developing the mechanical sympathy for ChatGPT.
+        </p>
+        <p>
+            Research has shown that large language models can create human-level prompts (<a href="https://arxiv.org/abs/2211.01910">Zhou et al. 2023</a>).
+            Inspired by this, our IDE implements a ChatGPT-based prompting co-pilot to create or revise prompts.
+            The <a href="designviewmanualpage">Design view</a> uses this prompting co-pilot to create candidate prompts when generating AI chain skeleton.
+            During prompt debugging in the <a href="blockviewmanualpage">Block view</a>, the engineer can request this prompting-copilot to revise an existing prompt.
         </p>
         
     </div>
