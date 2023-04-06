@@ -4,6 +4,11 @@
     src: url("../plugin/font/Roboto-Regular.ttf");
 }
 
+@font-face {
+    font-family: Exo;
+    src: url("../plugin/font/Exo2-VariableFont_wght.ttf");
+}
+
 :root{
     --first: #23a6d5;
     --second: #e73c7e;
@@ -129,7 +134,7 @@ html body{
 
 .title{
     font-size: 8em;
-    font-family: "Agency FB", serif;
+    font-family: Exo, serif;
 }
 
 .subtitle{
