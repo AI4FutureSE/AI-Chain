@@ -4,6 +4,11 @@
     src: url("../plugin/font/Roboto-Regular.ttf");
 }
 
+@font-face {
+    font-family: Exo;
+    src: url("../plugin/font/Exo2-VariableFont_wght.ttf");
+}
+
 :root{
     --first: #23a6d5;
     --second: #e73c7e;
@@ -68,21 +73,21 @@ html body{
     /*background-color: var(--blue);*/
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     transition: 0.8s !important;
-    width: 700px;
+    width: 750px;
     height: 65px;
     top: 0;
 }
 
 .navbar-brand{
     width: 150px;
-    font-size: 30px;
-    font-weight: bolder;
+    font-size: 25px;
+    font-weight: bold;
     text-align: center;
     background-color: white;
     color: var(--first);
-    font-family: "Agency FB", serif;
+    font-family: Exo, serif;
     height: 65px;
-    padding-top: 10px;
+    padding-top: 12px;
     transition: 0.5s;
     margin: 0;
 }
@@ -122,18 +127,18 @@ html body{
 
 .title-wrap{
     color: white;
-    padding: 200px;
+    padding: 145px;
     text-align: center;
     height: 100%;
 }
 
 .title{
-    font-size: 8em;
-    font-family: "Agency FB", serif;
+    font-size: 7em;
+    font-family: Exo, serif;
 }
 
 .subtitle{
-    margin: 2em 0 3em;
+    margin: 3em 0 6em;
 }
 
 .btn-title{
@@ -190,7 +195,7 @@ html body{
 
 .graphic-divider{
     width: 100%;
-    margin-top: -295px;
+    margin-top: -270px;
 }
 
 /* module */
