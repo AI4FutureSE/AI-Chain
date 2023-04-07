@@ -72,7 +72,7 @@
             We need to interact with engineers through requirement elicitation and gradually clarify vague ``what they want'' statements into specific AI chain needs. 
             This challenging task can be supported by large language models, for example, through a <a href="workerstereotypepage">Reverse Questioner</a> worker. 
             By providing some examples of requirement elicitation (such as good open-ended requirement elicitation questions in <a href="https://www.amazon.com.au/Software-Requirements-Karl-Wiegers/dp/0735679665">Software Requirements</a> by Karl E. Wiegers), large language models would learn to ask good open-ended questions for specific tasks and thus elicit specific AI chain needs.
-            The <a href="designviewmanualpage">Design view</a> of our <a href="https://promptsapper.tech">Sapper IDE</a> is equipped with such a requirement elicitation co-pilot that interacts with the engineer to elicit and analyze tasks requirements.
+            The <a href="designviewmanualpage">Design view</a> of our <a href="https://promptsapper.tech">Sapper IDE</a> is equipped with such a requirement elicitation co-pilot that interacts with the engineer to elicit and analyze tasks requirements (<b>To be fixed: see a demo case there</b>).
         </p>
         
         <h2 class="main-subtitle">Mechanical sympthy</h2>
@@ -91,12 +91,13 @@
         <p>
             Foundation models provide playgrounds for experimenting prompts.
             Our IDE's <a href="explorationviewpage">Exploration view</a> can be regarded as a playground for developing the mechanical sympathy for ChatGPT.
+            For example, when building <a href="sixiaopincase">SiXiaoPin</a> (a mock interview service), the engineer experimented prompts for generating interview questions and found that the LLM sometimes generates questions in form of suggestions such as ``You may ask: ... an interview question ...'', but not as an interviewer. 
+            He found that this issue can be addressed by setting up <a href="promptdecroratorspage">persona</a> and <a href="promptaspectspage">output formatter</a>.
         </p>
         <p>
             Research has shown that large language models can create human-level prompts (<a href="https://arxiv.org/abs/2211.01910">Zhou et al. 2023</a>).
-            Inspired by this, our IDE implements a ChatGPT-based prompting co-pilot to create or revise prompts.
-            The <a href="designviewmanualpage">Design view</a> uses this prompting co-pilot to create candidate prompts when generating AI chain skeleton.
-            During prompt debugging in the <a href="blockviewmanualpage">Block view</a>, the engineer can request this prompting-copilot to revise an existing prompt.
+            Inspired by this, our IDE's <a href="designviewpage">Design view</a> implements a ChatGPT-based prompting co-pilot to create candidate prompts for the generated AI chain steps as initial <a href="systemdesign.html">task decomposition</a>.
+            <b>??not supported yet? During prompt debugging in the <a href="blockviewmanualpage">Block view</a>, the engineer can request this prompting-copilot to revise an existing prompt (see an example in <a href="aichaintestingpage">AI chain testing</a>).</b>
         </p>
         
     </div>
