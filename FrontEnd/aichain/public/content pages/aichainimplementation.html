@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contents</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- self-defined -->
+    <link href="content.css" rel="stylesheet">
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light my-navbar">
+  <a class="navbar-brand" href="#cover">AI Chain</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#aichain">Chain</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#promptmanship">Promptmanship</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sapper">Sapper</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+    <div id="main-content" class="container">
+        <h1 class="main-title">AI Chain Implementation</h1>
+        <h2 class="main-subtitle"></h2>
+
+
+        <p>
+            AI chain implementation spans all phases of AI chain development, with feasibility exploration in the exploration phase, further optimization and evaluation in the design phase, and is fully carried out in the construction phase. 
+            In particular, an AI chain is built on the AI chain skeleton laid in the design phase.
+        </p>
+        
+        <h2 class="main-subtitle">Worker 1.0/2.0 Implementation</h2>
+        <p>
+            Implementing Software 1.0 and Software 2.0 workers follow traditional software engineering methods.
+            These two types of workers remain crucial, especially when it comes to accessing external data, APIs, or applications.
+            In our IDE's <a href="blockviewpage">Block view</a>, users can implement worker 1.0 by visual programming blocks (<b>To be confirm: natively supported in Sapper IDE</b>) (e.g., <b>To be fixed: the worker-xxx in <a href="">showcase-name-yyy</a></b>) and worker 1.0/2.0 by coding in a programming language (e.g., Python) (<b>To be confirmed: this requires the corresponding language's RESTful APIs installed in the <a href="">Engine Management</a></b>).
+        </p>
+        <p>
+            As the capabilities of LLMs continue to improve, they are increasingly able to generate (almost) correct code based on task prompts. 
+            This makes it increasingly possible to develop Software 1.0/2.0 workers using a prompt-based AI chain.
+            That is, we do not need to directly write code to accomplish a specific function.
+            Instead, we write natural language prompts requesting the LLM to generate the corresponding code. 
+            This kind of workers are a kind of hybrid worker, and we name them <a href="aichainconcepts.html">worker 1.5/2.5</a> and will support them in the next IDE release.
+        </p>
+    
+
+        <h2 class="main-subtitle">Worker 3.0 Implementation</h2>
+        <p>
+            <b>To be added: @mulong add Table 1 here. Worker stereotype links to a workerstereotypes.html page, the other three (prompt caveats, prompt aspects, prompting decorators) link to promptpatterns.html page.</b>
+        </p>
+        <p>
+            For Software 3.0 workers, the key is to determine the worker stereotypes and design their prompts that clearly define worker roles and functions.
+            Prompting requires creativity and experiments, but like other forms of programming, can be improved with good practices.
+        </p>
+        <p>
+            We summarize and document best prompting practices as four categories of prompt design patterns: <a href="workerstereotypes.html">worker stereotypes</a>, <a href="promptpatterns.html">prompting caveats,  prompt aspects, and prompting decorators</a>, summarized in the above table.
+            Compared with other attempts to summarize prompt patterns (<a href="https://aclanthology.org/2022.findings-acl.50">Mishra et al. 2022</a>, <a href="https://arxiv.org/abs/2302.11382">White et al. 2023</a>, <a href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/">Lil’Log Prompt Engineering</a>, <a href="https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md">OpenAI cookbook</a>, <a href="https://www.amazon.com/Art-Asking-ChatGPT-High-Quality-Answers/dp/B0BT2JB67Y">The Art of Asking ChatGPT for High-Quality Answers</a>), our pattern catalog is more structured and clearly identifies the four perspectives that prompt design needs to consider, allowing for a more structured design of prompts.
+        </p>
+        <p>
+            It is important to note that these prompt design patterns will not replace creativity and experiments.
+            Furthermore, they are more focused on tactical individual worker level optimization.
+            Often, the task is too complex to be completed through prompt design, and then we need to consider more strategic system level adjustments, such as <a href="systemdesignpage">task decomposition and worker cooperation</a>.
+        </p>
+                         
+    </div>
+</main>
+
+<!--<footer id="footer">-->
+<!--</footer>-->
+
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contents</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- self-defined -->
+    <link href="content.css" rel="stylesheet">
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light my-navbar">
+  <a class="navbar-brand" href="#cover">AI Chain</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#aichain">Chain</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#promptmanship">Promptmanship</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sapper">Sapper</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+    <div id="main-content" class="container">
+        <h1 class="main-title">Worker Stereotypes</h1>
+        <h2 class="main-subtitle"></h2>
+
+        <p>
+            To enhance not only performance but also debuggability, reusability, and composability, each worker should adhere to the <a href="https://en.wikipedia.org/wiki/Single-responsibility_principle">Single Responsibility Principle</a>, playing a distinct role in the AI chain.
+            A worker may simultaneously take on multiple roles, but it should be noted that a worker with too many roles may become an ``epic'' worker, who not only performs poorly but is also challenging to optimize and control.
+        </p>
+        <p>
+            We summarize nine worker stereotypes that guide the worker's role and prompt design: 
+        </p>
+        
+        <p><b>@mulong: To be fixed: Link each buttle to the corresponding discussion</b></p>
+        
+        <em>Input simplification or transformation</em>
+        <ul>
+            <li>
+                <a href="">Input Rewirter</a>: Transform the input into an acceptable or simplified form
+            </li>
+            <li>
+                <a href="">Data Splitter</a>: Divide a large amount of homogeneous data into smaller chunks
+            </li>
+        </ul>
+        
+        <em>Task processing</em>
+        <ul>
+            <li>
+                <a href="">Reverse Questioner</a>: Let the LLM drive human-LLM dialogue to elicit or recommend the information
+            </li>
+            <li>
+                <a href="">Planner</a>: Generate, refine, or complete task plans
+            </li>
+            <li>
+                <a href="">Information Inquirer</a>: Consult the LLM as a neural knowledge base for information and knowledge
+            </li>
+            <li>
+                <a href="">Commander</a>: Perform a specific function not explicitly covered by other stereotypes
+            </li>
+            <li>
+                <a href="">Composer</a>: Consolidate the outputs of several workers to arrive at a final answer
+            </li>
+        </ul>
+        
+        <em>Output validation</em>
+        <ul>
+            <li>
+                <a href="">State Monitor</a>: Obtain system and environment states to feedback AI chain execution
+            </li>
+            <li>
+                <a href="">Verifier</a>: Validate the worker's outputs to mitigate errors and hallucinations
+            </li>
+        </ul>
+        
+        <p>
+            A stereotype only defines the meta-role, and the specific functions of workers with the same stereotype can vary widely.
+            All worker stereotypes can be regarded as "commander" in a broad sense because they all instruct LLM to perform certain tasks.
+            However, we distinguish different stereotypes based on their specific intents.
+        </p>
+        
+        <h2 class="main-subtitle">Input Rewriter</h2>
+        <p>
+            <b>Intent:</b> 
+            The Input Rewriter transforms the input into an acceptable or simplified form, making it easier for the model to understand and process.
+        </p>
+        <p>
+            <b>Usage examples:</b>
+            A user's natural language input may not conform to the expected format of AI services. 
+            The Input Rewriter can standardize the input by calling on a LLM, for example, converting declarative sentences into interrogative ones (<a href="https://arxiv.org/abs/2210.02441">Arora et al. 2022</a>). 
+            If a user's input is long and verbose, the Input Rewriter can extract key information (e.g., time, location, and event from news, or known facts from the problem description) to avoid irrelevant details affecting later processing. 
+            In cases where the input has complex syntax or logic, the Input Rewriter can transform the complex input into several simpler items, enabling a divide-and-conquer approach (<a href="https://dl.acm.org/doi/abs/10.1145/3491102.3517582">Wu et al. 2022</a>).
+        </p>
+        <p>
+            <b>Related concepts or methods:</b>
+            named entity recognition, question answering, text transformation
+        </p>
+        <p>
+            <b>Related patterns:</b> 
+            Input Rewriter is more generic than <a href="">Data Splitter</a> which splits homogeneous data into smaller chunks.
+            Unlike <a href="">Reverse Questioner</a> that involve human-LLM dialogue to elicit information from users, Input Rewriter processes the input ``algorithmatically'' without human interaction.
+        </p>
+        <p>
+            <b>Case studies:</b> 
+            <b>To be fixed: SiXiaoPin's first step? ... href to our case studies using this worker stereotype ...</b>
+        </p>
+        
+        <h2 class="main-subtitle">Data Splitter</h2>
+        <p>
+            <b>Intent:</b> 
+            The Data Splitter divides a large dataset (e.g., a long document or a a database of student records) into smaller chunks.
+        </p>
+        <p>
+            <b>Usage examples:</b>
+            The input may contain a large amount of homogeneous data that requires repetitive processing.
+            Handling more data can be more challenging than less data, even if the data fits within the model's context window. 
+            The splitting can be based on the amount of data the model can reliably handle, or the input structure (such as document sections)
+            It can also recursively reduce complex data to simpler form based on a least-to-most approach (<a href="https://arxiv.org/abs/2205.10625">Zhou et al. 2022</a>), for example, a long string to a shorter sub-string, a code block into nested smaller blocks.
+            Then, each data chunk can be processed iteratively or multiple chunks can be processed in parallel. 
+        </p>
+        <p>
+            <b>Related concepts or methods:</b>
+            Rule-based data splitting may be used alternatively.
+            Loop or fork-join control structure is required for iterative or parallel processing of smaller data chunks.
+        </p>
+        <p>
+            <b>Related patterns:</b> 
+            Unlike <a href="">Input Rewriter</a>, Data Splitter only splits the data items but does not modify the data items.
+            <a href="">Composer</a> can be used to combine the results of individual data chunks, for example, combining the section summaries into a summary of the entire document. 
+        </p>
+        <p>
+            <b>Case studies:</b> 
+            <b>To be fixed: WenXiaoJie splitting writing outline? ... href to our case studies using this worker stereotype ...</b>
+        </p>
+        
+        <h2 class="main-subtitle">Reverse Questioner</h2>
+        <p>
+            <b>Intent:</b> 
+            The Reverse Questioner utilizes the vast knowledge of a Large Language Model (LLM) to generate clarifying questions based on a user's initial input, obtaining more relevant information, suggesting related knowledge, proposing better input methods, or recommending alternative solutions. 
+        </p>
+        <p>
+            <b>Usage examples:</b>
+            Humans often provide high-level or even vague and detail-lacking input for various reasons, such as a lack of domain knowledge, unfamiliarity with prompting skills, or uncertainty about appropriate phrasing. 
+            Reverse questioning addresses these issues by reversing the interaction between humans and the LLM, allowing the LLM to drive the conversation. 
+            This technique is particularly useful during the exploration and design phases of AI chain development and is seamlessly integrated into our AI Chain IDE, supporting AI chain <a href="taskmodeling.html">task modeling</a> and <a href="systemdesign.html">requirement analysis</a>. 
+            Reverse questioning dialogues can be either fixed-round or open-ended. 
+            Open-ended dialogues can be terminated by the user with phrases like "stop" or "no more follow-up questions", or the LLM can decide whether it has collected enough information for further processing.
+        </p>
+        <p>
+            A special use case for Reverse Questioner is when the LLM refuses to complete a user's task, allowing the LLM to rephrase the input into a form it may support. 
+            Sometimes, an LLM may refuse to provide a service due to a perceived lack of relevant knowledge or potential responsible AI (RAI) risks, which could be caused by unclear user input. 
+            Simply refusing service can leave users confused or disappointed, and this is where the Reverse Questioner can offer alternatives. 
+            Although these alternatives may not always be effective, they can at least provide assistance or inspiration. 
+        </p>
+        <p>
+            <b>Related concepts or methods:</b>
+            Questionnaire and pre-defined dialogue can be alternative to LLM-based Reverse Questioner.
+            When using the Reverse Questioner in cases where the LLM refuses service, it is important to be aware of potential jail-breaking issues that may circumvent the RAI principles that the LLM is required to follow.
+        </p>
+        <p>
+            <b>Related patterns:</b> 
+            <a href="">Persona</a> and <a href="">Context Control</a> are needed to customize and constrain the LLM's behavior as a special-purpose Reverse Questioner.
+        </p>
+        <p>
+            <b>Case studies:</b> 
+            <b>To be fixed: SiXiaoPin interview practice worker? ... href to our case studies using this worker stereotype ...</b>
+        </p>
+        
+        <h2 class="main-subtitle">Planner</h2>
+        <p>
+            <b>Intent:</b> 
+            The Planner generates task components or execution plans for user tasks. 
+        </p>
+        <p>
+            <b>Usage examples:</b>
+            For example, the first step in creating a long story with Re3 (<a href="https://arxiv.org/abs/2210.06774">Yang et al. 2022</a>) is to generate story scenes, characters, and an outline based on a premise. 
+            Subsequent steps gradually unfold the long story within the defined scenes and characters, following the outline. 
+            The Planner is also very useful for controlling robots (<a href="https://arxiv.org/abs/2209.11302">Singh et al. 2022</a>, <a href="https://www.microsoft.com/en-us/research/group/autonomous-systems-group-robotics/articles/chatgpt-for-robotics/">ChatGPT for Robotics</a>) or operating external devices (<a href="https://arxiv.org/abs/2209.08655">Wang et al. 2023</a>), as it can convert a user's high-level intention into a sequence of low-level robotic or UI actions for achieving the intention.
+        </p>
+        <p>
+            In addition to creating plans from scratch, the Planner can also develop plans based on partial information provided by the user. 
+            Considering an analogy, a user may know some ingredients and steps required to prepare a dish but might be unsure about the right order of the steps, which ingredients are needed for each step, or if any ingredients or steps are missing or redundant. 
+            In such cases, the Planner can help users obtain a specific, feasible execution plan, eliminating unnecessary steps and filling in missing ones.
+        </p>
+        <p>
+            <b>Related concepts or methods:</b>
+            Template-based planning or classic AI planning
+        </p>
+        <p>
+            <b>Related patterns:</b> 
+            Unlike <a href="">Input Rewriter</a> and <a href="">Reverse Questioner</a>, the Planner does not aim to improve, simplify or clarify input but rather to establish the context and steps for subsequent processing. 
+            It might not be possible for the Planner to immediately come up with a viable plan based on the user's initial incomplete or ambiguous input. 
+            In such cases, <a href="">Reverse Questioner</a> can be used to interact with the user and better understand their requirements before effective planning.
+            Although LLMs possess extensive knowledge, the plans generated by them may be impractical, containing irrelevant information or unfeasible steps, or they may encounter issues during the execution process.
+            The planner can use <a href="">Persona</a> or <a href="">Context Control</a> to constrain the planning context and output. 
+            It can also collaborate with <a href="">State Monitor</a> to obtain real-time feedback on the execution of the generated plan, assessing the current status and future feasibility, and making necessary adjustments accordingly(<a href="https://arxiv.org/abs/2210.06774">Yang et al. 2022</a>, <a href="https://arxiv.org/abs/2209.11302">Singh et al. 2022</a>.
+        </p>
+        <p>
+            <b>Case studies:</b> 
+            <b>To be fixed: SiXiaoPin interview practice worker? ... href to our case studies using this worker stereotype ...</b>
+        </p>
+        
+        <h2 class="main-subtitle">Information Inquirer</h2>
+        <p>
+            <b>Intent:</b> 
+            The Information Inquirer uses the LLM as a knowledge base, consulting it to obtain task-related information. 
+        </p>
+        <p>
+            <b>Usage examples:</b>
+            For example, the PCR-Chain (Huang et al. 2023) inquires the LLM to obtain the fully qualified name of an API mentioned in a piece of text. 
+            When analyzing vulnerability reports, the LLM can be consulted to gain historical vulnerability knowledge about the product, such as its features and common vulnerabilities.
+            This is different from traditional Information-Retrieval (IR) methods, as the LLM can offer direct answers, rather than just relevant texts.
+        </p>
+        <p>
+            <b>Related concepts or methods:</b>
+            Using the LLM as a knowledge base requires considering the scope and recency of its pre-trained data. 
+            For information that the model is unaware of, a combination of retrieval model (<a href="https://arxiv.org/abs/2002.08909">Guu et al. 2020</a>, <a href="https://arxiv.org/abs/2208.03299">Izacard et al. 2022</a>) and LLM-based reader (<a href="https://arxiv.org/abs/2204.10019">Levine et al. 2022</a>, <a href="https://arxiv.org/abs/2203.05115">Lazaridou et al. 2022</a>) (Commander) can be used as an alternative to Information Inquirers to obtain relevant information.
+            Natural language inference models (<a href="https://arxiv.org/abs/2301.00303">He et al. 2022</a>) can be used to validate the information faithfulness.
+        </p>
+        <p>
+            <b>Related patterns:</b> 
+            The LLM may ``hallucinate'' non-existent information or provide inaccurate details (<a href="https://arxiv.org/abs/2205.03401">Ye and Durrett 2022</a>). 
+            The Information Inquirer can employ a <a href="">Prompt Committee</a> design, consulting the same information in different ways and cross-validating the results to obtain more faithful information by a <a href="">Composer</a>. 
+            The output of Information Inquirer can also be validated by a <a href="">Verifier</a> (<a href="https://arxiv.org/abs/2208.14271">Creswell and Shanahan 2022</a>).
+        </p>
+        
+        <p>
+            <b>Case studies:</b> 
+            <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
+        </p>
+        
+        <h2 class="main-subtitle">Commander</h2>
+        <p>
+            <b>Intent:</b> 
+            This is the narrow sense of "commanders" that perform a specific function not explicitly covered by other stereotypes.
+            An AI chain may consist of several commanders.
+        </p>
+        <p>
+            <b>Usage examples:</b>
+            Commanders can serve various roles in specific tasks, such as  question answerers, readers, summarizers, classifiers, action executors, calculators, writers, fact selector or inferencer, and many more.
+            Data creators are a unique type of Commander that utilizes the LLM to generate diverse and realistic data, simulating real-world scenarios.
+            This is useful in many application scenarios, such as learning and training, marketing, model training, and software testing.
+            A special data creator is to request the LLM to generate prompts which our IDE implements to assist users in writing prompts.
+        </p>
+        <p>
+            <b>Related concepts or methods:</b>
+            Task-specific models or APIs
+        </p>
+        <p>
+            <b>Related patterns:</b> 
+            Just like on a battlefield, a commander requires the effective support of skilled staff. Similarly, an AI chain should not assign too many duties to a single Commander (i.e., an epic worker), expecting them to be a jack of all trades. 
+            Instead, a combination of Commanders with specific roles and other necessary worker stereotypes (e.g., Input Rewriter, Planner, Information Inquirer, State Monitor), as well as any necessary external knowledge bases, tools, or traditional ML models, should work together cohesively to achieve user goals. 
+            This collaborative approach enables each worker to focus on its specific role, leading to more efficient and effective AI services that can handle complex tasks with greater precision and adaptability.
+        </p>
+        
+        <p>
+            <b>Case studies:</b> 
+            <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
+        </p>
+        
+        <h2 class="main-subtitle">Composer</h2>
+        <p>
+            <b>Intent:</b> 
+            The Composer consolidates the outputs of several workers to arrive at a final answer.
+        </p>
+        <p>
+            <b>Usage examples:</b>
+            For example, in a review rewriting task, an AI chain (<a href="https://dl.acm.org/doi/abs/10.1145/3491102.3517582">Wu et al. 2022</a>) first uses an Input Rewriter to break down a logically unclear and non-specific review into several rewriting suggestions. 
+            Then, corresponding modifications are generated for each suggestion, and finally, a Composer consolidates them into a unified, high-quality review.
+            Composers are often used when processing lengthy documents (such as document summarization). 
+            The document can be divided into segments based on the model's context window size, processed separately, and then consolidated by the Composer. 
+            Another application scenario is when several different Commanders make inferences on the same question (also known as a Prompt Committee). 
+            The Composer can then determine the final answer based on the majority vote.
+        </p>
+        <p>
+            <b>Related concepts or methods:</b>
+            N/A
+        </p>
+        <p>
+            <b>Related patterns:</b> 
+            <a href="">Data Splitter</a>, <a href="">Information Inquirer</a> or Commanders in a <a href="">Prompt Committee</a> as described in the above usage examples.
+        </p>
+        
+        <p>
+            <b>Case studies:</b> 
+            <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
+        </p>        
+
+        <h2 class="main-subtitle">State Monitor</h2>
+        <p>
+            <b>Intent:</b> 
+            The state monitor obtains system state changes caused by the AI chain's operation, as well as other environmental or contextual information, providing feedback for the AI chain's execution.
+        </p>
+        <p>
+            <b>Usage examples:</b>
+            State Monitor is crucial for AI services that need to interact with external devices or applications, such as controlling robots (<a href="https://arxiv.org/abs/2209.11302">Singh et al. 2022</a>, <a href="https://arxiv.org/abs/2207.05608"></a>Huang et al. 2022).
+            For example, <a href="https://arxiv.org/abs/2209.11302">ProgPrompt</a> designs assertion prompts that utilize LLM to make judgments about the environment state, such as whether the microwave door is open or closed. 
+            State Monitor can also be used to analyze internal system states. 
+            For example, <a href="https://arxiv.org/abs/2210.06774">Re3</a>'s edit module leverages LLM to analyze whether newly generated story parts are in conflict with established story settings (e.g., a character's gender is set as male, but the story uses ``she''). 
+            If a conflict is found, the subsequent step makes the necessary adjustments.
+        </p>
+        <p>
+            <b>Related concepts or methods:</b>
+            N/A
+        </p>
+        <p>
+            <b>Related patterns:</b> 
+            State Monitor collaborates with Planner and Commander as stated in the above examples.
+            State Monitor differs from Verifier in that State Monitor obtains state changes or inconsistencies while Verifier Verifier validates the information faithfulness of the LLM's output.
+        </p>
+        
+        <p>
+            <b>Case studies:</b> 
+            <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
+        </p>  
+        
+        <h2 class="main-subtitle">Verifier</h2>
+        <p>
+            <b>Intent:</b> 
+            The Verifier checks the correctness and authenticity of the LLM's output, as errors and hallucinations are difficult to avoid.
+        </p>
+        <p>
+            <b>Usage examples:</b>
+            For automated processing, we can design methods similar to <a href="https://arxiv.org/abs/2302.04166">GPTScore</a> that allow the LLM to score its outputs from various perspectives. 
+            However, having the LLM score its own output is often not effective unless supplemented with different analytical approaches and external knowledge.
+            For example, backward reasoning can be used on the model's output to check for any conflicting information with the input will be obtained from the output. 
+            Alternatively, the <a href="">Verifier</a> can extract relevant information from external knowledge bases and have the model compare its output's consistency with the external knowledge (<a href="https://arxiv.org/abs/2212.10509">Trivedl et al. 2022</a>, <a href="https://arxiv.org/abs/2210.03629">Yao et al. 2022</a>, <a href="https://arxiv.org/abs/2210.03350">Press et al. 2022</a>) (assuming the external knowledge base is correct and can accurately provide relevant information). 
+        </p>
+        <p>
+            <b>Related concepts or methods:</b>
+            In addition to using LLM-based verification, Verifiers can employ traditional natural language inference methods to obtain entailment and contradiction scores between the model's output and external information (<a href="https://arxiv.org/abs/2301.00303">He et al. 2022</a>).
+        </p>
+        <p>
+            <b>Related patterns:</b> 
+            The Verifier can be used to validate the output of <a href="">Information Inquirer</a> and <a href="">Commander</a> (e.g., question answering).
+            Information Inquirer and Commander can adopt <a href="">Reflection</a> (a "think-aloud" prompting decorator) to have the LLM list facts and evidence related to its output, facilitating the verification.
+            This also allows humans to judge whether the LLM's output is reasonable or if the so-called facts it relies on are genuine. 
+        </p>
+        
+        <p>
+            <b>Case studies:</b> 
+            <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
+        </p>  
+        
+    </div>
+</main>
+
+<!--<footer id="footer">-->
+<!--</footer>-->
+
+</body>
+</html>
