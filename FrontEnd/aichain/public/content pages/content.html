@@ -8,8 +8,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <!-- icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- jquery -->
+    <script src="../plugin/jquery.min.js"></script>
     <!-- self-defined -->
     <link href="content.css" rel="stylesheet">
+    <script src="content.js"></script>
 </head>
 <body>
 <div style="position: relative">
@@ -38,46 +41,46 @@
         <nav class="doc-nav">
             <ul class="doc-list">
                 <li class="doc-item">
-                    <a class="doc-link doc-link-level1" href="#promptmanship">AI2.0 and Software3.0</a>
+                    <a class="doc-link doc-link-level1" id="ai20" href="ai20software30.html">AI2.0 and Software3.0</a>
                 </li>
                 <li class="doc-item">
-                    <a class="doc-link doc-link-level1" href="#sapper">SE for AIChain: Vision & Goals</a>
+                    <a class="doc-link doc-link-level1" id="se4aichain" href="se4aichain.html">SE for AIChain: Vision & Goals</a>
                 </li>
                 <li class="doc-item">
-                    <a class="doc-link doc-link-level1" href="#sapper">Promptmanship</a>
+                    <a class="doc-link doc-link-level1" id="promptmanship" href="promptpatterns.html">Promptmanship</a>
                     <!-- 2ed level -->
                     <ul class="doc-list">
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">Rapid Prototype Process</a>
+                            <a class="doc-link doc-link-level2" id="rapidpro" href="rapidprototypingprocess.html">Rapid Prototype Process</a>
                         </li>
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">AI Chain Concepts</a>
+                            <a class="doc-link doc-link-level2" id="aichainconcepts" href="aichainconcepts.html">AI Chain Concepts</a>
                         </li>
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">Activities</a>
+                            <a class="doc-link doc-link-level2" id="activities">Activities</a>
                             <!-- 3rd level -->
                             <ul class="doc-list">
                                 <li class="doc-item">
-                                    <a class="doc-link doc-link-level3" href="#about">Magic Enhancing Magic</a>
+                                    <a class="doc-link doc-link-level3" id="magic" href="magicenhancingmagic.html">Magic Enhancing Magic</a>
                                 </li>
                                 <li class="doc-item">
-                                    <a class="doc-link doc-link-level3" href="#about">Task Modelling</a>
+                                    <a class="doc-link doc-link-level3" id="taskmodeling" href="taskmodeling.html">Task Modelling</a>
                                 </li>
                                 <li class="doc-item">
-                                    <a class="doc-link doc-link-level3" href="#about">System Design</a>
+                                    <a class="doc-link doc-link-level3" id="systemdesign" href="systemdesign.html">System Design</a>
                                 </li>
                                 <li class="doc-item">
-                                    <a class="doc-link doc-link-level3" href="#about">AI Chain Testing</a>
+                                    <a class="doc-link doc-link-level3" id="aichaintesting" href="aichaintesting.html">AI Chain Testing</a>
                                 </li>
                                 <li class="doc-item">
-                                    <a class="doc-link doc-link-level3" href="#about">AI Chain Implementation</a>
+                                    <a class="doc-link doc-link-level3" id="aichainimplement" href="aichainimplementation.html">AI Chain Implementation</a>
                                     <!-- 4th level -->
                                     <ul class="doc-list">
                                         <li class="doc-item">
-                                            <a class="doc-link doc-link-level4" href="#about">Worker Stereotype</a>
+                                            <a class="doc-link doc-link-level4" id="worker" href="workerstereotypes.html">Worker Stereotype</a>
                                         </li>
                                         <li class="doc-item">
-                                            <a class="doc-link doc-link-level4" href="#about">Prompting * </a>
+                                            <a class="doc-link doc-link-level4" id="promptcaveats">Prompting Caveats</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -86,41 +89,41 @@
                     </ul>
                 </li>
                 <li class="doc-item">
-                    <a class="doc-link doc-link-level1" href="#sapper">Sapper IDE</a>
+                    <a class="doc-link doc-link-level1" id="sapperide">Sapper IDE</a>
                     <!-- 2ed level -->
                     <ul class="doc-list">
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">Exploration View</a>
+                            <a class="doc-link doc-link-level2" id="exploreview">Exploration View</a>
                         </li>
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">Design View</a>
+                            <a class="doc-link doc-link-level2" id="designview">Design View</a>
                         </li>
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">Block View</a>
+                            <a class="doc-link doc-link-level2" id="blockview">Block View</a>
                         </li>
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">Prompt Hub</a>
+                            <a class="doc-link doc-link-level2" id="prompthub">Prompt Hub</a>
                         </li>
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">Engine Management</a>
+                            <a class="doc-link doc-link-level2" id="enginemanagement">Engine Management</a>
                         </li>
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">Artifacts</a>
+                            <a class="doc-link doc-link-level2" id="artifacts">Artifacts</a>
                         </li>
                     </ul>
                 </li>
                 <li class="doc-item">
-                    <a class="doc-link doc-link-level1" href="#promptmanship">AI Chain Marketplace</a>
+                    <a class="doc-link doc-link-level1" id="market">AI Chain Marketplace</a>
                     <!-- 2ed level -->
                     <ul class="doc-list">
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">WenXiaoJie</a>
+                            <a class="doc-link doc-link-level2" id="wenxiaojie">WenXiaoJie</a>
                         </li>
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">SiXiaoPin</a>
+                            <a class="doc-link doc-link-level2" id="sixiaopin">SiXiaoPin</a>
                         </li>
                         <li class="doc-item">
-                            <a class="doc-link doc-link-level2" href="#about">MaXiaoYan</a>
+                            <a class="doc-link doc-link-level2" id="maxiaoyan">MaXiaoYan</a>
                         </li>
                     </ul>
                 </li>

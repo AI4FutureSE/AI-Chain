@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../plugin/font/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Exo;
+    src: url("../plugin/font/Exo2-VariableFont_wght.ttf");
+}
+
 :root{
     --first: #23a6d5;
     --second: #e73c7e;
@@ -111,7 +121,7 @@ main{
 
 /* content nav bar */
 .doc-nav{
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 30px;
     width: 330px;
     height: calc(100vh - 80px);
