@@ -48,48 +48,48 @@
         <em>Prompting caveats</em>
         <ul>
             <li>
-                <a href="">Grice's maxims of conversion</a>: Prompts should be informative, truthful, relevant, and clear
+                <a href="#grice">Grice's maxims of conversion</a>: Prompts should be informative, truthful, relevant, and clear
             </li>
             <li>
-                <a href="">Terminology explanation</a>: Explain polysemous or unknown terms and symbols
+                <a href="#terminology">Terminology explanation</a>: Explain polysemous or unknown terms and symbols
             </li>
              <li>
-                <a href="">Prompt committee</a>: Substitute a committee of prompt variants for optimal prompt
+                <a href="#committee">Prompt committee</a>: Substitute a committee of prompt variants for optimal prompt
             </li>
         </ul>
         
         <em>Prompt aspects</em>
         <ul>
             <li>
-                <a href="">Context</a>: Provide the inputs, explain the input format, terminology, and semantics, and define problem context and constraints
+                <a href="#context">Context</a>: Provide the inputs, explain the input format, terminology, and semantics, and define problem context and constraints
             </li>
             <li>
-                <a href="">Instruction</a>: Describe the worker’s function (may contain simple input and control structure)
+                <a href="#instruction">Instruction</a>: Describe the worker’s function (may contain simple input and control structure)
             </li>
              <li>
-                <a href="">Demonstration examples</a>: Provide zero-shot or few-shot examples
+                <a href="#demo">Demonstration examples</a>: Provide zero-shot or few-shot examples
             </li>
             <li>
-                <a href="">Output formatter</a>: Describe the output format that the LLM should follow
+                <a href="#output">Output formatter</a>: Describe the output format that the LLM should follow
             </li>
              <li>
-                <a href="">Content representation</a>: Organizing prompt aspects into an effective representation that is best suited for the functionality and complexity of the worker
+                <a href="#content">Content representation</a>: Organizing prompt aspects into an effective representation that is best suited for the functionality and complexity of the worker
             </li>
         </ul>
         
         <em>Prompting decorators</em>
         <ul>
             <li>
-                <a href="">Self-ask</a>: Guide the worker’s reasoning by asking and answering its own question
+                <a href="#self-ask">Self-ask</a>: Guide the worker’s reasoning by asking and answering its own question
             </li>
             <li>
-                <a href="">Reflection</a>: Asking the worker to explain why and how it generated a particular output
+                <a href="#reflection">Reflection</a>: Asking the worker to explain why and how it generated a particular output
             </li>
              <li>
-                <a href="">Persona</a>: Request the model to simulate a specific identify (human or non-human)
+                <a href="#persona">Persona</a>: Request the model to simulate a specific identify (human or non-human)
             </li>
             <li>
-                <a href="">Context control</a>: Constrain the model’s behavior and responses beyond persona
+                <a href="#context-control">Context control</a>: Constrain the model’s behavior and responses beyond persona
             </li>
         </ul>
         
@@ -98,7 +98,7 @@
             We identify three caveats that may affect prompt performance significantly: Grice's maxims, terminology explanation, and prompt committee.
         </p>
         
-        <p>
+        <p id="grice">
             <b>Grice's maxims of conversion</b>
         </p>
         <p>
@@ -111,7 +111,7 @@
             Prompt creator (<a href="">Commander</a>) can ask the LLM to generate prompts according to task descriptions (<a href="https://arxiv.org/abs/2211.01910">Zhou et al. 2023</a>).
         </p>
         
-        <p>
+        <p id="terminology">
             <b>Terminology explanation</b>
         </p>
         <p>
@@ -125,8 +125,8 @@
             Based on the <a href="magicenhancingmagic.html">mechanical sympathy</a> for the model's understanding of terms and symbols, we can clearly define the meaning of terms or symbols in a specific prompt within its <a href="">Context</a> to ensure that the model can understand them and correctly execute the prompt.
         </p>
         
-        <p>
-            <b>Prompt comittee</b>
+        <p id="committee">
+            <b>Prompt committee</b>
         </p>
         <p>
             Designing the optimal prompt can often be difficult, or even impossible to determine. 
@@ -143,7 +143,7 @@
             When designing prompts, the following aspects should be considered: context, instruction, demonstration examples, output format, and content representation.
         </p>
 
-        <p>
+        <p id="context">
             <b>Context</b>
         </p>
         <p>
@@ -156,7 +156,7 @@
             Context can use <a href="">Persona</a> and <a href="">Context Control</a> to customize the LLM's behavior, constrain the LLM's response, and define things to avoid while executing the instruction.
         </p>
         
-        <p>
+        <p id="instruction">
             <b>Instruction</b>
         </p>
         <p>
@@ -178,7 +178,7 @@
             (2) cloze-questions which ask the model to fill in the blank ("John went to ___"); and (3) free-form (yes-no, Wh) questions ("Where did John go?").
         </p>    
         
-        <p>
+        <p id="demo">
             <b>Demonstration examples</b>
         </p>
         <p>
@@ -203,7 +203,7 @@
             Engineers can provide seed examples, and then a prompt creator <a href="">Commander</a> can be used to generate example variants (<a href="https://aclanthology.org/2022.acl-long.230">Ribeiro and Lundberg 2022</a>).
         </p>
         
-        <p>
+        <p id="output">
             <b>Output formatter</b>
         </p>
         <p>
@@ -227,7 +227,7 @@
             This extra information could cause subsequent workers to fail, and such issues can be resolved by using an <a href="">Input Rewriter</a> to keep only the relevant information in the outputs.
         </p>
         
-        <p>
+        <p id="content">
             <b>Content representation</b>
         </p>
         <p>
@@ -255,7 +255,7 @@
             This is different from <a href="">State Monitor</a> and <a href="">Verifier</a> that monitor or verify the output of other workers.
         </p>
         
-        <p>
+        <p id="self-ask">
             <b>Self-ask</b>
         </p>
         <p>
@@ -265,7 +265,7 @@
             Self-ask is the worker's inner monologue, which is different from <a href="">Reverse Questioner</a> that involves human-LLM dialogue.
         </p>
         
-        <p>
+        <p id="reflection">
             <b>Reflection</b>
         </p>
         <p>
@@ -275,7 +275,7 @@
             Reflection can be done either before or after providing the result, and encouraging explanation before answering could be more effective.
         </p>
         
-        <p>
+        <p id="persona">
             <b>Persona</b>
         </p>
         <p>
@@ -286,7 +286,7 @@
             In human-LLM dialogue scenarios, such as playing a game with the model, it is necessary not only to define the LLM persona but also to explain the persona of the person interacting with the model so that the model can respond more effectively. 
         </p>
 
-        <p>
+        <p id="context-control">
             <b>Context control</b>
         </p>
         <p>

@@ -49,44 +49,42 @@
             We summarize nine worker stereotypes that guide the worker's role and prompt design: 
         </p>
         
-        <p><b>@mulong: To be fixed: Link each buttle to the corresponding discussion</b></p>
-        
         <em>Input simplification or transformation</em>
         <ul>
             <li>
-                <a href="">Input Rewirter</a>: Transform the input into an acceptable or simplified form
+                <a href="#input">Input Rewirter</a>: Transform the input into an acceptable or simplified form
             </li>
             <li>
-                <a href="">Data Splitter</a>: Divide a large amount of homogeneous data into smaller chunks
+                <a href="#data-splitter">Data Splitter</a>: Divide a large amount of homogeneous data into smaller chunks
             </li>
         </ul>
         
         <em>Task processing</em>
         <ul>
             <li>
-                <a href="">Reverse Questioner</a>: Let the LLM drive human-LLM dialogue to elicit or recommend the information
+                <a href="#reverse-questioner">Reverse Questioner</a>: Let the LLM drive human-LLM dialogue to elicit or recommend the information
             </li>
             <li>
-                <a href="">Planner</a>: Generate, refine, or complete task plans
+                <a href="#planner">Planner</a>: Generate, refine, or complete task plans
             </li>
             <li>
-                <a href="">Information Inquirer</a>: Consult the LLM as a neural knowledge base for information and knowledge
+                <a href="#inquirer">Information Inquirer</a>: Consult the LLM as a neural knowledge base for information and knowledge
             </li>
             <li>
-                <a href="">Commander</a>: Perform a specific function not explicitly covered by other stereotypes
+                <a href="#commander">Commander</a>: Perform a specific function not explicitly covered by other stereotypes
             </li>
             <li>
-                <a href="">Composer</a>: Consolidate the outputs of several workers to arrive at a final answer
+                <a href="#composer">Composer</a>: Consolidate the outputs of several workers to arrive at a final answer
             </li>
         </ul>
         
         <em>Output validation</em>
         <ul>
             <li>
-                <a href="">State Monitor</a>: Obtain system and environment states to feedback AI chain execution
+                <a href="#monitor">State Monitor</a>: Obtain system and environment states to feedback AI chain execution
             </li>
             <li>
-                <a href="">Verifier</a>: Validate the worker's outputs to mitigate errors and hallucinations
+                <a href="#verifier">Verifier</a>: Validate the worker's outputs to mitigate errors and hallucinations
             </li>
         </ul>
         
@@ -96,7 +94,7 @@
             However, we distinguish different stereotypes based on their specific intents.
         </p>
         
-        <h2 class="main-subtitle">Input Rewriter</h2>
+        <h2 id="input" class="main-subtitle">Input Rewriter</h2>
         <p>
             <b>Intent:</b> 
             The Input Rewriter transforms the input into an acceptable or simplified form, making it easier for the model to understand and process.
@@ -122,7 +120,7 @@
             <b>To be fixed: SiXiaoPin's first step? ... href to our case studies using this worker stereotype ...</b>
         </p>
         
-        <h2 class="main-subtitle">Data Splitter</h2>
+        <h2 id="data-splitter" class="main-subtitle">Data Splitter</h2>
         <p>
             <b>Intent:</b> 
             The Data Splitter divides a large dataset (e.g., a long document or a a database of student records) into smaller chunks.
@@ -150,7 +148,7 @@
             <b>To be fixed: WenXiaoJie splitting writing outline? ... href to our case studies using this worker stereotype ...</b>
         </p>
         
-        <h2 class="main-subtitle">Reverse Questioner</h2>
+        <h2 id="reverse-questioner" class="main-subtitle">Reverse Questioner</h2>
         <p>
             <b>Intent:</b> 
             The Reverse Questioner utilizes the vast knowledge of a Large Language Model (LLM) to generate clarifying questions based on a user's initial input, obtaining more relevant information, suggesting related knowledge, proposing better input methods, or recommending alternative solutions. 
@@ -183,7 +181,7 @@
             <b>To be fixed: SiXiaoPin interview practice worker? ... href to our case studies using this worker stereotype ...</b>
         </p>
         
-        <h2 class="main-subtitle">Planner</h2>
+        <h2 id="planner" class="main-subtitle">Planner</h2>
         <p>
             <b>Intent:</b> 
             The Planner generates task components or execution plans for user tasks. 
@@ -217,7 +215,7 @@
             <b>To be fixed: SiXiaoPin interview practice worker? ... href to our case studies using this worker stereotype ...</b>
         </p>
         
-        <h2 class="main-subtitle">Information Inquirer</h2>
+        <h2 id="inquirer" class="main-subtitle">Information Inquirer</h2>
         <p>
             <b>Intent:</b> 
             The Information Inquirer uses the LLM as a knowledge base, consulting it to obtain task-related information. 
@@ -246,7 +244,7 @@
             <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
         </p>
         
-        <h2 class="main-subtitle">Commander</h2>
+        <h2 id="commander" class="main-subtitle">Commander</h2>
         <p>
             <b>Intent:</b> 
             This is the narrow sense of "commanders" that perform a specific function not explicitly covered by other stereotypes.
@@ -275,7 +273,7 @@
             <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
         </p>
         
-        <h2 class="main-subtitle">Composer</h2>
+        <h2 id="composer" class="main-subtitle">Composer</h2>
         <p>
             <b>Intent:</b> 
             The Composer consolidates the outputs of several workers to arrive at a final answer.
@@ -303,7 +301,7 @@
             <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
         </p>        
 
-        <h2 class="main-subtitle">State Monitor</h2>
+        <h2 id="monitor" class="main-subtitle">State Monitor</h2>
         <p>
             <b>Intent:</b> 
             The state monitor obtains system state changes caused by the AI chain's operation, as well as other environmental or contextual information, providing feedback for the AI chain's execution.
@@ -331,7 +329,7 @@
             <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
         </p>  
         
-        <h2 class="main-subtitle">Verifier</h2>
+        <h2 id="verifier" class="main-subtitle">Verifier</h2>
         <p>
             <b>Intent:</b> 
             The Verifier checks the correctness and authenticity of the LLM's output, as errors and hallucinations are difficult to avoid.
