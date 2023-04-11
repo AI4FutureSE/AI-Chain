@@ -64,7 +64,7 @@ html body{
 }
 
 .nav-item:hover{
-    background-color: var(--second);
+    background-color: var(--first);
     color: whitesmoke;
 }
 
@@ -78,10 +78,6 @@ main{
 #main-content{
     padding: 120px 280px;
     overflow: auto;
-}
-
-.main-title{
-
 }
 
 .main-subtitle{
@@ -112,16 +108,47 @@ main{
 
 /* content nav bar */
 .doc-nav{
-    color: white;
-    padding-top: 82px;
+    padding-top: 90px;
     width: 300px;
     height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.doc-nav .nav-link{
-    font-size: 20px;
+.doc-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
+
+.doc-item{
+}
+
+.doc-item:hover{
+}
+
+.doc-link{
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px 100px;
+    transition: 0.25s;
+}
+
+.doc-link:hover{
+    background: var(--first);
+    color: white;
+}
+
+.doc-link-level1{
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.doc-link-level2{
+    font-size: 18px;
+    padding-left: 40px;
+}
+
 
 
 /* footer */
