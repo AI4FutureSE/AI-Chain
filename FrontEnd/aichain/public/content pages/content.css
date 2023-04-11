@@ -121,7 +121,7 @@ main{
 
 /* content nav bar */
 .doc-nav{
-    padding-top: 10px;
+    padding-top: 2px;
     padding-bottom: 30px;
     width: 330px;
     height: calc(100vh - 80px);
@@ -175,6 +175,11 @@ main{
 .doc-link-level4{
     font-size: 14px;
     padding-left: 80px;
+}
+
+.doc-link-active{
+    background: #23a6d590;
+    color: ghostwhite;
 }
 
 
