@@ -49,9 +49,9 @@ html body{
     text-align: center;
     background-color: white;
     color: var(--first);
-    font-family: "Agency FB", serif;
+    font-family: Exo, serif;
     height: 65px;
-    padding-top: 10px;
+    padding-top: 7px;
     transition: 0.5s;
     margin: 0;
 }
