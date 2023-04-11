@@ -1,4 +1,6 @@
 $(document).ready(()=>{
+    $('#promptmanship').attr('href', null)
+
     highlightUnLinkedDoc()
     function highlightUnLinkedDoc(){
         let links = $('.doc-link')
