@@ -28,7 +28,8 @@ html body{
     /*box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;*/
     width: 100%;
     height: 80px;
-    position: fixed;
+    position: absolute;
+    top: 0;
 }
 
 .navbar-brand{
@@ -72,11 +73,13 @@ html body{
 main{
     display: flex;
     overflow: hidden;
-    height: 100vh;
+    height: calc(100vh - 80px);
+    position: absolute;
+    top: 80px;
 }
 
 #main-content{
-    padding: 120px 280px;
+    padding: 35px 280px;
     overflow: auto;
 }
 
@@ -108,10 +111,14 @@ main{
 
 /* content nav bar */
 .doc-nav{
-    padding-top: 90px;
-    width: 300px;
-    height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 330px;
+    height: calc(100vh - 80px);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    flex: 1 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .doc-list{
@@ -128,10 +135,11 @@ main{
 
 .doc-link{
     text-decoration: none;
-    color: black;
+    color: var(--black);
     display: block;
-    padding: 10px 100px;
+    padding: 10px 12px;
     transition: 0.25s;
+    width: 320px;
 }
 
 .doc-link:hover{
@@ -149,6 +157,15 @@ main{
     padding-left: 40px;
 }
 
+.doc-link-level3{
+    font-size: 16px;
+    padding-left: 60px;
+}
+
+.doc-link-level4{
+    font-size: 14px;
+    padding-left: 80px;
+}
 
 
 /* footer */
