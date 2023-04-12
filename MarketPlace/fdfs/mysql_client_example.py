@@ -1,9 +1,9 @@
 import pymysql
 
-connection = pymysql.connect(host='35.91.153.26',
-                             user='aichain',
-                             password='ai!chain135',
-                             database='AIChainStore',
+connection = pymysql.connect(host='***',
+                             user='***',
+                             password='***',
+                             database='***',
                              cursorclass=pymysql.cursors.DictCursor) 
 
 cursor = connection.cursor()
