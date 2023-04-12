@@ -138,6 +138,16 @@ html body{
     width: 100%;
 }
 
+.cover-lead{
+    padding-top: 380px;
+}
+
+.cover-lead p{
+    font-size: 25px;
+    color: navajowhite;
+    margin: 0;
+}
+
 .cover-title{
     padding: 25em 80px 0;
     color: ghostwhite;
@@ -146,4 +156,16 @@ html body{
 
 .cover-title h1{
     font-size: 5em;
+}
+
+.cover-subtitle{
+    font-size: 40px;
+    color: navajowhite;
+    margin-bottom: 15px;
+}
+
+.cover-emp{
+    font-size: 28px;
+    font-weight: bold;
+    color: antiquewhite;
 }
