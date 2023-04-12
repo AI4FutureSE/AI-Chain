@@ -1,0 +1,24 @@
+/*** Font ***/
+@font-face {
+    font-family: Roboto;
+    src: url("../plugin/font/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Exo;
+    src: url("../plugin/font/Exo2-VariableFont_wght.ttf");
+}
+
+:root{
+    --first: #23a6d5;
+    --second: #e73c7e;
+
+    --yellow: #FEE622;
+    --orange: #F49237;
+    --grey: #DBDBDB;
+    --red: #F6522C;
+    --blue: #23a6d5;
+    --purple: #760fcb;
+    --black: #262626;
+    --pink: #b369b8;
+}
