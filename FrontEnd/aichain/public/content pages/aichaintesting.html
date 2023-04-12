@@ -41,24 +41,24 @@
         <h1 class="main-title">AI Chain Testing</h1>
         <h2 class="main-subtitle"></h2>
 
-        <img class="main-figure" src="image/figures/Magic.jpg">
+        <img class="main-figure" src="../image/figures/Magic.jpg">
         <p class="figure-caption">Promptmanship: process, concepts, activities, and patterns</p>
 
         <p>
             AI chain testing involves running an AI chain and its component workers (prompts), evaluating the running results, and debugging and fixing unexpected behaviors.
             Similar to traditional testing, we can perform unit tests for each worker, integration (interface) tests for cooperating workers, and system tests for the entire AI chain. 
-            Our IDE's <a href="blockviewpage">Block view</a> supports all three levels of testing.
+            Our IDE's <a href="blockview.html">Block view</a> supports all three levels of testing.
         </p>
         <p>
             Since the behavior of foundation models is un-designed but emergent, testing methods based on verifying design and construction correctness are no longer applicable. 
             AI chain testing and prompt testing are more of an experimental process to gain mechanical sympathy for the model and to find effective prompts to interact with the model.
             This process begins in the exploration stage and continues throughout the rapid prototyping process of AI chain. 
-            In our IDE, users can experiment prompts in the <a href="explorationviewpage">Exploration view</a>, and test and debug a worker's prompt in the <a href="blockviewpage">Block view</a>.
+            In our IDE, users can experiment prompts in the <a href="explorationview.html">Exploration view</a>, and test and debug a worker's prompt in the <a href="blockview.html">Block view</a>.
         </p>
         <p>
             Due to the emergent behavior of foundation models and the flexibility of natural language, it is impossible to achieve ``comprehensive'' testing in the traditional sense, no matter how much effort is put into it, as evidenced by unexpected prompt injection and jail-breaking in ChatGPT.
             This highlights the importance of user testing, such as <a href="https://blog.google/technology/ai/join-us-in-the-ai-test-kitchen/">AI test kitchen</a> which leverage crowd intelligence to test and improve emerging AI technology. 
-            We plan to support crowd testing of AI chains on our <a href="https://aichain.store">AI chain marketplace</a>.
+            We plan to support crowd testing of AI chains in our <a href="https://aichain.store">AI chain marketplace</a>.
         </p>
         <p>
             Exploring the behavior of foundation models requires creativity, and even experts may have limitations in their personal experience and knowledge, leading to blind spots. 

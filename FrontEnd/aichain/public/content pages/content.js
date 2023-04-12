@@ -9,10 +9,10 @@ $(document).ready(()=>{
             '                <a class="doc-link doc-link-level1" id="ai20" href="ai20software30.html">AI 2.0 and Software 3.0</a>\n' +
             '            </li>\n' +
             '            <li class="doc-item">\n' +
-            '                <a class="doc-link doc-link-level1" id="se4aichain" href="se4aichain.html">SE for AIChain: Vision & Goals</a>\n' +
+            '                <a class="doc-link doc-link-level1" id="se4aichain" href="se4aichain.html">SE for AI Chain: Vision & Goals</a>\n' +
             '            </li>\n' +
             '            <li class="doc-item">\n' +
-            '                <a class="doc-link doc-link-level1" id="promptmanship" href="promptpatterns.html">Promptmanship</a>\n' +
+            '                <a class="doc-link doc-link-level1" id="promptmanship" href="promptmanship.html">Promptmanship</a>\n' +
             '                <!-- 2ed level -->\n' +
             '                <ul class="doc-list">\n' +
             '                    <li class="doc-item">\n' +
@@ -22,7 +22,7 @@ $(document).ready(()=>{
             '                        <a class="doc-link doc-link-level2" id="aichainconcepts" href="aichainconcepts.html">AI Chain Concepts</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="activities">Activities</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="activities" href="activitiessummary.html">Activities</a>\n' +
             '                        <!-- 3rd level -->\n' +
             '                        <ul class="doc-list">\n' +
             '                            <li class="doc-item">\n' +
@@ -35,9 +35,6 @@ $(document).ready(()=>{
             '                                <a class="doc-link doc-link-level3" id="systemdesign" href="systemdesign.html">System Design</a>\n' +
             '                            </li>\n' +
             '                            <li class="doc-item">\n' +
-            '                                <a class="doc-link doc-link-level3" id="aichaintesting" href="aichaintesting.html">AI Chain Testing</a>\n' +
-            '                            </li>\n' +
-            '                            <li class="doc-item">\n' +
             '                                <a class="doc-link doc-link-level3" id="aichainimplement" href="aichainimplementation.html">AI Chain Implementation</a>\n' +
             '                                <!-- 4th level -->\n' +
             '                                <ul class="doc-list">\n' +
@@ -45,8 +42,11 @@ $(document).ready(()=>{
             '                                        <a class="doc-link doc-link-level4" id="worker" href="workerstereotypes.html">Worker Stereotype</a>\n' +
             '                                    </li>\n' +
             '                                    <li class="doc-item">\n' +
-            '                                        <a class="doc-link doc-link-level4 doc-link-active" id="promptcaveats" href="promptpatterns.html">Prompting Caveats</a>\n' +
-            '                                    </li>\n' +
+            '                                        <a class="doc-link doc-link-level4 doc-link-active" id="promptcaveats" href="promptpatterns.html">Prompting Patterns</a>\n' +
+             '                            <li class="doc-item">\n' +
+            '                                <a class="doc-link doc-link-level3" id="aichaintesting" href="aichaintesting.html">AI Chain Testing</a>\n' +
+            '                            </li>\n' +
+           '                                    </li>\n' +
             '                                </ul>\n' +
             '                            </li>\n' +
             '                        </ul>\n' +
@@ -78,7 +78,7 @@ $(document).ready(()=>{
             '                </ul>\n' +
             '            </li>\n' +
             '            <li class="doc-item">\n' +
-            '                <a class="doc-link doc-link-level1" id="market">AI Chain Marketplace</a>\n' +
+            '                <a class="doc-link doc-link-level1" id="market">AI Chain Showcases</a>\n' +
             '                <!-- 2ed level -->\n' +
             '                <ul class="doc-list">\n' +
             '                    <li class="doc-item">\n' +

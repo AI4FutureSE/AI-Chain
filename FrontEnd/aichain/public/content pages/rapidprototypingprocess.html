@@ -44,41 +44,45 @@
         <img class="main-figure" src="../image/figures/Magic.jpg">
         <p class="figure-caption">Promptmanship: process, concepts, activities, and patterns</p>
 
-        <P>
+        <p>
             With no need for complex data engineering (although a small number of prompt examples is often required) and model training, foundation models coupled with prompt-based AI chains can support rapid development of AI services. 
             This makes <b>rapid application development (RAD)</b> style methodologies highly applicable to AI chain development, as RAD emphasizes rapid prototyping and iterative delivery. 
+        </p>
+        <p>
             Considering that AI chain's requirements analysis, design, implementation, and testing are parallel and have no clear boundaries, we propose an AI chain process model similar to <b>Rational Unified Process (RUP)</b>. 
             RUP emphasizes identifying and addressing risks early in the project life cycle, which is beneficial for embedding RAI principles and risks in the AI chain process model in the future.
-        </P>
+        </p>
 
         <p>
             AI chain process consists of four phases: <b>exploration</b>, <b>design</b>, <b>construction</b>, and <b>deployment</b>. 
         </p>
         <ul>
             <li>
-                Exploration develops an approximate vision of the task, requirements, model capabilities, and prompt effectiveness through the conversation between human and a large language model, which establishes the context for AI chain design and development.
-                This phase is mainly supported by the <a href="explorationviewpage">Exploration view</a> in the Sapper IDE.
+                Exploration develops an approximate vision of the task, requirements, model capabilities, and prompt effectiveness through the conversation between human and a large language model (e.g., ChatGPT), which establishes the context for AI chain design and development.
+                This phase is mainly supported by the <a href="explorationview.html">Exploration view</a> in the Sapper IDE.
             </li>
             <li>
                 Design involves designing the AI chain system skeleton built on the understanding and experience gained from exploration. 
                 System design can deepen the understanding of the task, clarify and refine task requirements, provide the skeleton for the AI chain and explore its feasibility. 
-                This phase is mainly supported by the <a href="designviewpage">Design view</a> in the Sapper IDE.
+                This phase is mainly supported by the <a href="designview.html">Design view</a> in the Sapper IDE.
             </li>
             <li>
                 Construction involves building, running, and debugging the AI chain through no-code programming methods.
                 The initial AI chain can be automatically assembled based on the AI chain skeleton from system design, minimizing the time and effort required for manual construction from scratch. 
-                The results of the AI chain and its individual prompts can further deepen the understanding of the task and provide feedback for adjusting the overall design of the AI chain and revising individual prompts. 
-                This phase is mainly supported by the <a href="blockviewpage">Block view</a> in the Sapper IDE.
+                The execution results of the AI chain and its individual prompts can further deepen the understanding of the task and provide feedback for adjusting the overall design of the AI chain and revising individual prompts. 
+                This phase is mainly supported by the <a href="blockview.html">Block view</a> in the Sapper IDE.
             </li>
             <li>
                 Deployment involves one-click deployment of AI services in the form of web services that can be integrated into the end user’s workflow.
                 The real-world usage and feedback from end-users can be used to evolve and upgrade the AI chain.
-                This phase is mainly supported by the <a href="artifactsmanagementpage">Artifacts Management</a> in the Sapper IDE and by the <a href="showcasemainpage">AI chain marketplace</a>.
+                This phase is mainly supported by the <a href="artifactsmanagement.html">Artifacts Management</a> in the Sapper IDE and by the <a href="https://aichain.store">AI chain marketplace</a>.
             </li>
         </ul>
         
         <p>
-            AI chain engineering activities involve <a href="">task modeling</a>, <a href="">system design</a> (task decomposition, separating AI and non-AI concerns, task workflow walk-through), <a href="">AI chain implementation (prompt design)</a>, <a href="">AI chain testing</a>, and the co-pilot activity <a href="">magic enhancing magic</a>. 
+            AI chain engineering activities involve <a href="taskmodeling.html">task modeling</a>, <a href="systemdesign.html">system design</a> (requirement analysis, task decomposition, separating AI and non-AI concerns, task workflow walk-through), <a href="aichainimplementation.html">AI chain implementation (prompt design)</a>, <a href="aichaintesting.html">AI chain testing</a>, and the co-pilot activity <a href="magicenhancingmagic.html">magic enhancing magic</a>. 
+        </p>
+        <p>
             In the above figure, the bar next to an activity indicates the start and end of the activity, and the bar height indicates the intensity of the activity. 
             We can see that each phase has focused (more intense) activities, but they all involve other activities to some extent (less intense). 
             Therefore, the AI chain development process has both iterative and parallel characteristics.

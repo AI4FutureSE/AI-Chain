@@ -42,7 +42,7 @@
         <h2 class="main-subtitle"></h2>
 
         <p>
-            In addition to determine proper <a href="workerstereotypes.html">worker stereotype</a>, designing a worker's prompt should consider three perspectives:
+            In addition to determine proper <a href="workerstereotypes.html">worker stereotypes</a>, designing a worker's prompt should consider three perspectives:
         </p>
         
         <em>Prompting caveats</em>
@@ -95,7 +95,7 @@
         
         <h2 class="main-subtitle">Prompting Caveats</h2>
         <p>
-            We identify three caveats that may affect prompt performance significantly: Grice's maxims, terminology explanation, and prompt committee.
+            We identify three caveats that may affect prompt performance significantly: Grice's maxims of conversion, terminology explanation, and prompt committee.
         </p>
         
         <p id="grice">
@@ -104,11 +104,11 @@
         <p>
             As a means of conversion, prompts should obey <a href="https://en.wikipedia.org/wiki/Cooperative_principle">Grice's maxims of conversion</a>: <em>informative</em>, <em>truth</em>, <em>relevance</em>, and <em>clarity</em>. 
             From the computational thinking perspective, it is about identifying the essential elements of a problem and removing unnecessary details.
-            One should avoid including irrelevant details or unrelated statements, as in human-written text, such details are typically assumed to be relevant, regardless of how illogical a narrative incorporating them may appear (Gwern's <a href="https://gwern.net/gpt-3#prompts-as-programming">blog</a> on prompts as programming).
+            One should avoid including irrelevant details or unrelated statements, as in human-written text, such details are typically assumed to be relevant, regardless of how illogical a narrative incorporating them may appear (read Gwern's <a href="https://gwern.net/gpt-3#prompts-as-programming">blog</a> on prompts as programming).
         </p>
         <p>
-            <a href="">Input Rewriter</a> and <a href="">Reverse Questioner</a> can assist in simplifying and clarifying prompts.
-            Prompt creator (<a href="">Commander</a>) can ask the LLM to generate prompts according to task descriptions (<a href="https://arxiv.org/abs/2211.01910">Zhou et al. 2023</a>).
+            <a href="workerstereotypes.html#input">Input Rewriter</a> and <a href="workerstereotypes.html#reverse-questioner">Reverse Questioner</a> can assist in simplifying and clarifying prompts.
+            Prompt creator (<a href="workerstereotypes.html#commander">Commander</a>) can ask the LLM to generate prompts according to task descriptions (<a href="https://arxiv.org/abs/2211.01910">Zhou et al. 2023</a>).
         </p>
         
         <p id="terminology">
@@ -122,7 +122,7 @@
             For terms with commonly known meanings, it is best not to override these meanings, as doing so can easily confuse the model. 
         </p>
         <p>
-            Based on the <a href="magicenhancingmagic.html">mechanical sympathy</a> for the model's understanding of terms and symbols, we can clearly define the meaning of terms or symbols in a specific prompt within its <a href="">Context</a> to ensure that the model can understand them and correctly execute the prompt.
+            Based on the <a href="magicenhancingmagic.html">mechanical sympathy</a> for the model's understanding of terms and symbols, we can clearly define the meaning of terms or symbols in a specific prompt within its <a href="promptpatterns.html#context">Context</a> to ensure that the model can understand them and correctly execute the prompt.
         </p>
         
         <p id="committee">
@@ -135,7 +135,7 @@
             Other factors can also be considered in consistency checking.
             For example, complexity-based consistency is to prefer more complex reasoning paths (e.g., those with more steps) among all the generations (<a href="https://arxiv.org/abs/2210.00720">Fu et al. 2022</a>).
             A prompt committee can be implemented using a <a href="systemdesign.html">fork-join control structure</a>.
-            A <a href="">Composer</a> can be used to perform consistency checking.
+            A <a href="workerstereotypes.html#composer">Composer</a> can be used to perform consistency checking.
         </p>
         
         <h2 class="main-subtitle">Prompt Aspects</h2>
@@ -151,9 +151,9 @@
             However, for simple tasks, the input can be a part of the instruction itself. 
             For example, if you want the model to calculate the sum of two numbers, you can include the numbers directly in the instruction, such as "What is the sum of 5 and 7?". 
             In such cases, the instruction incorporates the necessary input or context for the model to understand and process the request. 
-            If the model does not understand the input data and its format (which is something to explore during the Exploration phase, as we need to gain <a href="magicenhancingmagic.html">mechanical sympathy</a> for the model), the context should explain the data format and clearly define any ambiguous or unfamiliar terms and symbols (<a href="">Terminology Explanation</a>). 
+            If the model does not understand the input data and its format (which is something to explore during the Exploration phase, as we need to gain <a href="magicenhancingmagic.html">mechanical sympathy</a> for the model), the context should explain the data format and clearly define any ambiguous or unfamiliar terms and symbols (<a href="promptpatterns.html#terminology">Terminology Explanation</a>). 
             Examples often help condition the model on the specific meanings of terms and symbols related to the task.
-            Context can use <a href="">Persona</a> and <a href="">Context Control</a> to customize the LLM's behavior, constrain the LLM's response, and define things to avoid while executing the instruction.
+            Context can use <a href="promptpatterns.html#persona">Persona</a> and <a href="promptpatterns.html#context-control">Context Control</a> to customize the LLM's behavior, constrain the LLM's response, and define things to avoid while executing the instruction.
         </p>
         
         <p id="instruction">
@@ -162,7 +162,7 @@
         <p>
             Instructions need to align with the worker's role and clearly define what the worker needs to do.
             Instructions can incorporate simple inputs or constraints.
-            But complex inputs and constraints should be separated and placed in the <a href="">Context</a>.
+            But complex inputs and constraints should be separated and placed in the <a href="promptpatterns.html#context">Context</a>.
         </p>
         <p>
             In most cases, instructions are written in the form of imperative sentences. 
@@ -200,7 +200,7 @@
         </p>
         <p>
             All these factors require extensive experimentation to achieve the best possible model <a href="magicenhancingmagic.html">mechanical sympathy</a>. 
-            Engineers can provide seed examples, and then a prompt creator <a href="">Commander</a> can be used to generate example variants (<a href="https://aclanthology.org/2022.acl-long.230">Ribeiro and Lundberg 2022</a>).
+            Engineers can provide seed examples, and then a prompt creator <a href="workerstereotypes.html#commander">Commander</a> can be used to generate example variants (<a href="https://aclanthology.org/2022.acl-long.230">Ribeiro and Lundberg 2022</a>).
         </p>
         
         <p id="output">
@@ -211,7 +211,7 @@
             In these cases, it is necessary to clearly define the output format, together with illustrative examples, and instruct the LLM to follow the format. 
         </p>
         <p>
-            Although <a href="">Persona</a> and <a href="">Context Control</a> contextualize the LLM's response, they do not specify output formats.
+            Although <a href="promptpatterns.html#persona">Persona</a> and <a href="promptpatterns.html#context-control">Context Control</a> contextualize the LLM's response, they do not specify output formats.
             It's a good idea to separate output format instructions from the core processing instructions as well as context descriptions. 
             This makes the prompt more structured and easier to understand, which can lead to better results from the LLM. 
             An Output Formatter can be a template with placeholders marked by tags, such as an email template like "Dear %NAME%, Thank you for your contributions to %EVENT% ...".
@@ -224,7 +224,7 @@
         <p>
             Formatting a worker's outputs also makes it easier to automatically use one worker's output as the input for subsequent workers. 
             However, it is important to note that even with an Output Formatter, the model may produce information beyond what the formatter specifies, such as attempting to provide additional explanations. 
-            This extra information could cause subsequent workers to fail, and such issues can be resolved by using an <a href="">Input Rewriter</a> to keep only the relevant information in the outputs.
+            This extra information could cause subsequent workers to fail, and such issues can be resolved by using an <a href="workerstereotypes.html#input">Input Rewriter</a> to keep only the relevant information in the outputs.
         </p>
         
         <p id="content">
@@ -237,8 +237,8 @@
             But as the context information increases, the instruction workflow becomes more complex, the number of examples grows, and output format requirements become more complicated, a more structured prompt representation may be needed, such as using line breaks, paragraphs, or itemized lists (<a href="https://arxiv.org/abs/2109.07830">Mishra et al. 2021</a>).
         </p>
         <p>
-            Using meaningful tags to mark different aspects and information units can be effective~\cite{DS1000}, such as %code%, %input%, %example%, and %answer%. 
-            Tags can also effectively annotate terms and symbols in the context that need explanation or specify the output format structure or placeholders. 
+            Using meaningful tags to mark different aspects and information units can be effective, such as %code%, %input%, %example%, and %answer%. 
+            Tags can also effectively annotate terms and symbols in the <a href="promptpatterns.html#context">Context</a> that need explanation or specify the output format structure or placeholders. 
             These tags can help the model distinguish information that requires special attention or processing from ordinary text content.
         </p>
         <p>
@@ -251,8 +251,8 @@
         <p>
             Prompting decorators are not a worker's core functionality, but they can enhance the model's reasoning capabilities through "think-aloud" (Self-ask and Reflection) and enable better customization of the model's behavior using explicit constraints (Persona and Context Control).
             Prompting decorators can be applied to any worker stereotypes.
-            Self-ask and Reflection encourages a worker's internal reflection.
-            This is different from <a href="">State Monitor</a> and <a href="">Verifier</a> that monitor or verify the output of other workers.
+            Self-ask and Reflection encourages a worker's inner monologue.
+            This is different from <a href="workerstereotypes.html#monitor">State Monitor</a> and <a href="workerstereotypes.html#verifier">Verifier</a> that monitor or verify the output of other workers.
         </p>
         
         <p id="self-ask">
@@ -262,7 +262,7 @@
             Self-ask (<a href="http://arxiv.org/abs/2210.03350">Press et al. 2022</a>) involves the model guiding its own reasoning process by asking and answering its own questions. 
             For example, the model may ask itself, "Is there any missing information?", "Do I have enough information to answer?", "What should I do first?" or "Are there follow-up steps?"
             By answering these questions, the model has more "think-time" or gather more information to complete the task at hand.
-            Self-ask is the worker's inner monologue, which is different from <a href="">Reverse Questioner</a> that involves human-LLM dialogue.
+            Self-ask is the worker's inner monologue, which is different from <a href="workerstereotypes.html#reverse-questioner">Reverse Questioner</a> that involves human-LLM dialogue.
         </p>
         
         <p id="reflection">

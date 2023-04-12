@@ -51,20 +51,20 @@
         <p>
             Implementing Software 1.0 and Software 2.0 workers follow traditional software engineering methods.
             These two types of workers remain crucial, especially when it comes to accessing external data, APIs, or applications.
-            In our IDE's <a href="blockviewpage">Block view</a>, users can implement worker 1.0 by visual programming blocks (<b>To be confirm: natively supported in Sapper IDE</b>) (e.g., <b>To be fixed: the worker-xxx in <a href="">showcase-name-yyy</a></b>) and worker 1.0/2.0 by coding in a programming language (e.g., Python) (<b>To be confirmed: this requires the corresponding language's RESTful APIs installed in the <a href="">Engine Management</a></b>).
+            In our IDE's <a href="blockviewpage">Block view</a>, users can implement worker 1.0 by visual programming blocks (<b>To be confirm: natively supported in Sapper IDE</b>) (e.g., <b>To be fixed: the worker-xxx in <a href="yyy.html">showcase-name-yyy</a></b>) or implement worker 1.0/2.0 by coding in a programming language (e.g., Python) (<b>To be confirmed: this requires the corresponding language's RESTful APIs installed in the <a href="">Engine Management</a></b>).
         </p>
         <p>
             As the capabilities of LLMs continue to improve, they are increasingly able to generate (almost) correct code based on task prompts. 
             This makes it increasingly possible to develop Software 1.0/2.0 workers using a prompt-based AI chain.
             That is, we do not need to directly write code to accomplish a specific function.
             Instead, we write natural language prompts requesting the LLM to generate the corresponding code. 
-            This kind of workers are a kind of hybrid worker, and we name them <a href="aichainconcepts.html">worker 1.5/2.5</a> and will support them in the next IDE release.
+            This kind of workers are a kind of hybrid workers, and we name them <a href="aichainconcepts.html">worker 1.5/2.5</a> and will support them in the next IDE release.
         </p>
     
 
         <h2 class="main-subtitle">Worker 3.0 Implementation</h2>
         <p>
-            <b>To be added: @mulong add Table 1 here. Worker stereotype links to a workerstereotypes.html page, the other three (prompt caveats, prompt aspects, prompting decorators) link to promptpatterns.html page.</b>
+            <b>To be added: @mulong add paper Table 1 here. Worker stereotype links to a workerstereotypes.html page, the other three (prompt caveats, prompt aspects, prompting decorators) link to promptpatterns.html page.</b>
         </p>
         <p>
             For Software 3.0 workers, the key is to determine the worker stereotypes and design their prompts that clearly define worker roles and functions.
@@ -72,12 +72,12 @@
         </p>
         <p>
             We summarize and document best prompting practices as four categories of prompt design patterns: <a href="workerstereotypes.html">worker stereotypes</a>, <a href="promptpatterns.html">prompting caveats,  prompt aspects, and prompting decorators</a>, summarized in the above table.
-            Compared with other attempts to summarize prompt patterns (<a href="https://aclanthology.org/2022.findings-acl.50">Mishra et al. 2022</a>, <a href="https://arxiv.org/abs/2302.11382">White et al. 2023</a>, <a href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/">Lil’Log Prompt Engineering</a>, <a href="https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md">OpenAI cookbook</a>, <a href="https://www.amazon.com/Art-Asking-ChatGPT-High-Quality-Answers/dp/B0BT2JB67Y">The Art of Asking ChatGPT for High-Quality Answers</a>), our pattern catalog is more structured and clearly identifies the four perspectives that prompt design needs to consider, allowing for a more structured design of prompts.
+            Compared with other attempts to summarize prompt patterns (<a href="https://aclanthology.org/2022.findings-acl.50">Mishra et al. 2022</a>, <a href="https://arxiv.org/abs/2302.11382">White et al. 2023</a>, <a href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/">Lil’Log Prompt Engineering</a>, <a href="https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md">OpenAI cookbook</a>, <a href="https://www.amazon.com/Art-Asking-ChatGPT-High-Quality-Answers/dp/B0BT2JB67Y">The Art of Asking ChatGPT for High-Quality Answers</a>), our pattern catalog is more structured and clearly identifies the four distinct but correlated perspectives that prompt design needs to consider, allowing for a more structured design of prompts.
         </p>
         <p>
             It is important to note that these prompt design patterns will not replace creativity and experiments.
             Furthermore, they are more focused on tactical individual worker level optimization.
-            Often, the task is too complex to be completed through prompt design, and then we need to consider more strategic system level adjustments, such as <a href="systemdesignpage">task decomposition and worker cooperation</a>.
+            Often, the task is too complex to be completed through prompt design, and then we need to consider more strategic system level adjustments, such as <a href="systemdesign.html">task decomposition and worker cooperation</a>.
         </p>
                          
     </div>
