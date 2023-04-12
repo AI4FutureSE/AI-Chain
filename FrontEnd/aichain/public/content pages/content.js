@@ -54,26 +54,26 @@ $(document).ready(()=>{
             '                </ul>\n' +
             '            </li>\n' +
             '            <li class="doc-item">\n' +
-            '                <a class="doc-link doc-link-level1" id="sapperide">Sapper IDE</a>\n' +
+            '                <a class="doc-link doc-link-level1" id="sapperide" href="sapperide/ideintro.html">Sapper IDE</a>\n' +
             '                <!-- 2ed level -->\n' +
             '                <ul class="doc-list">\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="exploreview">Exploration View</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="exploreview" href="sapperide/explorationview.html">Exploration View</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="designview">Design View</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="designview" href="sapperide/designview.html">Design View</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="blockview">Block View</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="blockview" href="sapperide/blockview.html">Block View</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="prompthub">Prompt Hub</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="prompthub" href="sapperide/prompthub.html">Prompt Hub</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="enginemanagement">Engine Management</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="enginemanagement" href="sapperide/enginemanagement.html">Engine Management</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="artifacts">Artifacts</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="artifacts" href="sapperide/artifactsmanagement.html">Artifacts Management</a>\n' +
             '                    </li>\n' +
             '                </ul>\n' +
             '            </li>\n' +
