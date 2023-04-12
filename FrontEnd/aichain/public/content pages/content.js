@@ -78,17 +78,37 @@ $(document).ready(()=>{
             '                </ul>\n' +
             '            </li>\n' +
             '            <li class="doc-item">\n' +
-            '                <a class="doc-link doc-link-level1" id="market">AI Chain Showcases</a>\n' +
+            '                <a class="doc-link doc-link-level1" id="market" href="showcases/showcases.html">AI Chain Showcases</a>\n' +
             '                <!-- 2ed level -->\n' +
             '                <ul class="doc-list">\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="wenxiaojie">WenXiaoJie</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="wenxiaojie" href="showcases/wenxiaojie.html">文小杰 (Wen Xiao Jie)</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="sixiaopin">SiXiaoPin</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="qingxiaoxie" href="showcases/qingxiaoxie.html">轻小写 (Qing Xiao Xie)</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="maxiaoyan">MaXiaoYan</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="chunxiaoxie" href="showcases/chunxiaoxie.html">纯小写 (Chun Xiao Xie)</a>\n' +
+            '                    </li>\n' +
+            '                    </li>\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="sixiaopin" href="showcases/sixiaopin.html">思小聘 (Si Xiao Pin)</a>\n' +
+            '                    </li>\n' +
+            '                    </li>\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="xinxiaozhu" href="showcases/xinxiaozhu.html">心小助 (Xin Xiao Zhu)</a>\n' +
+            '                    </li>\n' +
+            '                    </li>\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="huixiaoshi" href="showcases/huixiaoshi.html">绘小诗 (Hui Xiao Shi)</a>\n' +
+            '                    </li>\n' +
+            '                    </li>\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="yunxiaojuan" href="showcases/yunxiaojuan.html">云小卷 (Yun Xiao Juan)</a>\n' +
+            '                    </li>\n' +
+            '                    </li>\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="maxiaoyuan" href="showcases/maxiaoyuan.html">码小猿 (Ma Xiao Yuan)</a>\n' +
             '                    </li>\n' +
             '                </ul>\n' +
             '            </li>\n' +
