@@ -9,6 +9,11 @@
     src: url("../plugin/font/Exo2-VariableFont_wght.ttf");
 }
 
+@font-face {
+    font-family: Ubuntu;
+    src: url("../plugin/font/Ubuntu-Regular.ttf");
+}
+
 :root{
     --first: #23a6d5;
     --second: #e73c7e;
@@ -24,7 +29,7 @@
 }
 
 html body{
-    font-family: Roboto, serif;
+    font-family: Ubuntu, serif;
     padding: 0;
     margin: 0;
 }
@@ -74,7 +79,7 @@ html body{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     /*box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;*/
     transition: 0.8s !important;
-    width: 750px;
+    width: 780px;
     height: 65px;
     top: 0;
 }
