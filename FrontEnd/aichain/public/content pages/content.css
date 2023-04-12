@@ -8,6 +8,16 @@
     src: url("../plugin/font/Exo2-VariableFont_wght.ttf");
 }
 
+@font-face {
+    font-family: Ubuntu;
+    src: url("../plugin/font/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+    font-family: Ubuntu-bold;
+    src: url("../plugin/font/Ubuntu-Bold.ttf");
+}
+
 :root{
     --first: #23a6d5;
     --second: #e73c7e;
@@ -23,7 +33,7 @@
 }
 
 html body{
-    font-family:sans-serif;
+    font-family:Ubuntu, serif;
     padding: 0;
     margin: 0;
 }
@@ -34,8 +44,8 @@ html body{
     font-size: 22px;
     z-index: 100;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    /*box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;*/
+    /*box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;*/
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     width: 100%;
     height: 80px;
     position: absolute;
@@ -124,9 +134,9 @@ main{
 .doc-nav{
     padding-top: 2px;
     padding-bottom: 30px;
-    width: 330px;
+    width: 340px;
     height: calc(100vh - 80px);
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     flex: 1 0 auto;
     overflow-y: auto;
     overflow-x: hidden;

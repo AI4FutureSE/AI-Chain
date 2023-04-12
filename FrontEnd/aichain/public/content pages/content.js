@@ -6,7 +6,7 @@ $(document).ready(()=>{
         let nav = '<nav class="doc-nav">\n' +
             '        <ul class="doc-list">\n' +
             '            <li class="doc-item">\n' +
-            '                <a class="doc-link doc-link-level1" id="ai20" href="ai20software30.html">AI2.0 and Software3.0</a>\n' +
+            '                <a class="doc-link doc-link-level1" id="ai20" href="ai20software30.html">AI 2.0 and Software 3.0</a>\n' +
             '            </li>\n' +
             '            <li class="doc-item">\n' +
             '                <a class="doc-link doc-link-level1" id="se4aichain" href="se4aichain.html">SE for AI Chain: Vision & Goals</a>\n' +

@@ -9,6 +9,11 @@
     src: url("../plugin/font/Exo2-VariableFont_wght.ttf");
 }
 
+@font-face {
+    font-family: Ubuntu;
+    src: url("../plugin/font/Ubuntu-Regular.ttf");
+}
+
 :root{
     --first: #23a6d5;
     --second: #e73c7e;
@@ -24,7 +29,7 @@
 }
 
 html body{
-    font-family: Roboto, serif;
+    font-family: Ubuntu, serif;
     padding: 0;
     margin: 0;
 }
@@ -71,9 +76,10 @@ html body{
     font-size: 22px;
     z-index: 100;
     /*background-color: var(--blue);*/
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    /*box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;*/
     transition: 0.8s !important;
-    width: 750px;
+    width: 850px;
     height: 65px;
     top: 0;
 }
@@ -98,7 +104,7 @@ html body{
 
 .nav-link{
     color: whitesmoke;
-    padding: 18px !important;
+    padding: 17px 29px !important;
     height: 100%;
 }
 
@@ -133,18 +139,19 @@ html body{
 }
 
 .title{
-    font-size: 7em;
+    font-size: 5em;
     font-family: Exo, serif;
 }
 
 .subtitle{
-    margin: 3em 0 6em;
+    margin: 4em 0 6em;
+    font-size: 25px;
 }
 
 .btn-title{
     border: white 1px solid;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     transition: 0.5s;
 }
 
@@ -206,15 +213,15 @@ html body{
 }
 
 #aichain{
-    background: var(--first);
-    color: white;
+    background: white;
+    color: black;
 }
 
 .module-title{
     font-family: Arial, serif;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bolder;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
 }
 
 .module-content{
