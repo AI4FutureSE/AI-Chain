@@ -51,8 +51,8 @@
         
         <p>           
             This activity is a continuation and a starting point: 
-            continuation in the sense that it clarifies and refines the initial (vague) ``what we want'' and the approximate task model into specific AI chain requirements through requirement analysis, and a starting point in the sense that it produces the AI chain skeleton as the foundation for implementing the AI chain through task decomposition, separation of AI and non-AI concerns, and workflow walk-through. 
-            These three activities adopt the basic principles of computational thinking and the modular design of software engineering, and will determine worker composition together with work-AI interaction modes, worker types (Software 3.0/2.0/1.0), and worker cooperation, forming a skeleton of AI chain.
+            a continuation in the sense that it clarifies and refines the initial (vague) ``what we want'' and the approximate task model into specific AI chain requirements through requirement analysis, and a starting point in the sense that it produces the AI chain skeleton as the foundation for implementing the AI chain through task decomposition, separation of AI and non-AI concerns, and workflow walk-through. 
+            These three activities adopt the basic principles of computational thinking and the modular design of software engineering, and will determine worker composition together with work-AI interaction modes, worker types (Software 3.0/2.0/1.0), and worker cooperation (see the definitions of these concepts in <a href="aichainconcepts.html">AI Chain Concepts</a>), forming a skeleton of AI chain.
         </p>
         
         <h2 class="main-subtitle">Requirement Analysis</h2>
@@ -60,14 +60,14 @@
             The initial AI chain requirements provided by AI chain engineers are often incomplete or ambiguous. 
             Building the AI chain on such requirements makes it difficult to ``build the right AI chain''. 
             In software projects, it is usually necessary to clarify and refine requirements through communication between product managers and users. 
-            We achieve this through an LLM-powered requirement co-pilot (implemented in the IDE's <a href="designviewpage">Design view</a>). 
-            This co-pilot is a <a href="workerstereotypespage">Reverse Questioner</a> who engages in open-ended questioning with engineers around their initial requirements and task notes collected by the note-taking copilot in the <a href="explorationviewpage">Exploration view</a>. 
+            We achieve this through an LLM-powered requirement co-pilot (implemented in the IDE's <a href="designview.html">Design view</a>). 
+            This co-pilot is a <a href="workerstereotypes.html">Reverse Questioner</a> who engages in open-ended questioning with engineers around their initial requirements and task notes collected by the note-taking copilot in the <a href="explorationview.html">Exploration view</a>. 
             Based on the engineer's answers, the requirement co-pilot iteratively rewrites and expands the AI chain requirements. 
+            <b>To be fixed: See our <a href="huixiaoshidemovideo">Hui Xiao Shi</a> showcase video to understand how our Sapper IDE supports requirement analysis.</b>
         </p>
-        
-        <p>
+        <!--p>
             <b>To be fixed: For example, ... need to provide an example of multi-round requirement clarification. can be a demo video + some text explanation ... </b>
-        </p>
+        </p-->
         
         <h2 class="main-subtitle">Task Decomposition</h2>
         <p>
@@ -80,20 +80,23 @@
             When a model cannot solve a problem successfully in a single generative pass, we could consider how humans would divide and conquer such complex problems. 
             LLMs demonstrate strong task planning abilities (<a href="https://arxiv.org/abs/2204.01691">Ahn et al. 2022</a>, <a href="https://arxiv.org/abs/2209.11302">Singh et al. 2022</a>, <a href="https://arxiv.org/abs/2201.07207">Huang et al. 2022</a>).
             During the exploration phase, consulting the LLM can often obtain inspiration for task decomposition.
-            Our IDE's Design view is equipped with a <a href="workerstereotypespage">Planner</a> co-pilot to generate a sequence of major steps for accomplishing the task requirement, which can be regarded as initial task decomposition.
+            Our IDE's Design view is equipped with a <a href="workerstereotypes.html">Planner</a> co-pilot to generate a sequence of major steps for accomplishing the task requirement, which can be regarded as initial task decomposition.
             <b>To be fixed: For example, for the task requirement ``...'' of <a href="">xXiaoy</a>, it generates ?? steps: ..., ..., ... ??a case study example from xXiaoy</b>
         </p>
 
         <p>
             We can iteratively break down the problem into small, simpler ones.
             If a sub-task is still too complex, it can be further decomposed into simpler sub-tasks until each small problem can be handled by the model in a single generative pass. 
-            This results in a hierarchy of sub-tasks, each of which is accomplished by an AI chain worker (<a href="aichainexamples.html">PCR-Chain</a>, <b>To be fixed: <a href="xXiaoy">xXiaoY task hierarhcy</a></b>). 
-            If fine-grained tasks and coarse-grained tasks are the same, but only deal with increasingly simpler inputs, for example, substrings of a longstring, nested code blocks, then we can recursively call the same worker to simplify the input until the model can handle it, similar to least-to-most prompting (<a href="https://arxiv.org/abs/2205.10625">Zhou et al. 2022</a>).
+            This results in a hierarchy of sub-tasks, each of which is accomplished by an AI chain worker (see <a href="aichainexamples.html">PCR-Chain</a> and our <a href="showcases.html">showcases</a> in <a href="https://aichain.store">AI Chain Marketplace</a>). 
+            If fine-grained tasks and coarse-grained tasks are the same, but only deal with increasingly simpler inputs, for example, substrings of a longstring, nested code blocks, then we can recursively call the same worker with simpler and simpler input until the model can handle it, similar to least-to-most prompting (<a href="https://arxiv.org/abs/2205.10625">Zhou et al. 2022</a>).
         </p>
         <p>
             For intermediate sub-tasks, we need composite workers corresponding to the L4 work-AI interaction mode. 
             For leaf sub-task workers, we need to empirically determine the appropriate L1 to L3 interaction modes with increasing reasoning capability.
-            <b>To be fixed:For example, ??worker-name1 in <a href="">xXiaoy</a> is a L1 worker, while ??worker-name2 is a L2 worker ... ??should assign L1-3 to worker 3.0 in the case study??? ...</b>
+            In <a href="showcases.html">our showcases</a>, leaf workers are generally L2 workers as they they take single responsbility and delegate workflow control to explicit worker 1.0 in the AI chain.
+        </p>
+            <!--b>To be fixed:For example, ??worker-name1 in <a href="">xXiaoy</a> is a L1 worker, while ??worker-name2 is a L2 worker ... ??should assign L1-3 to worker 3.0 in the case study??? ...</b-->
+        <p>
             Task decomposition requires mechanical sympathy to align task characteristics with model capabilities.
             That is, the appropriate granularity for task decomposition depends on the scale and capabilities of the foundation model. 
             For smaller models with weaker capabilities, tasks may need to be decomposed into finer granularity. 
@@ -101,19 +104,20 @@
         </p>
         <p>
             An important question is whether we no longer need composite workers (i.e., task decomposition and AI chain), but only need a single worker with sufficient reasoning capabilities, as model capabilities scale up. 
-            We believe we will see a left-shift in worker-AI interaction modes. 
+            We believe we will see a <b>left-shift in worker-AI interaction modes</b>. 
             For a task that previously required a higher-level interaction mode, it can now be completed with a lower-level interaction mode as model capabilities improve. 
-            Or, tasks that previously required a very complex AI chain can now be completed with a simple AI chain.
-            However, AI chain engineering will not disappear as model capabilities increase, as task complexities that models could handle will increase at the same time.
-            That is, many tasks that previous models could not handle can be completed with AI chains and stronger models. 
+            Or, tasks that previously required a very complex AI chain can now be completed with a simpler AI chain.
+            At the same time, many tasks that previous models could not handle can be completed with AI chains and stronger models.
+            However, we do not think AI chain engineering will disappear as model capabilities increase, because it is a fundamental problem solving and software engineering strategy on top of foundation models, rather than a specific AI capability which could be absorbed by the large language models.
+            Stephen Wolfram wrote an insightful article on a related topic "<a href="https://writings.stephenwolfram.com/2023/03/will-ais-take-all-our-jobs-and-end-human-history-or-not-well-its-complicated/">Will AIs Take All Our Jobs and End Human History - or Not?</a>".
         </p>
       
         <h2 class="main-subtitle">Separation of AI and non-AI Concerns</h2>
         <p>
-            An AI chain contains many workers, and not all workers need to be implemented based on the foundation model from both functional and economic perspectives.
+            An AI chain contains many workers, and not all workers need to be implemented based on the foundation models from both functional and economic perspectives (<a href="https://arxiv.org/abs/2205.12255">TALM</a>, <a href="https://arxiv.org/abs/2302.04761">Toolformer</a>, <a href="https://arxiv.org/abs/2303.16434">Taskmatrix.AI</a>, <a href="https://arxiv.org/abs/2303.17580">HuggingGPT</a>, <a href="https://openai.com/blog/chatgpt-plugins">ChatGPT Plugins</a>).
             The economic perspective is an important factor to consider because foundation models usually require high-end computing resources or significant API usage expenses.
             We need to distinguish which workers need to leverage AI and which ones can use traditional programs. 
-            For AI-based workers, we further distinguish which ones need to use the foundation model and which ones can use traditional ML models. 
+            For AI-based workers, we further distinguish which ones need to use the foundation models and which ones can use traditional ML models. 
         </p>
         <p>
             Through separation of concerns, we can achieve single responsibility and modular design, meaning that each worker in the system has a clear and specific responsibility. 
@@ -123,30 +127,32 @@
             For example, we can replace a foundation model-based classifier with a performance-enhanced classifier fine-tuned on task data, or vice versa, replace a task-specific classifier trained on specific data with a foundation model-based classifier with better generalizability.
         </p>
         <p>
-            For Software 3.0 workers, the core task is to determine <a href="workerstereotypepage">worker stereotype</a> and <a href="promptdesignpatternspage">design prompt</a>.
+            For Software 2.0 or Software 1.0 workers, we need to determine the external knowledge base, task-specific models, tools or APIs to be used to implement the workers (see <a href="aichainimplementation.html">AI chain implementation</a>). 
+        </p>
+        <p>
+            For Software 3.0 workers, the core task is to determine <a href="workerstereotypes.html">worker stereotype</a> and <a href="promptpatterns.html">design prompt</a>.
             Single responsibility worker makes it easier to determine a worker's distinct role and simplify its prompt design.
-            Our IDE is equipped with a prompting co-pilot to create or revise prompts when generating AI chain steps from the task requirement or debugging prompts.
-            <b>To be fixed: For example, for the step ``...'' of xXiaoy (Section~\ref{sec:xxiaoy}), this co-pilot generates a prompt ``...''.</b>
+            Our Sapper IDE is equipped with a prompting co-pilot to create prompts when generating AI chain steps from the task requirement.
+            <b>To be fixed: For example, for the step ``...'' of <a href="">xXiaoy</a>, this co-pilot generates a prompt ``...''.</b>
             Software 3.0 workers can be enhanced by external knowledge bases, tools or APIs (<a href="https://arxiv.org/abs/2101.06804">Liu et al. 2021</a>, <a href="https://arxiv.org/abs/2112.04426">Borgeaud et al. 2022</a>, <a href="https://arxiv.org/abs/2205.12255">TALM</a>, <a href="https://arxiv.org/abs/2211.10435">PAL</a>, <a href="http://arxiv.org/abs/2211.12588">Program of Thoughts</a>, <a href="https://arxiv.org/abs/2302.04761">Toolformer</a>, <a href="https://arxiv.org/abs/2303.16434">Taskmatrix.AI</a>, <a href="https://arxiv.org/abs/2303.17580">HuggingGPT</a>, <a href="https://openai.com/blog/chatgpt-plugins">ChatGPT Plugins</a>).
-            For Software 2.0 or Software 1.0 workers, we need to determine the external knowledge base, task-specific models, or external tools to be used. 
         </p>
 
         <h2 class="main-subtitle">Workflow Walk-through</h2>
         <p>
-            AI chain workers collaborate to complete tasks according to a workflow (see <a href="">AI chain examples</a> and our <a href="">AI chain showcases</a>). 
+            AI chain workers collaborate to complete tasks according to a workflow (see <a href="aichainexamples.html">AI chain examples</a> and our <a href="showcases.html">AI chain showcases</a>). 
             This requires algorithmic thinking to develop a step-by-step process for solving problems.
             We recommend using <a href="http://www.workflowpatterns.com/">workflow patterns</a> to model AI chain workflows. 
-            Note that a L3 worker expresses the workflow in its prompt internally, which is not for worker cooperation.
+            Note that a L3 worker expresses the workflow in its prompt internally, which does not support explicit worker cooperation.
         </p>
         <p>
             The workflow needs to support control structures, such as conditional, loop, fork-join.
             For example, in order to avoid introducing errors into correct code, <a href="aichainexamples.html">PCR-Chain</a> only attempts to fix the code when the LLM determines that there are last-mile errors (judging whether the code has errors is easier than fixing the code). 
-            <b>To be fixed: <a href="wenxiaojiecase">WenXiaoJie</a></b> works by iteratively expanding a story based on an outline, while maintaining coherence and consistency throughout the story.
-            <b>To be fixed - use a fork-join example from our case?: When summarizing a long document, fork-join can be applied to summarize each section in parallel and then merge them into an overall summary of the document.</b>
+            <b>To be fixed: <a href="wenxiaojie.html">Wen Xiao Jie</a></b> works by iteratively expanding a story based on an outline, while maintaining coherence and consistency throughout the story.
+            <b>To be fixed: When interpreting a poem, <a href="huixiaoshi.html">Hui Xiao Shi</a> uses a fork-join workflow to first obtain a set of interpretations by a <a href="promptpatterns.html">Prompt Committee</a> and then merge them into a coherent intepretation.</b>
         </p>
         <p>
             Meanwhile, each worker needs to define a function signature in terms of input and output as well as any pre/post-condition constraints, akin to interface specification in software engineering, so that workers can interact or communicate with one another.
-            <b>To be fixed: For example, the worker-xxx in <a href="wenxiaojiecase">WenXiaoJie</a> takes ??three inputs (theme, audience, subject matter) and outputs a generic article outline.</b>
+            <b>To be fixed: For example, the worker-xxx in <a href="wenxiaojie.html">WenXiaoJie</a> takes ??three inputs (theme, audience, subject matter) and outputs a generic article outline.</b>
         </p>
     </div>
 </main>

@@ -51,23 +51,23 @@
         </p>
         
         <p>
-            <b>Our vision</b> is to develop a systematic AI chain methodology which we call <b>promptmanship</b>, corresponding development and deployment environment (<b>AI chain IDE</b>), and <b>AI services ecosystem</b>. 
+            <b>Our vision</b> is to develop a systematic AI chain methodology which we call <a href="promptmanship.html"><b>promptmanship</b></a>, corresponding development and deployment environment (<a href="https://promptsapper.tech"><b>AI chain IDE</b></a>), and <a href="https://aichain.store"><b>AI services ecosystem</b></a>. 
         </p>
 
         <p>
             Software engineering has developed many effective methodologies and engineering practices and tools for Software 1.0 and Software 2.0, and many successful ideas and experiences are transferable to AI chain engineering. 
-            However, due to the emergent capabilities of foundation models and the significant shift it brings to human-AI interaction (see <a href="ai20software30.html">AI 2.0 and Software 3.0)</a>, we need to extend these "old-fashioned" methodologies and best practices to adapt to the new foundation model driven, human-centric, natural language-based programming paradigm.        
+            However, due to the emergent capabilities of foundation models and the significant shift it brings to human-AI interaction (see <a href="ai20software30.html">AI 2.0 and Software 3.0)</a>, we need to extend the "old-fashioned" SE methodologies and best practices to adapt to the <b>new foundation model driven, human-centric, natural language-based programming paradigm</b>.        
         </p>
         
         <p>
             On the one hand, large language models encode rich world knowledge and have strong conversational abilities. 
-            We can leverage these models to support AI chain engineers in acquiring task-specific knowledge, thinking methods, workflows, and thereby gain more accurate problem understanding and solving capabilities. 
+            We can leverage these models to support AI chain engineers in <a href="magicenhancingmagic.html">acquiring task-specific knowledge</a>, thinking methods, workflows, and thereby gain more accurate problem understanding and solving capabilities. 
             At the same time, large language models have uncertainty and can suffer from errors and hallucination problems. 
-            We need to develop the mechanical sympathy for the models and adopt effective engineering methods and design prompts to mitigate the impact of such problems. 
+            We need to develop the <a href="magicenhancingmagic.html">mechanical sympathy</a> for the models and adopt effective engineering methods and design prompts to mitigate the impact of such problems. 
         </p>
         <p>
             On the other hand, large language models have deeply transformed who can develop AI services and what kind of AI services can be made available. 
-            This requires us to shift from the past code-centric development methods and tools to human-centric ones that allow individuals, including those with limited technical backgrounds, to focus on problem-solving, more effectively articulate and clarify task requirements, and more intuitively design, build, and evaluate AI chains, rather than performing data engineering and writing code.
+            This requires us to <b>shift from the past code-centric development methods and tools to human-centric ones</b> that allow individuals, including those with limited technical backgrounds, to focus on problem-solving, more effectively articulate and clarify task requirements, and more intuitively design, build, and evaluate AI chains, rather than performing data engineering and writing code.
         </p>
         
         <p>    
@@ -80,17 +80,19 @@
         <p>
             Since the groundbreaking <a href="https://arxiv.org/abs/2005.14165">GPT-3 paper</a>, a large amount of work has focused on prompt engineering to improve task performance or accomplish more challenging tasks. 
             Many tasks that performed poorly in the GPT-3 paper can be significantly improved by appropriate prompt formatting. 
-            Several important prompt design concepts have been proposed and proven effective, including <a href="https://arxiv.org/abs/2201.11903">Chain of Thought</a>, <a href="https://ofir.io/self-ask.pdf">self-ask</a>, and <a href="https://arxiv.org/abs/2203.11171">self-consistency</a>, which are effective prompt constructs for solving recurring prompting problems. 
+            Several important prompt design concepts have been proposed and proven effective, such as <a href="https://arxiv.org/abs/2201.11903">Chain of Thought</a>, <a href="https://ofir.io/self-ask.pdf">self-ask</a>, and <a href="https://arxiv.org/abs/2203.11171">self-consistency</a>, which are effective prompt constructs for solving recurring prompting problems. 
+        </p>
+        <p>
             However, as task complexity increases, the impact of optimizing a single prompt decreases.
             This is because models struggle to handle overly complex, multi-step tasks in a single generative process. 
-            People naturally adopt task decomposition, a basic principle of computational thinking, to break down complex tasks into several relatively simple steps that large language models can effectively solve. 
+            People naturally adopt task decomposition, a basic principle of <a href="https://en.wikipedia.org/wiki/Computational_thinking">computational thinking</a>, to break down complex tasks into several relatively simple steps that large language models can effectively solve. 
             Many works have employed this principle, but most of them are task-specific decomposition structures, not task-agnostic decomposition strategies. Currently, most research in prompt engineering focuses on performance improvement, but little attention to software engineering perspectives, such as the modularity, composability, debuggability, and reusability of AI functionalities.
         </p>
         
         <p>    
             <b>Goal #2 AI Chain IDE:</b>
             <em>
-                Develop an AI chain integrated development environment (IDE) to support the full life cycle of AI chain development. By organically embodying AI chain methodology in this IDE, people can naturally apply AI chain best practices throughout the AI chain development process, enabling those with limited programming skills to develop high-quality foundation model-based AI services.
+                Develop an AI chain integrated development environment (IDE) to support the full life cycle of AI chain development. By organically embodying AI chain methodology in this IDE, people can naturally apply AI chain best practices throughout the AI chain development process, enabling those with limited AI and programming skills to develop high-quality foundation model-based AI services.
             </em>
         </p>
         
@@ -99,15 +101,17 @@
             Through conversations with large models, people can acquire a lot of knowledge (though one should be careful of hallucination problems) and explore the capabilities and effective prompts of the foundation models. 
             Since chatbots themselves cannot be used for task automation, people need to write programs to utilize effective prompts obtained through conversations with the foundtion models and call the foundation model APIs for task automation. 
             Although there are frameworks (<a href="https://langchain.readthedocs.io/en/latest/index.html}">LangChain</a>, <a href="https://dust.tt/">Dust</a>, <a href="https://primer.ought.org/">Primer</a>) that encapsulate the raw APIs and support AI chain programming, these frameworks still require basic programming language skills, which undoubtedly counteract the democratization effect of foundation models. 
+        </p>
+        <p>
             Researchers have attempted to lower the barriers to prototyping AI functionality through visual programming such as <a href="https://arxiv.org/abs/2203.06566">PromptChainer</a>. 
             Although visual programming can achieve this goal, it does not address the challenges of task decomposition, prompt design, evaluation, and management when creating AI functionality based on foundation models. 
-            In response to these challenges, people have developed some scattered tools, such as <a href="https://github.com/bigscience-workshop/promptsource">PromptSource</a>, <a href="">Promptable</a>, <a href="">Dyno</a>, <a href="">GPTTools</a>, <a href="">Interactive Composition Explorer</a>, <a href="">Metaprompt</a>, <a href="">Visual Prompt Builder</a>, <a href="">AI Test Kitchen</a>, but these tools are independent and cannot systematically support AI chain methodology.
+            In response to these challenges, people have developed some scattered tools, such as <a href="https://github.com/bigscience-workshop/promptsource">PromptSource</a>, <a href="https://promptable.ai/">Promptable</a>, <a href="https://trydyno.com/">Dyno</a>, <a href="https://gpttools.com/comparisontool">GPTTools</a>, <a href="https://github.com/oughtinc/ice">Interactive Composition Explorer</a>, <a href="https://metaprompt.vercel.app/?task=gpt">Metaprompt</a>, <a href="https://tools.saxifrage.xyz/prompt">Visual Prompt Builder</a>, <a href="https://gpt3demo.com/apps/ai-test-kitchen-by-google">AI Test Kitchen</a>, but these tools are independent and do not support a coherent AI chain methodology.
         </p>
         
         <p>    
-            <b>Goal #2 AI Chain IDE:</b>
+            <b>Goal #3 AI services ecosystem:</b>
             <em>
-                Develop the underlying technology to support the emerging AI services ecosystem while researching responsible AI chain engineering techniques to enhance the transparency, accountability, and security of AI services ecosystem.
+                Develop the underlying technology to support the emerging AI services marketplace while researching responsible AI chain engineering techniques to enhance the transparency, accountability, and security of AI services ecosystem and supply chain.
             </em>
         </p>
         
@@ -115,8 +119,8 @@
             We anticipate that the combination of foundation models and our AI chain IDE will usher in a wave of democratized AI services development. 
             This will lead to the creation of a multitude of diverse and innovative AI services that will impact and transform our learning, working, and living experiences, much like the influence and changes brought about by mobile applications over a decade ago. 
             In vertical markets, we can expect an emergence of AI services providers connecting foundation models with end-users, offering more convenient and affordable service customization. 
-            As these AI services proliferate, we look forward to a thriving AI service marketplace, similar to today’s app marketplaces, where people can share, assemble, and trade AI services based on foundation models or even hire AI chain development talents. 
-            Over time, this marketplace will evolve into an ecosystem of AI services, bringing new software engineering challenges, especially in responsible AI and AI service supply chain management.
+            As these AI services proliferate, we look forward to a thriving AI services marketplace, similar to today’s app marketplaces, where people can share, assemble, and trade AI services based on foundation models or even hire AI chain development talents. 
+            Over time, this marketplace will evolve into an ecosystem of AI services, bringing new software engineering challenges, especially in responsible AI and AI services supply chain management.
         </p>
 
     </div>
