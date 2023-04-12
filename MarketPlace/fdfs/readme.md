@@ -1,4 +1,4 @@
-# This is example of using python to connect FastDFS to manipulate files and mysql database.
+# This is examples of using python to connect FastDFS to manipulate files and mysql database.
 
 ## How to use
 
