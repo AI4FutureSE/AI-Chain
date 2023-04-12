@@ -10,3 +10,5 @@ I have made it done and you can use this file directly when creating client.
 `fdfs_client_example.py` shows how to upload and delete file. There are some bugs for downloading file because of the library.
 It outputs an exception but you can download the file successfully.
 Maybe upload and delete file are enough for you.
+
+More examples see [https://pypi.org/project/py-fdfs-client/](https://pypi.org/project/py-fdfs-client/)
