@@ -17,6 +17,12 @@ $(document).ready(()=>{
             '        <ul class="doc-list">\n' +
             '            <li class="doc-item">\n' +
             '                <a class="doc-link doc-link-level1" id="ai20" href="http://' + location.host + '/public/content pages/ai20software30.html">AI 2.0 and Software 3.0</a>\n' +
+            '                <!-- 2ed level -->\n' +
+            '                <ul class="doc-list">\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="aichainexamples" href="http://' + location.host + '/public/content pages/aichainexamples.html">AI Chain Examples</a>\n' +
+            '                    </li>\n' +
+            '                </ul>\n' +
             '            </li>\n' +
             '            <li class="doc-item">\n' +
             '                <a class="doc-link doc-link-level1" id="se4aichain" href="http://' + location.host + '/public/content pages/se4aichain.html">SE for AI Chain: Vision & Goals</a>\n' +
