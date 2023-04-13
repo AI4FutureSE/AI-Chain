@@ -130,55 +130,49 @@
 <!--    </nav>-->
 
     <div id="main-content">
-        <h1 class="main-title"><a href="https://promptsapper.tech   ">Sapper IDE</a></h1>
-        <h2 class="main-subtitle">The world-first integrated development environment for AI chain</h2>
+        <h1 class="main-title">Prompt Hub</h1>
+        <h2 class="main-subtitle">The hub of your prompt assets</h2>
 
-        <img class="main-figure" src="ide-figures/xxx.git">
-        <p class="figure-caption"><b>To be fixed: Rolling screenshots of the six IDE main views/features listed below</b></p>
+        <img class="main-figure" src="ide-figures/prompthub.jpg">
+        <p class="figure-caption">Prompt Hub: Create, edit, and manage your prompt assets</p>
 
-        <p style="color:red">
-            <b>NOTE: To use Sapper IDE, you MUST enter your OpenAI API key at the bottom of the IDE window.</b>
+        <p>
+            Similar to the value of code in traditional software, prompts are the core assets in the AI chain paradigm, which can be reused across AI chain projects. 
+            Therefore, our Sapper IDE supports a Prompt Hub that is independent of project management.
+            Prompt Hub has two tabs: Prompt Builder and Prompt Base.
         </p>
         
         <p>
-            Unlike traditional IDEs focused on code development, considering that AI chains will be developed by a large number of people with little or no computing knowledge or skills, the highest goal of our AI chain IDE design is to <b>put people first</b>. 
-            This is reflected in three design principles.
+            <b>All contents below need to be confirmed!!!</b>
         </p>
         <p>
-            First, we seamlessly <b>embody promptmanship (AI chain methodology) in the AI chain IDE</b>, effectively utilizing AI chain methodology and best practices in anyone's AI chain development process. 
+            In the Prompt Builder tab, the user can manually create new prompts.
+            They can also drag an existing prompt from the Prompt Base tab to the prompt editor to edit it.
+            Editing prompt blocks in the prompt editor is the same as editing other types of blocks in the AI chain editor.
         </p>
         <p>
-            Second, we make full use of the LLM's extensive knowledge and conversational capabilities, turning it into <b>intelligent co-pilots</b> for AI chain development, effectively assisting non-technical professionals in completing AI chain task modeling, requirement annlysis, design and construction. 
+            Experienced users can directly enter or edit prompt text in the Prompt Text view at the bottom.
+            Users can also create or edit prompts in a structured way by the <a href="../promptpatterns.html">four prompt aspects</a> (Context, Instruction, Examples, and Output Formatter).
+            Except for the Instruction, the other three aspects are optional, but are recommended to represent the prompt in a more structure form.
         </p>
         <p>
-            Third, we support the <b>whole-process no-code development and deployment of AI chains</b>. 
-            To that end, we explicitly support the exploration and design phases in the IDE, providing effective support for AI chain analysis and design, enabling non-technical people to complete the main work of AI chain development in a natural, non-programming way, thus minimizing what needs to be done in AI chain implementation. 
-            Furthermore, we use blocky-style visual programming to support AI chain implementation, execution, and testing, further minimizing the programming skills required. 
-            Finally, through one-click deployment, anyone can easily complete the last mile between AI services and end users.
+            Clicking "Save to Prompt Base" will save the created prompts to the Prompt Base or update existing prompts in the Prompt Base.
+            All prompts can be viewed in the Prompt Base tab. 
+            The prompts in Prompt Base can be searched and recommended in the Design view (upcoming feature). 
         </p>
+        <p>
+            In the Prompts tab of an AI chain project, the user clicks the "Import Prompts ..." button, which will open the Prompt Hub view.
+            The user can then drag the prompts that the project will use from the Prompt Base tab to the prompt editor.
+            Then, clicking the "Export to Project" button will export the selected prompts to the project.
+            The user can change prompts used in the project in the project's Prompt Console tab, but these changes will not affect the origional prompts in the Prompt Hub.
+        </p>
+        <p>
+            The user can download the prompts into local files or upload local prompt files to the IDE.
+        </p>
+        
+        <p>
 
-        <p>
-            Based on these three design principles, our <a href="https://promptsapper.tech">Sapper IDE</a> implements the following major functionalities:
         </p>
-        <p>
-            <a href="explorationview.html">Exploration view</a>: Freely chat with the GPT inside the IDE to acquire task knowledge, identify task challenges, and experiment prompts. You do not need to take notes. Our co-pilot will summarize your interested tasks, preferences, and special considerations.
-        </p>
-        <p>
-           <a href="designview.html">Design view</a>: Tell the IDE what you want to build. Don't worry if your initial thoughts are incomplete or ambiguous. Our co-pilot will discuss with you to clarify and enrich your initial ideas, turning them into specific AI service requirements. Likewise, you don't need to worry about how to implement these requirements. Our co-pilot will automatically generate an AI chain skeleton (including major steps and candidate prompts) based on the AI service requirements for your to review and edit.
-        </p>
-        <p>
-            <a href="blockview.html">Block view</a>: Build and test your AI chain using block-based visual programming. You do not need to do it from scrach. Our IDE will automatically construct and assemble AI chain workers based on the AI chain skeleton you designed, allowing you to directly run, debug, and refine them. Of course, if you know exactly what you need, you can also manually build the AI chain, which is also an intuitive and enjoyable process.
-        </p>
-        <p>
-            <a href="prompthub.html">Prompt hub</a>: Create, edit, and manage your prompt assets in this hub. You can reuse or customize these prompts across different projects.
-        </p>
-        <p>
-            <a href="enginemanagement.html">Engine management</a>: Configure and manage the engines used by workers, including foundation models, traditional ML models, external data sources, or APIs. Our IDE has pre-installed large language models (GPT series) and text-to-image models (Stable Diffusion). You can configure and manage foundation model instances with different parameters in the IDE. Traditional ML models, external data sources, or APIs can be imported through a plugin system (under implementation).
-        </p>
-        <p>
-            <a href="artifactsmanagement.html">Project management</a>: Create, open, or save AI chain projects. You can download the backend Python code for the AI chain to integrate it into your other software projects (require our sapperchain Python library). We are working on implementing a one-click sharing feature for sharing your AI chain projects to the <a href="https://aichain.store">AI chain marketplace</a>, as well as deploying your AI services to cloud servers.
-        </p>
-
     </div>
 </main>
 <!--/div>

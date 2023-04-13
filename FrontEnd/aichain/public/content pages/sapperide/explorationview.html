@@ -130,58 +130,40 @@
 <!--    </nav>-->
 
     <div id="main-content">
-        <h1 class="main-title"><a href="https://promptsapper.tech   ">Sapper IDE</a></h1>
-        <h2 class="main-subtitle">The world-first integrated development environment for AI chain</h2>
+        <h1 class="main-title">Exploration View</h1>
+        <h2 class="main-subtitle">You chat with the LLM. Sapper IDE takes notes.</h2>
 
-        <img class="main-figure" src="ide-figures/xxx.git">
-        <p class="figure-caption"><b>To be fixed: Rolling screenshots of the six IDE main views/features listed below</b></p>
-
-        <p style="color:red">
-            <b>NOTE: To use Sapper IDE, you MUST enter your OpenAI API key at the bottom of the IDE window.</b>
-        </p>
-        
-        <p>
-            Unlike traditional IDEs focused on code development, considering that AI chains will be developed by a large number of people with little or no computing knowledge or skills, the highest goal of our AI chain IDE design is to <b>put people first</b>. 
-            This is reflected in three design principles.
-        </p>
-        <p>
-            First, we seamlessly <b>embody promptmanship (AI chain methodology) in the AI chain IDE</b>, effectively utilizing AI chain methodology and best practices in anyone's AI chain development process. 
-        </p>
-        <p>
-            Second, we make full use of the LLM's extensive knowledge and conversational capabilities, turning it into <b>intelligent co-pilots</b> for AI chain development, effectively assisting non-technical professionals in completing AI chain task modeling, requirement annlysis, design and construction. 
-        </p>
-        <p>
-            Third, we support the <b>whole-process no-code development and deployment of AI chains</b>. 
-            To that end, we explicitly support the exploration and design phases in the IDE, providing effective support for AI chain analysis and design, enabling non-technical people to complete the main work of AI chain development in a natural, non-programming way, thus minimizing what needs to be done in AI chain implementation. 
-            Furthermore, we use blocky-style visual programming to support AI chain implementation, execution, and testing, further minimizing the programming skills required. 
-            Finally, through one-click deployment, anyone can easily complete the last mile between AI services and end users.
-        </p>
+        <img class="main-figure" src="ide-figures/explorationview.jpg">
+        <p class="figure-caption">Exploration view: chatbot interface (left), task notes panel (right)</p>
 
         <p>
-            Based on these three design principles, our <a href="https://promptsapper.tech">Sapper IDE</a> implements the following major functionalities:
+            The exploration view supports activities in the exploration and initial design phases, allowing the user to obtain an approximate task model and challenges, and develop preliminary understanding of task decomposition, workflow, input/output data, and prompt effectiveness. 
         </p>
         <p>
-            <a href="explorationview.html">Exploration view</a>: Freely chat with the GPT inside the IDE to acquire task knowledge, identify task challenges, and experiment prompts. You do not need to take notes. Our co-pilot will summarize your interested tasks, preferences, and special considerations.
+            As shown in the above figure, the left part of the exploration view is a <b>chatbot</b> (currently a wrapper of GPT-3.5 API), working in the same way as common chatbot interfaces (e.g., ChatGPT interface).
+            The chatbot allows users to have any type of conversation with the LLM.
+            Of course, we assume that the users would talk around the AI service they need to support. 
+            For example, in the above figure, <b>To be fixed: the user is intereted in developing a poem-to-paiting service. He is consulting with the LLM about some aesthetic conception and imagery, and is experimeting some prompts to obtain the relevant information for a poem.</b>
         </p>
         <p>
-           <a href="designview.html">Design view</a>: Tell the IDE what you want to build. Don't worry if your initial thoughts are incomplete or ambiguous. Our co-pilot will discuss with you to clarify and enrich your initial ideas, turning them into specific AI service requirements. Likewise, you don't need to worry about how to implement these requirements. Our co-pilot will automatically generate an AI chain skeleton (including major steps and candidate prompts) based on the AI service requirements for your to review and edit.
+            Different from a regular conversational chatbot, the exploration view is equpped a <b>LLM-based co-pilot</b> that automatically collects and analyzes the user's conversations with the LLM to obtain the broad task context (e.g., the concered AI service, user preference, things to avoid) that might be relevant to subsequent AI chain design and development. 
+            This co-pilot is an <b>AI chain service</b> built on top of the LLM (currently GPT-3.5). 
+            It works in a non-intrusive manner, and dynamically takes notes as shown in the <b>Task Note</b> panel from the conversions between the user and the LLM.
+            For example, <b>To be fixed: this co-pilot notes that the input could be Chinese ancient poetry and some art styles the user might perfer.</b>
         </p>
-        <p>
-            <a href="blockview.html">Block view</a>: Build and test your AI chain using block-based visual programming. You do not need to do it from scrach. Our IDE will automatically construct and assemble AI chain workers based on the AI chain skeleton you designed, allowing you to directly run, debug, and refine them. Of course, if you know exactly what you need, you can also manually build the AI chain, which is also an intuitive and enjoyable process.
-        </p>
-        <p>
-            <a href="prompthub.html">Prompt hub</a>: Create, edit, and manage your prompt assets in this hub. You can reuse or customize these prompts across different projects.
-        </p>
-        <p>
-            <a href="enginemanagement.html">Engine management</a>: Configure and manage the engines used by workers, including foundation models, traditional ML models, external data sources, or APIs. Our IDE has pre-installed large language models (GPT series) and text-to-image models (Stable Diffusion). You can configure and manage foundation model instances with different parameters in the IDE. Traditional ML models, external data sources, or APIs can be imported through a plugin system (under implementation).
-        </p>
-        <p>
-            <a href="artifactsmanagement.html">Project management</a>: Create, open, or save AI chain projects. You can download the backend Python code for the AI chain to integrate it into your other software projects (require our sapperchain Python library). We are working on implementing a one-click sharing feature for sharing your AI chain projects to the <a href="https://aichain.store">AI chain marketplace</a>, as well as deploying your AI services to cloud servers.
-        </p>
-
+        <!--p>
+            In the past, software development required a real human product manager to perform these tasks, but the LLM makes it feasible to develop a virtual product manager.
+            \zc{In fact, this intelligent co-pilot in the exploration view, which acts as a virtual product manager, is an AI chain service built on top of the LLM, as shown in Figure~\ref{fig:explorationviewcopilot}. 
+            It includes a Summarizer Commander to summarize the main topics of user input, and a Classifier Commander to classify user input (e.g., determining whether it is a processing step, pointing out a problem in the model response, or modifying previous prompts). 
+            For lengthy input data, it uses an Input Rewriter to extract key information related to the topic. 
+            After observing a certain amount of conversation, it uses a Composer to consolidate the collected information according to AI chain-related concepts such as task context, data properties, worker composition, worker cooperation, and external resources, and saves it to a context memory. 
+            This memory is continuously updated as the conversation progresses, and will provide the approximate task model for the design view. 
+            The user can click on the ``Context Memory'' button located at the bottom right corner of the Exploration View to view and edit the context memory.
+            ??Imagine how this co-pilot would work. Revise according to the actual implementation.}
+        </p-->
     </div>
 </main>
-<!--/div>
+</div>
 
 <!--<footer id="footer">-->
 <!--</footer>-->

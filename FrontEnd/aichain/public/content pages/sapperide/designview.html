@@ -130,55 +130,92 @@
 <!--    </nav>-->
 
     <div id="main-content">
-        <h1 class="main-title"><a href="https://promptsapper.tech   ">Sapper IDE</a></h1>
-        <h2 class="main-subtitle">The world-first integrated development environment for AI chain</h2>
+        <h1 class="main-title">Design View</h1>
+        <h2 class="main-subtitle">Turn your ideas into AI chain requirements and skeleton</h2>
 
-        <img class="main-figure" src="ide-figures/xxx.git">
-        <p class="figure-caption"><b>To be fixed: Rolling screenshots of the six IDE main views/features listed below</b></p>
+        <img class="main-figure" src="ide-figures/designview.jpg">
+        <p class="figure-caption">Design view: requirement analysis chatbot (left), AI chain requirements (upper-right), AI chain skeleton (lower-right)</p>
 
-        <p style="color:red">
-            <b>NOTE: To use Sapper IDE, you MUST enter your OpenAI API key at the bottom of the IDE window.</b>
+        <p>
+            Design view supports the main activities of the design phase and plays an important role in bridging the gap between the exploration and construction phases. 
+            Therefore, it has two main functionalities: <b>requirement analysis</b> and <b>AI chain skeleton generation</b>, supported by <b>two LLM-based co-pilots</b>.
+            Different from the non-intrusive co-pilot in the <a href="explorationview.html">Exploration view</a>, the two co-pilots in the Design view actively interact with the user to assist in requirement analysis and AI chain skeleton generation.
+        </p>
+        
+        <h2 class="main-subtitle">Requirement Analysis</h2>
+        <p>
+            On the left side of the Design view, there is a <b>LLM-based requirement analysis chatbot</b>. 
+            However, unlike the free-style chatbot in the Exploration view, the requirement analysis chatbot is prompted as an infinite <a href="../workerstereotypes.html#reverse-questioner">Reserve Questioner</a>, working as follows:
+        </p>
+        <p>
+            1) The conversation starts with the user's task description (usually a vague description of what the user wants), entered in the Enquiry box.
+        </p>
+        <p>
+            2) Based on this initial task description and the task notes (if any) collected in the Exploration view, the requirement analysis chatbot asks a series of open-ended questions to elicit the user's specific task requirements.
+        </p>
+        <p>
+            3) Each round of the response from the user is iteratively incorporated into the user's task description (displayed in the <b>task requirement</b> box in the upper-right part). 
+        </p>
+        <ul>
+            <li>
+                Example: <b>To be fixed - revise this to HuiXiaoShi shown in the screenshot figure: given the user's initial task description is "Automatically generate questions", and the responses to the two rounds of clarification questions are "multiple-choice questions" and "math", the task description will be updated to "Develop a service that automatically generates multiple-choice math questions".</b>
+            </li>
+        </ul>
+        <p>
+            Of course, if the user believes he alreay has clear requirement and thus does not need the help of the requirement analysis co-pilot, he can directly enter the requirement in the task requirement box.
+        </p>
+
+        <h2 class="main-subtitle">AI Chain Skeleton Generation</h2>
+        <p>            
+            When the user feels the task requirement is clear and specific, they can click the <b>Generate AI chain Skeleton</b> button below the Task Description box to request the Design view to <b>generate the main steps</b> required to complete the task, as well as <b>three candidate prompts for each step</b>. 
         </p>
         
         <p>
-            Unlike traditional IDEs focused on code development, considering that AI chains will be developed by a large number of people with little or no computing knowledge or skills, the highest goal of our AI chain IDE design is to <b>put people first</b>. 
-            This is reflected in three design principles.
+            To achieve this, Design view implements a <b>LLM-based skeleton generation co-pilot</b>. 
         </p>
         <p>
-            First, we seamlessly <b>embody promptmanship (AI chain methodology) in the AI chain IDE</b>, effectively utilizing AI chain methodology and best practices in anyone's AI chain development process. 
+            1) This co-pilot first converts the high-level task description into the main steps required to complete the task (similar to the ``sunny day scenario'' in use case modeling). 
+            Each step has a step name (used to identify the step output in the AI chain) and a concise step description.
         </p>
+        <ul>
+            <li>
+                Example: <b>To be fixed with HuiXiaoShi case: for the task description in the Task Description box, it generates three steps: ``Generate a question template based on the given math concepts'', ``Fill in the question template with specific values to generate a math question'', and ``Generate multiple choices for the math question''. 
+                 </b>
+            </li>
+        </ul>
         <p>
-            Second, we make full use of the LLM's extensive knowledge and conversational capabilities, turning it into <b>intelligent co-pilots</b> for AI chain development, effectively assisting non-technical professionals in completing AI chain task modeling, requirement annlysis, design and construction. 
+            2) Based on the step description, the co-pilot recommends three candidate prompts for each step. 
+            <em>Upcoming feature</em>: If the user has accumulated a set of prompt assets (see <a href="prompthub.html">Prompt Hub</a>), the co-pilot can also be set to search the prompt hub for prompts related to the step using a retrieval-based engine (such as <a href="https://github.com/jerryjliu/llama_index">GPT Index</a>). 
+            Of course, the co-pilot can also be set to recommend both retrieved and generated prompts. 
         </p>
+        <ul>
+            <li>
+                Example: <b>To be fixed with HuiXiaoShi: for step "Generate a question template based on the given math concepts", a generated prompt is "Create a list of question templates based on {{concept}} for a math quiz or exam".</b>
+            </li>
+        </ul>
+            
         <p>
-            Third, we support the <b>whole-process no-code development and deployment of AI chains</b>. 
-            To that end, we explicitly support the exploration and design phases in the IDE, providing effective support for AI chain analysis and design, enabling non-technical people to complete the main work of AI chain development in a natural, non-programming way, thus minimizing what needs to be done in AI chain implementation. 
-            Furthermore, we use blocky-style visual programming to support AI chain implementation, execution, and testing, further minimizing the programming skills required. 
-            Finally, through one-click deployment, anyone can easily complete the last mile between AI services and end users.
+            3) The user can manually modify the generated steps, including remove steps, add steps, or reorder steps. 
+            In the current version, the co-pilot does not generate control flow. 
+            The user can manually add control flow, including step execution conditions or step loops. 
         </p>
-
+        <ul>
+            <li>
+                Example: <b>To be fixed with HuiXiaoShi: the user adds a condition ??? for the step "...".</b>
+            </li>
+        </ul>
         <p>
-            Based on these three design principles, our <a href="https://promptsapper.tech">Sapper IDE</a> implements the following major functionalities:
+            4) The user can edit the generated prompts using a structured form. In this form, the user can also set the input to the step and select the engine to execute the prompt.
         </p>
+        <ul>
+            <li>
+                Example: <b>To be fixed with HuiXiaoShi: the user set ?? as the input and choose to use ?? as the engine.</b>
+            </li>
+        </ul>
         <p>
-            <a href="explorationview.html">Exploration view</a>: Freely chat with the GPT inside the IDE to acquire task knowledge, identify task challenges, and experiment prompts. You do not need to take notes. Our co-pilot will summarize your interested tasks, preferences, and special considerations.
+            5) The user can click the <b>Generate AI Chain</b> button at the bottom right of the Design view, and the IDE will automatically assemble a block-based AI chain according to the AI chain skeleton, which can be viewed, edited, and executed in the <a href="blockview.html">Block view</a>
         </p>
-        <p>
-           <a href="designview.html">Design view</a>: Tell the IDE what you want to build. Don't worry if your initial thoughts are incomplete or ambiguous. Our co-pilot will discuss with you to clarify and enrich your initial ideas, turning them into specific AI service requirements. Likewise, you don't need to worry about how to implement these requirements. Our co-pilot will automatically generate an AI chain skeleton (including major steps and candidate prompts) based on the AI service requirements for your to review and edit.
-        </p>
-        <p>
-            <a href="blockview.html">Block view</a>: Build and test your AI chain using block-based visual programming. You do not need to do it from scrach. Our IDE will automatically construct and assemble AI chain workers based on the AI chain skeleton you designed, allowing you to directly run, debug, and refine them. Of course, if you know exactly what you need, you can also manually build the AI chain, which is also an intuitive and enjoyable process.
-        </p>
-        <p>
-            <a href="prompthub.html">Prompt hub</a>: Create, edit, and manage your prompt assets in this hub. You can reuse or customize these prompts across different projects.
-        </p>
-        <p>
-            <a href="enginemanagement.html">Engine management</a>: Configure and manage the engines used by workers, including foundation models, traditional ML models, external data sources, or APIs. Our IDE has pre-installed large language models (GPT series) and text-to-image models (Stable Diffusion). You can configure and manage foundation model instances with different parameters in the IDE. Traditional ML models, external data sources, or APIs can be imported through a plugin system (under implementation).
-        </p>
-        <p>
-            <a href="artifactsmanagement.html">Project management</a>: Create, open, or save AI chain projects. You can download the backend Python code for the AI chain to integrate it into your other software projects (require our sapperchain Python library). We are working on implementing a one-click sharing feature for sharing your AI chain projects to the <a href="https://aichain.store">AI chain marketplace</a>, as well as deploying your AI services to cloud servers.
-        </p>
-
+       
     </div>
 </main>
 <!--/div>

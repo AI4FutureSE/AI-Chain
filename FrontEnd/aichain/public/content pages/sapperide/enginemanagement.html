@@ -130,53 +130,38 @@
 <!--    </nav>-->
 
     <div id="main-content">
-        <h1 class="main-title"><a href="https://promptsapper.tech   ">Sapper IDE</a></h1>
-        <h2 class="main-subtitle">The world-first integrated development environment for AI chain</h2>
+        <h1 class="main-title">Engine Management</h1>
+        <h2 class="main-subtitle">Configure and manage the engines used by workers</h2>
 
-        <img class="main-figure" src="ide-figures/xxx.git">
-        <p class="figure-caption"><b>To be fixed: Rolling screenshots of the six IDE main views/features listed below</b></p>
+        <img class="main-figure" src="ide-figures/enginemanagement.jpg">
+        <p class="figure-caption">Engine management: foundation models, traditional ML models, API engines</p>
 
-        <p style="color:red">
-            <b>NOTE: To use Sapper IDE, you MUST enter your OpenAI API key at the bottom of the IDE window.</b>
+        <p>
+            Workers use different types of engines to complete tasks, including foundation models, traditional ML models (upcoming feature), and external APIs. 
+            These engines can also be used across AI chain projects, so the AI chain IDE supports separate Engine Management. 
         </p>
         
         <p>
-            Unlike traditional IDEs focused on code development, considering that AI chains will be developed by a large number of people with little or no computing knowledge or skills, the highest goal of our AI chain IDE design is to <b>put people first</b>. 
-            This is reflected in three design principles.
+            <b>All contents below need to be confirmed!!!</b>
         </p>
         <p>
-            First, we seamlessly <b>embody promptmanship (AI chain methodology) in the AI chain IDE</b>, effectively utilizing AI chain methodology and best practices in anyone's AI chain development process. 
+            Our IDE currently pre-installs three foundation models, including gpt-3.5-turbo, text-davinci-003, and DALL-E, and the Python standard REPL shell.
         </p>
         <p>
-            Second, we make full use of the LLM's extensive knowledge and conversational capabilities, turning it into <b>intelligent co-pilots</b> for AI chain development, effectively assisting non-technical professionals in completing AI chain task modeling, requirement annlysis, design and construction. 
+            In the Foundation Engine tab, users can create a foundtion model engine and configure it to use different model parameters, such as temprature, maximum length, Top P, frequency penalty, presence penalty.
+            In this way, users can create different engine instances of the same foundation model.
+            Clicking "Save Engine" in the toolbar will save the created engine in the Foundation Engine tab, which can be edited later or exported to the projects for using.
         </p>
+        
         <p>
-            Third, we support the <b>whole-process no-code development and deployment of AI chains</b>. 
-            To that end, we explicitly support the exploration and design phases in the IDE, providing effective support for AI chain analysis and design, enabling non-technical people to complete the main work of AI chain development in a natural, non-programming way, thus minimizing what needs to be done in AI chain implementation. 
-            Furthermore, we use blocky-style visual programming to support AI chain implementation, execution, and testing, further minimizing the programming skills required. 
-            Finally, through one-click deployment, anyone can easily complete the last mile between AI services and end users.
+            In the Engines tab of an AI chain project, the user clicks the "Import Engine ..." button, which will open the Engine Management view.
+            The user can then drag the engines that the project will use to the engine editor.
+            Then, clicking the "Export to Project" button will export the selected engines to the project.
+            The user can change the configuration of the engines used in the project in the project's Engine tab, but these changes will not affect the origional engines in the Engine Management.
         </p>
-
+        
         <p>
-            Based on these three design principles, our <a href="https://promptsapper.tech">Sapper IDE</a> implements the following major functionalities:
-        </p>
-        <p>
-            <a href="explorationview.html">Exploration view</a>: Freely chat with the GPT inside the IDE to acquire task knowledge, identify task challenges, and experiment prompts. You do not need to take notes. Our co-pilot will summarize your interested tasks, preferences, and special considerations.
-        </p>
-        <p>
-           <a href="designview.html">Design view</a>: Tell the IDE what you want to build. Don't worry if your initial thoughts are incomplete or ambiguous. Our co-pilot will discuss with you to clarify and enrich your initial ideas, turning them into specific AI service requirements. Likewise, you don't need to worry about how to implement these requirements. Our co-pilot will automatically generate an AI chain skeleton (including major steps and candidate prompts) based on the AI service requirements for your to review and edit.
-        </p>
-        <p>
-            <a href="blockview.html">Block view</a>: Build and test your AI chain using block-based visual programming. You do not need to do it from scrach. Our IDE will automatically construct and assemble AI chain workers based on the AI chain skeleton you designed, allowing you to directly run, debug, and refine them. Of course, if you know exactly what you need, you can also manually build the AI chain, which is also an intuitive and enjoyable process.
-        </p>
-        <p>
-            <a href="prompthub.html">Prompt hub</a>: Create, edit, and manage your prompt assets in this hub. You can reuse or customize these prompts across different projects.
-        </p>
-        <p>
-            <a href="enginemanagement.html">Engine management</a>: Configure and manage the engines used by workers, including foundation models, traditional ML models, external data sources, or APIs. Our IDE has pre-installed large language models (GPT series) and text-to-image models (Stable Diffusion). You can configure and manage foundation model instances with different parameters in the IDE. Traditional ML models, external data sources, or APIs can be imported through a plugin system (under implementation).
-        </p>
-        <p>
-            <a href="artifactsmanagement.html">Project management</a>: Create, open, or save AI chain projects. You can download the backend Python code for the AI chain to integrate it into your other software projects (require our sapperchain Python library). We are working on implementing a one-click sharing feature for sharing your AI chain projects to the <a href="https://aichain.store">AI chain marketplace</a>, as well as deploying your AI services to cloud servers.
+            The user can download the engine information to local files or upload it from local files to the IDE.
         </p>
 
     </div>

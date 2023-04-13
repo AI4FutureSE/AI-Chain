@@ -130,55 +130,132 @@
 <!--    </nav>-->
 
     <div id="main-content">
-        <h1 class="main-title"><a href="https://promptsapper.tech   ">Sapper IDE</a></h1>
-        <h2 class="main-subtitle">The world-first integrated development environment for AI chain</h2>
+        <h1 class="main-title">Block View</h1>
+        <h2 class="main-subtitle">Build and test your AI chain using block-based visual programming</h2>
 
-        <img class="main-figure" src="ide-figures/xxx.git">
-        <p class="figure-caption"><b>To be fixed: Rolling screenshots of the six IDE main views/features listed below</b></p>
+        <img class="main-figure" src="ide-figures/blockview.jpg">
+        <p class="figure-caption">Block view: ...</p>
 
-        <p style="color:red">
-            <b>NOTE: To use Sapper IDE, you MUST enter your OpenAI API key at the bottom of the IDE window.</b>
+        <p>
+            We use block-based visual programming to support AI chain implementation, execution, and debugging. 
+            The current implementation is based on the open-source <a href="https://github.com/google/blockly">Blockly</a> project. 
         </p>
         
         <p>
-            Unlike traditional IDEs focused on code development, considering that AI chains will be developed by a large number of people with little or no computing knowledge or skills, the highest goal of our AI chain IDE design is to <b>put people first</b>. 
-            This is reflected in three design principles.
+            On the left panel, the user can access building blocks in the Units, Code, Prompts, Variables, and Engines tabs.
         </p>
+        
+        <h2 class="main-subtitle">Worker block</h2>
         <p>
-            First, we seamlessly <b>embody promptmanship (AI chain methodology) in the AI chain IDE</b>, effectively utilizing AI chain methodology and best practices in anyone's AI chain development process. 
+            The core component of an AI chain is the worker. 
+            A new Worker block can be dragged to the editor from the Units tab.
+            A Worker block consists of three slots: <b>preworkers</b>, <b>prompt</b>, and <b>engine</b>.
         </p>
+        <ul>
+            <li>
+                The <b>preworkers</b> slot specifies a worker's inputs, which can be zero or more Input or Worker blocks. 
+                An Input block (from the Code tab) receives user input from the console or uses a variable as the input to the worker. 
+                Connecting a worker A to another worker B's preworkers slot is equivalent to running these two workers in series, that is, using A's output as B's input. 
+            </li>
+            <li>
+                The <b>prompt</b> slot can hold a natural language prompt. Prompt can be in the form of plain text, semi-structed text or code-like text. 
+                The prompt slot can also hold a piece of executable code (which can be thought of as a special type of prompt).
+            </li>
+            <li>
+                The <b>engine</b> slot specifies the foundation model used to execute the prompt or the tool used to run the code (such as a Python interpreter) or a traditional ML model that the code uses. 
+            </li>
+        </ul>
         <p>
-            Second, we make full use of the LLM's extensive knowledge and conversational capabilities, turning it into <b>intelligent co-pilots</b> for AI chain development, effectively assisting non-technical professionals in completing AI chain task modeling, requirement annlysis, design and construction. 
+            With this worker block design, we can represent Software 1.0/2.0/3.0 workers using a unified worker block.
         </p>
+        
+        <h2 class="main-subtitle">Container block</h2>
         <p>
-            Third, we support the <b>whole-process no-code development and deployment of AI chains</b>. 
-            To that end, we explicitly support the exploration and design phases in the IDE, providing effective support for AI chain analysis and design, enabling non-technical people to complete the main work of AI chain development in a natural, non-programming way, thus minimizing what needs to be done in AI chain implementation. 
-            Furthermore, we use blocky-style visual programming to support AI chain implementation, execution, and testing, further minimizing the programming skills required. 
-            Finally, through one-click deployment, anyone can easily complete the last mile between AI services and end users.
+            We design container block to represent composite workers. 
+            A new Container block can be dragged to the editor from the Units tab.
+            A container block has two slots: <b>preunits</b> and <b>units</b>. 
+        </p>
+        <ul>
+            <li>
+                The <b>preunits</b> slot specifies a composite worker's inputs, which can be zero or more workers (leaf or composite).
+                These preunits will be executed before the present composite worker. 
+            </li>
+            <li>
+                The <b>units</b> slot can hold one or more worker or container blocks, forming a worker hierarchy, as well as any traditional code blocks for user input and control structure.
+            </li>
+        </ul>
+        
+        <h2 class="main-subtitle">Code blocks</h2>
+        <p>
+            The Code tab includes traditional programming constructs, including console Input, console Output, assignment, if, for, while, and parallel blocks. 
+            Users can drag and drop the required code blocks into the editor and assemble them with the worker/container blocks by dragging and dropping.
+            If a worker block needs to output information to end-users, it need to be placed in an Output block. 
+            Then, the output of this worker will be displayed in the bottom-right Output window.
+            Otherwise, the worker's output can only be inspected in the Block Console during the worker execution, but not visiable to the end users.
         </p>
 
+        <h2 class="main-subtitle">Prompt, Variable and Engine blocks</h2>
         <p>
-            Based on these three design principles, our <a href="https://promptsapper.tech">Sapper IDE</a> implements the following major functionalities:
-        </p>
-        <p>
-            <a href="explorationview.html">Exploration view</a>: Freely chat with the GPT inside the IDE to acquire task knowledge, identify task challenges, and experiment prompts. You do not need to take notes. Our co-pilot will summarize your interested tasks, preferences, and special considerations.
-        </p>
-        <p>
-           <a href="designview.html">Design view</a>: Tell the IDE what you want to build. Don't worry if your initial thoughts are incomplete or ambiguous. Our co-pilot will discuss with you to clarify and enrich your initial ideas, turning them into specific AI service requirements. Likewise, you don't need to worry about how to implement these requirements. Our co-pilot will automatically generate an AI chain skeleton (including major steps and candidate prompts) based on the AI service requirements for your to review and edit.
-        </p>
-        <p>
-            <a href="blockview.html">Block view</a>: Build and test your AI chain using block-based visual programming. You do not need to do it from scrach. Our IDE will automatically construct and assemble AI chain workers based on the AI chain skeleton you designed, allowing you to directly run, debug, and refine them. Of course, if you know exactly what you need, you can also manually build the AI chain, which is also an intuitive and enjoyable process.
-        </p>
-        <p>
-            <a href="prompthub.html">Prompt hub</a>: Create, edit, and manage your prompt assets in this hub. You can reuse or customize these prompts across different projects.
-        </p>
-        <p>
-            <a href="enginemanagement.html">Engine management</a>: Configure and manage the engines used by workers, including foundation models, traditional ML models, external data sources, or APIs. Our IDE has pre-installed large language models (GPT series) and text-to-image models (Stable Diffusion). You can configure and manage foundation model instances with different parameters in the IDE. Traditional ML models, external data sources, or APIs can be imported through a plugin system (under implementation).
-        </p>
-        <p>
-            <a href="artifactsmanagement.html">Project management</a>: Create, open, or save AI chain projects. You can download the backend Python code for the AI chain to integrate it into your other software projects (require our sapperchain Python library). We are working on implementing a one-click sharing feature for sharing your AI chain projects to the <a href="https://aichain.store">AI chain marketplace</a>, as well as deploying your AI services to cloud servers.
+            Prompts, variables and engines used by the worker blocks are managed as explicit blocks in the corresponding tabs.
+            In the Prompts and Engines tab, the user can import prompts from <a href="prompthub.html">Prompt Hub</a> and engines managed in <a href="enginemanagement.html">Engine Management</a>.
+            In the Code tab, the user can create or delete variables.
         </p>
 
+        <h2 class="main-subtitle">Edit worker/container blocks</h2>
+        <p>
+            To make it intuitive for users to build and modify workers, all visual programming operations can be triggered directly on the worker/container block. 
+            Clicking the + icon on the right side of each slot can directly add or edit the corresponding blocks for the slot. 
+        </p>
+        
+        <h2 class="main-subtitle">Edit AI chain</h2>
+        <p>
+            A block can be added to the editor by dragging and dropping a block template from the tab.
+            The use can assemble the blocks by dragging and dropping in the editor.
+            The user can zoom in/out the editor or place the selected block in the center of the editor by clicking the "+", "-", and "aim" button at the right side of the editr.
+        </p>
+        <p>
+            Selecting a block and pressing delete can delete a block.
+            Deleted blocks can be restored from the Recycle Bin at the bottom-right corner of the editor.
+            By righ-clicking a block, the user can duplicate, detele, collapse, or disable a block from the context menu.
+            A Worker and Continaer block can be shown in a compact form to save space (by Inline Inputs from the context menu).
+        </p>
+        <p>
+            Collapsing a block will show the worker as a node. 
+            This saves the space for other blocks and is helpful when viewing and editing complex AI chains.
+            A collapsed block can be restored by expanding the collapsed node.
+        </p>
+        <p>
+            Disableing a block will exclude the block from the AI chain execution. 
+            This is useful when testing variant workers in an AI chain.
+            A disabled block has the gray grid background, and can be enabled back to the normal status.
+        </p>
+        <p>
+            The user can right-click a block and add a comment which will be accessed and edited by the "?" icon at the top-left corner of a block.
+        </p>
+        
+        <h2 class="main-subtitle">Run and debug AI chain and workers</h2>
+        <p>
+            Users can run or debug the AI chain by the Run menu. 
+        </p>
+        <p>
+            When a worker is running, the bug signal in the top-left corner of the worker block will light up. 
+            The actual prompt used during the worker's execution and the engine outputs will be outputted to the Block Console. 
+            User inputs required for execution will be entered in the Block Console.
+        </p>
+        <p>
+            In debug mode, workers will be executed one at a time. 
+            After a worker finishes running, the execution will be suspended, and the user can check if the outputs in the Block Console match their expectation. 
+            If the result is as expected, the user can proceed to execute the next worker. 
+            Alternatively, the user can modify the prompt for the current worker in the Prompt Console and then re-run the current worker.
+        </p>
+        <p>
+            If a worker block is placed in an Output block, its output will be displayed in the bottom-right Output window. 
+            This window does not show the output of workers that are not placed in an Output block, nor will it show prompts. 
+        </p>
+        <p>
+            The Block Console is used to help AI chain engineers debug the AI chain and thus contains prompt information and intermediate execution results. 
+            The Output Window at the bottom-right allows the engineer to inspect the AI chain output that end-users will see.
+        </p>
     </div>
 </main>
 <!--/div>
