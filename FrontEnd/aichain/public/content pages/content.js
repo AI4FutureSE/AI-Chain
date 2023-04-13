@@ -101,18 +101,18 @@ $(document).ready(()=>{
             '                        <a class="doc-link doc-link-level2" id="wenxiaojie" href="http://' + location.host + '/public/content pages/showcases/wenxiaojie/wenxiaojie.html">文小杰 (Wen Xiao Jie)</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="qingxiaoxie" href="http://' + location.host + '/public/content pages/showcases/qingxiaoxie.html">轻小写 (Qing Xiao Xie)</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="qingxiaoxie" href="http://' + location.host + '/public/content pages/showcases/qingxiaoxie/qingxiaoxie.html">轻小写 (Qing Xiao Xie)</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="chunxiaoxie" href="http://' + location.host + '/public/content pages/showcases/chunxiaoxie.html">纯小写 (Chun Xiao Xie)</a>\n' +
-            '                    </li>\n' +
-            '                    </li>\n' +
-            '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="sixiaopin" href="http://' + location.host + '/public/content pages/showcases/sixiaopin.html">思小聘 (Si Xiao Pin)</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="chunxiaoxie" href="http://' + location.host + '/public/content pages/showcases/chunxiaoxie/chunxiaoxie.html">纯小写 (Chun Xiao Xie)</a>\n' +
             '                    </li>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="xinxiaozhu" href="http://' + location.host + '/public/content pages/showcases/xinxiaozhu.html">心小助 (Xin Xiao Zhu)</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="sixiaopin" href="http://' + location.host + '/public/content pages/showcases/sixiaopin/sixiaopin.html">思小聘 (Si Xiao Pin)</a>\n' +
+            '                    </li>\n' +
+            '                    </li>\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="xinxiaozhu" href="http://' + location.host + '/public/content pages/showcases/xinxiaozhu/xinxiaozhu.html">心小助 (Xin Xiao Zhu)</a>\n' +
             '                    </li>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
@@ -120,11 +120,11 @@ $(document).ready(()=>{
             '                    </li>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="yunxiaojuan" href="http://' + location.host + '/public/content pages/showcases/yunxiaojuan.html">云小卷 (Yun Xiao Juan)</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="yunxiaojuan" href="http://' + location.host + '/public/content pages/showcases/yunxiaojuan/yunxiaojuan.html">云小卷 (Yun Xiao Juan)</a>\n' +
             '                    </li>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="maxiaoyuan" href="http://' + location.host + '/public/content pages/showcases/maxiaoyuan.html">码小猿 (Ma Xiao Yuan)</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="maxiaoyuan" href="http://' + location.host + '/public/content pages/showcases/maxiaoyuan/maxiaoyuan.html">码小猿 (Ma Xiao Yuan)</a>\n' +
             '                    </li>\n' +
             '                </ul>\n' +
             '            </li>\n' +

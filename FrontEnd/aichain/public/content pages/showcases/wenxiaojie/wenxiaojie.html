@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Wenxiaojie</title>
+    <title>WenXiaoJie</title>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -21,157 +21,107 @@
 
 <main>
     <div id="main-content">
-        <h1 class="main-title">Chun Xiao Xie</h1>
-        <br>
-        <br>
-        <p style="text-align:right">
-            Author： Chen Zhong
-        </p>
-        <br>
-        <br>
-        <div style="width: 100%; text-align: center">
-            <img class="main-figure" style="width: 100px" src="Chun.jpg">
-        </div>
-        <h2 class="main-subtitle"><b>APPLICATION SCENARIO AND TARGETED END USERS</b></h2>
+        <h1 class="main-title">Wen Xiao Jie-- AI-Powered Personalized Long Articles</h1>
+        <div style="text-align:right;font-size:25px;">Author: Yajiao Deng</div>
+        <h2 class="main-subtitle"><b>Unlock the Power of AI for Tailored, Engaging Content that Resonates with Your Audience!</b></h2>
 
+        <h2 class="main-subtitle">1 APPLICATION SCENARIO AND TARGETED END USERS</h2>
         <p>
-            To begin with, we'll delve into the different scenarios where Chun Xiao Xie can be applied, the targeted end-users it's aimed at, and their individual needs for the product.
+            We first discuss the application scenarios, targeted end users and their needs for Wen Xiao Jie.<br>
+            <b>1.1 Application Scenarios and Targeted End Users</b>
         </p>
-        
-        <h3 class="main-subtitle"><b>Application Scenario</b></h3>
-        <p>
-                <ul>
-                <li>Literary creation: When encountering a lack of inspiration during the creative process, Chun Xiao Xie can be used to find inspiration;</li>
-                <li>Daily writing: When facing difficulties in writing WeChat copy or not knowing how to complete a writing task assigned by a leader, Chun Xiao Xie can be used to assist writing and improve efficiency.</li>
-                </ul>
-        </p>
-        
-        <h3 class="main-subtitle"><b>End users and Their Needs</b></h3>
-        <p style="text-indent:2em">
             <ul>
-                <li>Writer: Use AI tools to assist writing and help improve writing efficiency;</li>
-                <li>Ordinary people: When writing WeChat copy or other writing tasks, AI tools can help them write better articles.</li>
-            </ul>
-        </p>
-        <h2 class="main-subtitle"><b>EXPLORATION AND CHALLENGES OF LLM</b></h2>
+          <li><p>Creators: Creators need to generate persuasive and engaging text to convey their ideas and stories, attracting readers' attention and appreciation. </p ></li>
+          <li><p>Academics: Academics require diverse texts to convey research findings, perspectives, and insights throughout the research process. Wen Xiao Jie meets their specific research needs and enhances both efficiency and accuracy.</p ></li>
+          <li><p>General Users: General Users need to generate various types of text, such as job application letters, resumes, reports, letters, etc., to meet their work and life needs.</p ></li>
+          <li><p>Content Marketers: Content marketers need to generate a large volume of brand-relevant long-form content to attract and retain audience attention, while increasing brand exposure and website traffic. </p ></li>
+          <li><p>SEO Experts: SEO experts need to generate high-quality text to optimize website rankings, attract more organic traffic, and improve conversion rates. </p ></li>
+        </ul>
         <p>
-            Now, we describe how we learn the task knowledge from the LLM, experiment prompt effectiveness, and summarize the task challenges.
+            <b>1.2 Targeted End Users Needs</b><br>
+            <p style="text-indent:2em">Wen Xiao Jie can meet targeted end users' demands for high-quality text generation, diversified text types, personalized customization, and easy operation, making it suitable for targeted end users in many fields.
         </p>
-        <h3 class="main-subtitle"><b>Explorations</b></h3>
-        <p style="text-indent:2em">
-            Before writing an article, there are several steps involved such as ideation, finding materials, organizing them, drafting, and revising. To assist users in completing these steps, We have designed a full-process simulated writing application that enables users to write the most suitable article as per their needs.
-The application comprises four sections. Firstly, the Ideation section, where users can ask for suggestions when they encounter unfamiliar content using LLM or have no idea or insufficient knowledge about the topic. Secondly, the Materials section, where users can get suggestions for suitable materials or styles for their articles.
-Next, users can submit the article type, theme, and materials to LLM to generate the article. Finally, to cater to users' different revision requirements, a Revision section is designed where users can choose the direction and content of revision as per their needs.
-Chun Xiao Xie can assist users in completing the writing process, and the LLM's assistance can reduce the threshold for writing.
+
+
+        <h2 class="main-subtitle">2 APPLICATION USAGE</h2>
+        <p>
+            <p style="text-indent:2em">For the targeted end users, I have developed a software called Wen Xiao Jie, which can be utilized in the following manner.<br>
+            <p style="text-indent:2em">To begin with, following Wen Xiao Jie's system prompts, the end users provide the theme, intended audience, and genre. Subsequently, Wen Xiao Jie furnishes a comprehensive article generic outline tailored to the user's specifications.<br>
+            <img class="main-figure" src="g%20outline%201.png"><br>
+        <p style="text-indent:2em">Users provide ideas and materials according to Wen Xiao Jie's prompts, and Wen Xiao Jie modifies the general outline into a personalized outline.<br>
+        <img class="main-figure" src="per%20outline%201.png">
+        <p style="text-indent:2em">Once users receive the personalized outline, they divide it into modules and provide the necessary materials. Wen Xiao Jie then assists in expanding each module with relevant content, which is automatically checked to ensure that it aligns with the topic. <br>
+        <img class="main-figure" src="expand%201.png">
+        <p style="text-indent:2em">Next, users review the article paragraphs and if any are unsatisfactory, they select them and provide rewriting requirements to Wen Xiao Jie. Wen Xiao Jie then provides the revised paragraph, which is automatically checked to ensure that it aligns with the topic. <br>
+            <img class="main-figure" src="rewrite%201.png">
+            <p style="text-indent:2em">Finally, users can review the article for phrasing and if any unsatisfactory sentences are found, they select them and remove the unsatisfactory portion, leaving an incomplete sentence. They then provide the unsatisfactory sentence to Wen Xiao Jie, who generates a prompt based on the remaining portion of the sentence to suggest a sentence that meets the user's satisfaction. <br>
+            <img class="main-figure" src="comptece%201.png">
+
 
         </p>
-        <img class="main-figure" src="discovery.png">
-        <h3 class="main-subtitle"><b>Challenges</b></h3>
-        <p style="text-indent:2em">
-            The challenge with this task is that the prompt is composed of user input, and there is no fixed template to follow. Additionally, there is no established optimal prompt that guarantees stable and consistent results when generating an article with AI. As a result, there is a need to explore and experiment with different prompts to ensure that the AI-generated text is accurate and appropriate for the given context. This requires the development of a flexible and adaptable system that can effectively incorporate user input while ensuring the quality of the output.
-        </p>
-        <h2 class="main-subtitle"><b>APPLICATION USAGE</b></h2>
-        <h3 class="main-subtitle"><b>Writing Guidance</b></h3>
-        <p>
-            User inputs text type, LLM outputs writing advice.
-        </p>
-        <img class="main-figure" src="show1.png">
-        <h3 class="main-subtitle"><b>Refine Communication</b></h3>
-        <p>
-            The user engages in a conversation with the writing robot Chun Chun and enriches their own needs.
-        </p>
-        <img class="main-figure" src="show2.png">
-        <img class="main-figure" src="show3.png">
-        <img class="main-figure" src="show4.png">
-        <img class="main-figure" src="show5.png">
-        <img class="main-figure" src="show6.png">
-        <h3 class="main-subtitle"><b>Writing Preparation Advice</b></h3>
-        <p>
-            The AI provides the necessary materials for writing.
-        </p>
-        <img class="main-figure" src="show7.png">
-        <h3 class="main-subtitle"><b>Knowledge Search</b></h3>
-        <p>
-            The user inputs the knowledge they want to search for.
-        </p>
-        <img class="main-figure" src="show8.png">
-        <h3 class="main-subtitle"><b>Abbreviate Knowledge</b></h3>
-        <p>
-            The user inputs fragmented knowledge. To create the final prompt, split the required knowledge into two parts and input each part into separate sections.
-        </p>
-        <img class="main-figure" src="show9.png">
-        <img class="main-figure" src="show10.png">
-        <h3 class="main-subtitle"><b>Writing</b></h3>
-        <p>
-            The AI writes based on the user's previous inputs, and then polishes the parts that need refinement.
-        </p>
-        <img class="main-figure" src="show11.png">
-        <img class="main-figure" src="show12.png">
-        <img class="main-figure" src="show13.png">
 
-        <h2 class="main-subtitle"><b>AI-CHAIN DESIGN</b></h2>
+        <h2 class="main-subtitle">3 EXPLORATIONS WITH LLM</h2>
         <p>
-            Next, let me introduce my AI chain design and major features.
+            Now, we describe how we learn the task knowledge from the LLM, experiment prompt effectiveness, and summarize the task challenges.<br>
+            <b>3.1 Discourse with LLM</b><br>
+            <p style="text-indent:2em">In our discourse with LLM, we examined techniques to optimize human typing efficiency, such as extension, paraphrasing, prompts, process guidance, and grammar refinement. Additionally, we explored methods to evaluate the quality of generated text and established corresponding metrics.<br>
+            <b>3.2 Challenges</b><br>
+            <i>3.2.1 Difficulties of technology. </i>
+            After conversing with LLM, we gained a preliminary understanding of the worker involved in becoming a Wen Xiao Jie. However, the production of such a product requires significant expertise, and my personal abilities are currently inadequate to employ traditional methods in its creation. Fortunately, Sapper's quick product building feature enabled me to overcome the technical hurdles and effortlessly implement the product's functionality.<br>
+            <i>3.2.2 Difficulties of AI-chain Design.</i>
+             As these workers are predominantly associated with rewriting, it is crucial to exercise caution when connecting various workers to achieve specific functions of high quality. When constructing the AI chain, it is important to not only utilize the suggested workers provided by LLM but also take into account the individualized requirements of users during specific use cases. For instance, determine off-topic content may be necessary.<br>
+            <i>3.2.3 Difficulties of Prompt Design. </i>
+             Initially, prompts were disorganized, resulting in uneven quality of LLM's responses and failure to meet user requirements. Most of the workers provided by LLM are related to rewriting, so it is necessary to carefully design and differentiate prompts so that they are all oriented towards rewriting and achieve different functions.<br>
         </p>
+        <h2 class="main-subtitle">4 AI-CHAIN DESIGN</h2>
+        <p>
+            Next, let me introduce our AI chain design and major features.<br>
+        </p>
+
         <!--add figure-->
-        <img class="main-figure" src="chunchun.drawio.png">
-        <p class="figure-caption"><b>Figure-1: AI Chain of Lightweight Writing Assistant</b></p>
-        <h3 class="main-subtitle"><b>Writing Guidance</b></h3>
-        <p style="text-indent:2em">
-            The user inputs an article type, and LLM provides guidance to help the user have a rough framework for their task. At the level of prompt design, Prompting Decorator's Persona was used here, and I gave LLM the identity of a Chinese language teacher, allowing the large model to guide students in writing and thus improving the accuracy of LLM's output.
-        </p>
-        <img class="main-figure" src="1.png">
-        <h3 class="main-subtitle"><b>Refine Communication</b></h3>
-        <p style="text-indent:2em">
-            After the initial guidance, the user will have a general understanding of the task, but may still be unclear about certain details (if already clear, skip this part). The user can ask LLM to answer any questions that are still unclear in the guidance. They can also communicate suitable topics, the direction of writing, and the target audience. Until the user has a clear understanding of their writing task, they can input their requirements into the program and exit the chat. At the prompt design level, we utilized the Persona and Context Control features of the Prompting Decorator. We had the LLM assume the role of a chatbot and set the Context Control to a                                                                                                  conversational format. Incorporating conversation can enhance user engagement and provide a more interactive and intelligent experience. Furthermore, we supplied the LLM with comprehensive information about the task, including writing suggestions, inspiration, and reference materials, all of which contributed to improving the accuracy of the LLM's output.
-        </p>
-        <img class="main-figure" src="2.png">
-        <h3 class="main-subtitle"><b>Writing Preparation Advice</b></h3>
-        <p style="text-indent:2em">
-            Based on the user's initial article type and the requirements supplemented during the conversation, LLM provides specific materials that need to be given before writing.
-        </p>
-        <img class="main-figure" src="3.png">
-        <h3 class="main-subtitle"><b>Knowledge Search</b></h3>
-        <p style="text-indent:2em">
-            Users can search for knowledge based on the suggestions provided by the previous feature or their own ideas. They can conduct multiple rounds of searches until they find suitable materials and knowledge.
-        </p>
-        <img class="main-figure" src="4.png">
-        <h3 class="main-subtitle"><b>Abbreviate Knowledge</b></h3>
-        <p style="text-indent:2em">
-                The user entrusts the relatively complex parts of the knowledge they need to LLM for summarization, making this part of the content clear and concise. Then they input it into the next section. The user can also input materials that do not need to be summarized into the next section.        </p>
-        <img class="main-figure" src="5.png">
-        <h3 class="main-subtitle"><b>Writing</b></h3>
-        <p style="text-indent:2em">
-            LLM uses the article type and other information provided by the user to generate an article.
-        </p>
-        <img class="main-figure" src="6.png">
-        <img class="main-figure" src="7.png">
-        <h3 class="main-subtitle"><b>Writing</b></h3>
-        <p style="text-indent:2em">
-            LLM uses the article type and other information provided by the user to generate an article.
-        </p>
-        <img class="main-figure" src="8.png">
-        <h2 class="main-subtitle"><b>RAPID PROTOTYPING PROCESS</b></h2>
+        <img class="main-figure" src="papper.svg">
+        <p class="figure-caption">Figure-1: AI Chain of Wen Xiao Jie</p>
         <p>
-            Lastly, we will describe how our AI chain's design and implementation have evolved and been enhanced through the rapid prototyping process. We will also discuss potential future enhancements to the system.
+            <b>4.1 Generating an Outline</b><br>
+            <p style="text-indent:2em">Based on the user's input of the theme, reader, and genre, the AI obtains information and expands it. Then, the AI uses the obtained information to generate a generic outline for that type of article. Next, the user inputs their writing ideas and materials for the article, allowing the AI to output a personalized outline.<br>
+            <b>4.2 Expanding the Outline</b><br>
+            <p style="text-indent:2em">The AI receives a theme and the necessary materials, and it then integrates and expands on them. To avoid content output that does not match the user's input, we have added Assessing relevance to track and verify if the output content is consistent with the user's input. To meet individual user needs, we have also added a satisfaction function that allows users to judge whether the expanded content meets their expectations. If it does not, the AI will provide additional expanded content until the user is satisfied. <br>
+            <b>4.3 Paraphrasing a Paragraph</b><br>
+            <p style="text-indent:2em">The user inputs a piece of text that needs to be rewritten and the requirements for rewriting it into the Paraphrasing a Paragraph worker, and then the AI performs the rewriting task. Similar to the Expanding the Outline worker the Assessing relevance function and the satisfaction function. <br>
+            <b>4.4 Completing a Sentence</b><br>
+            <p style="text-indent:2em">The user inputs an incomplete sentence, and the AI uses association to generate a sentence that meets the user's expectations. This functionality allows for greater accuracy and personalization in the AI's output, as it takes into account the user's intended meaning and context when generating the completed sentence.<br>
         </p>
-        <h3 class="main-subtitle"><b>Original Version</b></h3>
-        <p style="text-indent:2em">
-            There were only two parts of the content, LLM writing and LLM polishing. LLM writing is an unsupervised analytical flow, so the generated articles have uncontrollable issues. Also, accepting the entire style and other aspects of the writing may lead to situations where it does not meet the user's needs.
-        </p>
-        <h3 class="main-subtitle"><b>Problem Resolution</b></h3>
-        <p style="text-indent:2em">
-            Therefore, we incorporated a human supervision section for each task segment to minimize uncontrollable factors. However, the effectiveness of the LLM's output may be influenced by varying interpretations of an article among different individuals. To mitigate this impact, we introduced an LLM suggestion and suggestion robot section.
-        </p>
-        <h3 class="main-subtitle"><b>Future Improvements</b></h3>
-        <p style="text-indent:2em">
-            We've refined our system by adding a suggestion robot function and optimizing LLM's suggestions through prompt fine-tuning. We're also working on enhancing LLM's writing ability. Note that some of these ideas have been implemented on Wen Xiao Jie.
-        </p>
-        <h2 class="main-subtitle"><b>IMPRESSIONS OF USING SAPPER</b></h2>
+        <h2 class="main-subtitle">5 RAPID PROTOTYPING PROCESS</h2>
         <p>
-            The process of using Sapper is different from traditional programming methods. I have used both Python and Sapper to achieve the same functionality, and found that Python is slower in programming speed and generates more error messages than Sapper, which has been wrapped to reduce the occurrence of errors. Sapper's innovative and simplified programming approach, combined with tools like LLM that utilize natural language prompts to accomplish various tasks, further reduces the programming threshold for ordinary people, enabling them to develop their own programs for specific tasks. This allows ordinary people to participate in development work as well.😘
-        </p>
+            <b>5.1 Generating an outline</b><br>
+            <i>5.1.1 AI chain interactive debugging</i><br>
+            <p style="text-indent:2em"> At the initial stage, the worker only had one worker, which enabled the AI to receive a set of information and generate an outline. However, the output results did not meet the general requirements of actual situations, nor did they meet the specific requirements of users. To address this issue, we adopted a step-by-step implementation approach. Specifically, we first had the AI generate a generic outline that meets the common requirements of the public, and then personalized outline to generate a general outline that meets the specific needs of users. This implementation approach is more accurate, logical, and can fully consider the balance between the needs of the public and individual users.<br>
+            <i>5.1.2 Prompt interactive debugging</i><br>
+            <p style="text-indent:2em"> Previously, when a single worker provided an outline and wrote the prompt, all information was mixed into a single paragraph, leading to frequent misunderstandings by the AI and resulting in outputs that did not meet the requirements. Now, the prompt is written in separate sections, each corresponding to a specific theme (Content Representation). For example, the first section may be "You are a... robot," the second section may be "Instruction description," and the third section may be "Context Control". Additionally, we have implemented special requirements for context control, such as: 1) ensuring uninterrupted output; 2) limiting the output to only the generic outline;3) using the specified theme, audience, and article type to generate personalized outlines. We have also defined the output format, such as "Generic outline: "+ content. These improvements have resulted in a more accurate, comprehensive, and logically clear approach to generating outlines.<br>
+            <i>5.1.3 Future Improvements </i><br>
+            <p style="text-indent:2em"> At present, the tool is more suitable for users who can clearly and specifically express their needs. For users who only have a general direction in mind, the tool may not be an ideal choice. Therefore, in future improvements, we plan to implement a function that recommends information for users who only have a general direction in mind, in order to meet the needs of a wider range of users. This improvement will help the tool better serve ordinary users, and improve its applicability and usability. <br>
+            <img class="main-figure" src="1.png"><br>
+            <b>5.2 Expanding the outline</b><br>
+            <i>5.2.1 AI chain interactive debugging</i><br>
+            <p style="text-indent:2em"> At first, we only allowed the AI to expand articles based on the information provided by the user. However, the content generated by the AI may not match the information provided by the user, leading to a decrease in the accuracy of the article. To address this issue, we introduced the Assessing relevance (State Monitor), which can supervise the content generated by the AI and determine whether it matches the information provided by the user. This approach effectively improves the accuracy of the article and ensures that the content generated by the AI meets the user's expectations.<br>
+            <i>5.2.2 Prompt interactive debugging</i><br>
+            <p style="text-indent:2em"> At first, we allowed the AI to expand on a sentence without any accompanying "materials" information. As a result, the expanded content mostly did not meet the user's requirements. To address this issue, we have added the requirement for "materials" information (The rest similar to the "prompt interactive debugging of Generating an outline”). <br>
+            <i>5.2.3 Future Improvements </i><br>
+            <p style="text-indent:2em"> LLM had frequent misunderstandings that resulted in incorrect output because the prompts mixed all information into a single paragraph. To overcome this, we now write prompts in separate sections, with each section corresponding to a specific theme. We also provide context control and define the output format to ensure accurate and satisfactory output.        <br>
+            <img class="main-figure" src="2.png"><br>
+            <b>5.3 Paraphrasing a paragraph</b><br>
+            <i>5.3.1 AI chain interactive debugging：(Similar to Expanding the outline AI chain interactive debugging).</i><br>
+            <i>5.3.2 Prompt interactive debugging：(Similar to Generating an outline Prompt interactive debugging).</i><br>
+            <img class="main-figure" src="3.png"><br>
+            <b>5.4 Completing a sentence</b><br>
+            <i>Prompt interactive debugging:(Similar to Generating an outline Prompt interactive debugging).</i><br>
+            <img class="main-figure" src="4.png"><br>
 
+        </p>
+        <h2 class="main-subtitle">6 USER EXPERIENCE WITH SAPPER</h2>
+        <p>
+            <p style="text-indent:2em"> The use of sapper greatly reduces the technical difficulty of developing applications like Wen Xiao Jie and increases my development efficiency. Sapper is an AI integrated development environment (IDE) designed for non-computer professionals, supporting no-code programming and graphical drag-and-drop development. It functions like an AI production line, enabling people to develop various AI applications quickly, providing fast services to society, and bringing immeasurable market and economic value. Sapper can better integrate AI into people's lives, enhance their work efficiency, and promote local economic growth.
+        </p>
     </div>
     <div id="page-nav-id" style="display: none">wenxiaojie</div>
 </main>

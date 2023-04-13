@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YunXiaoJuan</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- jquery -->
+    <script src="../../../plugin/jquery.min.js"></script>
+    <!-- self-defined -->
+    <link href="../../content.css" rel="stylesheet">
+    <script src="../../content.js"></script>
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light my-navbar">
+</nav>
+
+<main>
+
+    <div id="main-content">
+        <h1 class="main-title">Yun Xiao Juan</h1>
+        <p style="text-indent:25em"> <font style="font-size:18px">Author: Chang Xu</font></p>
+        <h2 class="main-subtitle"><b>Unleash the Intelligence of AI for Customized and Compelling Questions that Connect with Your Quiz-takers!</b></h2>
+
+        <p>
+            <!-- <b>To be fixed: add the demo video at the top</b> -->
+        </p>
+        
+        <h2 class="main-subtitle">1 APPLICATION SCENARIO, TERMINAL USERS AND THEIR NEEDS</h2>
+
+        <p>
+            <p style="text-indent:2em"> <font style="font-size:15px">These contents involve application scenarios and targeted end users and their needs.</font></p></br>
+            <b>1.1 Application Scenario </b></br>
+            <p style="text-indent:2em"> <font style="font-size:15px">Yun Xiao Juan is an educational tool designed to support teachers and students. It features intelligent question generation, quick access to study materials, and personalized analysis of mistakes.</font></p></br> 
+            <b>1.2 Terminal Users and Their Needs </b></br>
+            <ul type="circle"><li>Teacher’s Needs: Teachers can use the intelligent question generation function to create practical exercises and exam questions, and quickly access study materials to prepare teaching content more efficiently.</li> 
+            <li>Student’s Needs: Students can use Yun Xiao Juan to search for additional learning materials and receive personalized learning recommendations based on their mistakes. Other products assess the same knowledge points, but cannot tailor question type and solution strategy. Yun Xiao Juan' s question generation, study material search, and mistake analysis functions are customized to meet users' needs. User feedback is also collected and incorporated into the system for adaptive modification.</li>
+        </ul>
+    </br>
+        </p>
+        <h2 class="main-subtitle">2 APPLICATION USAGE</h2>
+        <b>2.1 Analytical Question Generation in Application Usage: Simplified Showcase </b></br>
+        <p style="text-indent:2em"><font style="font-size:15px">This is the Analytical Question Generation Function, which allows you to see how it analyzes your learning progress based on your performance, and generates personalized exercises to fill any gaps.</font></p>
+        <img class="main-figure" src="1-1.png">
+        <img class="main-figure" src="1-2.png">
+        <img class="main-figure" src="1-3.png">
+        <p class="figure-caption">Fig-1:Analytical Question Generation in Application Usage</p>
+        <b>2.2 Material-Based Question Generation in Application Usage: Simplified Showcase </b></br>
+        <p style="text-indent:2em"><font style="font-size:15px">This is the Material-Based Question Generation Function. You can choose the material type and input content requirements to generate the corresponding question materials. After entering the requirements for the question, you can generate the corresponding exercise.</font></p>
+        <img class="main-figure" src="2-1.png">
+        <img class="main-figure" src="2-2.png">
+        <p class="figure-caption">Fig-2:Material-Based Question Generation in Application Usage</p>
+        <h2 class="main-subtitle">3 Explorations with LLM</h2>
+        <p style="text-indent:2em"><font style="font-size:15px">Now, we will explore task knowledge, experiment with prompt effectiveness, and summarize challenges involved in generating accurate and user-friendly questions and assessments.</font></p>
+        <b>3.1 Exploration</b></br> 
+        <p style="text-indent:2em"><font style="font-size:15px">We identified key conditions for question generation through online searches and interactions with the large model, such as knowledge points tested by the question and corresponding question type.</font></p></br>
+        <b>3.2 Experimentation</b></br> 
+        <p style="text-indent:2em"><font style="font-size:15px">Directly generating questions using the model's templates may not meet requirements. Detailed templates are needed, and the model may not always understand user needs, so it's necessary to extract requirements before generating custom questions.</font></p>
+        <b>3.3 Ai-chain Design</b></br>
+        <!--add figure-->
+        <img class="main-figure" src="fig-1.svg">
+        <p class="figure-caption">Fig-3: Analytical Question Generation System Design</p>
+        <img class="main-figure" src="fig-2.svg">
+        <p class="figure-caption">Fig-4: Material-Based Question Generation System Design</p>
+        <b>3.4 Sapper Design</b></br>
+        <i>3.4.1 Start Menu</i></br>
+        <i>Function</i></br>
+        <ul type="circle">
+        <li>
+            Select function: Select Start-up menu with user input selection based on numerical prompts for corresponding functions.
+        </li>
+    </ul>
+        <i>Sapper design:</i>
+        <img class="main-figure" src="1.png">
+        <p class="figure-caption">Fig-5: Start Menu</p>
+        <i>3.4.1 Analytical Question Generation</i>
+        <i>Function：</i></br>
+        <ul type="circle">
+            <li>
+                Module for analyzing incorrect answers: Based on the user's input of incorrect questions and answers, analyze the reasons for the errors, the knowledge points that the user has not mastered, and provide learning advice for the knowledge points that the user has not mastered.
+            </li>
+            <li>
+                User feedback template: After outputting the analysis results, the user is asked to choose whether they are satisfied or not, and decide whether to regenerate；
+            </li>
+            <li>
+                Question generation template: After the loop ends, the learning analysis results are passed to the question generation module as one of the requirements for generating questions. Users can learn the knowledge points they have not mastered before by inputting other conditions to generate questions.
+            </li>
+        </ul>
+        <img class="main-figure" src="2.png">
+        <p class="figure-caption">Fig-6: Analytical Question Generation</p>
+        <i>The program's output display:</i>
+        <img class="main-figure" src="3.png">
+        <p class="figure-caption">Fig-7: Module for Analyzing Incorrect Answers</p>
+        <img class="main-figure" src="4.png">
+        <p class="figure-caption">Fig-8: User Feedback Template</p>
+        <img class="main-figure" src="5.png">
+        <p class="figure-caption">Fig-9: Question Generation Template</p>
+        <i>3.4.2 Material-Based Question Generation</i></br>
+        <i>Function:</i></br>
+        <ul>
+            <li>
+                Find Material Module: After the user selects the type of material they want to search for, they enter the corresponding refined module, where they continue to input their content requirements. The worker then generates the corresponding material based on the user's inputs；
+            </li>
+            <li>
+                User feedback template: After outputting the analysis results, the user is asked to choose whether they are satisfied or not, and decide whether to regenerate；
+            </li>
+            <li>
+                Information extraction model: extracts relevant information related to the question from the user's input based on predefined patterns.
+            </li>
+            <li>
+                Generation Module: After the loop ends, the generated materials are passed to the question generation module as reference material for generating questions based on user inputted conditions. The worker analyzes the question generation conditions provided by the user and generates questions and answers accordingly.
+            </li>
+        </ul>
+        <i>Sapper design：</i>
+        <img class="main-figure" src="6.png">
+        <p class="figure-caption">Fig-10: Material-Based Question Generation</p>
+        <i>The program's output display:</i>
+        <img class="main-figure" src="7.png">
+        <img class="main-figure" src="8.png">
+        <p class="figure-caption">Fig-11: Find Material Module</p>
+        <img class="main-figure" src="9.png">
+        <p class="figure-caption">Fig-12: Information Extraction Model</p>
+        <img class="main-figure" src="11.png">
+        <img class="main-figure" src="10.png">
+        <p class="figure-caption">Fig-13: Generation Module</p>
+        
+        <h2 class="main-subtitle">4 DEVELOPMENT EXPERIENCE AND FUTURE PROSPECTS</h2>
+        <i>4.1 My Impression of Using Sapper</i></br>
+        <ul>
+            <li>
+                Easy operation: Compared to traditional text-based programming languages, visual programming tools are more intuitive and easier to understand, making it easier for beginners to understand and use, lowering the user threshold.  
+            </li>
+            <li>
+                Efficient programming: Visual programming tools can save a lot of time and effort, as developers can create complex programs and processes through simple drag-and-drop and click operations, without the need to manually write code.
+            </li>
+            <li>
+                Full-featured: It can call multiple models, such as gpt-3.5-turbo, DALL-E, and also use code modules such as loops and conditional statements. It has a debug function, which is convenient for debugging. When writing prompts, it also provides categorization to prevent the prompts from being too long and facilitate user modification, which improves the accuracy of the model's response.
+            </li>
+        </ul>
+        <i>4.2 Future Improvements</i></br>
+        <p style="text-indent:2em"><font style="font-size:15px">Now, we will explore task knowledge, experiment with prompt effectiveness, and summarize challenges involved in generating accurate and user-friendly questions and assessments.</font></p>
+    </div>
+    <div id="page-nav-id" style="display: none">yunxiaojuan</div>
+</main>
+
+</body>
+</html>

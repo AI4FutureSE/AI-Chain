@@ -114,9 +114,17 @@ main{
     top: 80px;
 }
 
+main h2{
+    font-size: 25px;
+}
+
 #main-content{
     padding: 35px 280px;
     overflow: auto;
+}
+
+.main-title{
+    font-size: 30px;
 }
 
 .main-subtitle{
