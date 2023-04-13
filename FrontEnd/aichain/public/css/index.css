@@ -168,6 +168,7 @@ html body{
 /* content */
 #content{
     width: 100%;
+    color: grey;
 }
 
 /* intro */
@@ -213,20 +214,19 @@ html body{
 /* module */
 .module-container{
     min-height: 80vh;
-    padding: 100px;
+    padding: 100px 100px 30px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 #aichain{
     background: white;
-    color: black;
 }
 
 .module-title{
     font-family: Arial, serif;
-    font-size: 3em;
+    font-size: 40px;
     font-weight: bolder;
-    border-bottom: 2px solid black;
+    text-align: center;
 }
 
 .module-content{
@@ -243,7 +243,7 @@ html body{
 /* module card */
 .module-card{
     background: #ffffff40;
-    padding: 40px;
+    padding: 10px 40px 5px;
     transition: 0.8s;
     border-radius: 10px;
     /*box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;*/
@@ -252,7 +252,6 @@ html body{
 
 .module-card:hover{
     background: #ffffff70;
-    cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -266,17 +265,26 @@ html body{
 }
 
 .module-subtitle{
-    font-size: 30px;
+    font-size: 25px;
+    text-align: center;
 }
 
 .module-card-link{
-    font-size: 25px;
-    color: white;
-
+    font-size: 14px;
+    color: var(--first);
+    transition: 0.5s;
+    text-decoration: none;
+    border: 1px solid var(--first);
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    display: inline-block;
 }
 
 .module-card-link:hover{
-    color: white;
+    color: whitesmoke;
+    background: var(--first);
+    cursor: pointer;
 }
 
 #promptmanship{
