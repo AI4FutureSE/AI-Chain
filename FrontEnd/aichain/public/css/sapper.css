@@ -209,7 +209,29 @@ html body{
 }
 
 .divider{
-    width: 300px;
-    border-bottom: grey 1px dotted;
+    /*width: 300px;*/
+    /*border-bottom: var(--first) 1px dotted;*/
     margin: 20px 0;
+}
+
+.section-card-text{
+    border-bottom: var(--first) 1px dotted;
+
+}
+
+.section-card-btn{
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid var(--first);
+    color: var(--first);
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.section-card-btn:hover{
+    color: white;
+    background: var(--first);
 }
