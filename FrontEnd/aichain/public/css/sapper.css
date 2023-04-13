@@ -153,6 +153,7 @@ html body{
     padding: 25em 80px 0;
     color: ghostwhite;
     font-family: Ubuntu-bold, serif;
+    text-align: center;
 }
 
 .cover-title h1{
@@ -162,11 +163,27 @@ html body{
 .cover-subtitle{
     font-size: 40px;
     color: navajowhite;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 .cover-emp{
     font-size: 28px;
     font-weight: bold;
     color: antiquewhite;
+}
+
+.cover-btn{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid navajowhite;
+    color: navajowhite;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s
+}
+
+.cover-btn:hover{
+    color: ghostwhite;
+    background: navajowhite;
 }
