@@ -49,8 +49,8 @@ html body{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     width: 100%;
     height: 80px;
-    position: absolute;
     top: 0;
+    position: fixed;
 }
 
 .navbar-brand{
@@ -104,4 +104,83 @@ html body{
     text-align: right;
     width: 100%;
     margin: 0;
+}
+
+/* market cards */
+.card-container{
+    padding: 120px 200px;
+}
+
+.market-card-wrapper{
+    /*border: 1px solid var(--first);*/
+    height: 38rem;
+    padding: 50px 50px 100px;
+}
+
+/* Cards */
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    color: whitesmoke;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+}
+
+.card h2 {
+    position: absolute;
+    inset: auto auto 30px 30px;
+    margin: 0;
+    transition: inset .3s .3s ease-out;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.card p {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+
+    inset: auto auto 80px 30px;
+}
+
+.card a {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+
+    inset: auto auto 40px 30px;
+    color: navajowhite;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card:hover h2 {
+    inset: auto auto 220px 30px;
+    transition: inset .3s ease-out;
+}
+
+.card:hover p, .card:hover a {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+}
+
+.card:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 1;
 }
