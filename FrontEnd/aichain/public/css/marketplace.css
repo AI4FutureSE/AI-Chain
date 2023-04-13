@@ -19,7 +19,7 @@
 }
 
 :root{
-    --first: #23a6d5;
+    --first: #7ec6b8;
     --second: #e73c7e;
 
     --yellow: #FEE622;
@@ -49,8 +49,8 @@ html body{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     width: 100%;
     height: 80px;
-    position: absolute;
     top: 0;
+    position: fixed;
 }
 
 .navbar-brand{
@@ -106,114 +106,81 @@ html body{
     margin: 0;
 }
 
-/* main content */
-main{
-    display: flex;
+/* market cards */
+.card-container{
+    padding: 120px 200px;
+}
+
+.market-card-wrapper{
+    /*border: 1px solid var(--first);*/
+    height: 38rem;
+    padding: 50px 50px 100px;
+}
+
+/* Cards */
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
     overflow: hidden;
-    height: calc(100vh - 80px);
+    position: relative;
+    color: whitesmoke;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
     position: absolute;
-    top: 80px;
-}
-
-#main-content{
-    padding: 35px 280px;
-    overflow: auto;
-}
-
-.main-subtitle{
-    font-size: 25px;
-    margin: 40px 0 20px;
-    text-decoration: underline;
-}
-
-.main-figure{
+    object-fit: cover;
     width: 100%;
-    /*border: 2px solid var(--first);*/
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    margin-bottom: 20px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
 }
 
-.figure-caption{
-    text-align: center !important;
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-
-#main-content p{
-    font-size: 20px;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-
-/* content nav bar */
-.doc-nav{
-    padding-top: 2px;
-    padding-bottom: 30px;
-    width: 340px;
-    height: calc(100vh - 80px);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    flex: 1 0 auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-.doc-list{
-    list-style-type: none;
-    padding: 0;
+.card h2 {
+    position: absolute;
+    inset: auto auto 30px 30px;
     margin: 0;
+    transition: inset .3s .3s ease-out;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
-.doc-item{
+.card p {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+
+    inset: auto auto 80px 30px;
 }
 
-.doc-item:hover{
-}
+.card a {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
 
-.doc-link{
+    inset: auto auto 40px 30px;
+    color: navajowhite;
     text-decoration: none;
-    color: var(--black);
-    display: block;
-    padding: 10px 12px;
-    transition: 0.25s;
-    width: 320px;
+    cursor: pointer;
 }
 
-.doc-link:hover{
-    background: var(--first);
-    color: white;
+.card:hover h2 {
+    inset: auto auto 220px 30px;
+    transition: inset .3s ease-out;
 }
 
-.doc-link-level1{
-    font-size: 20px;
-    padding-left: 20px;
+.card:hover p, .card:hover a {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
 }
 
-.doc-link-level2{
-    font-size: 18px;
-    padding-left: 40px;
-}
-
-.doc-link-level3{
-    font-size: 16px;
-    padding-left: 60px;
-}
-
-.doc-link-level4{
-    font-size: 14px;
-    padding-left: 80px;
-}
-
-.doc-link-active{
-    background: #23a6d590;
-    color: ghostwhite;
-}
-
-
-/* footer */
-#footer{
-    width: 100%;
-    height: 200px;
-    background: var(--first);
+.card:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 1;
 }
