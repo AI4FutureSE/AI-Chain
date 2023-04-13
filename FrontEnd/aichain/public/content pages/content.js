@@ -5,7 +5,7 @@ $(document).ready(()=>{
     function addTopNavBar(){
         let topNav = $('.my-navbar')
         topNav.html('<nav class="navbar navbar-expand-lg navbar-light my-navbar">\n' +
-            '    <a class="navbar-brand" href="#cover"><img class="brand-logo" src="http://' + location.host + '/public/image/graphics/logo-blue.png"></a>\n' +
+            '    <a class="navbar-brand" href="http://' + location.host + '/public/index.html"><img class="brand-logo" src="http://' + location.host + '/public/image/graphics/logo-blue.png"></a>\n' +
             '    <h2 class="nav-title"><i class="bi bi-card-list"></i> Documentations </h2>\n' +
             '</nav>')
     }
