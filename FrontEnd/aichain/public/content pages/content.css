@@ -62,18 +62,23 @@ html body{
     color: var(--first);
     font-family: Exo, serif;
     height: 65px;
-    padding-top: 7px;
+    padding-top: 4px;
     transition: 0.5s;
-    margin: 0;
+    margin-right: 10px;
 }
 
 .navbar-brand:hover{
     color: var(--second);
 }
 
+.brand-logo{
+    width: 145px;
+}
+
+
 .nav-link{
     color: var(--first);
-    padding: 20px 40px !important;
+    padding: 20px 30px !important;
     height: 100%;
     font-size: 17px;
 }
