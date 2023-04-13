@@ -79,7 +79,7 @@ html body{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     /*box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;*/
     transition: 0.8s !important;
-    width: 850px;
+    width: 750px;
     height: 65px;
     top: 0;
 }
@@ -110,6 +110,7 @@ html body{
     color: whitesmoke;
     padding: 17px 29px !important;
     height: 100%;
+    font-size: 17px;
 }
 
 .nav-link:hover{
@@ -121,7 +122,7 @@ html body{
 }
 
 .nav-item:hover{
-    background-color: var(--second);
+    background-color: var(--first);
     color: whitesmoke;
 }
 
@@ -155,7 +156,7 @@ html body{
 .btn-title{
     border: white 1px solid;
     color: white;
-    font-size: 20px;
+    font-size: 17px;
     transition: 0.5s;
 }
 

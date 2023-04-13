@@ -75,6 +75,7 @@ html body{
     color: var(--first);
     padding: 20px 40px !important;
     height: 100%;
+    font-size: 17px;
 }
 
 .nav-link:hover{
