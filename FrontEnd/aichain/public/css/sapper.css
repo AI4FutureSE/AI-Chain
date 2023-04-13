@@ -184,5 +184,32 @@ html body{
 }
 
 .btn-icon{
+    margin-left: 10px;
+}
 
+/* Sections */
+.section{
+    padding:50px;
+    color: grey;
+
+}
+
+.section-title{
+    font-family: Ubuntu, serif;
+    font-size: 25px;
+}
+
+.section-card{
+    width: 80%;
+    margin: auto;
+}
+
+.section-lead{
+
+}
+
+.divider{
+    width: 300px;
+    border-bottom: grey 1px dotted;
+    margin: 20px 0;
 }
