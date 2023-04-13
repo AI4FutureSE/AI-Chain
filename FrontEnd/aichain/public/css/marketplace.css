@@ -106,9 +106,25 @@ html body{
     margin: 0;
 }
 
+/* title */
+.title-wrapper{
+    margin-top: 150px;
+    text-align: center;
+}
+
+.title-wrapper h1{
+    color: var(--first);
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.title-wrapper p{
+    color: grey;
+}
+
 /* market cards */
 .card-container{
-    padding: 120px 200px;
+    padding: 40px 200px;
 }
 
 .market-card-wrapper{
