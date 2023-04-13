@@ -143,24 +143,14 @@
             As shown in the above figure, the left part of the exploration view is a <b>chatbot</b> (currently a wrapper of GPT-3.5 API), working in the same way as common chatbot interfaces (e.g., ChatGPT interface).
             The chatbot allows users to have any type of conversation with the LLM.
             Of course, we assume that the users would talk around the AI service they need to support. 
-            For example, in the above figure, <b>To be fixed: the user is intereted in developing a poem-to-paiting service. He is consulting with the LLM about some aesthetic conception and imagery, and is experimeting some prompts to obtain the relevant information for a poem.</b>
+            <!--For example, in the above figure, <b>To be fixed: the user is intereted in developing a poem-to-paiting service. He is consulting with the LLM about some aesthetic conception and imagery, and is experimeting some prompts to obtain the relevant information for a poem.</b>-->
         </p>
         <p>
             Different from a regular conversational chatbot, the exploration view is equpped a <b>LLM-based co-pilot</b> that automatically collects and analyzes the user's conversations with the LLM to obtain the broad task context (e.g., the concered AI service, user preference, things to avoid) that might be relevant to subsequent AI chain design and development. 
             This co-pilot is an <b>AI chain service</b> built on top of the LLM (currently GPT-3.5). 
             It works in a non-intrusive manner, and dynamically takes notes as shown in the <b>Task Note</b> panel from the conversions between the user and the LLM.
-            For example, <b>To be fixed: this co-pilot notes that the input could be Chinese ancient poetry and some art styles the user might perfer.</b>
+            <!--For example, <b>To be fixed: this co-pilot notes that the input could be Chinese ancient poetry and some art styles the user might perfer.</b>-->
         </p>
-        <!--p>
-            In the past, software development required a real human product manager to perform these tasks, but the LLM makes it feasible to develop a virtual product manager.
-            \zc{In fact, this intelligent co-pilot in the exploration view, which acts as a virtual product manager, is an AI chain service built on top of the LLM, as shown in Figure~\ref{fig:explorationviewcopilot}. 
-            It includes a Summarizer Commander to summarize the main topics of user input, and a Classifier Commander to classify user input (e.g., determining whether it is a processing step, pointing out a problem in the model response, or modifying previous prompts). 
-            For lengthy input data, it uses an Input Rewriter to extract key information related to the topic. 
-            After observing a certain amount of conversation, it uses a Composer to consolidate the collected information according to AI chain-related concepts such as task context, data properties, worker composition, worker cooperation, and external resources, and saves it to a context memory. 
-            This memory is continuously updated as the conversation progresses, and will provide the approximate task model for the design view. 
-            The user can click on the ``Context Memory'' button located at the bottom right corner of the Exploration View to view and edit the context memory.
-            ??Imagine how this co-pilot would work. Revise according to the actual implementation.}
-        </p-->
     </div>
 </main>
 </div>

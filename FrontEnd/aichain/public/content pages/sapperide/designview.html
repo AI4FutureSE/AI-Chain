@@ -134,7 +134,7 @@
         <h2 class="main-subtitle">Turn your ideas into AI chain requirements and skeleton</h2>
 
         <img class="main-figure" src="ide-figures/designview.jpg">
-        <p class="figure-caption">Design view: requirement analysis chatbot (left), AI chain requirements (upper-right), AI chain skeleton (lower-right)</p>
+        <p class="figure-caption">Design view: requirement analysis chatbot (left), task requirement box (upper-right), AI chain skeleton (lower-right)</p>
 
         <p>
             Design view supports the main activities of the design phase and plays an important role in bridging the gap between the exploration and construction phases. 
@@ -156,11 +156,11 @@
         <p>
             3) Each round of the response from the user is iteratively incorporated into the user's task description (displayed in the <b>task requirement</b> box in the upper-right part). 
         </p>
-        <ul>
+        <!--ul>
             <li>
                 Example: <b>To be fixed - revise this to HuiXiaoShi shown in the screenshot figure: given the user's initial task description is "Automatically generate questions", and the responses to the two rounds of clarification questions are "multiple-choice questions" and "math", the task description will be updated to "Develop a service that automatically generates multiple-choice math questions".</b>
             </li>
-        </ul>
+        </ul-->
         <p>
             Of course, if the user believes he alreay has clear requirement and thus does not need the help of the requirement analysis co-pilot, he can directly enter the requirement in the task requirement box.
         </p>
@@ -177,41 +177,41 @@
             1) This co-pilot first converts the high-level task description into the main steps required to complete the task (similar to the ``sunny day scenario'' in use case modeling). 
             Each step has a step name (used to identify the step output in the AI chain) and a concise step description.
         </p>
-        <ul>
+        <!--ul>
             <li>
                 Example: <b>To be fixed with HuiXiaoShi case: for the task description in the Task Description box, it generates three steps: ``Generate a question template based on the given math concepts'', ``Fill in the question template with specific values to generate a math question'', and ``Generate multiple choices for the math question''. 
                  </b>
             </li>
-        </ul>
+        </ul-->
         <p>
             2) Based on the step description, the co-pilot recommends three candidate prompts for each step. 
             <em>Upcoming feature</em>: If the user has accumulated a set of prompt assets (see <a href="prompthub.html">Prompt Hub</a>), the co-pilot can also be set to search the prompt hub for prompts related to the step using a retrieval-based engine (such as <a href="https://github.com/jerryjliu/llama_index">GPT Index</a>). 
             Of course, the co-pilot can also be set to recommend both retrieved and generated prompts. 
         </p>
-        <ul>
+        <!--ul>
             <li>
                 Example: <b>To be fixed with HuiXiaoShi: for step "Generate a question template based on the given math concepts", a generated prompt is "Create a list of question templates based on {{concept}} for a math quiz or exam".</b>
             </li>
-        </ul>
+        </ul-->
             
         <p>
             3) The user can manually modify the generated steps, including remove steps, add steps, or reorder steps. 
             In the current version, the co-pilot does not generate control flow. 
             The user can manually add control flow, including step execution conditions or step loops. 
         </p>
-        <ul>
+        <!--ul>
             <li>
                 Example: <b>To be fixed with HuiXiaoShi: the user adds a condition ??? for the step "...".</b>
             </li>
-        </ul>
+        </ul-->
         <p>
             4) The user can edit the generated prompts using a structured form. In this form, the user can also set the input to the step and select the engine to execute the prompt.
         </p>
-        <ul>
+        <!--ul>
             <li>
                 Example: <b>To be fixed with HuiXiaoShi: the user set ?? as the input and choose to use ?? as the engine.</b>
             </li>
-        </ul>
+        </ul-->
         <p>
             5) The user can click the <b>Generate AI Chain</b> button at the bottom right of the Design view, and the IDE will automatically assemble a block-based AI chain according to the AI chain skeleton, which can be viewed, edited, and executed in the <a href="blockview.html">Block view</a>
         </p>

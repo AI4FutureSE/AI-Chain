@@ -56,16 +56,16 @@
             Such task-related knowledge serve as the foundation for AI chain analysis and design.
         </p>
         
-        <p>
+        <!--p>
             For example, to build <a href="wenxiaojie.html">Wen Xiao Jie</a> (a long article writing assistant), the engineer who consulted ChatGPT and learned that the major phases of writing a long article include: create a generic outline, personalize the outline, and iteratively expand, rewrite and polish the content.
             She also learned that the information required for these phases, for example, article theme, audience, subject matter for generic outline, favorite storyline for personalizing the outline.
             Furthermore, content consistency need to be continually checked during expansion and rewriting.
-        </p>
+        </p-->
         
         <p>
-            Our IDE's <a href="explorationview.html">Exploration view</a> supports the chatting with ChatGPT, and is equipped with a note-taking co-pilot that summarizes key notes from the chats in real time, such as task context, user preference, things to avoid.
+            Our IDE's <a href="sapperide/explorationview.html">Exploration view</a> supports the chatting with ChatGPT, and is equipped with a note-taking co-pilot that summarizes key notes from the chats in real time, such as task context, user preference, things to avoid.
             Although chatting with the LLM is more convenient and efficient than obtaining relevant knowledge through Internet searches, it is important to be aware of the correctness of the knowledge recommended by the LLM.
-            Users can verify the model's output by asking it to explain its thought process (<a href="promptpatterns.html">Reflection</a>), list the relevant facts it knows (<a href="workerstereotypes.html">Verifier</a>), and then combine it with their own knowledge to assess the validity of the model's response.
+            Users can verify the model's output by asking it to explain its thought process (<a href="promptpatterns.html#reflection">Reflection</a>), list the relevant facts it knows (<a href="workerstereotypes.html#verifier">Verifier</a>), and then combine it with their own knowledge to assess the validity of the model's response.
         </p>
         
         <h2 class="main-subtitle">Requirement elicitation</h2>
@@ -73,9 +73,10 @@
             Like other software projects, AI chain engineers often start with a vague understanding of ``what they want''.
             Building software on such vague statements is a major reason for the failure of software projects.
             We need to interact with engineers through requirement elicitation and gradually clarify the initial ``what they want'' statements into specific AI chain needs. 
-            This challenging task can be supported by large language models, for example, through a <a href="workerstereotypes.html">Reverse Questioner</a> worker. 
+            This challenging task can be supported by large language models, for example, through a <a href="workerstereotypes.html#reverse-questioner">Reverse Questioner</a> worker. 
             By providing some examples of requirement elicitation (such as good open-ended requirement elicitation questions in <a href="https://www.amazon.com.au/Software-Requirements-Karl-Wiegers/dp/0735679665">Software Requirements</a> by Karl E. Wiegers), large language models would learn to ask good open-ended questions for specific tasks and thus elicit specific AI chain needs.
-            The <a href="designviewmanualpage">Design view</a> of our <a href="https://promptsapper.tech">Sapper IDE</a> is equipped with such a requirement elicitation co-pilot that interacts with the engineer to elicit and analyze tasks requirements (<b>To be fixed: see our <a href="huixiaoshidemovideo">Hui Xiao Shi</a> showcase video</b>).
+            The <a href="sapperide/designview.html">Design view</a> of our <a href="https://promptsapper.tech">Sapper IDE</a> is equipped with such a requirement elicitation co-pilot that interacts with the engineer to elicit and analyze tasks requirements.
+            <!--(<b>To be fixed: see our <a href="huixiaoshidemovideo">Hui Xiao Shi</a> showcase video</b>)-->
         </p>
         
         <h2 class="main-subtitle">Mechanical sympthy</h2>
@@ -93,13 +94,15 @@
         </p>
         <p>
             Foundation models provide playgrounds for experimenting prompts.
-            Our IDE's <a href="explorationview.html">Exploration view</a> can be regarded as a playground for developing the mechanical sympathy for ChatGPT.
+            Our IDE's <a href="sapperide/explorationview.html">Exploration view</a> can be regarded as a playground for developing the mechanical sympathy for GPT-3.5.
+        </p>
+        <!--p>
             For example, when building <a href="sixiaopin.html">Si Xiao Pin</a> (a mock interview service), the engineer experimented prompts for generating interview questions and found that the LLM sometimes generates questions in form of suggestions such as ``You may ask: ... an interview question ...'', but not as an interviewer. 
             He found that this issue can be addressed by setting up <a href="promptpatterns.html">persona</a> and <a href="promptpatterns.html">output formatter</a>.
-        </p>
+        </p-->
         <p>
             Research has shown that large language models can create human-level prompts (<a href="https://arxiv.org/abs/2211.01910">Zhou et al. 2023</a>).
-            Inspired by this, our IDE's <a href="designviewpage">Design view</a> implements a ChatGPT-based prompting co-pilot to create candidate prompts for the generated AI chain steps as initial <a href="systemdesign.html">task decomposition</a>.
+            Inspired by this, our IDE's <a href="sapperide/designview.html">Design view</a> implements a ChatGPT-based prompting co-pilot to create candidate prompts for the generated AI chain steps as initial <a href="systemdesign.html">task decomposition</a>.
             <!--b>??not supported yet? During prompt debugging in the <a href="blockviewmanualpage">Block view</a>, the engineer can request this prompting-copilot to revise an existing prompt (see an example in <a href="aichaintestingpage">AI chain testing</a>)./b-->
         </p>
         
