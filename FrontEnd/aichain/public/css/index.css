@@ -34,6 +34,10 @@ html body{
     margin: 0;
 }
 
+p{
+    line-break: anywhere;
+}
+
 
 /*** General ***/
 .animate-color{
@@ -214,8 +218,7 @@ html body{
 /* module */
 .module-container{
     min-height: 80vh;
-    padding: 100px 100px 30px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    padding: 100px 100px 20px;
 }
 
 #aichain{
@@ -238,6 +241,7 @@ html body{
     width: 100%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin-bottom: 20px;
 }
 
 /* module card */
@@ -256,11 +260,11 @@ html body{
 }
 
 .module-card-caption{
-    padding: 40px;
+    padding: 30px;
 }
 
 .module-card-title{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bolder;
 }
 
@@ -287,26 +291,20 @@ html body{
     cursor: pointer;
 }
 
-#promptmanship{
-    background: #e73c7e70;
-    color: var(--second);
-}
+/*#promptmanship{*/
+/*    !*background: #e73c7e70;*!*/
+/*    !*color: var(--second);*!*/
+/*}*/
 
-#promptmanship .module-title{
-    font-size: 3.5em;
-    float: right;
-    border-bottom: 2px solid var(--second);
-}
+/*#promptmanship .module-card{*/
+/*    color: white;*/
+/*    background: #e73c7e00;*/
+/*}*/
 
-#promptmanship .module-card{
-    color: white;
-    background: #e73c7e00;
-}
-
-#promptmanship .module-card:hover{
-    color: white;
-    background: #e73c7e70;
-}
+/*#promptmanship .module-card:hover{*/
+/*    color: white;*/
+/*    background: #e73c7e70;*/
+/*}*/
 
 #sapper{
     background: var(--second);
