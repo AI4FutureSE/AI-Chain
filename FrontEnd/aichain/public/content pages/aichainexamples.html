@@ -140,33 +140,11 @@
             The paper proposes using large language models (LLMs) as a controller to manage existing AI models in different domains and modalities to solve complicated AI tasks. The proposed framework, HuggingGPT, uses LLMs to conduct task planning, select appropriate AI models, execute subtasks, and summarize responses. HuggingGPT shows impressive results in various challenging tasks, including language, vision, speech, and other modalities, demonstrating the potential of LLMs in advancing artificial intelligence.
         </p>
         
-        
-        <p>
-             Figure~\ref{fig:examples} present examples of AI chains for diverse tasks, such as question answering~\cite{arora2022ask}, content creation~\cite{schick2022peer, yang2022re3, wu2022ai}, logical reasoning~\cite{creswell2022selection, kazemi2022lambada}, robotics~\cite{singh2022progprompt}, and code analysis~\cite{pcrchain}.
-            \begin{itemize}[leftmargin=*]
-                \item Arora et al.~\cite{arora2022ask} (Figure~\ref{fig:examples}(a)) present a strategy for improving question answering by chaining question rewriting, parallel answering, and self-consistency checking units.
-
-                \item PEER~\cite{schick2022peer} (Figure~\ref{fig:examples}(b)) and Re3~\cite{yang2022re3} (Figure~\ref{fig:examples}(c) decompose content creation as recursive plan, write, revision steps.
-
-                \item LAMBADA (Figure~\ref{fig:examples}(d)) supports a backward reasoning AI chain algorithm, consisting of four sub-modules - fact check, rule selection, goal decomposition, and sign agreement.
-
-                \item Wu et al.~\cite{wu2022ai} (Figure~\ref{fig:examples}(e)) design an AI chain for rewriting peer reviews by chaining split-points, ideation, and compose-points steps.
-                They also demonstrate an AI chain for travel flashcard creation through brainstorming, ideation, and translation.
-
-                \item Selection-Inference~\cite{creswell2022selection} (Figure~\ref{fig:examples}(f)) performs repeated fact selection and inference for interpretable logical reasoning.
-
-                \item Singh et el.~\cite{singh2022progprompt} ((Figure~\ref{fig:examples}(g)) perform robotics operation by an AI chain of robot task planning, execution and feedback.
-                Similar LLM-based robotics can be found in~\cite{DescribeExplainPlanSelect-https://arxiv.org/pdf/2302.01560.pdf, chatgptforrobotics-https://www.microsoft.com/en-us/research/uploads/prod/2023/02/ChatGPT___Robotics.pdf}
-
-                \item Huang et al.~\cite{pcrchain} (Figure~\ref{fig:examples}(h)) fix unresolved fully-qualified names and last-mile code errors step by step in partial code.
-            \end{itemize}
-        </p>
-        
         <p>
             In addition to specific tasks, AI chain is a powerful tool for multi-model, tool, or API collaboration to solve complex tasks involving multi-modal subtasks.
-            HuggingGTP~\cite{https://arxiv.org/abs/2303.17580} creates a model collaborative system, in which the LLM coordinates external specialized models to deal with complex AI tasks.
+            <a href="../paper/2303.17580.pdf">HuggingGPT</a> creates a model collaborative system, in which the LLM coordinates external specialized models to deal with complex AI tasks.
             In the backend, the LLM runs an AI chain to understand user input, plan task sub-steps, select appropriate external models to execute, and aggregate the results from various models.
-            Similar ideas have been proposed in ChatGPT plugin~\cite{https://openai.com/blog/chatgpt-plugins} and TaskMatrix.AI~\cite{https://arxiv.org/abs/2303.16434}
+            Similar ideas have been proposed in <a href="https://openai.com/blog/chatgpt-plugins">ChatGPT plugin</a> and <a href="https://arxiv.org/abs/2303.16434">TaskMatrix.AI</a>.
         </p>
     </div>
 </main>
