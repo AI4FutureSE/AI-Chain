@@ -77,25 +77,10 @@ html body{
     color: ghostwhite;
     padding: 20px 40px !important;
     height: 100%;
+    font-size: 17px;
 }
 
 .nav-link:hover{
-    color: navajowhite;
-}
-
-.nav-scroll{
-    font-size: 22px;
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    background: white;
-}
-
-.nav-link-scroll{
-    color: var(--first);
-}
-
-.nav-link-scroll:hover{
     color: navajowhite;
 }
 
