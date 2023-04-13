@@ -51,7 +51,7 @@ $(document).ready(()=>{
             '                                        <a class="doc-link doc-link-level4" id="worker" href="http://' + location.host + '/public/content pages/workerstereotypes.html">Worker Stereotype</a>\n' +
             '                                    </li>\n' +
             '                                    <li class="doc-item">\n' +
-            '                                        <a class="doc-link doc-link-level4" id="promptcaveats" href="http://' + location.host + '/public/content pages/promptpatterns.html">Prompting Patterns</a>\n' +
+            '                                        <a class="doc-link doc-link-level4" id="promptpattern" href="http://' + location.host + '/public/content pages/promptpatterns.html">Prompting Patterns</a>\n' +
              '                            <li class="doc-item">\n' +
             '                                <a class="doc-link doc-link-level3" id="aichaintesting" href="http://' + location.host + '/public/content pages/aichaintesting.html">AI Chain Testing</a>\n' +
             '                            </li>\n' +
