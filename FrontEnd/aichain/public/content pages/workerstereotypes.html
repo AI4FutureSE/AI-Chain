@@ -103,7 +103,7 @@
             <b>Usage examples:</b>
             A user's natural language input may not conform to the expected format of AI services. 
             The Input Rewriter can standardize the input by calling on a LLM, for example, converting declarative sentences into interrogative ones (<a href="https://arxiv.org/abs/2210.02441">Arora et al. 2022</a>). 
-            If a user's input is long and verbose, the Input Rewriter can extract key information (e.g., time, location, and event from news, known facts from the problem description, or profession from user answer in <a href="sixiaopin.html">Si Xiao Pin</a>) to avoid irrelevant details affecting later processing. 
+            If a user's input is long and verbose, the Input Rewriter can extract key information (e.g., time, location, and event from news, known facts from the problem description)<!--, or profession from user answer in <a href="sixiaopin.html">Si Xiao Pin</a>)--> to avoid irrelevant details affecting later processing. 
             In cases where the input has complex syntax or logic, the Input Rewriter can transform the complex input into several simpler items, enabling a divide-and-conquer approach (<a href="https://dl.acm.org/doi/abs/10.1145/3491102.3517582">Wu et al. 2022</a>).
         </p>
         <p>
@@ -115,10 +115,10 @@
             Input Rewriter is more generic than <a href="workerstereotypes.html#data-splitter">Data Splitter</a> which splits homogeneous data into smaller chunks.
             Unlike <a href="workerstereotypes.html#reverse-questioner">Reverse Questioner</a> that involve human-LLM dialogue to elicit information from users, Input Rewriter processes the input ``algorithmatically'' without human interaction.
         </p>
-        <p>
+        <!--p>
             <b>Case studies:</b> 
             <b>To be fixed: <a href="sixiaopin.html">Si Xiao Pin</a> ... href to our case studies using this worker stereotype ...</b>
-        </p>
+        </p-->
         
         <h2 id="data-splitter" class="main-subtitle">Data Splitter</h2>
         <p>
@@ -129,7 +129,7 @@
             <b>Usage examples:</b>
             The input may contain a large amount of homogeneous data that requires repetitive processing.
             Handling more data can be more challenging than less data, even if the data fits within the model's context window. 
-            The splitting can be based on the amount of data the model can reliably handle, or the input structure (such as document sections in <a href="wenxiaojie.html">Wen Xiao Jie</a>)
+            The splitting can be based on the amount of data the model can reliably handle, or the input structure.<!-- (such as document sections in <a href="wenxiaojie.html">Wen Xiao Jie</a>)-->
             It can also recursively reduce complex data to simpler form based on a least-to-most approach (<a href="https://arxiv.org/abs/2205.10625">Zhou et al. 2022</a>), for example, a long string to a shorter sub-string, a code block into nested smaller blocks.
             Then, each data chunk can be processed iteratively or multiple chunks can be processed in parallel. 
         </p>
@@ -143,10 +143,10 @@
             Unlike <a href="workerstereotypes.html#input">Input Rewriter</a>, Data Splitter only splits the data items but does not modify the data items.
             <a href="workerstereotypes.html#composer">Composer</a> can be used to combine the results of individual data chunks, for example, combining the section summaries into a summary of the entire document. 
         </p>
-        <p>
+        <!--p>
             <b>Case studies:</b> 
             <b>To be fixed: <a href="wenxiaojie.html">Wen Xiao Jie</a>... href to our case studies using this worker stereotype ...</b>
-        </p>
+        </p-->
         
         <h2 id="reverse-questioner" class="main-subtitle">Reverse Questioner</h2>
         <p>
@@ -160,7 +160,7 @@
             This technique is particularly useful during the exploration and design phases of AI chain development and is seamlessly integrated into our Sapper IDE, supporting AI chain <a href="taskmodeling.html">task modeling</a> and <a href="systemdesign.html">requirement analysis</a>. 
             Reverse questioning dialogues can be either fixed-round or open-ended. 
             Open-ended dialogues can be terminated by the user with phrases like "stop" or "no more follow-up questions", or the LLM can decide whether it has collected enough information for further processing.
-            <b>To be confirmed: <a href="sixiaopin.html">Si Xiao Pin</a> has a Reverse Questioner worker to ask the interview questions.</b>
+            <!--b>To be confirmed: <a href="sixiaopin.html">Si Xiao Pin</a> has a Reverse Questioner worker to ask the interview questions.</b-->
         </p>
         <p>
             A special use case for Reverse Questioner is when the LLM refuses to complete a user's task, allowing the LLM to rephrase the input into a form it may support. 
@@ -178,10 +178,10 @@
             <b>Related patterns:</b> 
             <a href="promptpatterns.html#persona">Persona</a> and <a href="promptpatterns.html#context-control">Context Control</a> are needed to customize and constrain the LLM's behavior as a special-purpose Reverse Questioner.
         </p>
-        <p>
+        <!--p>
             <b>Case studies:</b> 
             <b>To be fixed: <a href="sixiaopin.html">Si Xiao Pin</a> ... href to our case studies using this worker stereotype ...</b>
-        </p>
+        </p-->
         
         <h2 id="planner" class="main-subtitle">Planner</h2>
         <p>
@@ -193,8 +193,8 @@
             For example, the first step in creating a long story with Re3 (<a href="https://arxiv.org/abs/2210.06774">Yang et al. 2022</a>) is to generate story scenes, characters, and an outline based on a premise. 
             Subsequent steps gradually unfold the long story within the defined scenes and characters, following the outline. 
             The Planner is also very useful for controlling robots (<a href="https://arxiv.org/abs/2209.11302">Singh et al. 2022</a>, <a href="https://www.microsoft.com/en-us/research/group/autonomous-systems-group-robotics/articles/chatgpt-for-robotics/">ChatGPT for Robotics</a>) or operating external devices (<a href="https://arxiv.org/abs/2209.08655">Wang et al. 2023</a>), as it can convert a user's high-level intention into a sequence of low-level robotic or UI actions for achieving the intention.
-            <b>To be fixed: one example from our case study ....?</b>
-            Our Sapper IDE's <a href="designview.html">Design view</a> uses a Planner co-pilot to generate the major steps from the task requirement as the inital <a href="systemdesign.html">task decomposition</a>.
+            <!--b>To be fixed: one example from our case study ....?</b-->
+            Our Sapper IDE's <a href="sapperide/designview.html">Design view</a> uses a Planner co-pilot to generate the major steps from the task requirement as the inital <a href="systemdesign.html">task decomposition</a>.
         </p>
         <p>
             In addition to creating plans from scratch, the Planner can also develop plans based on partial information provided by the user. 
@@ -214,10 +214,10 @@
             The planner can use <a href="promptpatterns.html#persona">Persona</a> or <a href="promptpatterns.html#context-control">Context Control</a> to constrain the planning context and output. 
             It can also collaborate with <a href="workerstereotypes.html#monitor">State Monitor</a> to obtain real-time feedback on the execution of the generated plan, assessing the current status and future feasibility, and making necessary adjustments accordingly (<a href="https://arxiv.org/abs/2210.06774">Yang et al. 2022</a>, <a href="https://arxiv.org/abs/2209.11302">Singh et al. 2022</a>.
         </p>
-        <p>
+        <!--p>
             <b>Case studies:</b> 
             <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
-        </p>
+        </p-->
         
         <h2 id="inquirer" class="main-subtitle">Information Inquirer</h2>
         <p>
@@ -226,9 +226,9 @@
         </p>
         <p>
             <b>Usage examples:</b>
-            For example, the <a href="aichainexamples.html">PCR-Chain</a> (<b>To be fixed:<a href="">Huang et al. 2023</a></b>) inquires the LLM to obtain the fully qualified name of an API mentioned in a piece of text. 
-            <b>To be confirmed: <a href="huixiaoshi.html">Hui Xiao Shi</a> inquires the LLM for artistic terms to be used in text-to-image prompts.</b>
-            <b>To be confirmed: <a href="maxiaoyuan.html">Ma Xiao Yuan</a> inquires the LLM for programming and API related knowledge.</b>
+            For example, the <a href="aichainexamples.html">PCR-Chain</a> <!--(<b>To be fixed:<a href="">Huang et al. 2023</a></b>)--> inquires the LLM to obtain the fully qualified name of an API mentioned in a piece of text. 
+            <!--b>To be confirmed: <a href="huixiaoshi.html">Hui Xiao Shi</a> inquires the LLM for artistic terms to be used in text-to-image prompts.</b-->
+            <!--b>To be confirmed: <a href="maxiaoyuan.html">Ma Xiao Yuan</a> inquires the LLM for programming and API related knowledge.</b-->
             When analyzing vulnerability reports, the LLM can be consulted to gain historical vulnerability knowledge about the product, such as its features and common vulnerabilities.
             Inquiring the LLMs is different from traditional Information-Retrieval (IR) methods, as the LLM can offer direct answers (often with explanations), rather than just relevant texts.
         </p>
@@ -245,10 +245,10 @@
             The output of Information Inquirer can also be validated by a <a href="workerstereotypes.html#verifier">Verifier</a> (<a href="https://arxiv.org/abs/2208.14271">Creswell and Shanahan 2022</a>).
         </p>
         
-        <p>
+        <!--p>
             <b>Case studies:</b> 
             <b>To be fixed: <a href="huixiaoshi.html">Hui Xiao Shi</a>, <a href="maxiaoyuan.html">Ma Xiao Yuan</a> ... href to our case studies using this worker stereotype ...</b>
-        </p>
+        </p-->
         
         <h2 id="commander" class="main-subtitle">Commander</h2>
         <p>
@@ -261,7 +261,7 @@
             Commanders can serve various roles in specific tasks, such as  question answerers, readers, summarizers, classifiers, action executors, calculators, writers, fact selector or inferencer, and many more.
             Data creators are a unique type of Commander that utilizes the LLM to generate diverse and realistic data, simulating real-world scenarios.
             This is useful in many application scenarios, such as learning and training, marketing, model training, and software testing.
-            A special data creator is to request the LLM to generate prompts which our IDE implements to <a href="designview.html">assist users in writing prompts</a>.
+            A special data creator is to request the LLM to generate prompts which our IDE implements to <a href="sapperide/designview.html">assist users in writing prompts</a>.
         </p>
         <p>
             <b>Related concepts or methods:</b>
@@ -274,10 +274,10 @@
             This collaborative approach enables each worker to focus on its specific role, leading to more efficient and effective AI services that can handle complex tasks with greater precision and adaptability.
         </p>
         
-        <p>
+        <!--p>
             <b>Case studies:</b> 
             <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
-        </p>
+        </p-->
         
         <h2 id="composer" class="main-subtitle">Composer</h2>
         <p>
@@ -290,10 +290,10 @@
             Then, corresponding modifications are generated for each suggestion, and finally, a Composer consolidates them into a unified, high-quality review.
             Composers are often used when processing lengthy documents (such as document summarization). 
             The document can be divided into segments based on the model's context window size, processed separately, and then consolidated by the Composer. 
-            <b>To be confirmed: <a href="huixiaoshi.html">Hui Xiao Shi</a> uses a composer to merge the poem interpretations by three different interpretation workers.</b>
+            <!--b>To be confirmed: <a href="huixiaoshi.html">Hui Xiao Shi</a> uses a composer to merge the poem interpretations by three different interpretation workers.</b-->
             Another application scenario is when several different Commanders make inferences on the same question (also known as a <a href="workerstereotypes.html#committee">Prompt Committee</a>). 
             The Composer can then determine the final answer based on the majority vote.
-            <b>To be fixed: one example of composer in our case study ...</b>
+            <!--b>To be fixed: one example of composer in our case study ...</b-->
         </p>
         <p>
             <b>Related concepts or methods:</b>
@@ -304,10 +304,10 @@
             <a href="workerstereotypes.html#data-splitter">Data Splitter</a>, <a href="workerstereotypes.html#inquirer">Information Inquirer</a> or Commanders in a <a href="promptpatterns.html#committee">Prompt Committee</a> as described in the above usage examples.
         </p>
         
-        <p>
+        <!--p>
             <b>Case studies:</b> 
             <b>To be fixed: <a href="huixiaoshi.html">Hui Xiao Shi</a> ... href to our case studies using this worker stereotype ...</b>
-        </p>        
+        </p-->        
 
         <h2 id="monitor" class="main-subtitle">State Monitor</h2>
         <p>
@@ -320,7 +320,7 @@
             For example, <a href="https://arxiv.org/abs/2209.11302">ProgPrompt</a> designs assertion prompts that utilize LLM to make judgments about the environment state, such as whether the microwave door is open or closed. 
             State Monitor can also be used to analyze internal system states. 
             For example, <a href="https://arxiv.org/abs/2210.06774">Re3</a>'s edit module leverages LLM to analyze whether newly generated story parts are in conflict with established story settings (e.g., a character's gender is set as male, but the story uses ``she''). 
-            In the similar vein, <a href="wenxiaojie.html">WenXiaoJie</a> has a worker to check the consistency between the user provided materials and the generated writing.
+            <!--In the similar vein, <a href="wenxiaojie.html">WenXiaoJie</a> has a worker to check the consistency between the user provided materials and the generated writing.-->
         </p>
         <p>
             <b>Related concepts or methods:</b>
@@ -332,10 +332,10 @@
             State Monitor differs from <a href="workerstereotypes.html#verifier">Verifier</a> in that State Monitor obtains state changes or inconsistencies while Verifier validates the information faithfulness of the LLM's output.
         </p>
         
-        <p>
+        <!--p>
             <b>Case studies:</b> 
             <b>To be fixed: <a href="wenxiaojie.html">WenXiaoJie</a> ... href to our case studies using this worker stereotype ...</b>
-        </p>  
+        </p-->  
         
         <h2 id="verifier" class="main-subtitle">Verifier</h2>
         <p>
@@ -360,10 +360,10 @@
             This also allows humans to judge whether the LLM's output is reasonable or if the so-called facts it relies on are genuine. 
         </p>
         
-        <p>
+        <!--p>
             <b>Case studies:</b> 
             <b>To be fixed: ... href to our case studies using this worker stereotype ...</b>
-        </p>  
+        </p-->  
         
     </div>
 </main>
