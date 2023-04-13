@@ -74,6 +74,13 @@ p{
     font-weight: bolder;
 }
 
+.divider{
+    width: 85%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    height: 45px;
+    margin: auto;
+}
+
 /**** Specific ***/
 /* nav */
 .my-navbar{
@@ -256,7 +263,7 @@ p{
 
 .module-card:hover{
     background: #ffffff70;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;;
 }
 
 .module-card-caption{
@@ -306,20 +313,20 @@ p{
 /*    background: #e73c7e70;*/
 /*}*/
 
-#sapper{
-    background: var(--second);
-    color: white;
-}
+/*#sapper{*/
+/*    background: var(--second);*/
+/*    color: white;*/
+/*}*/
 
-#sapper .module-card{
-    background: var(--second);
-    color: white;
-}
+/*#sapper .module-card{*/
+/*    background: var(--second);*/
+/*    color: white;*/
+/*}*/
 
-#sapper .module-card:hover{
-    color: white;
-    background: #ffffff70;
-}
+/*#sapper .module-card:hover{*/
+/*    color: white;*/
+/*    background: #ffffff70;*/
+/*}*/
 
 .showcase-img{
     width: 100%;
