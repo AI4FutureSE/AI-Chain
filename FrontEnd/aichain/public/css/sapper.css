@@ -20,7 +20,7 @@
 }
 
 :root{
-    --first: rgb(126,198,184);
+    --first: #7ec6b8;
     --second: #c38d9e;
 
     --yellow: #FEE622;
@@ -48,8 +48,11 @@ html body{
     width: 100%;
     height: 80px;
     position: absolute;
-    top: 0;
     transition: 0.8s !important;
+}
+
+.brand-logo{
+    width: 143px;
 }
 
 .navbar-brand{
@@ -57,11 +60,11 @@ html body{
     font-size: 30px;
     font-weight: bolder;
     text-align: center;
-    background-color: ghostwhite;
+    background-color: white;
     color: var(--first);
     font-family: Exo, serif;
     height: 65px;
-    padding-top: 7px;
+    padding-top: 5px;
     transition: 0.5s;
     margin: 0;
 }
@@ -80,13 +83,20 @@ html body{
     color: navajowhite;
 }
 
-.nav-item{
-    transition: 0.5s;
+.nav-scroll{
+    font-size: 22px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background: white;
 }
 
-.nav-item:hover{
-    /*background-color: var(--second);*/
-    /*color: var(--second);*/
+.nav-link-scroll{
+    color: var(--first);
+}
+
+.nav-link-scroll:hover{
+    color: navajowhite;
 }
 
 
@@ -140,7 +150,8 @@ html body{
 }
 
 .cover-lead{
-    padding-top: 380px;
+    padding-left: 40px;
+    border-left: 2px solid navajowhite;
 }
 
 .cover-lead p{
@@ -150,9 +161,9 @@ html body{
 }
 
 .cover-title{
-    padding: 25em 80px 0;
     color: ghostwhite;
     font-family: Ubuntu-bold, serif;
+    text-align: center;
 }
 
 .cover-title h1{
@@ -162,11 +173,31 @@ html body{
 .cover-subtitle{
     font-size: 40px;
     color: navajowhite;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .cover-emp{
     font-size: 28px;
     font-weight: bold;
     color: antiquewhite;
+}
+
+.cover-btn{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid navajowhite;
+    color: navajowhite;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s
+}
+
+.cover-btn:hover{
+    color: ghostwhite;
+    background: navajowhite;
+}
+
+.btn-icon{
+
 }
