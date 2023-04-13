@@ -98,7 +98,7 @@ $(document).ready(()=>{
             '                <!-- 2ed level -->\n' +
             '                <ul class="doc-list">\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="wenxiaojie" href="http://' + location.host + '/public/content pages/showcases/wenxiaojie.html">文小杰 (Wen Xiao Jie)</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="wenxiaojie" href="http://' + location.host + '/public/content pages/showcases/wenxiaojie/wenxiaojie.html">文小杰 (Wen Xiao Jie)</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
             '                        <a class="doc-link doc-link-level2" id="qingxiaoxie" href="http://' + location.host + '/public/content pages/showcases/qingxiaoxie.html">轻小写 (Qing Xiao Xie)</a>\n' +
@@ -116,7 +116,7 @@ $(document).ready(()=>{
             '                    </li>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="huixiaoshi" href="http://' + location.host + '/public/content pages/showcases/huixiaoshi.html">绘小诗 (Hui Xiao Shi)</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="huixiaoshi" href="http://' + location.host + '/public/content pages/showcases/huixiaoshi/huixiaoshi.html">绘小诗 (Hui Xiao Shi)</a>\n' +
             '                    </li>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +

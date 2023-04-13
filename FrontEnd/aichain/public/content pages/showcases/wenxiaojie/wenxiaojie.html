@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wenxiaojie</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- jquery -->
+    <script src="../../../plugin/jquery.min.js"></script>
+    <!-- self-defined -->
+    <link href="../../content.css" rel="stylesheet">
+    <script src="../../content.js"></script>
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light my-navbar">
+</nav>
+
+<main>
+    <div id="main-content">
+        <h1 class="main-title">Chun Xiao Xie</h1>
+        <br>
+        <br>
+        <p style="text-align:right">
+            Author： Chen Zhong
+        </p>
+        <br>
+        <br>
+        <div style="width: 100%; text-align: center">
+            <img class="main-figure" style="width: 100px" src="Chun.jpg">
+        </div>
+        <h2 class="main-subtitle"><b>APPLICATION SCENARIO AND TARGETED END USERS</b></h2>
+
+        <p>
+            To begin with, we'll delve into the different scenarios where Chun Xiao Xie can be applied, the targeted end-users it's aimed at, and their individual needs for the product.
+        </p>
+        
+        <h3 class="main-subtitle"><b>Application Scenario</b></h3>
+        <p>
+                <ul>
+                <li>Literary creation: When encountering a lack of inspiration during the creative process, Chun Xiao Xie can be used to find inspiration;</li>
+                <li>Daily writing: When facing difficulties in writing WeChat copy or not knowing how to complete a writing task assigned by a leader, Chun Xiao Xie can be used to assist writing and improve efficiency.</li>
+                </ul>
+        </p>
+        
+        <h3 class="main-subtitle"><b>End users and Their Needs</b></h3>
+        <p style="text-indent:2em">
+            <ul>
+                <li>Writer: Use AI tools to assist writing and help improve writing efficiency;</li>
+                <li>Ordinary people: When writing WeChat copy or other writing tasks, AI tools can help them write better articles.</li>
+            </ul>
+        </p>
+        <h2 class="main-subtitle"><b>EXPLORATION AND CHALLENGES OF LLM</b></h2>
+        <p>
+            Now, we describe how we learn the task knowledge from the LLM, experiment prompt effectiveness, and summarize the task challenges.
+        </p>
+        <h3 class="main-subtitle"><b>Explorations</b></h3>
+        <p style="text-indent:2em">
+            Before writing an article, there are several steps involved such as ideation, finding materials, organizing them, drafting, and revising. To assist users in completing these steps, We have designed a full-process simulated writing application that enables users to write the most suitable article as per their needs.
+The application comprises four sections. Firstly, the Ideation section, where users can ask for suggestions when they encounter unfamiliar content using LLM or have no idea or insufficient knowledge about the topic. Secondly, the Materials section, where users can get suggestions for suitable materials or styles for their articles.
+Next, users can submit the article type, theme, and materials to LLM to generate the article. Finally, to cater to users' different revision requirements, a Revision section is designed where users can choose the direction and content of revision as per their needs.
+Chun Xiao Xie can assist users in completing the writing process, and the LLM's assistance can reduce the threshold for writing.
+
+        </p>
+        <img class="main-figure" src="discovery.png">
+        <h3 class="main-subtitle"><b>Challenges</b></h3>
+        <p style="text-indent:2em">
+            The challenge with this task is that the prompt is composed of user input, and there is no fixed template to follow. Additionally, there is no established optimal prompt that guarantees stable and consistent results when generating an article with AI. As a result, there is a need to explore and experiment with different prompts to ensure that the AI-generated text is accurate and appropriate for the given context. This requires the development of a flexible and adaptable system that can effectively incorporate user input while ensuring the quality of the output.
+        </p>
+        <h2 class="main-subtitle"><b>APPLICATION USAGE</b></h2>
+        <h3 class="main-subtitle"><b>Writing Guidance</b></h3>
+        <p>
+            User inputs text type, LLM outputs writing advice.
+        </p>
+        <img class="main-figure" src="show1.png">
+        <h3 class="main-subtitle"><b>Refine Communication</b></h3>
+        <p>
+            The user engages in a conversation with the writing robot Chun Chun and enriches their own needs.
+        </p>
+        <img class="main-figure" src="show2.png">
+        <img class="main-figure" src="show3.png">
+        <img class="main-figure" src="show4.png">
+        <img class="main-figure" src="show5.png">
+        <img class="main-figure" src="show6.png">
+        <h3 class="main-subtitle"><b>Writing Preparation Advice</b></h3>
+        <p>
+            The AI provides the necessary materials for writing.
+        </p>
+        <img class="main-figure" src="show7.png">
+        <h3 class="main-subtitle"><b>Knowledge Search</b></h3>
+        <p>
+            The user inputs the knowledge they want to search for.
+        </p>
+        <img class="main-figure" src="show8.png">
+        <h3 class="main-subtitle"><b>Abbreviate Knowledge</b></h3>
+        <p>
+            The user inputs fragmented knowledge. To create the final prompt, split the required knowledge into two parts and input each part into separate sections.
+        </p>
+        <img class="main-figure" src="show9.png">
+        <img class="main-figure" src="show10.png">
+        <h3 class="main-subtitle"><b>Writing</b></h3>
+        <p>
+            The AI writes based on the user's previous inputs, and then polishes the parts that need refinement.
+        </p>
+        <img class="main-figure" src="show11.png">
+        <img class="main-figure" src="show12.png">
+        <img class="main-figure" src="show13.png">
+
+        <h2 class="main-subtitle"><b>AI-CHAIN DESIGN</b></h2>
+        <p>
+            Next, let me introduce my AI chain design and major features.
+        </p>
+        <!--add figure-->
+        <img class="main-figure" src="chunchun.drawio.png">
+        <p class="figure-caption"><b>Figure-1: AI Chain of Lightweight Writing Assistant</b></p>
+        <h3 class="main-subtitle"><b>Writing Guidance</b></h3>
+        <p style="text-indent:2em">
+            The user inputs an article type, and LLM provides guidance to help the user have a rough framework for their task. At the level of prompt design, Prompting Decorator's Persona was used here, and I gave LLM the identity of a Chinese language teacher, allowing the large model to guide students in writing and thus improving the accuracy of LLM's output.
+        </p>
+        <img class="main-figure" src="1.png">
+        <h3 class="main-subtitle"><b>Refine Communication</b></h3>
+        <p style="text-indent:2em">
+            After the initial guidance, the user will have a general understanding of the task, but may still be unclear about certain details (if already clear, skip this part). The user can ask LLM to answer any questions that are still unclear in the guidance. They can also communicate suitable topics, the direction of writing, and the target audience. Until the user has a clear understanding of their writing task, they can input their requirements into the program and exit the chat. At the prompt design level, we utilized the Persona and Context Control features of the Prompting Decorator. We had the LLM assume the role of a chatbot and set the Context Control to a                                                                                                  conversational format. Incorporating conversation can enhance user engagement and provide a more interactive and intelligent experience. Furthermore, we supplied the LLM with comprehensive information about the task, including writing suggestions, inspiration, and reference materials, all of which contributed to improving the accuracy of the LLM's output.
+        </p>
+        <img class="main-figure" src="2.png">
+        <h3 class="main-subtitle"><b>Writing Preparation Advice</b></h3>
+        <p style="text-indent:2em">
+            Based on the user's initial article type and the requirements supplemented during the conversation, LLM provides specific materials that need to be given before writing.
+        </p>
+        <img class="main-figure" src="3.png">
+        <h3 class="main-subtitle"><b>Knowledge Search</b></h3>
+        <p style="text-indent:2em">
+            Users can search for knowledge based on the suggestions provided by the previous feature or their own ideas. They can conduct multiple rounds of searches until they find suitable materials and knowledge.
+        </p>
+        <img class="main-figure" src="4.png">
+        <h3 class="main-subtitle"><b>Abbreviate Knowledge</b></h3>
+        <p style="text-indent:2em">
+                The user entrusts the relatively complex parts of the knowledge they need to LLM for summarization, making this part of the content clear and concise. Then they input it into the next section. The user can also input materials that do not need to be summarized into the next section.        </p>
+        <img class="main-figure" src="5.png">
+        <h3 class="main-subtitle"><b>Writing</b></h3>
+        <p style="text-indent:2em">
+            LLM uses the article type and other information provided by the user to generate an article.
+        </p>
+        <img class="main-figure" src="6.png">
+        <img class="main-figure" src="7.png">
+        <h3 class="main-subtitle"><b>Writing</b></h3>
+        <p style="text-indent:2em">
+            LLM uses the article type and other information provided by the user to generate an article.
+        </p>
+        <img class="main-figure" src="8.png">
+        <h2 class="main-subtitle"><b>RAPID PROTOTYPING PROCESS</b></h2>
+        <p>
+            Lastly, we will describe how our AI chain's design and implementation have evolved and been enhanced through the rapid prototyping process. We will also discuss potential future enhancements to the system.
+        </p>
+        <h3 class="main-subtitle"><b>Original Version</b></h3>
+        <p style="text-indent:2em">
+            There were only two parts of the content, LLM writing and LLM polishing. LLM writing is an unsupervised analytical flow, so the generated articles have uncontrollable issues. Also, accepting the entire style and other aspects of the writing may lead to situations where it does not meet the user's needs.
+        </p>
+        <h3 class="main-subtitle"><b>Problem Resolution</b></h3>
+        <p style="text-indent:2em">
+            Therefore, we incorporated a human supervision section for each task segment to minimize uncontrollable factors. However, the effectiveness of the LLM's output may be influenced by varying interpretations of an article among different individuals. To mitigate this impact, we introduced an LLM suggestion and suggestion robot section.
+        </p>
+        <h3 class="main-subtitle"><b>Future Improvements</b></h3>
+        <p style="text-indent:2em">
+            We've refined our system by adding a suggestion robot function and optimizing LLM's suggestions through prompt fine-tuning. We're also working on enhancing LLM's writing ability. Note that some of these ideas have been implemented on Wen Xiao Jie.
+        </p>
+        <h2 class="main-subtitle"><b>IMPRESSIONS OF USING SAPPER</b></h2>
+        <p>
+            The process of using Sapper is different from traditional programming methods. I have used both Python and Sapper to achieve the same functionality, and found that Python is slower in programming speed and generates more error messages than Sapper, which has been wrapped to reduce the occurrence of errors. Sapper's innovative and simplified programming approach, combined with tools like LLM that utilize natural language prompts to accomplish various tasks, further reduces the programming threshold for ordinary people, enabling them to develop their own programs for specific tasks. This allows ordinary people to participate in development work as well.😘
+        </p>
+
+    </div>
+    <div id="page-nav-id" style="display: none">wenxiaojie</div>
+</main>
+<!--&lt;!&ndash;/div>-->
+
+<!--<footer id="footer">-->
+<!--</footer>-->
+
+</body>
+</html>
