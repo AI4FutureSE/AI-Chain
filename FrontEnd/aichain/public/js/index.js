@@ -28,7 +28,7 @@ $(document).ready(()=>{
     })
 
     // click card to redirect
-    $('.module-card').click(function (){
-        window.location.href = 'content.html'
-    })
+    // $('.module-card').click(function (){
+    //     window.location.href = 'content.html'
+    // })
 })
