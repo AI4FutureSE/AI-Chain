@@ -5,7 +5,7 @@ $(document).ready(()=>{
     function addTopNavBar(){
         let topNav = $('.my-navbar')
         topNav.html('<nav class="navbar navbar-expand-lg navbar-light my-navbar">\n' +
-            '    <a class="navbar-brand" href="#cover"><img class="brand-logo" src="../image/graphics/logo-blue.png"></a>\n' +
+            '    <a class="navbar-brand" href="#cover"><img class="brand-logo" src="http://' + location.host + '/public/image/graphics/logo-blue.png"></a>\n' +
             '    <h2 class="nav-title"><i class="bi bi-card-list"></i> Documentations </h2>\n' +
             '</nav>')
     }
@@ -82,12 +82,12 @@ $(document).ready(()=>{
             '                        <a class="doc-link doc-link-level2" id="enginemanagement" href="http://' + location.host + '/public/content pages/sapperide/enginemanagement.html">Engine Management</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="artifacts" href="http://' + location.host + '/public/content pages/sapperide/projectmanagement.html">Project Management</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="projectmanagement" href="http://' + location.host + '/public/content pages/sapperide/projectmanagement.html">Project Management</a>\n' +
             '                    </li>\n' +
             '                </ul>\n' +
             '            </li>\n' +
             '            <li class="doc-item">\n' +
-            '                <a class="doc-link doc-link-level1" id="market" href="http://' + location.host + '/public/content pages/showcases/showcases.html">AI Chain Showcases</a>\n' +
+            '                <a class="doc-link doc-link-level1" id="showcase" href="http://' + location.host + '/public/content pages/showcases/showcases.html">AI Chain Showcases</a>\n' +
             '                <!-- 2ed level -->\n' +
             '                <ul class="doc-list">\n' +
             '                    <li class="doc-item">\n' +
