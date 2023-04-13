@@ -20,7 +20,7 @@
 }
 
 :root{
-    --first: rgb(126,198,184);
+    --first: #7ec6b8;
     --second: #c38d9e;
 
     --yellow: #FEE622;
@@ -52,6 +52,10 @@ html body{
     transition: 0.8s !important;
 }
 
+.brand-logo{
+    width: 143px;
+}
+
 .navbar-brand{
     width: 150px;
     font-size: 30px;
@@ -61,7 +65,7 @@ html body{
     color: var(--first);
     font-family: Exo, serif;
     height: 65px;
-    padding-top: 7px;
+    padding-top: 5px;
     transition: 0.5s;
     margin: 0;
 }
@@ -140,7 +144,7 @@ html body{
 }
 
 .cover-lead{
-    padding-top: 380px;
+    padding-top: 400px;
 }
 
 .cover-lead p{

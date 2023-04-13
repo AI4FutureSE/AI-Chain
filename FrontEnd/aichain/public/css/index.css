@@ -84,6 +84,10 @@ html body{
     top: 0;
 }
 
+.brand-logo{
+    width: 143px;
+}
+
 .navbar-brand{
     width: 150px;
     font-size: 25px;
@@ -93,7 +97,7 @@ html body{
     color: var(--first);
     font-family: Exo, serif;
     height: 65px;
-    padding-top: 12px;
+    padding-top: 10px;
     transition: 0.5s;
     margin: 0;
 }
