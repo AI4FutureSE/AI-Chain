@@ -1,9 +1,18 @@
 $(document).ready(()=>{
     $('#promptmanship').attr('href', null)
 
+    addTopNavBar()
+    function addTopNavBar(){
+        let topNav = $('.my-navbar')
+        topNav.html('<nav class="navbar navbar-expand-lg navbar-light my-navbar">\n' +
+            '    <a class="navbar-brand" href="#cover"><img class="brand-logo" src="../image/graphics/logo-blue.png"></a>\n' +
+            '    <h2 class="nav-title"><i class="bi bi-card-list"></i> Documentations </h2>\n' +
+            '</nav>')
+    }
+
     addSideNavBar()
     function addSideNavBar(){
-        let nav = '<nav class="doc-nav">\n' +
+        let docNav = '<nav class="doc-nav">\n' +
             '        <ul class="doc-list">\n' +
             '            <li class="doc-item">\n' +
             '                <a class="doc-link doc-link-level1" id="ai20" href="http://' + location.host + '/public/content pages/ai20software30.html">AI 2.0 and Software 3.0</a>\n' +
@@ -42,7 +51,7 @@ $(document).ready(()=>{
             '                                        <a class="doc-link doc-link-level4" id="worker" href="http://' + location.host + '/public/content pages/workerstereotypes.html">Worker Stereotype</a>\n' +
             '                                    </li>\n' +
             '                                    <li class="doc-item">\n' +
-            '                                        <a class="doc-link doc-link-level4 doc-link-active" id="promptcaveats" href="http://' + location.host + '/public/content pages/promptpatterns.html">Prompting Patterns</a>\n' +
+            '                                        <a class="doc-link doc-link-level4" id="promptcaveats" href="http://' + location.host + '/public/content pages/promptpatterns.html">Prompting Patterns</a>\n' +
              '                            <li class="doc-item">\n' +
             '                                <a class="doc-link doc-link-level3" id="aichaintesting" href="http://' + location.host + '/public/content pages/aichaintesting.html">AI Chain Testing</a>\n' +
             '                            </li>\n' +
@@ -115,17 +124,13 @@ $(document).ready(()=>{
             '        </ul>\n' +
             '    </nav>'
 
-        $('main').prepend(nav)
-        highlightUnLinkedDoc()
+        $('main').prepend(docNav)
+        highlightCurrentLink()
     }
 
-    function highlightUnLinkedDoc(){
-        let links = $('.doc-link')
-        for (let i = 0; i < links.length; i ++){
-            let link = $(links[i])
-            if (link.attr('href') == null){
-                link.css('color', 'var(--second)')
-            }
-        }
+    function highlightCurrentLink(){
+        let pageNavID = $('#page-nav-id').text()
+        $('.doc-link-active').removeClass('doc-link-active')
+        $('#' + pageNavID).addClass('doc-link-active')
     }
 })
