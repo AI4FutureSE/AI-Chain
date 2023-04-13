@@ -130,51 +130,54 @@
 <!--    </nav>-->
 
     <div id="main-content">
-        <h1 class="main-title">Sapper</h1>
-        <h2 class="main-subtitle">Subtitle</h2>
+        <h1 class="main-title"><a href="https://promptsapper.tech   ">Sapper IDE</a></h1>
+        <h2 class="main-subtitle">The world-first integrated development environment for AI chain</h2>
 
-        <img class="main-figure" src="../../image/figures/SE4AIChain.jpg">
-        <p class="figure-caption">Caption of the figure</p>
+        <img class="main-figure" src="ide-figures/xxx.git">
+        <p class="figure-caption"><b>To be fixed: Rolling screenshots of the six IDE main views/features listed below</b></p>
 
         <p>
-            This paper defines the concept of AI chain and promotes the prac-
-            tice of AI chain engineering. The advent of foundation models,
-            especially large language models, has unlocked a new program-
-            ming paradigm that allows us to write natural language prompts
-            that program foundation models to do various tasks. Chaining
-            prompt-based AI functionalities on top of foundation models can
-            develop complex real-world applications with lower effort and less
-            time. However, people tend to focus on flashy prompts rather than
-            systematic AI chain engineering, which is reminiscent of the era
-            before software engineering, when individuals engaged in egoistic
-            programming practices. This paper introduces the best principles
-            and practices that have been accumulated in software engineering
-            for decades into AI chain engineering, such as rapid prototyping, re-
-            quirements analysis, structured programming, and design patterns.
-            It also develops a no-code integrated development environment,
-            Prompt Sapper, which embodies these AI chain engineering prin-
-            ciples and patterns naturally in the process of building AI chains,
-            thereby improving the performance and quality of AI chains.
+            Unlike traditional IDEs focused on code development, considering that AI chains will be developed by a large number of people with little or no computing knowledge or skills, the highest goal of our AI chain IDE design is to <b>put people first</b>. 
+            This is reflected in three design principles.
         </p>
         <p>
-            With Prompt Sapper, AI chain engineers can compose prompt-based AI
-            services on top of foundation models through chat-based require-
-            ment analysis and visual programming. The AI services can be
-            deployed as web services to provide services to end users through
-            websites or mobile applications. They can also be embedded in
-            large software projects or other design and development environ-
-            ments (e.g, Figma) to facilitate rapid AI functionality prototyping.
-            We report a variety of application cases built on Prompt Sapper,
-            from coding assistant, literacy and science education, text-based
-            role-playing game development, and robotic process automation.
-            We envision the development direction of AI chain engineering
-            (e.g., AI chain DevOps, AI service marketplace) and the enhance-
-            ment of Prompt Sapper’s functionality (e.g., AI chain debugging,
-            responsible AI chain engineering)
+            First, we seamlessly <b>embody promptmanship (AI chain methodology) in the AI chain IDE</b>, effectively utilizing AI chain methodology and best practices in anyone's AI chain development process. 
         </p>
+        <p>
+            Second, we make full use of the LLM's extensive knowledge and conversational capabilities, turning it into <b>intelligent co-pilots</b> for AI chain development, effectively assisting non-technical professionals in completing AI chain task modeling, requirement annlysis, design and construction. 
+        </p>
+        <p>
+            Third, we support the <b>whole-process no-code development and deployment of AI chains</b>. 
+            To that end, we explicitly support the exploration and design phases in the IDE, providing effective support for AI chain analysis and design, enabling non-technical people to complete the main work of AI chain development in a natural, non-programming way, thus minimizing what needs to be done in AI chain implementation. 
+            Furthermore, we use blocky-style visual programming to support AI chain implementation, execution, and testing, further minimizing the programming skills required. 
+            Finally, through one-click deployment, anyone can easily complete the last mile between AI services and end users.
+        </p>
+
+        <p>
+            Based on these three design principles, our <a href="https://promptsapper.tech">Sapper IDE</a> implements the following major functionalities:
+        </p>
+        <p>
+            <a href="explorationview.html">Exploration view</a>: Freely chat with the GPT inside the IDE to acquire task knowledge, identify task challenges, and experiment prompts. You do not need to take notes. Our co-pilot will summarize your interested tasks, preferences, and special considerations.
+        </p>
+        <p>
+           <a href="designview.html">Design view</a>: Tell the IDE what you want to build. Don't worry if your initial thoughts are incomplete or ambiguous. Our co-pilot will discuss with you to clarify and enrich your initial ideas, turning them into specific AI service requirements. Likewise, you don't need to worry about how to implement these requirements. Our co-pilot will automatically generate an AI chain skeleton (including major steps and candidate prompts) based on the AI service requirements for your to review and edit.
+        </p>
+        <p>
+            <a href="blockview.html">Block view</a>: Build and test your AI chain using block-based visual programming. You do not need to do it from scrach. Our IDE will automatically construct and assemble AI chain workers based on the AI chain skeleton you designed, allowing you to directly run, debug, and refine them. Of course, if you know exactly what you need, you can also manually build the AI chain, which is also an intuitive and enjoyable process.
+        </p>
+        <p>
+            <a href="prompthub.html">Prompt hub</a>: Create, edit, and manage your prompt assets in this hub. You can reuse or customize these prompts across different projects.
+        </p>
+        <p>
+            <a href="enginemanagement.html">Engine management</a>: Configure and manage the engines used by workers, including foundation models, traditional ML models, external data sources, or APIs. Our IDE has pre-installed large language models (GPT series) and text-to-image models (Stable Diffusion). You can configure and manage foundation model instances with different parameters in the IDE. Traditional ML models, external data sources, or APIs can be imported through a plugin system (under implementation).
+        </p>
+        <p>
+            <a href="artifactsmanagement.html">Project management</a>: Create, open, or save AI chain projects. You can download the backend Python code for the AI chain to integrate it into your other software projects (require our sapperchain Python library). We are working on implementing a one-click sharing feature for sharing your AI chain projects to the <a href="https://aichain.store">AI chain marketplace</a>, as well as deploying your AI services to cloud servers.
+        </p>
+
     </div>
 </main>
-</div>
+<!--/div>
 
 <!--<footer id="footer">-->
 <!--</footer>-->

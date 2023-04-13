@@ -73,7 +73,7 @@ $(document).ready(()=>{
             '                        <a class="doc-link doc-link-level2" id="enginemanagement" href="sapperide/enginemanagement.html">Engine Management</a>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="artifacts" href="sapperide/artifactsmanagement.html">Artifacts Management</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="artifacts" href="sapperide/projectmanagement.html">Project Management</a>\n' +
             '                    </li>\n' +
             '                </ul>\n' +
             '            </li>\n' +
