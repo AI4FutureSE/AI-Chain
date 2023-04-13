@@ -1,5 +1,6 @@
 $(document).ready(()=>{
     $('#promptmanship').attr('href', null)
+    $('head').append('<link rel="icon" type="image/x-icon" href="http://' + location.host + '/public/image/graphics/favicon.ico">')
 
     addTopNavBar()
     function addTopNavBar(){
