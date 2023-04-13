@@ -40,17 +40,107 @@
     <div id="main-content">
         <h1 class="main-title">AI Chain Examples</h1>
         <h2 class="main-subtitle"></h2>
+        
+        <p> 
+            <a href="../paper/2210.02441.pdf">Ask Me Anything: A simple strategy for prompting language models </a>
+        </p>
 
-        <img class="main-figure" src="../image/figures/previous%20work.jpg">
-        <p class="figure-caption">Caption of the figure</p>
+        <img class="main-figure" src="../image/figures/ama.jpg">
+        <p class="figure-caption">Ask Me Anything</p>
 
         <p>
-            @Dehai, make each example a side by side figure and text (including paper title, hyperlink the title to the paper source, and a short explanation).
+            The research proposes a new method called "ASK ME ANYTHING (AMA)" for generating natural language prompts to train Large Language Models (LLMs) on new tasks. The approach involves producing multiple effective prompts, including question-answering formats, and using weak supervision to combine the noisy predictions. The proposed method shows an average performance lift of 10.2% over the few-shot baseline and enables GPT-J-6B model to outperform few-shot GPT3-175B on 15 of 20 popular benchmarks.
         </p>
         
-        <p>
-            @Dehai, add hugginggpt figure and text
+        <p> 
+            <a href="../paper/2208.11663.pdf">PEER: A Collaborative Language Model </a>
         </p>
+
+        <img class="main-figure" src="../image/figures/PEER.jpg">
+        <p class="figure-caption">PEER</p>
+
+        <p>
+            The research paper introduces PEER, a collaborative language model that imitates the entire writing process, including writing drafts, proposing edits, and providing explanations. It addresses the shortcomings of existing language models in collaborative writing by enabling them to update existing texts, control text generation, and explain their actions. Multiple instances of PEER can infill various parts of the writing process, allowing self-training to increase the quality, amount, and diversity of training data. The model shows strong performance across various domains and editing tasks.
+        </p>
+        
+        <p> 
+            <a href="../paper/2210.06774.pdf">Re3: Generating Longer Stories With Recursive Reprompting and Revision</a>
+        </p>
+
+        <img class="main-figure" src="../image/figures/Re3.jpg">
+        <p class="figure-caption">Re3</p>
+
+        <p>
+            The paper proposes a Recursive Reprompting and Revision (Re3) framework for generating long-form stories. Re3 uses a general-purpose language model to create an overarching plan and generate story passages. The passages are then revised for plot coherence and premise relevance, and the best continuation is edited for factual consistency. Compared to similar-length stories generated directly from the same model, Re3's stories were judged to have a more coherent plot and to be more relevant to the initial premise by human evaluators.
+        </p>
+        
+        <p> 
+            <a href="../paper/2205.09712.pdf">Selection-Inference: Exploiting Large Language Models for Interpretable Logical Reasoning</a>
+        </p>
+
+        <img class="main-figure" src="../image/figures/SI.jpg">
+        <p class="figure-caption">Selection-Inference</p>
+
+        <p>
+            This research evaluates the performance of large language models (LLMs) on logical reasoning tasks and proposes a Selection-Inference (SI) framework to improve their ability to solve complex problems. The framework utilizes pre-trained LLMs and alternates between selection and inference to generate a series of interpretable, causal reasoning steps. The proposed SI framework outperforms vanilla baselines and yields a performance improvement of over 100% in a 5-shot generalization setting, even outperforming a larger baseline. Additionally, the framework generates reasoning traces to improve the safety and trustworthiness of the system.
+        </p>
+        
+        <p> 
+            <a href="../paper/3491102.3517582.pdf">AI Chains: Transparent and Controllable Human-AI Interaction by Chaining Large Language Model Prompts</a>
+        </p>
+
+        <img class="main-figure" src="../image/figures/AIChain.jpg">
+        <p class="figure-caption">Selection-Inference</p>
+
+        <p>
+            This paper proposes Chaining Large Language Model (LLM) steps together as a method to enhance the effectiveness of LLMs on complex tasks, while improving transparency, controllability and sense of collaboration. The authors define a set of LLM primitive operations and present an interactive system where users can modify these chains in a modular way. A user study found that Chaining improved task outcomes, and users developed new ways of interacting with LLMs. The paper presents two case studies to explore how LLM Chains can be used in future applications.
+        </p>
+        
+        <p> 
+            <a href="../paper/2212.13894.pdf">LAMBADA: Backward Chaining for Automated Reasoning in Natural Language</a>
+        </p>
+
+        <img class="main-figure" src="../image/figures/lambada.jpg">
+        <p class="figure-caption">LAMBADA</p>
+
+        <p>
+            The paper discusses automated reasoning with natural language texts by using large language models. It introduces a backward chaining algorithm, called LAMBADA, which decomposes reasoning into four sub-modules to efficiently search for proofs. LAMBADA significantly outperforms state-of-the-art forward reasoning methods on two challenging logical reasoning datasets.
+        </p>
+        
+        <p> 
+            <a href="../paper/2209.11302.pdf">ProgPrompt: Generating Situated Robot Task Plans using Large Language Models</a>
+        </p>
+
+        <img class="main-figure" src="../image/figures/ProgPrompt.jpg">
+        <p class="figure-caption">ProgPrompt</p>
+
+        <p>
+            The paper introduces a method of using large language models (LLMs) to plan robot actions for various tasks in a situated environment. By prompting the LLM with program-like specifications of available actions and objects, and with example programs, the system can generate action sequences that are functional across different environments and robot capabilities. The method achieves state-of-the-art success rates in household tasks and is demonstrated on a physical robot arm for tabletop tasks.
+        </p>
+        
+        <p> 
+            <a href="../paper/PCR_Chain.pdf">PCR-Chain: Partial Code Reuse Assisted by Hierarchical Chaining of Prompts on Frozen Copilot</a>
+        </p>
+
+        <img class="main-figure" src="../image/figures/pcrchain.jpg">
+        <p class="figure-caption">PCR_Chain</p>
+
+        <p>
+            The research paper proposes PCR-Chain, a method for reusing partial code from API documentation, technical blogs, and programming Q&A sites. PCR-Chain resolves fully qualified names and fixes syntax errors using a pre-trained code model and in-context learning. The paper outlines the underlying prompt architecture and design and demonstrates the high success rate of the method in automatically resolving FQNs and fixing syntax errors in partial code samples.
+        </p>
+        
+        <p> 
+            <a href="../paper/2303.17580.pdf">HuggingGPT: Solving AI Tasks with ChatGPT and
+            its Friends in Hugging Face</a>
+        </p>
+
+        <img class="main-figure" src="../image/figures/HuggingGPT.jpg">
+        <p class="figure-caption">HuggingGPT</p>
+
+        <p>
+            The paper proposes using large language models (LLMs) as a controller to manage existing AI models in different domains and modalities to solve complicated AI tasks. The proposed framework, HuggingGPT, uses LLMs to conduct task planning, select appropriate AI models, execute subtasks, and summarize responses. HuggingGPT shows impressive results in various challenging tasks, including language, vision, speech, and other modalities, demonstrating the potential of LLMs in advancing artificial intelligence.
+        </p>
+        
         
         <p>
              Figure~\ref{fig:examples} present examples of AI chains for diverse tasks, such as question answering~\cite{arora2022ask}, content creation~\cite{schick2022peer, yang2022re3, wu2022ai}, logical reasoning~\cite{creswell2022selection, kazemi2022lambada}, robotics~\cite{singh2022progprompt}, and code analysis~\cite{pcrchain}.
