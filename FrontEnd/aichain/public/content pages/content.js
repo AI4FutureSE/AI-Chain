@@ -1,6 +1,15 @@
 $(document).ready(()=>{
     $('#promptmanship').attr('href', null)
-    $('head').append('<link rel="icon" type="image/x-icon" href="http://' + location.host + '/public/image/graphics/favicon.ico">')
+    $('head').append('    <!-- Google tag (gtag.js) -->\n' +
+        '    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WDT7R908VP"></script>\n' +
+        '    <script>\n' +
+        '        window.dataLayer = window.dataLayer || [];\n' +
+        '        function gtag(){dataLayer.push(arguments);}\n' +
+        '        gtag(\'js\', new Date());\n' +
+        '\n' +
+        '        gtag(\'config\', \'G-WDT7R908VP\');\n' +
+        '    </script>' +
+        '<link rel="icon" type="image/x-icon" href="http://' + location.host + '/public/image/graphics/favicon.ico">')
 
     addTopNavBar()
     function addTopNavBar(){
