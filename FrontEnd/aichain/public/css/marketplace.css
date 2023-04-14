@@ -114,7 +114,7 @@ html body{
 
 .title-wrapper h1{
     color: var(--first);
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 25px;
 }
 
@@ -158,20 +158,25 @@ html body{
 
 .card h2 {
     position: absolute;
-    inset: auto auto 30px 30px;
+    inset: auto auto 30px;
     margin: 0;
     transition: inset .3s .3s ease-out;
     font-weight: normal;
     text-transform: uppercase;
+    width: 100%;
+    background: #26262680;
+    padding: 15px;
 }
 
 .card p {
     position: absolute;
     opacity: 0;
-    max-width: 80%;
-    transition: opacity .3s ease-out;
+    transition: .3s;
 
-    inset: auto auto 80px 30px;
+    inset: auto auto 110px;
+    width: 100%;
+    background: #26262680;
+    padding: 15px;
 }
 
 .card a {
@@ -181,13 +186,12 @@ html body{
     transition: opacity .3s ease-out;
 
     inset: auto auto 40px 30px;
-    color: navajowhite;
     text-decoration: none;
     cursor: pointer;
 }
 
 .card:hover h2 {
-    inset: auto auto 220px 30px;
+    inset: auto auto 180px;
     transition: inset .3s ease-out;
 }
 
@@ -199,4 +203,17 @@ html body{
 .card:hover img {
     transition: opacity .3s ease-in;
     opacity: 1;
+}
+
+.card-btn{
+    padding: 10px;
+    background: var(--first);
+    border-radius: 4px;
+    color: whitesmoke;
+    float: right;
+}
+
+.card-btn:hover{
+    background: navajowhite;
+    color: whitesmoke;
 }
