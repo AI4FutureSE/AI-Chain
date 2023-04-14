@@ -334,11 +334,12 @@ p{
     border: #DBDBDB 1px solid;
 }
 
-.showcase-img-caption{
+.img-caption{
     padding: 8px;
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 22px;
     text-align: center;
+    margin-top: -5px;
+    margin-bottom: 30px;
 }
 
 /* footer */
