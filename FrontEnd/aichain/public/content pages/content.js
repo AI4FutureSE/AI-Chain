@@ -16,7 +16,22 @@ $(document).ready(()=>{
         let topNav = $('.my-navbar')
         topNav.html('<nav class="navbar navbar-expand-lg navbar-light my-navbar">\n' +
             '    <a class="navbar-brand" href="http://' + location.host + '/public/index.html"><img class="brand-logo" src="http://' + location.host + '/public/image/graphics/logo-blue.png"></a>\n' +
-            '    <h2 class="nav-title"><i class="bi bi-card-list"></i> Documentations </h2>\n' +
+            '    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">\n' +
+            '        <span class="navbar-toggler-icon"></span>\n' +
+            '    </button>\n' +
+            '    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">\n' +
+            '        <ul class="navbar-nav">\n' +
+            '            <li class="nav-item">\n' +
+            '                <a class="nav-link" href="http://' + location.host + '/public/marketplace.html"><i class="bi bi-shop-window"></i>Marketplace</a>\n' +
+            '            </li>\n' +
+            '            <li class="nav-item">\n' +
+            '                <a class="nav-link" href="http://' + location.host + '/public/content%20pages/ai20software30.html"><i class="bi bi-card-list"></i>Documentations</a>\n' +
+            '            </li>\n' +
+            '            <li class="nav-item">\n' +
+            '                <a class="nav-link" href="http://' + location.host + '/public/sapper.html"><i class="bi bi-motherboard"></i>Sapper IDE</a>\n' +
+            '            </li>\n' +
+            '        </ul>\n' +
+            '    </div>\n' +
             '</nav>')
     }
 

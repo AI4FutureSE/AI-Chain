@@ -39,6 +39,10 @@ html body{
     margin: 0;
 }
 
+i{
+    margin: 3px;
+}
+
 /**** Specific ***/
 /* nav */
 .my-navbar{
@@ -76,13 +80,14 @@ html body{
 
 .nav-link{
     color: var(--first);
-    padding: 20px 30px !important;
+    padding: 5px !important;
     height: 100%;
     font-size: 17px;
+    margin-right: 20px;
 }
 
 .nav-link:hover{
-    color: whitesmoke;
+    color: navajowhite;
 }
 
 .nav-item{
@@ -90,8 +95,7 @@ html body{
 }
 
 .nav-item:hover{
-    background-color: var(--first);
-    color: whitesmoke;
+    /*background-color: var(--first);*/
 }
 
 .nav-title{

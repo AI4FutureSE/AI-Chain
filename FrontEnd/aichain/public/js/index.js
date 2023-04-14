@@ -14,6 +14,13 @@ $(document).ready(()=>{
             }).mouseout(function (){
                 $(this).css({'color':'var(--first)'})
             });
+
+            if (cover.offset().top - $(document).scrollTop() <= -400){
+                $('.main-page-nav').show()
+            }
+            else{
+                $('.main-page-nav').hide()
+            }
         }
         // back to the top
         else{

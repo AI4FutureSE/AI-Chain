@@ -38,6 +38,10 @@ p{
     line-break: anywhere;
 }
 
+i{
+    margin: 5px;
+}
+
 
 /*** General ***/
 .animate-color{
@@ -136,6 +140,10 @@ p{
     background-color: var(--first);
     color: whitesmoke;
 }
+
+/*.main-page-nav{*/
+/*    display: none;*/
+/*}*/
 
 
 /* cover */

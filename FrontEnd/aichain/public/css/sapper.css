@@ -43,6 +43,10 @@ p{
     line-break: anywhere;
 }
 
+i{
+    margin: 5px;
+}
+
 /* nav */
 .my-navbar{
     font-size: 22px;
@@ -79,9 +83,10 @@ p{
 
 .nav-link{
     color: ghostwhite;
-    padding: 20px 40px !important;
+    padding: 15px;
     height: 100%;
     font-size: 17px;
+    margin-right: 20px;
 }
 
 .nav-link:hover{
