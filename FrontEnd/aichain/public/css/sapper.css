@@ -260,12 +260,13 @@ i{
     background: var(--first);
 }
 
+/* footer */
 .footer{
     width: 100%;
     background: var(--first);
     text-align: center;
-    padding: 20px;
-    height: 120px;
+    padding: 45px;
+    height: 160px;
 }
 
 .footer p{

@@ -221,3 +221,33 @@ i{
     background: navajowhite;
     color: whitesmoke;
 }
+
+/* footer */
+.footer{
+    width: 100%;
+    background: var(--first);
+    text-align: center;
+    padding: 45px;
+    height: 160px;
+}
+
+.footer p{
+    color: whitesmoke;
+    margin: 10px;
+}
+
+.footer a{
+    display: inline-block;
+    margin: 5px 20px;
+    cursor: pointer;
+    color: navajowhite !important;
+    transition: 0.5s;
+}
+
+.footer a:hover{
+    color: whitesmoke !important;
+}
+
+.footer i{
+    margin: 5px;
+}
