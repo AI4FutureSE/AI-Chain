@@ -164,6 +164,10 @@ i{
     font-size: 5em;
 }
 
+.cover-title-img{
+    width: 560px;
+}
+
 .cover-subtitle{
     font-size: 35px;
     color: navajowhite;
@@ -217,6 +221,13 @@ i{
     padding: 40px;
 }
 
+.section-card-img{
+    width: 100%;
+    margin: 10px 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 3px;
+}
+
 .section-lead{
 
 }
@@ -229,6 +240,7 @@ i{
 
 .section-card-text{
     /*border-bottom: var(--first) 1px dotted;*/
+    padding: 30px;
 }
 
 .section-card-btn{
@@ -246,4 +258,33 @@ i{
 .section-card-btn:hover{
     color: white;
     background: var(--first);
+}
+
+.footer{
+    width: 100%;
+    background: var(--first);
+    text-align: center;
+    padding: 20px;
+    height: 120px;
+}
+
+.footer p{
+    color: whitesmoke;
+    margin: 10px;
+}
+
+.footer a{
+    display: inline-block;
+    margin: 5px 20px;
+    cursor: pointer;
+    color: navajowhite !important;
+    transition: 0.5s;
+}
+
+.footer a:hover{
+    color: whitesmoke !important;
+}
+
+.footer i{
+    margin: 5px;
 }

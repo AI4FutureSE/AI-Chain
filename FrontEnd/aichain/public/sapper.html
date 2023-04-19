@@ -59,7 +59,7 @@
                     <h2 class="cover-subtitle">AI service incubator, aiming at making everyone AI creative master</h2>
 
 <!--                    <p><span class="cover-emp" >manship</span> - Skills or arts of a competitive nature</p>-->
-                    <a class="cover-btn" href="https://promptsapper.tech">Try Sapper<i class="bi bi-box-arrow-in-up-right btn-icon"></i></a>
+                    <a class="cover-btn" href="https://promptsapper.tech">Try Sapper IDE<i class="bi bi-box-arrow-in-up-right btn-icon"></i></a>
                 </div>
             </div>
         </div>
@@ -70,20 +70,21 @@
     <section id="content">
         <div id="expview" class="section">
             <div class="section-card row">
-                <div class="col-3 section-card-img">
-                </div>
-                <div class="col-9 section-card-text">
+                <div class="col-12 section-card-text">
                     <h2 class="section-title">Exploration View</h2>
                     <p class="section-lead">Freely chat with the GPT inside the IDE to acquire task knowledge, identify task challenges, and experiment prompts. You do not need to take notes. Our co-pilot will summarize your interested tasks, preferences, and special considerations.</p>
                     <a class="section-card-btn" href="content%20pages/sapperide/explorationview.html">Learn More</a>
                     <div class="divider"></div>
+                </div>
+                <div class="col-3 section-card-img">
+                    <img class="section-card-img" src="public/image/figures/explorationview.png">
                 </div>
             </div>
         </div>
 
         <div id="designview" class="section">
             <div class="section-card row">
-                <div class="col-9 section-card-text">
+                <div class="col-12 section-card-text">
                     <h2 class="section-title">Design View</h2>
                     <p class="section-lead">Tell the IDE what you want to build. Don't worry if your initial thoughts are incomplete or ambiguous. Our co-pilot will discuss with you to clarify and enrich your initial ideas, turning them into specific AI service requirements.</p>
                     <p class="section-lead">Likewise, you don't need to worry about how to implement these requirements. Our co-pilot will automatically generate an AI chain skeleton (including major steps and candidate prompts) based on the AI service requirements for your to review and edit.</p>
@@ -91,54 +92,58 @@
                     <div class="divider"></div>
                 </div>
                 <div class="col-3 section-card-img">
+                    <img class="section-card-img" src="public/image/figures/designview.png">
                 </div>
             </div>
         </div>
 
         <div id="blockview" class="section">
             <div class="section-card row">
-                <div class="col-3 section-card-img">
-                </div>
-                <div class="col-9 section-card-text">
+                <div class="col-12 section-card-text">
                     <h2 class="section-title">Block View</h2>
                     <p class="section-lead">Build and test your AI chain using block-based visual programming. You do not need to do it from scrach. Our IDE will automatically construct and assemble AI chain workers based on the AI chain skeleton you designed, allowing you to directly run, debug, and refine them. </p>
                     <p class="section-lead">Of course, if you know exactly what you need, you can also manually build the AI chain, which is also an intuitive and enjoyable process.</p>
                     <a class="section-card-btn" href="content%20pages/sapperide/blockview.html">Learn More</a>
                     <div class="divider"></div>
                 </div>
+                <div class="col-3 section-card-img">
+                    <img class="section-card-img" src="public/image/figures/blockview.png">
+                </div>
             </div>
         </div>
 
         <div id="prompthub" class="section">
             <div class="section-card row">
-                <div class="col-9 section-card-text">
+                <div class="col-12 section-card-text">
                     <h2 class="section-title">Prompt Hub</h2>
                     <p class="section-lead">Create, edit, and manage your prompt assets in this hub. You can reuse or customize these prompts across different projects.</p>
                     <a class="section-card-btn" href="content%20pages/sapperide/prompthub.html">Learn More</a>
                     <div class="divider"></div>
                 </div>
                 <div class="col-3 section-card-img">
+                    <img class="section-card-img" src="public/content%20pages/sapperide/ide-figures/prompthub.jpg">
                 </div>
             </div>
         </div>
 
         <div id="enginemanagement" class="section">
             <div class="section-card row">
-                <div class="col-3 section-card-img">
-                </div>
-                <div class="col-9 section-card-text">
+                <div class="col-12 section-card-text">
                     <h2 class="section-title">Engine Management</h2>
                     <p class="section-lead">Configure and manage the engines used by workers, including foundation models, traditional ML models, external data sources, or APIs. Our IDE has pre-installed large language models (GPT series) and text-to-image models (Stable Diffusion).</p>
                     <p class="section-lead">You can configure and manage foundation model instances with different parameters in the IDE. Traditional ML models, external data sources, or APIs can be imported through a plugin system (under implementation).</p>
                     <a class="section-card-btn" href="content%20pages/sapperide/enginemanagement.html">Learn More</a>
                     <div class="divider"></div>
                 </div>
+                <div class="col-3 section-card-img">
+                    <img class="section-card-img" src="public/content%20pages/sapperide/ide-figures/enginemanagement.jpg">
+                </div>
             </div>
         </div>
 
         <div id="projectmanagement" class="section">
             <div class="section-card row">
-                <div class="col-9 section-card-text">
+                <div class="col-12 section-card-text">
                     <h2 class="section-title">Project Management</h2>
                     <p class="section-lead">Create, open, or save AI chain projects. You can download the backend Python code for the AI chain to integrate it into your other software projects (require our sapperchain Python library). </p>
                     <p class="section-lead">We are working on implementing a one-click sharing feature for sharing your AI chain projects to the AI chain marketplace, as well as deploying your AI services to cloud servers.</p>
@@ -146,10 +151,18 @@
                     <div class="divider"></div>
                 </div>
                 <div class="col-3 section-card-img">
+                    <img class="section-card-img" src="public/content%20pages/sapperide/ide-figures/SE4AIChain.jpg">
                 </div>
             </div>
         </div>
     </section>
+
+    <footer id="footer" class="footer">
+        <a href="paper/termofservice.pdf"><i class="bi bi-person-check"></i>Term of Service</a>
+        <a href="paper/privacypolicy.pdf"><i class="bi bi-card-heading"></i>Privacy Agreement</a>
+        <a href="mailto:promptsapper@gmail.com"><i class="bi bi-envelope-at"></i>Contact Us</a>
+        <p>Copyright © 2023. AI-Chain All rights reserved.</p>
+    </footer>
 </main>
 </body>
 </html>
