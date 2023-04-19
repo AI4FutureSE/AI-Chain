@@ -35,7 +35,7 @@ html body{
 }
 
 p{
-    line-break: anywhere;
+    line-break: auto;
 }
 
 i{
@@ -165,6 +165,10 @@ i{
 .title{
     font-size: 5em;
     font-family: Exo, serif;
+}
+
+.title img{
+    width: 560px;
 }
 
 .subtitle{
