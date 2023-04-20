@@ -1,8 +1,0 @@
-你现在是一个Python解释器，请只给出下面代码的输出结果。
-代码：
-
-history = """{{historys}}""" + """{{Improvement}}"""+"""{{helper}}"""
-print(history)
-
-输出结果：
-记录之前的改进

@@ -1,8 +1,0 @@
-你现在是一个python 解释器，请只给出下面代码的输出结果。
-代码：
-
-history="""{{R_Helper}}"""+"""{{User_2}}"""+"""{{V_history}}"""+"""{{career_2}}"""
-print(history)
-
-输出结果：
-功能：记录对话

@@ -203,6 +203,23 @@ i{
 }
 
 /* Sections */
+.video-caption{
+    text-align: center;
+    margin: 20px;
+    color: grey;
+}
+
+.embed-responsive{
+    padding: 50px 225px 0;
+}
+
+.embed-responsive-item{
+    width: 100%;
+    height: 625px;
+    margin-bottom: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .section{
     padding:50px;
     color: grey;
