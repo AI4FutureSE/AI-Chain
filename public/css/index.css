@@ -237,7 +237,7 @@ i{
 /* module */
 .module-container{
     min-height: 80vh;
-    padding: 100px 100px 20px;
+    padding: 90px 100px 20px;
 }
 
 #aichain{
@@ -257,7 +257,7 @@ i{
 }
 
 .embed-responsive{
-    padding: 35px;
+    padding: 10px 35px 0;
 }
 .embed-responsive-item{
     width: 100%;
@@ -360,8 +360,7 @@ i{
     padding: 8px;
     font-size: 22px;
     text-align: center;
-    margin-top: -5px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 
@@ -380,7 +379,7 @@ i{
     position: relative;
     color: whitesmoke;
     box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
-    margin: 0 20px 20px;
+    margin: 0 20px 30px;
 }
 
 .card img {
