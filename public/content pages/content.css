@@ -221,6 +221,41 @@ main h2{
     color: ghostwhite;
 }
 
+/* project link buttons */
+.btn-wrap-fixed{
+    position: fixed;
+    bottom: 80px;
+    display: none;
+}
+
+.btn-wrap{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-group{
+    margin: auto;
+    display: table;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 0;
+}
+
+.btn-showcase{
+    background: var(--first);
+    color: whitesmoke;
+    border: 1px solid var(--first);
+}
+
+.btn-showcase:hover{
+    background: white;
+    color: var(--first);
+}
+
+.btn-showcase i{
+    margin-right: 5px;
+}
+
 
 /* footer */
 #footer{

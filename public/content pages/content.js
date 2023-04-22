@@ -164,4 +164,13 @@ $(document).ready(()=>{
         $('.doc-link-active').removeClass('doc-link-active')
         $('#' + pageNavID).addClass('doc-link-active')
     }
+
+    $('#main-content').scroll(function (){
+        if ($('#main-content').scrollTop() > 800){
+            $('.btn-wrap-fixed').slideDown()
+        }
+        else {
+            $('.btn-wrap-fixed').slideUp()
+        }
+    })
 })
