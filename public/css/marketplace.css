@@ -110,6 +110,26 @@ i{
     margin: 0;
 }
 
+/* nav search bar*/
+.nav-searchbar{
+    display: inline-flex;
+    width: 300px;
+    margin: 15px auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.nav-searchbar input, .nav-searchbar button{
+    color: var(--first);
+    border-color: var(--first);
+    border-radius: 0;
+}
+
+.nav-searchbar button:hover{
+    background: navajowhite;
+    border-color: navajowhite;
+    color: whitesmoke;
+}
+
 /* title */
 .title-wrapper{
     margin-top: 150px;
