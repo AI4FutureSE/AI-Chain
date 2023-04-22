@@ -22,13 +22,13 @@ $(document).ready(()=>{
             '    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">\n' +
             '        <ul class="navbar-nav">\n' +
             '            <li class="nav-item">\n' +
-            '                <a class="nav-link" href="https://' + location.host + '/public/marketplace.html"><i class="bi bi-shop-window"></i>Marketplace</a>\n' +
+            '                <a class="nav-link" href="https://www.aichain.store/"><i class="bi bi-shop-window"></i>Marketplace</a>\n' +
             '            </li>\n' +
             '            <li class="nav-item">\n' +
             '                <a class="nav-link" href="https://' + location.host + '/public/content%20pages/ai20software30.html"><i class="bi bi-card-list"></i>Documentations</a>\n' +
             '            </li>\n' +
             '            <li class="nav-item">\n' +
-            '                <a class="nav-link" href="https://' + location.host + '/public/sapper.html"><i class="bi bi-motherboard"></i>Sapper IDE</a>\n' +
+            '                <a class="nav-link" href="https://www.promptsapper.tech/"><i class="bi bi-motherboard"></i>Sapper IDE</a>\n' +
             '            </li>\n' +
             '        </ul>\n' +
             '    </div>\n' +
