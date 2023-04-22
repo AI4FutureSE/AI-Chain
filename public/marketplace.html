@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <title>Marketplace</title>
-    <link rel="icon" type="image/x-icon" href="static/image/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="image/graphics/favicon.ico">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -21,27 +21,27 @@
     <!-- jquery -->
     <script src="plugin/jquery.min.js"></script>
     <!-- self-defined -->
-    <link href="static/css/marketplace.css" rel="stylesheet">
-    <script src="static/js/marketplace.js"></script>
+    <link href="css/marketplace.css" rel="stylesheet">
+    <script src="js/marketplace.js"></script>
 </head>
 <body>
 
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light my-navbar">
-    <a class="navbar-brand" href="https://www.aichain.store"><img class="brand-logo" src="static/image/logo-green.png"></a>
+    <a class="navbar-brand" href="index.html"><img class="brand-logo" src="image/graphics/logo-green.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="https://www.aichain.store"><i class="bi bi-shop-window"></i>Marketplace</a>
+                <a class="nav-link" href="marketplace.html"><i class="bi bi-shop-window"></i>Marketplace</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://www.aichain.online/content%20pages/ai20software30.html"><i class="bi bi-card-list"></i>Documentations</a>
+                <a class="nav-link" href="content%20pages/ai20software30.html"><i class="bi bi-card-list"></i>Documentations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://www.promptsapper.tech"><i class="bi bi-motherboard"></i>Sapper IDE</a>
+                <a class="nav-link" href="sapper.html"><i class="bi bi-motherboard"></i>Sapper IDE</a>
             </li>
         </ul>
     </div>
@@ -53,11 +53,111 @@
         <p>AI Chain marketplace showcases the infinite potential and widespread applications of AI technology, demonstrating that our vision is being realized</p>
     </div>
 
-        {% block content %}{% endblock %}
+    <div class="card-container container-fluid">
+        <div class="row">
+            <div class="col-lg-4 market-card-wrapper">
+                <div class="card">
+                    <img src="image/marketplace/wenxiaojie.png" alt="">
+                    <div class="card-content">
+                        <h2>Wen Xiao Jie</h2>
+                        <p>AI-Powered Long Articles Personalization</p>
+                        <a class="card-btn" href="content%20pages/showcases/wenxiaojie/wenxiaojie.html">Learn More</a>
+                        <!--                        <a class="card-btn" style="left: 100px">Service</a>-->
+                        <!--                        <a class="card-btn" style="left: 150px">Sapper IDE</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 market-card-wrapper">
+                <div class="card">
+                    <img src="image/marketplace/qingxiaoxie.png" alt="">
+                    <div class="card-content">
+                        <h2>Qing Xiao Xie</h2>
+                        <p>Text generation assistant</p>
+                        <a class="card-btn" href="content%20pages/showcases/qingxiaoxie/qingxiaoxie.html">Learn More</a>
+                        <!--                        <a class="card-btn" style="left: 100px">Service</a>-->
+                        <!--                        <a class="card-btn" style="left: 150px">Sapper IDE</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 market-card-wrapper">
+                <div class="card">
+                    <img src="image/marketplace/chunxiaoxie.jpg" alt="">
+                    <div class="card-content">
+                        <h2>Chun Xiao Xie</h2>
+                        <p>Gain inspiration during creative process</p>
+                        <a class="card-btn" href="content%20pages/showcases/chunxiaoxie/chunxiaoxie.html">Learn More</a>
+                        <!--                        <a class="card-btn" style="left: 100px">Service</a>-->
+                        <!--                        <a class="card-btn" style="left: 150px">Sapper IDE</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 market-card-wrapper">
+                <div class="card">
+                    <img src="image/marketplace/sixiaopin.png" alt="">
+                    <div class="card-content">
+                        <h2>Si Xiao Pin</h2>
+                        <p>AI Job Search Assistant</p>
+                        <a class="card-btn" href="content%20pages/showcases/sixiaopin/sixiaopin.html">Learn More</a>
+                        <!--                        <a class="card-btn" style="left: 100px">Service</a>-->
+                        <!--                        <a class="card-btn" style="left: 150px">Sapper IDE</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 market-card-wrapper">
+                <div class="card">
+                    <img src="image/marketplace/xinxiaozhu.png" alt="">
+                    <div class="card-content">
+                        <h2>Xin Xiao Zhu</h2>
+                        <p>Your Personal Mental Health Assistant</p>
+                        <a class="card-btn" href="content%20pages/showcases/xinxiaozhu/xinxiaozhu.html">Learn More</a>
+                        <!--                        <a class="card-btn" style="left: 100px">Service</a>-->
+                        <!--                        <a class="card-btn" style="left: 150px">Sapper IDE</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 market-card-wrapper">
+                <div class="card">
+                    <img src="image/marketplace/huixiaoshi.png" alt="">
+                    <div class="card-content">
+                        <h2>Hui Xiao Shi</h2>
+                        <p>Create Cultural and Creative Products</p>
+                        <a class="card-btn" href="content%20pages/showcases/huixiaoshi/huixiaoshi.html">Learn More</a>
+                        <!--                        <a class="card-btn" style="left: 100px">Service</a>-->
+                        <!--                        <a class="card-btn" style="left: 150px">Sapper IDE</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 market-card-wrapper">
+                <div class="card">
+                    <img src="image/marketplace/yunxiaojuan.png" alt="">
+                    <div class="card-content">
+                        <h2>Yun Xiao Juan</h2>
+                        <p>Customizing and Compelling Your Quiz-takers</p>
+                        <a class="card-btn" href="content%20pages/showcases/yunxiaojuan/yunxiaojuan.html">Learn More</a>
+                        <!--                        <a class="card-btn" style="left: 100px">Service</a>-->
+                        <!--                        <a class="card-btn" style="left: 150px">Sapper IDE</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 market-card-wrapper">
+                <div class="card">
+                    <img src="image/marketplace/maxiaoyuan.png" alt="">
+                    <div class="card-content">
+                        <h2>Ma Xiao Yuan</h2>
+                        <p>Your intelligent programming assistant</p>
+                        <a class="card-btn" href="content%20pages/showcases/maxiaoyuan/maxiaoyuan.html">Learn More</a>
+                        <!--                        <a class="card-btn" style="left: 100px">Service</a>-->
+                        <!--                        <a class="card-btn" style="left: 150px">Sapper IDE</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <footer id="footer" class="footer">
-        <a href="https://www.aichain.online/paper/termofservice.pdf"><i class="bi bi-person-check"></i>Term of Service</a>
-        <a href="https://www.aichain.online/paper/privacypolicy.pdf"><i class="bi bi-card-heading"></i>Privacy Agreement</a>
+        <a href="paper/termofservice.pdf"><i class="bi bi-person-check"></i>Term of Service</a>
+        <a href="paper/privacypolicy.pdf"><i class="bi bi-card-heading"></i>Privacy Agreement</a>
         <a href="mailto:promptsapper@gmail.com"><i class="bi bi-envelope-at"></i>Contact Us</a>
         <p>Copyright © 2023. AI-Chain All rights reserved.</p>
     </footer>
