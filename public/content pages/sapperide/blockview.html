@@ -25,7 +25,7 @@
         <h2 class="main-subtitle">Build and test your AI chain using block-based visual programming</h2>
 
         <img class="main-figure" src="ide-figures/blockview.jpg">
-        <p class="figure-caption">Block view: Block tabs (left), AI chain editor (right), Consoles (bottom)</p>
+        <p class="figure-caption">Block view: Block toolboxes (left), AI chain editor (right), Consoles (bottom)</p>
 
         <p>
             We use block-based visual programming to support AI chain implementation, execution, and debugging. 
@@ -33,19 +33,19 @@
         </p>
         
         <p>
-            On the left panel, the user can access building blocks in the Units, Code, Prompts, Variables, and Engines tabs.
+            On the left panel, the user can access building blocks in the Units, Code, Prompts, Variables, and Engines toolboxes.
         </p>
         
         <h2 class="main-subtitle">Worker block</h2>
         <p>
             The core component of an AI chain is the worker. 
-            A new Worker block can be dragged to the editor from the Units tab.
+            A new Worker block can be dragged to the editor from the Units toolbox.
             A Worker block consists of three slots: <b>preworkers</b>, <b>prompt</b>, and <b>engine</b>.
         </p>
         <ul>
             <li>
                 The <b>preworkers</b> slot specifies a worker's inputs, which can be zero or more Input or Worker blocks. 
-                An Input block (from the Code tab) receives user input from the console or uses a variable as the input to the worker. 
+                An Input block (from the Code toolbox) receives user input from the console or uses a variable as the input to the worker. 
                 Connecting a worker A to another worker B's preworkers slot is equivalent to running these two workers in series, that is, using A's output as B's input. 
             </li>
             <li>
@@ -63,7 +63,7 @@
         <h2 class="main-subtitle">Container block</h2>
         <p>
             We design container block to represent composite workers. 
-            A new Container block can be dragged to the editor from the Units tab.
+            A new Container block can be dragged to the editor from the Units toolbox.
             A container block has two slots: <b>preunits</b> and <b>units</b>. 
         </p>
         <ul>
@@ -78,7 +78,7 @@
         
         <h2 class="main-subtitle">Code blocks</h2>
         <p>
-            The Code tab includes traditional programming constructs, including console Input, console Output, assignment, if, for, while, and parallel blocks. 
+            The Code toolbox includes traditional programming constructs, including console Input, console Output, assignment, if, for, while, and parallel blocks. 
             Users can drag and drop the required code blocks into the editor and assemble them with the worker/container blocks by dragging and dropping.
             If a worker block needs to output information to end-users, it need to be placed in an Output block. 
             Then, the output of this worker will be displayed in the bottom-right Output window.
@@ -87,9 +87,9 @@
 
         <h2 class="main-subtitle">Prompt, Variable and Engine blocks</h2>
         <p>
-            Prompts, variables and engines used by the worker blocks are managed as explicit blocks in the corresponding tabs.
-            In the Prompts and Engines tab, the user can import prompts from <a href="prompthub.html">Prompt Hub</a> and engines managed in <a href="enginemanagement.html">Engine Management</a>.
-            In the Code tab, the user can create or delete variables.
+            Prompts, variables and engines used by the worker blocks are managed as explicit blocks in the corresponding toolbox.
+            In the Prompts and Engines toolbox, the user can import prompts from <a href="prompthub.html">Prompt Hub</a> and engines managed in <a href="enginemanagement.html">Engine Management</a>.
+            In the Code toolbox, the user can create or delete variables.
         </p>
 
         <h2 class="main-subtitle">Edit worker/container blocks</h2>
@@ -100,7 +100,7 @@
         
         <h2 class="main-subtitle">Edit AI chain</h2>
         <p>
-            A block can be added to the editor by dragging and dropping a block template from the tab.
+            A block can be added to the editor by dragging and dropping a block template from the toolbox.
             The use can assemble the blocks by dragging and dropping in the editor.
             The user can zoom in/out the editor or place the selected block in the center of the editor by clicking the "+", "-", and "aim" button at the right side of the editr.
         </p>
