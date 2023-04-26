@@ -162,6 +162,35 @@ $(document).ready(()=>{
             '                    </li>\n' +
             '                </ul>\n' +
             '            </li>\n' +
+            '            <li class="doc-item">\n' +
+            '                <a class="doc-link doc-link-level1" id="sappervsothers" href="https://' + location.host + '/public/content pages/sappervsothers.html">Prompt Sapper vs. Others</a>\n' +
+            '                <!-- 2ed level -->\n' +
+            '                <ul class="doc-list">\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="aichainexamples" href="https://' + location.host + '/public/content pages/sappervschatgpt.html">Sapper vs. ChatGPT</a>\n' +
+            '                    </li>\n' +
+            '                </ul>\n' +
+            '                <ul class="doc-list">\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="aichainexamples" href="https://' + location.host + '/public/content pages/sappervsautoagent.html">Sapper vs. AutoGPT</a>\n' +
+            '                    </li>\n' +
+            '                </ul>\n' +
+            '                <ul class="doc-list">\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="aichainexamples" href="https://' + location.host + '/public/content pages/sappervsagentprogramming.html">Sapper vs. LangChain</a>\n' +
+            '                    </li>\n' +
+            '                </ul>\n' +
+            '                <ul class="doc-list">\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="aichainexamples" href="https://' + location.host + '/public/content pages/sappervsnocodeai.html">Sapper vs. No Code AI</a>\n' +
+            '                    </li>\n' +
+            '                </ul>\n' +
+            '                <ul class="doc-list">\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="aichainexamples" href="https://' + location.host + '/public/content pages/sappervspromptengineering.html">Sapper vs. Prompt Engineering</a>\n' +
+            '                    </li>\n' +
+            '                </ul>\n' +            
+            '            </li>\n' +            
             '        </ul>\n' +
             '    </nav>'
 
