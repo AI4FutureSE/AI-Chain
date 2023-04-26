@@ -38,9 +38,16 @@
 
 <main>
     <div id="main-content">
-        <h1 class="main-title">AI Chain Examples</h1>
+        <h1 class="main-title">AI Chain Examples in the Literature</h1>
         <h2 class="main-subtitle"></h2>
         
+        <p>
+            The concept of AI chain has been widely applied in various scenarios recently. Here, we provide several typical examples that we have learned about (please let us know if we have missed any important work). 
+            We categorize these works into three major categories: <b>task-specific AI chains</b>, <b>task-agnostic agent frameworks</b>, <b>AI chain programming support</b>.
+            Our Prompt Sapper draws inspiration from these projects and tools, but it has <a href="sappervsothers.html">significant differences</a> from them in terms of balanced human-AI teamwork, low requirments for computing and programming skills, and systematic support for AI4SE4AI.
+        </p>
+
+        <h2 class="main-subtitle">Task Specific AI Chains</h2>
         <p> 
             <a href="https://arxiv.org/abs/2210.02441">Ask Me Anything: A simple strategy for prompting language models </a>
         </p>
@@ -88,17 +95,6 @@
         </p>
         
         <p> 
-            <a href="https://dl.acm.org/doi/abs/10.1145/3491102.3517582">AI Chains: Transparent and Controllable Human-AI Interaction by Chaining Large Language Model Prompts</a>
-        </p>
-
-        <img class="main-figure" src="../image/figures/AIChain.jpg">
-        <p class="figure-caption">Selection-Inference</p>
-
-        <p>
-            This paper proposes Chaining Large Language Model (LLM) steps together as a method to enhance the effectiveness of LLMs on complex tasks, while improving transparency, controllability and sense of collaboration. The authors define a set of LLM primitive operations and present an interactive system where users can modify these chains in a modular way. A user study found that Chaining improved task outcomes, and users developed new ways of interacting with LLMs. The paper presents two case studies to explore how LLM Chains can be used in future applications.
-        </p>
-        
-        <p> 
             <a href="https://arxiv.org/abs/2212.13894">LAMBADA: Backward Chaining for Automated Reasoning in Natural Language</a>
         </p>
 
@@ -137,18 +133,49 @@
             <a href="https://arxiv.org/abs/2303.17580">HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face</a>
         </p>
 
+        <h2 class="main-subtitle">Task Agnostic Agent Frameworks</h2>
         <img class="main-figure" src="../image/figures/HuggingGPT.jpg">
         <p class="figure-caption">HuggingGPT</p>
-
-        <p>
-            The paper proposes using large language models (LLMs) as a controller to manage existing AI models in different domains and modalities to solve complicated AI tasks. The proposed framework, HuggingGPT, uses LLMs to conduct task planning, select appropriate AI models, execute subtasks, and summarize responses. HuggingGPT shows impressive results in various challenging tasks, including language, vision, speech, and other modalities, demonstrating the potential of LLMs in advancing artificial intelligence.
-        </p>
         
         <p>
-            In addition to specific tasks, AI chain is a powerful tool for multi-model, tool, or API collaboration to solve complex tasks involving multi-modal subtasks.
-            <a href="https://arxiv.org/abs/2303.17580">HuggingGPT</a> creates a model collaborative system, in which the LLM coordinates external specialized models to deal with complex AI tasks.
-            In the backend, the LLM runs an AI chain to understand user input, plan task sub-steps, select appropriate external models to execute, and aggregate the results from various models.
-            Similar ideas have been proposed in <a href="https://openai.com/blog/chatgpt-plugins">ChatGPT plugin</a> and <a href="https://arxiv.org/abs/2303.16434">TaskMatrix.AI</a>.
+            In addition to specific tasks, AI chain is a powerful tool for multi-model, tool, and API collaboration to solve complex tasks involving multi-modal subtasks.
+        </p>
+        <p>
+            <a href="https://arxiv.org/abs/2303.17580">HuggingGPT</a> is a typical example. 
+            It regards large language models (LLMs) as a controller to manage existing AI models in different domains and modalities to solve complicated AI tasks. 
+            As shwon in the above figure, it uses LLMs to conduct task planning, select appropriate AI models, execute subtasks, and summarize responses. 
+            HuggingGPT shows impressive results in various challenging tasks, including language, vision, speech, and other modalities, demonstrating the potential of LLMs in advancing artificial intelligence.
+        </p>
+        <p>
+            Technically, HuggingGPT is a task-agnostic autonomous agent framework.
+            Many such agent frameworks have been proposed recently, such as <a href="https://openai.com/blog/chatgpt-plugins">ChatGPT Plugins</a>, <a href="https://github.com/reworkd/AgentGPT">AgentGPT</a>, <a href="https://github.com/microsoft/TaskMatrix">Visual-ChatGPT</a>, <a href="https://arxiv.org/abs/2303.16434">TaskMatrix.AI</a>, <a href="https://github.com/Significant-Gravitas/Auto-GPT">AutoGPT</a>, <a href="https://github.com/yoheinakajima/babyagi">BabyAGI</a>, <a href="https://github.com/alvarosevilla95/autolang">autolang</a>, <a href="https://github.com/lightaime/camel">CAMEL</a>, <a href="https://hyperwriteai.com/">HyperWriter AI</a>, <a href="https://www.codewand.co/">Codewand</a>, which some people argue are the step towards Artificial General Intelligence (AGI).
+            In these frameworks, the LLM runs an AI chain to understand user input, divide and conquer the task, plan task sub-steps, map task steps to appropriate models, tools and APIs, coordinate the task execution, and aggregate the results from various steps.
+            As such, AI can deal with much more complex tasks.
+        </p>
+        
+        
+        <h2 class="main-subtitle">AI Chain Programming Support</h2>        
+        <p> 
+            <a href="https://dl.acm.org/doi/abs/10.1145/3491102.3517582">AI Chains: Transparent and Controllable Human-AI Interaction by Chaining Large Language Model Prompts</a>
+        </p>
+
+        <img class="main-figure" src="../image/figures/AIChain.jpg">
+        <p class="figure-caption">AI Chain Visual Programming</p>
+
+        <p>
+            This paper proposes to use visual programming to chain Large Language Model (LLM) steps together as a method to enhance the effectiveness of LLMs on complex tasks, while improving transparency, controllability and sense of collaboration. The paper defines a set of LLM primitive operations and presents an interactive system where users can create and modify these chains in a modular way (such as step b1/b2/b3 in the above figure). A user study found that chaining improved task outcomes, and users developed new ways of interacting with LLMs. The paper presents three case studies to explore how LLM chains can be used travel flashcard creation, visualization code debugging, and assisted text entry.
+            The authors have published a series of works on the AI chain benefits, challenges and tool supports (see also their papers <a href="https://dl.acm.org/doi/abs/10.1145/3491101.3503564">PromptMaker</a> and <a href="https://dl.acm.org/doi/10.1145/3491101.3519729">PromptChainer</a>).
+        </p>
+        
+        <p> 
+            <a href="https://python.langchain.com/en/latest/index.html">LangChain Python Framework</a>
+        </p>
+        <img class="main-figure" src="../image/figures/langchain.jpg">
+        <p class="figure-caption">LangChain Documentation</p>
+
+        <p>
+            In addition end-user oriented visual programming, several agent programming frameworks have also been proposed, such as <a href="https://dust.tt/">Dust</a>, <a href="https://primer.ought.org/">Primer</a>, and the most popular one, <a href="https://langchain.readthedocs.io/en/latest/index.html}">LangChain</a>, targeting at AI engineers and software developers.
+            These frameworks encapsulate raw LLM and data APIs into explicit high-level concepts such as chains, agents, prompts, models, indexes, and streamline the model and data interactions, thus facilitating the development of task-specific AI chains and autonomous agent frameworks.
         </p>
     </div>
     <div id="page-nav-id" style="display: none">aichainexamples</div>

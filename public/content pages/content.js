@@ -44,7 +44,17 @@ $(document).ready(()=>{
             '                <!-- 2ed level -->\n' +
             '                <ul class="doc-list">\n' +
             '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="aichainexamples" href="https://' + location.host + '/public/content pages/whysignificant.html">Why is it Significant?</a>\n' +
+            '                    </li>\n' +
+            '                </ul>\n' +
+            '                <ul class="doc-list">\n' +
+            '                    <li class="doc-item">\n' +
             '                        <a class="doc-link doc-link-level2" id="aichainexamples" href="https://' + location.host + '/public/content pages/aichainexamples.html">AI Chain Examples</a>\n' +
+            '                    </li>\n' +
+            '                </ul>\n' +
+            '                <ul class="doc-list">\n' +
+            '                    <li class="doc-item">\n' +
+            '                        <a class="doc-link doc-link-level2" id="aichainexamples" href="https://' + location.host + '/public/content pages/notflashinpan.html"> Is AI chain a Flash in the Pan?</a>\n' +
             '                    </li>\n' +
             '                </ul>\n' +
             '            </li>\n' +
