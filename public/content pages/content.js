@@ -25,7 +25,7 @@ $(document).ready(()=>{
             '                <a class="nav-link" href="https://www.aichain.store/"><i class="bi bi-shop-window"></i>Marketplace</a>\n' +
             '            </li>\n' +
             '            <li class="nav-item">\n' +
-            '                <a class="nav-link" href="https://' + location.host + '/public/content%20pages/ai20software30.html"><i class="bi bi-card-list"></i>Documentations</a>\n' +
+            '                <a class="nav-link" href="https://' + location.host + '/public/content%20pages/ai20software30.html"><i class="bi bi-card-list"></i>Documentation</a>\n' +
             '            </li>\n' +
             '            <li class="nav-item">\n' +
             '                <a class="nav-link" href="https://www.promptsapper.tech/"><i class="bi bi-motherboard"></i>Sapper IDE</a>\n' +

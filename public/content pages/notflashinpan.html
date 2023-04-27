@@ -60,16 +60,19 @@
         <p>
             For example, through backward reasoning chain, <a href="https://arxiv.org/abs/2212.13894">LAMBADA</a> more accurately determined the model's ability to solve complex reasoning tasks that were originally prone to errors.
             <a href="https://react-lm.github.io/">ReAct</a> narrows blind spots by combining two fundamental abilities: reasoning and action, such as overcoming the common hallucination problem in Chain-of-Thoughts by searching Wikipedia through APIs.
-            <a href="https://arxiv.org/abs/2303.11366">Reflection</a> introduces self-reflection agent to ReAct, allowing for the exploration of roblem-solving abilities through trial and error.
+            <a href="https://arxiv.org/abs/2210.02406">Decomposed Prompting</a> and <a href="https://arxiv.org/abs/2301.0175">Iterated Decomposition</a> leverages problem decomposition as a means of exploring the model's capability boundaries. 
+            <a href="https://arxiv.org/abs/2303.11366">Reflection</a> introduces self-reflection agent to ReAct, allowing for the exploration of problem-solving abilities through trial and error.
         </p>
         <p>
-            While autonomous agents (such as <a href="https://github.com/Significant-Gravitas/Auto-GPT">AutoGPT</a>) possess strong abilities in task planning, execution, and reflection, they cannot replace the concept and production tool of AI chain.
-            First, they are themselves AI chains and their design and development require the support of AI chain production tools.
-            Second, the continuous improvement of model capabilities has brought about the problem of "moving sand".
+            Although autonomous agents (such as <a href="https://github.com/Significant-Gravitas/Auto-GPT">AutoGPT</a>) possess strong abilities in task planning, execution, and reflection, we do not think they can replace the concept and production tool of AI chain.
+            First, the success of autonomous agents heavily relies on the LLM's ability to accurately decompose tasks and map sub-tasks to corresponding models or API functions, which is still very limited compared to human abilities, despite continuous improvements.
+            Second, autonomous agent frameworks are themselves AI chains and their design and development require the support of AI chain production tools.
+            Third, the continuous improvement of model capabilities has brought about the problem of "moving sand".
             In addition, the overall model improvement does not necessarily mean that all task abilities are improved.
             Some <a href="https://garymarcus.substack.com/p/how-not-to-test-gpt-3">experiments</a> have shown that new models may even perform worse in simple tasks. 
             This "moving sand" problem brings a great deal of uncertainty and unpredictability to the behavior of autonomous agents, as these agents are <a href="https://jina.ai/news/auto-gpt-unmasked-hype-hard-truths-production-pitfalls/">not software production tools</a> themselves. 
             In contrast, the AI chain production tool we propose is built on a transparent software process and methodology, adhering to core values such as modular design, reusability, debuggability, and composability in software engineering. This enables the development of AI services to be more robust and predictable in the face of model "moving sand" problems.
+            Read more in <a href="sappervsautoagent.html">Prompt Sapper versus Autonomous Agent Frameworks</a>.
         </p>
 
         <p>
@@ -83,10 +86,6 @@
             We believe that this article provides a profound understanding of the relationship and collaboration between humans and AI, and is very useful for understanding and positioning the significance and role of AI chains.
         </p>
         
-        <p>
-            Also read more in <a href="sappervsautoagent.html">Prompt Sapper versus Autonomous Agent Frameworks</a>.
-        </p>
-
         <!--img class="main-figure" src="../image/figures/Evolution.jpg">
         <p class="figure-caption">Figure 2: Evolution of Machine Learning and Software Paradigms</p>
 

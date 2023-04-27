@@ -80,7 +80,7 @@
         <h2 id="input" class="main-subtitle">Input Rewriter</h2>
         <p>
             <b>Intent:</b> 
-            The Input Rewriter transforms the input into an acceptable or simplified form, making it easier for the model to understand and process.
+            The Input Rewriter transforms the input to a worker into an acceptable or simplified form, making it easier for the model to understand and process.
         </p>
         <p>
             <b>Usage examples:</b>
@@ -88,6 +88,7 @@
             The Input Rewriter can standardize the input by calling on a LLM, for example, converting declarative sentences into interrogative ones (<a href="https://arxiv.org/abs/2210.02441">Arora et al. 2022</a>). 
             If a user's input is long and verbose, the Input Rewriter can extract key information (e.g., time, location, and event from news, known facts from the problem description)<!--, or profession from user answer in <a href="sixiaopin.html">Si Xiao Pin</a>)--> to avoid irrelevant details affecting later processing. 
             In cases where the input has complex syntax or logic, the Input Rewriter can transform the complex input into several simpler items, enabling a divide-and-conquer approach (<a href="https://dl.acm.org/doi/abs/10.1145/3491102.3517582">Wu et al. 2022</a>).
+            In addition to processing human inputs, the Input Rewriter can also be applied to the output of precedent workers, for example to remove redudant or irrelevant contents.
         </p>
         <p>
             <b>Related concepts or methods:</b>
