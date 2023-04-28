@@ -477,7 +477,7 @@ i{
 }
 
 .about-ppl{
-    padding: 20px;
+    padding: 15px;
 }
 
 .about-img{
@@ -486,11 +486,6 @@ i{
     border: 5px solid navajowhite;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
-
-.about-tech .about-img{
-    width: 100px;
-    height: 100px;
 }
 
 .about-contrib .about-img{
