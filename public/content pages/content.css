@@ -43,6 +43,10 @@ i{
     margin: 3px;
 }
 
+table{
+    margin: 25px 0
+}
+
 /**** Specific ***/
 /* nav */
 .my-navbar{
