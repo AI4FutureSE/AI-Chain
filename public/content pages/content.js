@@ -163,7 +163,7 @@ $(document).ready(()=>{
             '                </ul>\n' +
             '            </li>\n' +
             '            <li class="doc-item">\n' +
-            '                <a class="doc-link doc-link-level1" id="sappervsothers" href="https://' + location.host + '/public/content pages/sappervsothers.html">Prompt Sapper vs. Others</a>\n' +
+            '                <a class="doc-link doc-link-level1" id="sappervsothers" href="https://' + location.host + '/public/content pages/sappervsothers.html">What Set Prompt Sapper Apart from Others?</a>\n' +
             '                <!-- 2ed level -->\n' +
             '                <ul class="doc-list">\n' +
             '                    <li class="doc-item">\n' +
