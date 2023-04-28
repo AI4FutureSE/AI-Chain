@@ -456,6 +456,70 @@ i{
     color: whitesmoke;
 }
 
+/* about us */
+#aboutUs{
+    margin-bottom: 30px;
+}
+
+.about-section{
+    text-align: center;
+    padding: 2px;
+}
+
+.about-wrap{
+    display: inline-flex;
+}
+
+.about-title{
+    font-size: 25px;
+    color: gold;
+    font-weight: bold;
+}
+
+.about-ppl{
+    padding: 20px;
+}
+
+.about-img{
+    width: 120px;
+    height: 120px;
+    border: 5px solid navajowhite;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.about-tech .about-img{
+    width: 100px;
+    height: 100px;
+}
+
+.about-contrib .about-img{
+    width: 60px;
+    height: 60px;
+    margin: 15px;
+}
+
+.about-name{
+    padding: 0;
+    margin: 3px;
+    font-weight: bold;
+}
+
+.about-desc{
+    padding: 0;
+    margin: 3px;
+}
+
+.about-links a{
+    text-decoration: none;
+    color: grey;
+    transition: 0.5s;
+}
+
+.about-links a:hover{
+    color: gold;
+}
+
 
 /* footer */
 #about{
