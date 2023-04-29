@@ -458,7 +458,13 @@ i{
 
 /* about us */
 #aboutUs{
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    min-height: 60vh;
+}
+
+#aboutUs .module-subtitle{
+    width: 70%;
+    margin: 20px auto;
 }
 
 .about-section{
