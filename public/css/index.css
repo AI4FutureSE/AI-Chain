@@ -521,6 +521,23 @@ i{
     color: gold;
 }
 
+.contact{
+    text-align: center;
+}
+
+.contact-btn{
+    color: var(--first);
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 30px;
+    margin: 0 20px;
+}
+
+.contact-btn:hover{
+    color: gold;
+    cursor: pointer;
+}
+
 
 /* footer */
 #about{
