@@ -24,63 +24,63 @@
         <h1 class="main-title">Block View</h1>
         <h2 class="main-subtitle">Build and test your AI chain using block-based visual programming</h2>
 
-        <img class="main-figure" src="ide-figures/blockview.jpg">
+        <img class="main-figure" src="ide-gifs/blockview.gif">
         <p class="figure-caption">Block view: Block toolboxes (left), AI chain editor (right), Consoles (bottom)</p>
 
         <p>
-            We use block-based visual programming to support AI chain implementation, execution, and debugging. 
-            The current implementation is based on the open-source <a href="https://github.com/google/blockly">Blockly</a> project. 
+            We use block-based visual programming to support AI chain implementation, execution, and debugging.
+            The current implementation is based on the open-source <a href="https://github.com/google/blockly">Blockly</a> project.
         </p>
-        
+
         <p>
             On the left panel, the user can access building blocks in the Units, Code, Prompts, Variables, and Engines toolboxes.
         </p>
-        
+
         <h2 class="main-subtitle">Worker block</h2>
         <p>
-            The core component of an AI chain is the worker. 
+            The core component of an AI chain is the worker.
             A new Worker block can be dragged to the editor from the Units toolbox.
             A Worker block consists of three slots: <b>preworkers</b>, <b>prompt</b>, and <b>engine</b>.
         </p>
         <ul>
             <li>
-                The <b>preworkers</b> slot specifies a worker's inputs, which can be zero or more Input or Worker blocks. 
-                An Input block (from the Code toolbox) receives user input from the console or uses a variable as the input to the worker. 
-                Connecting a worker A to another worker B's preworkers slot is equivalent to running these two workers in series, that is, using A's output as B's input. 
+                The <b>preworkers</b> slot specifies a worker's inputs, which can be zero or more Input or Worker blocks.
+                An Input block (from the Code toolbox) receives user input from the console or uses a variable as the input to the worker.
+                Connecting a worker A to another worker B's preworkers slot is equivalent to running these two workers in series, that is, using A's output as B's input.
             </li>
             <li>
-                The <b>prompt</b> slot can hold a natural language prompt. Prompt can be in the form of plain text, semi-structed text or code-like text. 
+                The <b>prompt</b> slot can hold a natural language prompt. Prompt can be in the form of plain text, semi-structed text or code-like text.
                 The prompt slot can also hold a piece of executable code (which can be thought of as a special type of prompt).
             </li>
             <li>
-                The <b>engine</b> slot specifies the foundation model used to execute the prompt or the tool used to run the code (such as a Python interpreter) or a traditional ML model that the code uses. 
+                The <b>engine</b> slot specifies the foundation model used to execute the prompt or the tool used to run the code (such as a Python interpreter) or a traditional ML model that the code uses.
             </li>
         </ul>
         <p>
             With this worker block design, we can represent Software 1.0/2.0/3.0 workers using a unified worker block.
         </p>
-        
+
         <h2 class="main-subtitle">Container block</h2>
         <p>
-            We design container block to represent composite workers. 
+            We design container block to represent composite workers.
             A new Container block can be dragged to the editor from the Units toolbox.
-            A container block has two slots: <b>preunits</b> and <b>units</b>. 
+            A container block has two slots: <b>preunits</b> and <b>units</b>.
         </p>
         <ul>
             <li>
                 The <b>preunits</b> slot specifies a composite worker's inputs, which can be zero or more workers (leaf or composite).
-                These preunits will be executed before the present composite worker. 
+                These preunits will be executed before the present composite worker.
             </li>
             <li>
                 The <b>units</b> slot can hold one or more worker or container blocks, forming a worker hierarchy, as well as any traditional code blocks for user input and control structure.
             </li>
         </ul>
-        
+
         <h2 class="main-subtitle">Code blocks</h2>
         <p>
-            The Code toolbox includes traditional programming constructs, including console Input, console Output, assignment, if, for, while, and parallel blocks. 
+            The Code toolbox includes traditional programming constructs, including console Input, console Output, assignment, if, for, while, and parallel blocks.
             Users can drag and drop the required code blocks into the editor and assemble them with the worker/container blocks by dragging and dropping.
-            If a worker block needs to output information to end-users, it need to be placed in an Output block. 
+            If a worker block needs to output information to end-users, it need to be placed in an Output block.
             Then, the output of this worker will be displayed in the bottom-right Output window.
             Otherwise, the worker's output can only be inspected in the Block Console during the worker execution, but not visiable to the end users.
         </p>
@@ -94,10 +94,10 @@
 
         <h2 class="main-subtitle">Edit worker/container blocks</h2>
         <p>
-            To make it intuitive for users to build and modify workers, all visual programming operations can be triggered directly on the worker/container block. 
-            Clicking the + icon on the right side of each slot can directly add or edit the corresponding blocks for the slot. 
+            To make it intuitive for users to build and modify workers, all visual programming operations can be triggered directly on the worker/container block.
+            Clicking the + icon on the right side of each slot can directly add or edit the corresponding blocks for the slot.
         </p>
-        
+
         <h2 class="main-subtitle">Edit AI chain</h2>
         <p>
             A block can be added to the editor by dragging and dropping a block template from the toolbox.
@@ -111,40 +111,40 @@
             A Worker and Continaer block can be shown in a compact form to save space (by Inline Inputs from the context menu).
         </p>
         <p>
-            Collapsing a block will show the worker as a node. 
+            Collapsing a block will show the worker as a node.
             This saves the space for other blocks and is helpful when viewing and editing complex AI chains.
             A collapsed block can be restored by expanding the collapsed node.
         </p>
         <p>
-            Disableing a block will exclude the block from the AI chain execution. 
+            Disableing a block will exclude the block from the AI chain execution.
             This is useful when testing variant workers in an AI chain.
             A disabled block has the gray grid background, and can be enabled back to the normal status.
         </p>
         <p>
             The user can right-click a block and add a comment which will be accessed and edited by the "?" icon at the top-left corner of a block.
         </p>
-        
+
         <h2 class="main-subtitle">Run and debug AI chain and workers</h2>
         <p>
-            Users can run or debug the AI chain by the Run menu. 
+            Users can run or debug the AI chain by the Run menu.
         </p>
         <p>
-            When a worker is running, the bug signal in the top-left corner of the worker block will light up. 
-            The actual prompt used during the worker's execution and the engine outputs will be outputted to the Block Console. 
+            When a worker is running, the bug signal in the top-left corner of the worker block will light up.
+            The actual prompt used during the worker's execution and the engine outputs will be outputted to the Block Console.
             User inputs required for execution will be entered in the Block Console.
         </p>
         <p>
-            In debug mode, workers will be executed one at a time. 
-            After a worker finishes running, the execution will be suspended, and the user can check if the outputs in the Block Console match their expectation. 
-            If the result is as expected, the user can proceed to execute the next worker. 
+            In debug mode, workers will be executed one at a time.
+            After a worker finishes running, the execution will be suspended, and the user can check if the outputs in the Block Console match their expectation.
+            If the result is as expected, the user can proceed to execute the next worker.
             Alternatively, the user can modify the prompt for the current worker in the Prompt Console and then re-run the current worker.
         </p>
         <p>
-            If a worker block is placed in an Output block, its output will be displayed in the bottom-right Output window. 
-            This window does not show the output of workers that are not placed in an Output block, nor will it show prompts. 
+            If a worker block is placed in an Output block, its output will be displayed in the bottom-right Output window.
+            This window does not show the output of workers that are not placed in an Output block, nor will it show prompts.
         </p>
         <p>
-            The Block Console is used to help AI chain engineers debug the AI chain and thus contains prompt information and intermediate execution results. 
+            The Block Console is used to help AI chain engineers debug the AI chain and thus contains prompt information and intermediate execution results.
             The Output Window at the bottom-right allows the engineer to inspect the AI chain output that end-users will see.
         </p>
     </div>

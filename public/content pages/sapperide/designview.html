@@ -24,18 +24,18 @@
         <h1 class="main-title">Design View</h1>
         <h2 class="main-subtitle">Turn your ideas into AI chain requirements and skeleton</h2>
 
-        <img class="main-figure" src="ide-figures/designview.jpg">
+        <img class="main-figure" src="ide-gifs/designview.gif">
         <p class="figure-caption">Design view: requirement analysis chatbot (left), task requirement box (upper-right), AI chain skeleton (lower-right)</p>
 
         <p>
-            Design view supports the main activities of the design phase and plays an important role in bridging the gap between the exploration and construction phases. 
+            Design view supports the main activities of the design phase and plays an important role in bridging the gap between the exploration and construction phases.
             Therefore, it has two main functionalities: <b>requirement analysis</b> and <b>AI chain skeleton generation</b>, supported by <b>two LLM-based co-pilots</b>.
             Different from the non-intrusive co-pilot in the <a href="explorationview.html">Exploration view</a>, the two co-pilots in the Design view actively interact with the user to assist in requirement analysis and AI chain skeleton generation.
         </p>
-        
+
         <h2 class="main-subtitle">Requirement Analysis</h2>
         <p>
-            On the left side of the Design view, there is a <b>LLM-based requirement analysis chatbot</b>. 
+            On the left side of the Design view, there is a <b>LLM-based requirement analysis chatbot</b>.
             However, unlike the free-style chatbot in the Exploration view, the requirement analysis chatbot is prompted as an infinite <a href="../workerstereotypes.html#reverse-questioner">Reserve Questioner</a>, working as follows:
         </p>
         <p>
@@ -45,7 +45,7 @@
             2) Based on this initial task description and the task notes (if any) collected in the Exploration view, the requirement analysis chatbot asks a series of open-ended questions to elicit the user's specific task requirements.
         </p>
         <p>
-            3) Each round of the response from the user is iteratively incorporated into the user's task description (displayed in the <b>task requirement</b> box in the upper-right part). 
+            3) Each round of the response from the user is iteratively incorporated into the user's task description (displayed in the <b>task requirement</b> box in the upper-right part).
         </p>
         <!--ul>
             <li>
@@ -57,38 +57,38 @@
         </p>
 
         <h2 class="main-subtitle">AI Chain Skeleton Generation</h2>
-        <p>            
-            When the user feels the task requirement is clear and specific, they can click the <b>Generate AI chain Skeleton</b> button below the Task Requirement box to request the Design view to <b>generate the main steps</b> required to complete the task, as well as <b>three candidate prompts for each step</b>. 
-        </p>
-        
         <p>
-            To achieve this, Design view implements a <b>LLM-based skeleton generation co-pilot</b>. 
+            When the user feels the task requirement is clear and specific, they can click the <b>Generate AI chain Skeleton</b> button below the Task Requirement box to request the Design view to <b>generate the main steps</b> required to complete the task, as well as <b>three candidate prompts for each step</b>.
+        </p>
+
+        <p>
+            To achieve this, Design view implements a <b>LLM-based skeleton generation co-pilot</b>.
         </p>
         <p>
-            1) This co-pilot first converts the high-level task description into the main steps required to complete the task (similar to the ``sunny day scenario'' in use case modeling). 
+            1) This co-pilot first converts the high-level task description into the main steps required to complete the task (similar to the ``sunny day scenario'' in use case modeling).
             Each step has a step name (used to identify the step output in the AI chain) and a concise step description.
         </p>
         <!--ul>
             <li>
-                Example: <b>To be fixed with HuiXiaoShi case: for the task description in the Task Description box, it generates three steps: ``Generate a question template based on the given math concepts'', ``Fill in the question template with specific values to generate a math question'', and ``Generate multiple choices for the math question''. 
+                Example: <b>To be fixed with HuiXiaoShi case: for the task description in the Task Description box, it generates three steps: ``Generate a question template based on the given math concepts'', ``Fill in the question template with specific values to generate a math question'', and ``Generate multiple choices for the math question''.
                  </b>
             </li>
         </ul-->
         <p>
-            2) Based on the step description, the co-pilot recommends three candidate prompts for each step. 
-            <em>Upcoming feature</em>: If the user has accumulated a set of prompt assets (see <a href="prompthub.html">Prompt Hub</a>), the co-pilot can also be set to search the prompt hub for prompts related to the step using a retrieval-based engine (such as <a href="https://github.com/jerryjliu/llama_index">GPT Index</a>). 
-            Of course, the co-pilot can also be set to recommend both retrieved and generated prompts. 
+            2) Based on the step description, the co-pilot recommends three candidate prompts for each step.
+            <em>Upcoming feature</em>: If the user has accumulated a set of prompt assets (see <a href="prompthub.html">Prompt Hub</a>), the co-pilot can also be set to search the prompt hub for prompts related to the step using a retrieval-based engine (such as <a href="https://github.com/jerryjliu/llama_index">GPT Index</a>).
+            Of course, the co-pilot can also be set to recommend both retrieved and generated prompts.
         </p>
         <!--ul>
             <li>
                 Example: <b>To be fixed with HuiXiaoShi: for step "Generate a question template based on the given math concepts", a generated prompt is "Create a list of question templates based on {{concept}} for a math quiz or exam".</b>
             </li>
         </ul-->
-            
+
         <p>
-            3) The user can manually modify the generated steps, including remove steps, add steps, or reorder steps. 
-            In the current version, the co-pilot does not generate control flow. 
-            The user can manually add control flow, including step execution conditions or step loops. 
+            3) The user can manually modify the generated steps, including remove steps, add steps, or reorder steps.
+            In the current version, the co-pilot does not generate control flow.
+            The user can manually add control flow, including step execution conditions or step loops.
         </p>
         <!--ul>
             <li>

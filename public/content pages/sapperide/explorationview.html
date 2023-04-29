@@ -24,21 +24,21 @@
         <h1 class="main-title">Exploration View</h1>
         <h2 class="main-subtitle">You chat with the LLM. Sapper IDE takes notes.</h2>
 
-        <img class="main-figure" src="ide-figures/explorationview.jpg">
+        <img class="main-figure" src="ide-gifs/explorationview.gif">
         <p class="figure-caption">Exploration view: chatbot interface (left), task notes panel (right)</p>
 
         <p>
-            The exploration view supports activities in the exploration and initial design phases, allowing the user to obtain an approximate task model and challenges, and develop preliminary understanding of task decomposition, workflow, input/output data, and prompt effectiveness. 
+            The exploration view supports activities in the exploration and initial design phases, allowing the user to obtain an approximate task model and challenges, and develop preliminary understanding of task decomposition, workflow, input/output data, and prompt effectiveness.
         </p>
         <p>
             As shown in the above figure, the left part of the exploration view is a <b>chatbot</b> (currently a wrapper of GPT-3.5 API), working in the same way as common chatbot interfaces (e.g., ChatGPT interface).
             The chatbot allows users to have any type of conversation with the LLM.
-            Of course, we assume that the users would talk around the AI service they need to support. 
+            Of course, we assume that the users would talk around the AI service they need to support.
             <!--For example, in the above figure, <b>To be fixed: the user is intereted in developing a poem-to-paiting service. He is consulting with the LLM about some aesthetic conception and imagery, and is experimeting some prompts to obtain the relevant information for a poem.</b>-->
         </p>
         <p>
-            Different from a regular conversational chatbot, the exploration view is equpped a <b>LLM-based co-pilot</b> that automatically collects and analyzes the user's conversations with the LLM to obtain the broad task context (e.g., the concered AI service, user preference, things to avoid) that might be relevant to subsequent AI chain design and development. 
-            This co-pilot is an <b>AI chain service</b> built on top of the LLM (currently GPT-3.5). 
+            Different from a regular conversational chatbot, the exploration view is equpped a <b>LLM-based co-pilot</b> that automatically collects and analyzes the user's conversations with the LLM to obtain the broad task context (e.g., the concered AI service, user preference, things to avoid) that might be relevant to subsequent AI chain design and development.
+            This co-pilot is an <b>AI chain service</b> built on top of the LLM (currently GPT-3.5).
             It works in a non-intrusive manner, and dynamically takes notes as shown in the <b>Task Note</b> panel from the conversions between the user and the LLM.
             <!--For example, <b>To be fixed: this co-pilot notes that the input could be Chinese ancient poetry and some art styles the user might perfer.</b>-->
         </p>
