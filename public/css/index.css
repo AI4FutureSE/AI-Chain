@@ -528,14 +528,22 @@ i{
 .contact-btn{
     color: var(--first);
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.25s;
     font-size: 30px;
     margin: 0 20px;
 }
 
 .contact-btn:hover{
-    color: gold;
+    color: navajowhite;
     cursor: pointer;
+}
+
+#contact-detail{
+    margin: 10px;
+}
+
+.contact-id{
+    color: gold;
 }
 
 

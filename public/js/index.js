@@ -38,4 +38,10 @@ $(document).ready(()=>{
     // $('.module-card').click(function (){
     //     window.location.href = 'content.html'
     // })
+
+    $('.contact-btn').click(function (){
+        let contact = $('#contact-detail')
+        contact.text($(this).attr('data-contact-id'))
+        contact.slideDown()
+    })
 })
