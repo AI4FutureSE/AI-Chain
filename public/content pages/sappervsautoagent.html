@@ -94,7 +94,7 @@
 
         <h2 class="main-subtitle">Autonomy versus Interactivity, Customizability, Controllablity</h2>
         <p>
-            Altnough autonomous agent frameworks have demonstrated impressive capabilities and promising prospects, their autonomy is most suitable for scenarios with clearly defined task objectives, without the need for user interaction.
+            Altnough autonomous agent frameworks have demonstrated impressive capabilities and promising prospects, their autonomy is most suitable for scenarios with clearly defined task objectives and certain organized and structured workflow, without much need for user interaction, such as recognize a toothbrush brank and place an order on Amazon.
             Furthermore, the success of autonomous agents heavily relies on the LLM's ability to accurately decompose tasks and map sub-tasks to corresponding models or API functions, which is still very limited compared to human abilities, despite continuous improvements.
         </p>
         <p>
@@ -136,14 +136,13 @@
 
         <img class="main-figure" src="../image/figures/teacheralgorithms.gif" style="width: 50%;float: left">
         <img class="main-figure" src="../image/figures/programmeralgorithms.gif" style="width: 50%;float: left">
+        <p class="figure-caption">Requirement analysis for "implement sorting algorithms": teacher (left) versus developer (right) in Sapper IDE</p>
 
         <p>
             Unlike autonomous agent frameworks, Prompt Sapper emphasizes understanding domain knowledge and clarifying requirements and designs before construating a solution.
             It provides <a href="sapperide/ideintro.html">user interfaces and co-pilots</a> to support interaction and clarification with users, instead of taking the user's initial input as granted and directly constructing an AI chain solution.
-            <b>
-                To be fixed: The above figure shows how Propmt Sapper interacts with the user to clarify what he actually needs for "implementing three sorting algorithms" in the <a href="sapperide/designview.html">Design view</a>.
-                Note that users with different needs (e.g., teacher versus developer) may end up with very different task requirements.
-            </b>
+            The above figure shows how Propmt Sapper interacts with the user to clarify what he actually needs for "implementing three sorting algorithms" in the <a href="sapperide/designview.html">Design view</a>.
+            Note that users with different needs (e.g., teacher versus developer) may end up with very different task requirements.
         </p>
         <p>
             Once the user needs are clear, Prompt Sapper utilizes autonomous agents to plan the task steps and their implementation, and assembles a directly executable AI chain, while it still offers ways for users to customize and modify the generated steps, considering the <a href="https://jina.ai/news/auto-gpt-unmasked-hype-hard-truths-production-pitfalls/">inadequate divide-and-conquer ability of GPT</a>.

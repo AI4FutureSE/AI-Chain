@@ -43,8 +43,10 @@
         
         <p>
             The concept of AI chain has been widely applied in various scenarios recently. Here, we provide several typical examples that we have learned about (please let us know if we have missed any important work). 
+        </p>
+        <p>
             We categorize these works into three major categories: <b>task-specific AI chains</b>, <b>task-agnostic agent frameworks</b>, <b>AI chain programming support</b>.
-            Our Prompt Sapper draws inspiration from these projects and tools, but it has <a href="sappervsothers.html">significant differences</a> from them in terms of balanced human-AI teamwork, low requirments for computing and programming skills, and systematic support for AI4SE4AI.
+            Our Prompt Sapper draws inspiration from these projects and tools, but it has <a href="sappervsothers.html">significant differences</a> from them in terms of  human-AI collaborative intelligence, low requirments for computing and programming skills, and systematic framework for AI4SE4AI.
         </p>
 
         <h2 class="main-subtitle">Task Specific AI Chains</h2>
@@ -128,17 +130,16 @@
         <p>
             The research paper proposes PCR-Chain, a method for reusing partial code from API documentation, technical blogs, and programming Q&A sites. PCR-Chain resolves fully qualified names and fixes syntax errors using a pre-trained code model and in-context learning. The paper outlines the underlying prompt architecture and design and demonstrates the high success rate of the method in automatically resolving FQNs and fixing syntax errors in partial code samples.
         </p>
-        
+
+        <h2 class="main-subtitle">Task Agnostic Agent Frameworks</h2>
         <p> 
             <a href="https://arxiv.org/abs/2303.17580">HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face</a>
         </p>
-
-        <h2 class="main-subtitle">Task Agnostic Agent Frameworks</h2>
         <img class="main-figure" src="../image/figures/HuggingGPT.jpg">
         <p class="figure-caption">HuggingGPT</p>
         
         <p>
-            In addition to specific tasks, AI chain is a powerful tool for multi-model, tool, and API collaboration to solve complex tasks involving multi-modal subtasks.
+            In addition to specific tasks, AI chain is a powerful generic tool for multi-model, tool, and API collaboration to solve complex tasks involving multi-modal subtasks.
         </p>
         <p>
             <a href="https://arxiv.org/abs/2303.17580">HuggingGPT</a> is a typical example. 
@@ -150,6 +151,8 @@
             Technically, HuggingGPT is a task-agnostic autonomous agent framework.
             Many such agent frameworks have been proposed recently, such as <a href="https://openai.com/blog/chatgpt-plugins">ChatGPT Plugins</a>, <a href="https://github.com/reworkd/AgentGPT">AgentGPT</a>, <a href="https://github.com/microsoft/TaskMatrix">Visual-ChatGPT</a>, <a href="https://arxiv.org/abs/2303.16434">TaskMatrix.AI</a>, <a href="https://github.com/Significant-Gravitas/Auto-GPT">AutoGPT</a>, <a href="https://github.com/yoheinakajima/babyagi">BabyAGI</a>, <a href="https://github.com/alvarosevilla95/autolang">autolang</a>, <a href="https://github.com/lightaime/camel">CAMEL</a>, <a href="https://hyperwriteai.com/">HyperWriter AI</a>, <a href="https://www.codewand.co/">Codewand</a>, which some people argue are the step towards Artificial General Intelligence (AGI).
             In these frameworks, the LLM runs an AI chain to understand user input, divide and conquer the task, plan task sub-steps, map task steps to appropriate models, tools and APIs, coordinate the task execution, and aggregate the results from various steps.
+            <a href="https://github.com/Significant-Gravitas/Auto-GPT">AutoGPT</a>, <a href="https://github.com/yoheinakajima/babyagi">BabyAGI</a>
+            also demonstrate the ability to iteratively generate intermediate prompts.
             As such, AI can deal with much more complex tasks.
         </p>
         
@@ -174,7 +177,7 @@
         <p class="figure-caption">LangChain Documentation</p>
 
         <p>
-            In addition end-user oriented visual programming, several agent programming frameworks have also been proposed, such as <a href="https://dust.tt/">Dust</a>, <a href="https://primer.ought.org/">Primer</a>, and the most popular one, <a href="https://langchain.readthedocs.io/en/latest/index.html}">LangChain</a>, targeting at AI engineers and software developers.
+            In addition to end-user oriented visual programming, several agent programming frameworks have also been proposed, such as <a href="https://dust.tt/">Dust</a>, <a href="https://primer.ought.org/">Primer</a>, and the most popular one, <a href="https://langchain.readthedocs.io/en/latest/index.html}">LangChain</a>, targeting at AI engineers and software developers.
             These frameworks encapsulate raw LLM and data APIs into explicit high-level concepts such as chains, agents, prompts, models, indexes, and streamline the model and data interactions, thus facilitating the development of task-specific AI chains and autonomous agent frameworks.
         </p>
     </div>
