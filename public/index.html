@@ -39,7 +39,15 @@
                     <a class="nav-link" href="#promptmanship">Promptmanship</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#sapper">Sapper IDE</a>
+<!--                    <div class="dropdown">-->
+                      <a class="nav-link" href="#sapperproduct">
+                          Sapper Products</a>
+<!--                      <div class="dropdown-menu">-->
+<!--                        <a class="dropdown-item" href="https://www.promptsapper.tech">Sapper Enterprise</a>-->
+<!--                        <a class="dropdown-item" href="https://www.promptsapper.tech:8000/SapperPro">Sapper Professional</a>-->
+<!--                        <a class="dropdown-item" href="https://www.aichain.store:3000/sappercommunity">Sapper Community</a>-->
+<!--                      </div>-->
+<!--                    </div>-->
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#aboutUs">About Us</a>
@@ -53,13 +61,21 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav main-page-nav" style="display: none">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.aichain.store/"><i class="bi bi-shop-window"></i>Marketplace</a>
+                    <a class="nav-link" href="https://www.aichain.store/"><i class="bi bi-shop-window"></i>Sapper Portal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="content%20pages/ai20software30.html"><i class="bi bi-card-list"></i>Documentation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.promptsapper.tech/"><i class="bi bi-motherboard"></i>Sapper IDE</a>
+                    <div class="dropdown">
+                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                          <i class="bi bi-motherboard"></i>Sapper</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="https://www.promptsapper.tech">Sapper Enterprise</a>
+                        <a class="dropdown-item" href="https://www.promptsapper.tech:8000/SapperPro">Sapper Professional</a>
+                        <a class="dropdown-item" href="https://www.aichain.store:3000/sappercommunity">Sapper Community</a>
+                      </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -68,9 +84,18 @@
     <div class="title-wrap container">
         <h1 class="title"><img src="image/graphics/logo-white.png"></h1>
         <h2 class="subtitle">Revolutionize Software Landscape - Empower, Innovate, and Elevate</h2>
-        <div class="btn-group" role="group">
+        <div class="btn-group dropdown" role="group">
             <a type="button" href="content%20pages/ai20software30.html" class="btn btn-title"><i class="bi bi-card-list" style="margin-right: 15px"></i>Learn about AI Chain</a>
-            <a type="button" href="https://www.promptsapper.tech/" class="btn btn-title"><i class="bi bi-motherboard" style="margin-right: 15px"></i>Build Your AI Chains in Sapper IDE</a>
+<!--            <a type="button" href="https://www.promptsapper.tech/" class="btn btn-title"><i class="bi bi-motherboard" style="margin-right: 15px"></i>Build Your AI Chains in Sapper IDE</a>-->
+            <div>
+              <a class="btn btn-title dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="bi bi-motherboard" style="margin-right: 15px"></i>Create Your AI-native services in Sapper</a>
+              <div class="dropdown-menu dropdown">
+                <a class="dropdown-item" href="https://www.promptsapper.tech">Sapper Enterprise</a>
+                <a class="dropdown-item" href="https://www.promptsapper.tech:8000/SapperPro">Sapper Professional</a>
+                <a class="dropdown-item" href="https://www.aichain.store:3000/sappercommunity">Sapper Community</a>
+              </div>
+            </div>
             <a type="button" href="https://www.aichain.store/" class="btn btn-title"><i class="bi bi-shop-window" style="margin-right: 15px"></i>Explore AI Chain Marketplace</a>
         </div>
     </div>
@@ -132,35 +157,64 @@
             <div class="divider"></div>
         </div>
 
-        <div id="sapper" class="module-container">
-            <h1 class="module-title">Sapper IDE</h1>
+        <div id="sapperproduct" class="module-container">
+            <h1 class="module-title">Sapper Products</h1>
             <p class="module-subtitle">The world-first AI chain production tool, fully unleashing human-AI collaborative intelligence</p>
             <div class="module-content container">
                 <div class="module-card row">
                     <div class="col-12">
-                        <div class="module-card-caption">
-                            <h3 class="module-card-title">Making Everyone <span class="font-emp">AI Creative Master</span></h3>
-                            <p>Prompt Sapper IDE practices promptmanship, and is equpped with a team of LLM-powered co-pilots, offering easy-to-use tools and resources, bringing an unparalleled AI experience to a wide range of users, and promoting the popularization and application of AI technology.</p>
-                            <a class="module-card-link" href="https://www.promptsapper.tech/">Build your AI chains now</a>
+                        <h3 class="module-card-title">Making Everyone <span class="font-emp">AI Creative Master</span></h3>
+                        <p>promptsapper is designed to develop AI services of different complexity for different groups of people</p>
+                        <div class="carousel-indicator">
+                            <button type="button" class="btn active" data-bs-target="#demo" data-bs-slide-to="0">Sapper Enterprise</button>
+                            <button type="button" class="btn" data-bs-target="#demo" data-bs-slide-to="1">Sapper Professional</button>
+                            <button type="button" class="btn" data-bs-target="#demo" data-bs-slide-to="2">Sapper Community</button>
                         </div>
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <iframe class="embed-responsive-item" src="//player.bilibili.com/player.html?aid=527531109&bvid=BV1FM411L7h4&cid=1096063571&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-                            <h4 class="img-caption">Sapper IDE Demo</h4>
+                        <div class="carousel slide" id="demo">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" style="border: 1px solid gainsboro">
+                                    <div class="module-card-caption">
+                                        <p>Prompt Sapper Enterprise edition practices promptmanship, and is equpped with a team of LLM-powered co-pilots, offering easy-to-use tools and resources, bringing an unparalleled AI experience to a wide range of users, and promoting the popularization and application of AI technology.</p>
+                                        <a class="module-card-link" href="https://www.promptsapper.tech/">Build your AI chains now</a>
+                                    </div>
+                                    <div class="embed-responsive embed-responsive-4by3">
+                                        <iframe class="embed-responsive-item" src="//player.bilibili.com/player.html?aid=527531109&bvid=BV1FM411L7h4&cid=1096063571&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                                    </div>
+                                    <p class="module-subtitle">Sapper Enterprise Demo</p>
+                                </div>
+                                <div class="carousel-item" style="border: 1px solid gainsboro">
+                                    <div class="module-card-caption">
+                                        <p>Prompt Sapper Professional edition Supports AI chain of collaborarive workers, you can build, run, test, deploy your AI chain here.</p>
+                                        <a class="module-card-link" href="https://www.promptsapper.tech:8000/SapperPro">Build your AI chains now</a>
+                                    </div>
+                                    <div class="embed-responsive embed-responsive-4by3">
+                                        <iframe class="embed-responsive-item" src="//player.bilibili.com/player.html?aid=446462919&bvid=BV1Sj411X7cC&cid=1210945909&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                                    </div>
+                                    <p class="module-subtitle">Sapper Professional Demo</p>
+                                </div>
+                                <div class="carousel-item" style="border: 1px solid gainsboro">
+                                    <div class="module-card-caption">
+                                        <p>Prompt Sapper Community edition practices the world-first pattern-oriented language for structured prompting.</p>
+                                        <p>An effective, simple, and fast way to start creating lightweight AI-native services</p>
+                                        <a class="module-card-link" href="https://www.aichain.store:3000/sappercommunity">Build your AI-native services now</a>
+                                    </div>
+                                    <div class="embed-responsive embed-responsive-4by3">
+                                        <iframe class="embed-responsive-item" src="//player.bilibili.com/player.html?aid=828885720&bvid=BV1au4y1U7qo&cid=1210935681&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                                    </div>
+                                    <p class="module-subtitle">Sapper Community Demo</p>
+                                </div>
+                            </div>
                         </div>
-                        <!--img class="figure-aichain" src="image/figures/explorationview.png">
-                        <h4 class="img-caption">Exploration View</h4>
-                        <img class="figure-aichain" src="image/figures/designview.png">
-                        <h4 class="img-caption">Design View</h4>
-                        <img class="figure-aichain" src="image/figures/blockview.png">
-                        <h4 class="img-caption">Block View</h4-->
+                        <div class="divider"></div>
                     </div>
                 </div>
+            </div>
 
-                <div id="marketplace" class="module-card" style="padding-bottom: 60px">
+            <div id="marketplace" class="module-card" style="padding-bottom: 60px">
                     <div class="module-card-caption" style="text-align: center">
-                        <h3 class="module-card-title">AI Chain <span class="font-emp">Marketplace</span></h3>
-                        <p>AI chain marketplace showcases the infinite potential and widespread applications of AI technology, demonstrating that our vision is being realized.</p>
-                        <a class="module-card-link" href="https://www.aichain.store/">Explore the Marketplace</a>
+                        <h3 class="module-card-title"><span class="font-emp">Sapper Portal</span></h3>
+                        <p>Sapper Portal showcases the infinite potential and widespread applications of AI technology, demonstrating that our vision is being realized.</p>
+                        <a class="module-card-link" href="https://www.aichain.store/">Explore the Portal</a>
                     </div>
 
                     <div class="card-wrap">
@@ -230,9 +284,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="divider"></div>
         </div>
+        <div class="divider"></div>
 
         <div id="aboutUs" class="module-container">
             <h1 class="module-title">About Us</h1>
@@ -345,4 +398,21 @@
 </main>
 
 </body>
+<script>
+  // 获取所有的指示符按钮
+  const indicators = document.querySelectorAll('.carousel-indicator button');
+
+  // 给每个指示符按钮添加点击事件处理程序
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      // 移除所有指示符的active类
+      indicators.forEach((item) => {
+        item.classList.remove('active');
+      });
+
+      // 给当前点击的指示符添加active类
+      indicator.classList.add('active');
+    });
+  });
+</script>
 </html>
