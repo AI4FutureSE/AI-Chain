@@ -125,7 +125,7 @@ $(document).ready(()=>{
                     '                    </li>\n' +
                     '                    <li class="doc-item">\n' +
                     '                        <a class="doc-link doc-link-level3" id="prompthub" href="https://' + location.host + '/public/content pages/sapperide/deploySP.html">Deploy Structured Prompt</a>\n' +
-                    '                    </li>\n' +
+                    '                    </li>\n'+
                     '                </ul>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
