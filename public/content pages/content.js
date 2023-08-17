@@ -104,26 +104,53 @@ $(document).ready(()=>{
             '                </ul>\n' +
             '            </li>\n' +
             '            <li class="doc-item">\n' +
-            '                <a class="doc-link doc-link-level1" id="sapperide" href="https://' + location.host + '/public/content pages/sapperide/ideintro.html">Sapper IDE</a>\n' +
+            '                <a class="doc-link doc-link-level1" id="se4aichain" href="https://' + location.host + '/public/content pages/structuredpromptLang.html">Structured Prompting Language</a>\n' +
+            '            </li>\n' +
+            '            <li class="doc-item">\n' +
+            '                <a class="doc-link doc-link-level1" id="sapperide" href="https://' + location.host + '/public/content pages/sapperide/ideintro.html">Sapper Products</a>\n' +
             '                <!-- 2ed level -->\n' +
             '                <ul class="doc-list">\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="exploreview" href="https://' + location.host + '/public/content pages/sapperide/explorationview.html">Exploration View</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="exploreview" href="https://' + location.host + '/public/content pages/sapperide/explorationview.html">Sapper Community</a>\n' +
+                    '                <!-- 3ed level -->\n' +
+                    '                <ul class="doc-list">\n' +
+                    '                    <li class="doc-item">\n' +
+                    '                        <a class="doc-link doc-link-level3" id="exploreview" href="https://' + location.host + '/public/content pages/sapperide/generateSP.html">Generate Structured Prompt</a>\n' +
+                    '                    </li>\n' +
+                    '                    <li class="doc-item">\n' +
+                    '                        <a class="doc-link doc-link-level3" id="designview" href="https://' + location.host + '/public/content pages/sapperide/refineSP.html">Refine Structured Prompt</a>\n' +
+                    '                    </li>\n' +
+                    '                    <li class="doc-item">\n' +
+                    '                        <a class="doc-link doc-link-level3" id="blockview" href="https://' + location.host + '/public/content pages/sapperide/runSP.html">Run Structured Prompt</a>\n' +
+                    '                    </li>\n' +
+                    '                    <li class="doc-item">\n' +
+                    '                        <a class="doc-link doc-link-level3" id="prompthub" href="https://' + location.host + '/public/content pages/sapperide/deploySP.html">Deploy Structured Prompt</a>\n' +
+                    '                    </li>\n' +
+                    '                </ul>\n' +
             '                    </li>\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="designview" href="https://' + location.host + '/public/content pages/sapperide/designview.html">Design View</a>\n' +
-            '                    </li>\n' +
-            '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="blockview" href="https://' + location.host + '/public/content pages/sapperide/blockview.html">Block View</a>\n' +
-            '                    </li>\n' +
-            '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="prompthub" href="https://' + location.host + '/public/content pages/sapperide/prompthub.html">Prompt Hub</a>\n' +
-            '                    </li>\n' +
-            '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="enginemanagement" href="https://' + location.host + '/public/content pages/sapperide/enginemanagement.html">Engine Management</a>\n' +
-            '                    </li>\n' +
-            '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="projectmanagement" href="https://' + location.host + '/public/content pages/sapperide/projectmanagement.html">Project Management</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="designview" href="https://' + location.host + '/public/content pages/sapperide/ideintro.html">Sapper Pro/Enterprise</a>\n' +
+                    '                <!-- 3ed level -->\n' +
+                    '                <ul class="doc-list">\n' +
+                    '                    <li class="doc-item">\n' +
+                    '                        <a class="doc-link doc-link-level3" id="exploreview" href="https://' + location.host + '/public/content pages/sapperide/explorationview.html">Exploration View</a>\n' +
+                    '                    </li>\n' +
+                    '                    <li class="doc-item">\n' +
+                    '                        <a class="doc-link doc-link-level3" id="designview" href="https://' + location.host + '/public/content pages/sapperide/designview.html">Design View</a>\n' +
+                    '                    </li>\n' +
+                    '                    <li class="doc-item">\n' +
+                    '                        <a class="doc-link doc-link-level3" id="blockview" href="https://' + location.host + '/public/content pages/sapperide/blockview.html">Block View</a>\n' +
+                    '                    </li>\n' +
+                    '                    <li class="doc-item">\n' +
+                    '                        <a class="doc-link doc-link-level3" id="prompthub" href="https://' + location.host + '/public/content pages/sapperide/prompthub.html">Prompt Hub</a>\n' +
+                    '                    </li>\n' +
+                    '                    <li class="doc-item">\n' +
+                    '                        <a class="doc-link doc-link-level3" id="enginemanagement" href="https://' + location.host + '/public/content pages/sapperide/enginemanagement.html">Engine Management</a>\n' +
+                    '                    </li>\n' +
+                    '                    <li class="doc-item">\n' +
+                    '                        <a class="doc-link doc-link-level3" id="projectmanagement" href="https://' + location.host + '/public/content pages/sapperide/projectmanagement.html">Project Management</a>\n' +
+                    '                    </li>\n' +
+                    '                </ul>\n' +
             '                    </li>\n' +
             '                </ul>\n' +
             '            </li>\n' +
@@ -189,8 +216,8 @@ $(document).ready(()=>{
             '                    <li class="doc-item">\n' +
             '                        <a class="doc-link doc-link-level2" id="aichainexamples" href="https://' + location.host + '/public/content pages/sappervspromptengineering.html">Sapper vs. Prompt Engineering</a>\n' +
             '                    </li>\n' +
-            '                </ul>\n' +            
-            '            </li>\n' +            
+            '                </ul>\n' +
+            '            </li>\n' +
             '        </ul>\n' +
             '    </nav>'
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Refine Structured Prompt</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- jquery -->
+    <script src="../../plugin/jquery.min.js"></script>
+    <!-- self-defined -->
+    <link href="../content.css" rel="stylesheet">
+    <script src="../content.js"></script>
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light my-navbar">
+</nav>
+<main>
+    <div id="main-content">
+        <h1 class="main-title">Step2: Refine Structured Prompt</h1>
+<!--        <h2 class="main-subtitle">Turn your ideas into Structured Prompt Form</h2>-->
+        <img class="main-figure" src="ide-gifs/refineSP.gif">
+        <p class="figure-caption">Refine Structured Prompt: Form(left), Text(right)</p>
+        <p>In this step, users can optimize the form by making appropriate changes based on the form generated in the first step.
+            Additionally, they can choose to build the form from scratch.
+            To assist users in creating a better form, we have designed two AI co-pilots based on advanced models.</p>
+        <p>The first co-pilot is capable of converting between the form and text, enhancing the understanding of the form's content.
+            The second co-pilot serves as a form-filling assistant, providing suggestions and recommendations to aid in the form completion process.</p>
+        <p>As shown in the above figure, the left part of the step2 is a <b>Form</b> area where structured prompts are created in the form format.
+            Users can click the "+Add Section" button located at the bottom right of the form area to select and add a section.
+            Furthermore, users have the option to click on the sequential icon at the top left of each section to drag and rearrange its position.
+            Should the need arise, users can click on the delete icon at the top right corner of the section to remove it.</p>
+        <p> Within each section, users can click the "Add Sub-section" button at the bottom right to add a sub-section.
+            Similarly, in each sub-section, there are icons at the top left that can be clicked to drag the sub-section for reordering, and at the top right, there's a delete icon for removal.</p>
+        <p>
+            Users can click the "Form Copilot" button located in the top right corner of the form area to open the form-filling assistant. The form-filling assistant offers assistance in four types:<br>
+            &nbsp;&nbsp;1. Explanation and Q&A of Form Terms<br>
+            &nbsp;&nbsp;2. Recommendation of Common Use Cases<br>
+            &nbsp;&nbsp;3. Recommendation for Filling in the Form due to Requirement Changes<br>
+            &nbsp;&nbsp;4. Check and Reflection on the Filling Results<br>
+        </p>
+        <p>Users can click on the button with a left-to-right arrow icon in the middle of Step 2 to transform the prompts in the form format into natural language prompts.
+            Of course, users can toggle the switch in the top right corner of the text area to activate editing mode, allowing them to modify the natural language prompts.
+            Afterward, they can click on the button with a right-to-left arrow icon in the middle of Step 2 to convert them back into the form format.</p>
+        <p>Once users have created and filled out the form, they can click the "Step3: Run Prompt" button located at the bottom left corner of the form area to test this prompt.</p>
+    </div>
+    <div id="page-nav-id" style="display: none">refineSP</div>
+</main>
+</body>
+</html>

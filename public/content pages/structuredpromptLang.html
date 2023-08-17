@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI 2.0 and Software 3.0</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- jquery -->
+    <script src="../plugin/jquery.min.js"></script>
+    <!-- self-defined -->
+    <link href="content.css" rel="stylesheet">
+    <script src="content.js"></script>
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light my-navbar">
+</nav>
+
+<main>
+    <div id="main-content">
+        <h1 class="main-title">Structured Prompting Language</h1>
+        <h2 class="main-subtitle">A language between natural language and programming language, analogous to the intermediate bytecode in between high-level programming language and machine instructions</h2>
+
+        <img class="main-figure" src="../image/figures/SPLBNF.jpg">
+        <p class="figure-caption">Structured Prompting Language BNF</p>
+
+        <P>To address the challenges posed by the expressive burden and cognitive load of natural language, people have begun to employ structured thinking by organizing prompts in a structured format.
+            For instance, this involves using bullet points or dividing information into distinct sections.
+            This approach is more intuitive and aids in both articulation and comprehension compared to using natural language expressions.
+            However, because structured thinking is closely tied to the specific implementation of prompts in particular applications, effectively applying it to other specific scenarios remains challenging.</P>
+
+        <p>When individuals write structured prompts, they might adopt various approaches, making it difficult to determine the optimal method.
+            Consequently, people have started to distill guiding prompt techniques, including certain prompting patterns, to serve as best practices for composing structured prompts.
+            Inspired by this notion, these prompting patterns can be utilized to guide the creation of structured prompts.</p>
+
+        <p>
+         In response to these challenges, we propose a standardized, universal, and instructive language termed "Structured Prompt Language" (SPL) for crafting structured prompts. Our approach unfolds as follows:<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;1.Building upon widely proposed prompting patterns, we expand and consolidate various crucial aspects for effective prompt creation. These aspects are transformed into practical keywords that subtly guide users in producing high-quality structured prompts.<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;2.To define the syntax and semantics of SPL, we employ Backus-Naur Form (BNF) to organize keywords and their hierarchical structure. For instance, here are two examples of SPL definitions:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"instruction-part ::= @instruction [identifier] left-bracket instruction-prompt right-bracket"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"instruction-prompt ::= {command-part} {rule-part} {format-part} {example-part}"<br>
+        </p>
+        <p>These expressions elucidate that the SPL keyword "instruction" encompasses parts such as "command," "rule," "format," "example," and more.
+            This prompts users to contemplate the specific functionalities to include in the prompt and explicitly outline the steps, constraint rules, output format, and multiple examples for each functionality.</p>
+
+        <p>By adopting this approach, we can more effectively tackle the expressive and cognitive load associated with natural language.
+            Through the utilization of SPL, individuals can systematically compose structured prompts, thereby enhancing the quality and accuracy of prompts.
+            This approach empowers the application of structured prompt advantages across diverse scenarios.</p>
+
+        <p>Generally speaking, SPL is a standardized, general-purpose, and instructive structured prompt language.
+            By converting existing prompt patterns into practical keywords and using BNF-organized prompt structures, SPL provides a clear syntax and semantics for structured prompt production.
+            Can show significant advantages in reducing expressive and cognitive load.</p>
+    </div>
+    <div id="page-nav-id" style="display: none">SPL</div>
+</main>
+
+<!--<footer id="footer">-->
+<!--</footer>-->
+
+</body>
+</html>
