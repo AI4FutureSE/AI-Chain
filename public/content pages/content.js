@@ -111,7 +111,7 @@ $(document).ready(()=>{
             '                <!-- 2ed level -->\n' +
             '                <ul class="doc-list">\n' +
             '                    <li class="doc-item">\n' +
-            '                        <a class="doc-link doc-link-level2" id="exploreview" href="https://' + location.host + '/public/content pages/sapperide/explorationview.html">Sapper Community</a>\n' +
+            '                        <a class="doc-link doc-link-level2" id="exploreview" >Sapper Community</a>\n' +
                     '                <!-- 3ed level -->\n' +
                     '                <ul class="doc-list">\n' +
                     '                    <li class="doc-item">\n' +
