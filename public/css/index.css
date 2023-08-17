@@ -240,6 +240,23 @@ i{
     padding: 90px 100px 20px;
 }
 
+.carousel-indicator {
+  /*display: flex;*/
+}
+
+.carousel-indicator button {
+  /*width: 10px;*/
+  /*height: 10px;*/
+  border: none;
+  margin: 5px;
+  background-color: white; /* 非active状态的颜色 */
+}
+
+.carousel-indicator button.active {
+  background-color: var(--first); /* active状态的颜色 */
+  color: gold;
+}
+
 #aichain{
     background: white;
 }

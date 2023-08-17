@@ -1,0 +1,291 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../plugin/font/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Exo;
+    src: url("../plugin/font/Exo2-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url("../plugin/font/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+    font-family: Ubuntu-bold;
+    src: url("../plugin/font/Ubuntu-Bold.ttf");
+}
+
+:root{
+    --first: #23a6d5;
+    --second: #e73c7e;
+
+    --yellow: #FEE622;
+    --orange: #F49237;
+    --grey: #DBDBDB;
+    --red: #F6522C;
+    --blue: #23a6d5;
+    --purple: #760fcb;
+    --black: #262626;
+    --pink: #b369b8;
+}
+
+html body{
+    font-family:Ubuntu, serif;
+    /*font-family: sans-serif;*/
+    padding: 0;
+    margin: 0;
+}
+
+i{
+    margin: 3px;
+}
+
+table{
+    margin: 25px 0
+}
+
+/**** Specific ***/
+/* nav */
+.my-navbar{
+    font-size: 22px;
+    z-index: 100;
+    background-color: white;
+    /*box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;*/
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+}
+
+.navbar-brand{
+    width: 150px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    background-color: white;
+    color: var(--first);
+    font-family: Exo, serif;
+    height: 65px;
+    padding: 4px 30px;
+    margin-right: 10px;
+}
+
+.navbar-brand:hover{
+    color: var(--second);
+}
+
+.brand-logo{
+    width: 145px;
+}
+
+.nav-link{
+    color: var(--first);
+    padding: 5px !important;
+    height: 100%;
+    font-size: 17px;
+    margin-right: 20px;
+}
+
+.nav-link:hover{
+    color: navajowhite;
+}
+
+.nav-item{
+    transition: 0.5s;
+}
+
+.nav-item:hover{
+    /*background-color: var(--first);*/
+}
+
+.nav-title{
+    /*font-family: Ubuntu, serif;*/
+    color: var(--first);
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 40px;
+    text-align: right;
+    width: 100%;
+    margin: 0;
+}
+
+/* main content */
+main{
+    display: flex;
+    overflow: hidden;
+    height: calc(100vh - 80px);
+    position: absolute;
+    top: 80px;
+}
+
+main h2{
+    font-size: 25px;
+}
+
+#main-content{
+    padding: 35px 280px;
+    overflow: auto;
+}
+
+.main-title{
+    font-size: 30px;
+}
+
+.main-subtitle{
+    font-size: 25px;
+    margin: 40px 0 20px;
+    text-decoration: underline;
+}
+
+.main-figure{
+    width: 100%;
+    /*border: 2px solid var(--first);*/
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    margin-bottom: 20px;
+}
+
+.figure-caption{
+    text-align: center !important;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#main-content p{
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.icon{
+    width: 28px;
+    height: 28px;
+}
+
+
+/* content nav bar */
+.doc-nav{
+    padding-top: 2px;
+    padding-bottom: 30px;
+    width: 340px;
+    height: calc(100vh - 80px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    flex: 1 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.doc-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.doc-item{
+}
+
+.doc-item:hover{
+}
+
+.doc-link{
+    text-decoration: none;
+    color: var(--black);
+    display: block;
+    padding: 10px 12px;
+    transition: 0.25s;
+    width: 320px;
+}
+
+.doc-link:hover{
+    background: var(--first);
+    color: white;
+}
+
+.doc-link-level1{
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.doc-link-level2{
+    font-size: 18px;
+    padding-left: 40px;
+}
+
+.doc-link-level3{
+    font-size: 16px;
+    padding-left: 60px;
+}
+
+.doc-link-level4{
+    font-size: 14px;
+    padding-left: 80px;
+}
+
+.doc-link-active{
+    background: #23a6d590;
+    color: ghostwhite;
+}
+
+/* project link buttons */
+.btn-wrap-fixed{
+    position: fixed;
+    bottom: 80px;
+    display: none;
+}
+
+.btn-wrap{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-group{
+    margin: auto;
+    display: table;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 0;
+}
+
+.btn-showcase{
+    background: var(--first);
+    color: whitesmoke;
+    border: 1px solid var(--first);
+}
+
+.btn-showcase:hover{
+    background: white;
+    color: var(--first);
+}
+
+.btn-showcase i{
+    margin-right: 5px;
+}
+
+.embed-responsive{
+    padding: 10px 35px 0;
+}
+.embed-responsive-item{
+    width: 100%;
+    height: 660px;
+    margin-bottom: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.img-caption{
+    padding: 8px;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/* footer */
+#footer{
+    width: 100%;
+    height: 200px;
+    background: var(--first);
+}

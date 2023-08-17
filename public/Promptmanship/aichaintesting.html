@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AIChain Testing</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- jquery -->
+    <script src="jquery.min.js"></script>
+    <!-- self-defined -->
+    <link href="content.css" rel="stylesheet">
+    <script src="content.js"></script>
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light my-navbar">
+</nav>
+
+<main>
+    <div id="main-content">
+        <h1 class="main-title">AI Chain Testing</h1>
+        <h2 class="main-subtitle"></h2>
+
+        <img class="main-figure" src="figures/Magic.jpg">
+        <p class="figure-caption">Promptmanship: process, concepts, activities, and patterns</p>
+
+        <p>
+            AI chain testing involves running an AI chain and its component workers (prompts), evaluating the running results, and debugging and fixing unexpected behaviors.
+            Similar to traditional testing, we can perform unit tests for each worker, integration (interface) tests for cooperating workers, and system tests for the entire AI chain.
+            Our IDE's <a href="sapperide/blockview.html">Block view</a> supports all three levels of testing.
+        </p>
+        <p>
+            Since the behavior of foundation models is un-designed but emergent, testing methods based on verifying design and construction correctness are no longer applicable.
+            AI chain testing and prompt testing are more of an experimental process to gain mechanical sympathy for the model and to find effective prompts to interact with the model.
+            This process begins in the exploration stage and continues throughout the rapid prototyping process of AI chain.
+            In our IDE, users can experiment prompts in the <a href="sapperide/explorationview.html">Exploration view</a>, and test and debug a worker's prompt in the <a href="sapperide/blockview.html">Block view</a>.
+        </p>
+        <p>
+            Due to the emergent behavior of foundation models and the flexibility of natural language, it is impossible to achieve ``comprehensive'' testing in the traditional sense, no matter how much effort is put into it, as evidenced by unexpected prompt injection and jail-breaking in ChatGPT.
+            This highlights the importance of user testing, such as <a href="https://blog.google/technology/ai/join-us-in-the-ai-test-kitchen/">AI test kitchen</a> which leverage crowd intelligence to test and improve emerging AI technology.
+            We plan to support crowd testing of AI chains in our <a href="https://aichain.store">AI chain marketplace</a>.
+        </p>
+        <p>
+            Exploring the behavior of foundation models requires creativity, and even experts may have limitations in their personal experience and knowledge, leading to blind spots.
+            Large language models can be utilized to supplement the creativity of individuals.
+            For example, <a href="https://aclanthology.org/2022.acl-long.230/">Ribeiro and Lundberg</a> proposed adaptive testing and debugging of NLP models, using the LLM to generate additional test cases from seed test cases given by humans.
+            Not only can humans gain inspiration from the LLM-generated test cases, but they can also more comprehensively test the AI behavior.
+            As another way, we can give the current prompt and the actual versus expected prompt outputs to the LLM and request it to revise the prompt to match the actual output to the expected one.
+        </p>
+    </div>
+    <div id="page-nav-id" style="display: none">aichaintesting</div>
+</main>
+
+<!--<footer id="footer">-->
+<!--</footer>-->
+
+</body>
+</html>
